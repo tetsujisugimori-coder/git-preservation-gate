@@ -1,9 +1,12 @@
 # AI担当への適用計画（Stage2、未実施）
 
-八兵衛、Codex CLI、Codexクラウド、その他AIは同じ[規約](preservation-policy.md)を参照する。役割名だけでidentityや独立性が成立したと扱わない。
+八兵衛、Codex CLI、Codexクラウド、その他AIは同じ[規約](preservation-policy.md)を参照する。役割名だけでidentityや独立性が成立したと扱わない。実行区分は[AI実行主体10分類](actor-execution-taxonomy.md)、その証拠化は[実行来歴レコード契約](execution-provenance-contract.md)で補足する。これらはStage 0の設計仕様であり、実装済みのゲートではない。
 
 ## 採用マニフェスト案
 各repoのAGENTS.mdと作業依頼へ `policy_version: 0.1.0`、承認された中央完全commit SHA、文書path/hash、検査器版/hash、採用範囲、案件のGate契約、owner承認参照を記載する。Stage0では採用先用の実SHAは未確定でOPEN。`main/latest`参照だけは禁止。未設定・参照不能はBLOCKED、過去cacheを確認済み最新版とはしない。
+
+## 実行主体と環境の判定（設計のみ）
+ChatGPT Web/デスクトップ/モバイル、WorkのCloud/Local、Codex Local/Cloud、DOT（八兵衛等）を単なる同義語として扱わない。起動面・実処理先・担当区分・委任先・Git対象・証拠取得経路を別に固定する。別repoで同一タスクを検証しても証拠や独立性を流用しない。Stage 2導入時には分類器/記録器/検査器の実装・実測と採用先ごとの承認を要する。
 
 ## 周知と実効性
 1. ownerが案件別採用範囲と保存先を承認する。

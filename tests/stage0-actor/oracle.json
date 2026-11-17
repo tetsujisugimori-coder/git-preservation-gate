@@ -37,5 +37,6 @@
   "Audit-wrong-source-target": {"additional":{"classifications":{"r1":"CODEX-LOCAL"},"input_status":"FAIL","reason_codes":["SOURCE_PROOF_MISMATCH"],"audit_status":"FAIL","permit":{"A":false,"B":false,"C":false}}},
   "Audit-same-source-destination": {"additional":{"classifications":{"r1":"CODEX-LOCAL"},"input_status":"BLOCKED","reason_codes":["ISOLATED_DESTINATION_REQUIRED"],"audit_status":"BLOCKED","permit":{"A":false,"B":false,"C":false}}},
   "Handoff-blank-ref": {"additional":{"classifications":{"r1":"DOT","r2":"CODEX-CLOUD"},"input_status":"BLOCKED","reason_codes":["HANDOFF_EVIDENCE_MISSING"],"audit_status":"NOT_TESTED","permit":{"A":false,"B":false,"C":false}}},
-  "Handoff-boolean-ref": {"additional":{"classifications":{"r1":"DOT","r2":"CODEX-CLOUD"},"input_status":"BLOCKED","reason_codes":["HANDOFF_EVIDENCE_MISSING"],"audit_status":"NOT_TESTED","permit":{"A":false,"B":false,"C":false}}}
+  "Handoff-boolean-ref": {"additional":{"classifications":{"r1":"DOT","r2":"CODEX-CLOUD"},"input_status":"BLOCKED","reason_codes":["HANDOFF_EVIDENCE_MISSING"],"audit_status":"NOT_TESTED","permit":{"A":false,"B":false,"C":false}}},
+  "Audit-invalid-digest": {"additional":{"classifications":{"r1":"CODEX-LOCAL"},"input_status":"FAIL","reason_codes":["SOURCE_DIGEST_INVALID"],"audit_status":"FAIL","permit":{"A":false,"B":false,"C":false}}}
 }

@@ -146,6 +146,8 @@ def check_audit(audit, evidence, records_by_id, issue):
         if (not all(nonblank(value) for value in (*approved_object, *retrieved_object, retrieval.get("retriever")))
                 or not approval.get("target") or not retrieval.get("target") or target is None):
             findings.append(("BLOCKED", "SOURCE_PROOF_REQUIRED"))
+        elif any(not re.fullmatch(r"[0-9a-f]{64}", item["sha256"]) for item in (approval, retrieval)):
+            findings.append(("FAIL", "SOURCE_DIGEST_INVALID"))
         elif (approved_object != retrieved_object or approval["target"] != target or retrieval["target"] != target
                 or (verified[-1] and retrieval["retriever"] != verified[-1])):
             findings.append(("FAIL", "SOURCE_PROOF_MISMATCH"))

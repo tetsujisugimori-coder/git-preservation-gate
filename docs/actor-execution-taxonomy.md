@@ -40,7 +40,7 @@
 - **DesktopからWorkを起動**: 起動面desktopでも、cloudワーカーなら`WORK-CLOUD-DESKTOP`。localと断定しない。
 - **WebからWorkを起動**: cloud処理実測なら`WORK-CLOUD-WEB`。同じWorkでも前項と起動面が違う。
 - **八兵衛からCodex Cloudへ依頼**: DOTの指示記録とCODEX-CLOUDの実行記録を分離。parent-childで結び、操作主体をすり替えない。
-- **Codex CLIとCodex Cloudが同じIssueを担当**: 同一タスク名でも別`execution_id`・作業領域・Git HEAD・試行。ローカルの証拠をクラウドの証拠に流用しない。
+- **Codex CLIとCodex Cloudが同じIssueを担当**: 実行ごとに別`execution_id`を付け、作業領域・対象Git HEAD・試行を固定する。同じ固定HEADに対する独立した実行も許す。ローカルの証拠をクラウドの証拠に流用しない。
 - **別repoで同じ課題を検証**: 研究上は可。ただし`repository`、完全commit/tree、入力fixture、試行をそれぞれ固定。別repoという事実だけで独立性・同一入力・同一結果を認定しない。
 - **WorkのCloudとLocalを切替**: 移行/委任を別イベントとして記録し、双方の境界の検証ができなければ環境同一性はUNKNOWN。
 
@@ -50,4 +50,4 @@
 ## 判定境界
 分類そのものに必要な観測が欠落したら`UNKNOWN`（試行済み・証拠不足）または`NOT_TESTED`（未試行）。必須記録が無く後続へ進めないなら`BLOCKED`。宣言と実証が矛盾したら`FAIL`。いずれもGate許可を出さず、中央規約P06の集約規則に従う。
 
-本補訂は文書限定で、実行時分類器・ローカル拡張・AGENTS.md配布・CI強制・既存repoへの適用は**未実装**。検査反例は[合成試験仕様](../tests/actor-classification-cases.md)に分離する。
+実運用の分類器・ローカル拡張・AGENTS.md配布・CI強制・既存repoへの適用は**未実装**。[Stage 0合成試験](../tests/actor-classification-cases.md)は、事前に用意した観測票で分類と来歴の判断を確かめる。

@@ -1,21 +1,26 @@
-# AI実行主体分類と来歴：合成反例仕様12件（未実施）
+# AI実行主体分類と来歴の合成反例12件
 
-すべて**NOT_TESTED**。これは設計レビュー用の反例表で、実行済み検査数や保全成功数に算入しない。入力は合成データのみ。検証では分類の期待値とGate許可boolを分けて比較する。正本は[分類](../docs/actor-execution-taxonomy.md)と[レコード契約](../docs/execution-provenance-contract.md)。
+正本は[分類](../docs/actor-execution-taxonomy.md)と[レコード契約](../docs/execution-provenance-contract.md)。下表の検査はStage 0専用で、実運用の観測、保全・復元、独立監査の成立を証明する試験はNOT_TESTED。Gate A/B/Cのpermitはすべてfalse。
 
-|case|合成入力/対照|確認したい判定|現在状態|
+## 固定入力と期待出力
+- [入力fixture](stage0-actor/fixtures.json)は各ATに正常対照 `normal` と故障注入 `fault` を持つ。作業主張 `records` と証拠票 `evidence` を別入力とし、必要なケースは委任票・旧台帳・監査票も与える。監査票の申告と観測した担当者ID・共有要素・承認対象・保存先からの取得票は別入力にする。
+- [事前期待値](stage0-actor/oracle.json)は次の5項目を固定する。`classifications` はrecord_idから分類（分類不能はnull）への写像、`input_status` は合成入力全体、`reason_codes` は重複のない辞書順の理由、`audit_status` は合成監査票の入力判定、`permit` はA/B/Cの各bool。入力の違反を期待どおりFAILにしたときは試験実行PASS。入力証拠が矛盾ならFAIL、必須前提の欠落ならBLOCKED、観測を試みて判定に足りないときはUNKNOWN。
+- 必須の観測票はactorと実処理先、対象のrepository/commit/tree/executionの結び付きを含む。各故障で改変・除去する入力と、追加で必要な票は下表のとおり。
+
+| ケース | 正常対照 | 故障注入 | 故障時の入力判定・理由 |
 |---|---|---|---|
-|AT01|Web版ChatGPT、Work指定なしをWORK-CLOUD-WEBと宣言|CHAT-WEBとの区分差を検出。Work実行の証拠欠落で不正分類を拒否|NOT_TESTED|
-|AT02|Desktop起動のWork、クラウドワーカー確認ありをWORK-LOCALと宣言|WORK-CLOUD-DESKTOPに分類、local誤認を拒否|NOT_TESTED|
-|AT03|Desktop起動のWork、実処理先の観測なしをWORK-LOCALと宣言|local判定UNKNOWN、必須ゲート許可false|NOT_TESTED|
-|AT04|Mobile起動のWork、cloud観測ありをWORK-CLOUD-WEBと宣言|WORK-CLOUD-MOBILEとの起動面不一致を検出|NOT_TESTED|
-|AT05|同じタスクをCodex local/cloudで実施、execution_id/環境証拠を共用|CODEX-LOCAL/CODEX-CLOUDの別レコード必須、証拠流用拒否|NOT_TESTED|
-|AT06|DOTがCodex Cloudへ委任したが子executionなし|委任履歴欠落のためCODEX-CLOUD実行完了を認定しない|NOT_TESTED|
-|AT07|DOT→Codex Cloudの子記録あり、委任根拠refなし|parent-child申告だけでは足りず後続許可false|NOT_TESTED|
-|AT08|異なるrepoで同名タスクを実施し、一方のOIDを他方へ再利用|repository/commit/tree突合で拒否、別repoを独立PASSとしない|NOT_TESTED|
-|AT09|同じprovider・共有workspaceの別actor名で独立審査を申告|名称差だけでは独立PASS不可、共有境界の開示が必要|NOT_TESTED|
-|AT10|再試行で元attemptを上書きし、旧FAILを消去|旧票消去と同一attempt再利用を拒否|NOT_TESTED|
-|AT11|必須actor/environment証拠が双方欠落し、空一致をPASSと採点|欠測を許可せず状態/理由を分離|NOT_TESTED|
-|AT12|生成元と異なる保存先から再取得せず、別パスのworkspaceコピーで監査PASSを申告|P03/P05の実再取得未達。分類PASSでもGate B不可|NOT_TESTED|
+| AT01 | 一般ChatGPTのWeb観測 | Work Cloud Webと申告 | FAIL / ACTOR_CONTRADICTION |
+| AT02 | Desktop起動のWorkとcloud観測 | Work Localと申告 | FAIL / ACTOR_CONTRADICTION |
+| AT03 | Desktop起動のWorkとlocalの観測 | 実処理先を観測不能にする | UNKNOWN / EXECUTION_SITE_UNOBSERVED |
+| AT04 | Mobile起動のWorkとcloud観測 | Work Cloud Webと申告 | FAIL / ACTOR_CONTRADICTION |
+| AT05 | Codex LocalとCloudに別実行・観測票 | 同じexecution IDとLocalの観測票を再利用 | FAIL / DUPLICATE_EXECUTION_ID, OBSERVATION_MISMATCH |
+| AT06 | DOTの委任票、Codex Cloud子実行、親子証拠 | 子実行と対応証拠を欠落させる | BLOCKED / DELEGATED_CHILD_MISSING |
+| AT07 | 両実行と親子を結ぶ委任証拠 | 親子の申告を残し委任証拠を除く | BLOCKED / HANDOFF_EVIDENCE_MISSING |
+| AT08 | 別repoの同一commit/tree OID、各repo固有の票 | 一方の証拠を別repoに結び付ける | FAIL / EVIDENCE_TARGET_MISMATCH |
+| AT09 | 共有基盤を開示した別担当、承認先再取得経路、別検証先の合成監査票 | 監査者を生成者と同一にする（表示名は別） | FAIL / SAME_RESPONSIBLE_ACTOR |
+| AT10 | 旧FAIL票と新attempt、元attempt参照 | 旧FAIL票を消し元attemptを再利用 | FAIL / PRIOR_RECORD_REMOVED_OR_CHANGED, RETRY_ATTEMPT_REUSED |
+| AT11 | 非空のactor・environmentの観測票 | 両方の証拠を空・欠落にする | BLOCKED / ACTOR_EVIDENCE_MISSING, ENVIRONMENT_EVIDENCE_MISSING |
+| AT12 | 承認先から再取得した経路と別検証先の合成監査票 | workspaceコピーを再取得として申告 | FAIL / WORKSPACE_COPY |
 
-## 将来の検証原則
-各caseに正常対照、入力票、期待分類、期待停止、実際の検査原票、exit/例外、証拠参照、担当を追加したうえで実行する。評価用validatorと同じ実装から期待値を生成しない。ラベルが合っても実環境の独立性・保存先実取得・隔離復元が成立したとは扱わない。ケースをひとつ実施しても未実施11件をPASSへ換算しない。
+## 実行方法
+Python 3.10以降の標準ライブラリで `python -I tests/stage0-actor/run.py --log <未作成のログパス>` を実行する。各入力を別processで検査し、exitが0かつstderrが空で、stdoutのJSONが期待値と完全一致した場合に試験PASS。例外、期限超過、未到達も記録対象とし、分母はAT正常12＋故障12。入力と期待値のケース・派生形を開始前に全件照合し、欠落・不一致時はAT24実行をNOT_TESTEDとして記録する。台帳、参照先、独立監査票、receiptの追加対照は別集計とする。期待値は検査器から生成せずに事前記述し、ログに入力・期待・実出力・標準出力・標準エラー・例外・終了状態・時刻・環境・試験ファイルhashを残す。合成監査票の「再取得経路」「別検証先」は入力条件を表す。実際の取得や隔離復元を実行するには、承認と独立担当による別工程を要する。

@@ -1,0 +1,82 @@
+{
+  "runner_sha256": "abd0eaf44ce1f3af021683f54847df2161174491aff5cb35f8e6e69ec2e4b191",
+  "rows": [
+    {
+      "id": "empty",
+      "start": "2026-11-18T10:03:41.229460+00:00",
+      "end": "2026-11-18T10:03:41.292960+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout": 30,
+      "retry": 0,
+      "actual": {
+        "started_at": "2026-11-18T10:03:41.286246+00:00",
+        "kind": "SYNTHETIC_ONLY",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "rows": [],
+        "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+        "oracle_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "test_status": "NOT_TESTED",
+        "preflight_error": "ValueError: empty or invalid case inventory",
+        "ended_at": "2026-11-18T10:03:41.288193+00:00"
+      },
+      "match": true
+    },
+    {
+      "id": "duplicate",
+      "start": "2026-11-18T10:03:41.292976+00:00",
+      "end": "2026-11-18T10:03:41.341003+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout": 30,
+      "retry": 0,
+      "actual": {
+        "started_at": "2026-11-18T10:03:41.331506+00:00",
+        "kind": "SYNTHETIC_ONLY",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "rows": [],
+        "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+        "oracle_sha256": "99d09534093b66630e5b6015556ba56828e4de3649f4914e5c9bb9c781000d7e",
+        "test_status": "NOT_TESTED",
+        "preflight_error": "ValueError: duplicate case ID",
+        "ended_at": "2026-11-18T10:03:41.333541+00:00"
+      },
+      "match": true
+    },
+    {
+      "id": "missing_field",
+      "start": "2026-11-18T10:03:41.341131+00:00",
+      "end": "2026-11-18T10:03:41.374876+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout": 30,
+      "retry": 0,
+      "actual": {
+        "started_at": "2026-11-18T10:03:41.368924+00:00",
+        "kind": "SYNTHETIC_ONLY",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "rows": [],
+        "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+        "oracle_sha256": "4a6e68b80482f625b9e293d41acdc9ee900e2165ebf7384ef200994a8125df6b",
+        "test_status": "NOT_TESTED",
+        "preflight_error": "ValueError: case shape invalid",
+        "ended_at": "2026-11-18T10:03:41.370543+00:00"
+      },
+      "match": true
+    }
+  ],
+  "passed": 3,
+  "total": 3
+}

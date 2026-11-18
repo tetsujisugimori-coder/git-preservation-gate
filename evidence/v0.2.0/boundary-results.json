@@ -1,0 +1,210 @@
+{
+  "at": "2026-11-18T09:27:33.138599+00:00",
+  "input_sha256": "b311399f9faa40ed91e4c1ffe4302a8ff9712b3b12a6cf3f184afd7d4c2cb7c5",
+  "check_sha256": "1f6669d6da1d6b1cf263990454d6fdc5d40e500c20988eef129a802b2b00c63d",
+  "rows": [
+    {
+      "id": "empty",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "array",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "null",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "string",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_artifact_kind",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_level",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_risk",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_mode",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_checks",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_context",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_authorization",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_flags",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_ci_required",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_extra_checks",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "missing_contract_extra_required",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_level15",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_level16",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_mode17",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_artifact_kind18",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_ci_required19",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_authorization20",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_extra_checks21",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_contract_extra_required22",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_risk_confidential",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_context_direct_storage",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_checks_sha256",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_flags_regenerated",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "bad_authorization_valid",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    },
+    {
+      "id": "extra_field",
+      "status": "PASS",
+      "exit": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": ""
+    }
+  ]
+}

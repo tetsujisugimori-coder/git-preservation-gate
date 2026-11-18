@@ -1,0 +1,284 @@
+[
+  {
+    "id": "X01",
+    "title": "Unknown classification keeps contract approval FAIL level 3",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "FAIL",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "LEVEL_UNKNOWN",
+        "RISK_CONTRACT_APPROVAL_FAIL"
+      ]
+    },
+    "rationale": "Known risk-contract approval failure survives unrelated classification uncertainty."
+  },
+  {
+    "id": "X02",
+    "title": "Unknown classification keeps contract approval FAIL level 1",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 1,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "FAIL",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "LEVEL_TOO_LOW",
+        "RISK_CONTRACT_APPROVAL_FAIL"
+      ]
+    },
+    "rationale": "Known risk-contract approval failure survives unrelated classification uncertainty."
+  },
+  {
+    "id": "X03",
+    "title": "Unknown classification keeps contract approval FAIL level UNKNOWN",
+    "input": {
+      "artifact_kind": "zip",
+      "level": "UNKNOWN",
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "FAIL",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "LEVEL_UNKNOWN",
+        "RISK_CONTRACT_APPROVAL_FAIL"
+      ]
+    },
+    "rationale": "Known risk-contract approval failure survives unrelated classification uncertainty."
+  }
+]

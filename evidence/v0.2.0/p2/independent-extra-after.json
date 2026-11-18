@@ -1,0 +1,200 @@
+{
+  "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+  "oracle_sha256": "cb925c283ab1d670d14dcc2a3b60b222be899712ed48d25d2d169462da8b3e9e",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "command": "python check.py < canonical case input",
+  "count": 3,
+  "passed": 3,
+  "rows": [
+    {
+      "id": "X01",
+      "input_sha256": "4f2faf754fcc115b08d597daeb4522e51462f1e750c138b75cde83778fada717",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.490662+00:00",
+      "end": "2026-11-18T10:00:07.518899+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_UNKNOWN\", \"RISK_CONTRACT_APPROVAL_FAIL\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "X02",
+      "input_sha256": "64e2611fd23e19844dea00cfec565415b708c76b414ed0dfd07abb136fc7d8f0",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.518958+00:00",
+      "end": "2026-11-18T10:00:07.543956+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\", \"RISK_CONTRACT_APPROVAL_FAIL\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "X03",
+      "input_sha256": "2ee6c2cf7325ec49bafc4f2a821e98e2ae123d01fc7b895be7a3ba989df58ce4",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN",
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.544015+00:00",
+      "end": "2026-11-18T10:00:07.564779+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_UNKNOWN\", \"RISK_CONTRACT_APPROVAL_FAIL\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    }
+  ]
+}

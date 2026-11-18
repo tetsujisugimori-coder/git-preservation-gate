@@ -1,0 +1,1412 @@
+{
+  "observed_at": "2026-11-18T09:21:53.156225+00:00",
+  "scope": "Read-only connector snapshot. Raw responses not for public redistribution; index contains no private locators.",
+  "sources": [
+    {
+      "source_file": "Loading-museum-agents.json",
+      "response_sha256": "ca4828f0aadbc42c0beae349c718cc5db0cacc81b79fc20ef619b13a479b13d9",
+      "is_error": true
+    },
+    {
+      "source_file": "Math-Art-Lab-comments.json",
+      "response_sha256": "47977e1088e9ee8fd552e3d233dcd94b897238e250b2de16530ce21d67d03829",
+      "is_error": false,
+      "comment_count": 77,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5825552863",
+          "created_at": "2026-11-09T12:02:08Z",
+          "body_sha256": "f0c6a06b74934d05e85c5e7ca728298470c1b17f86b2ae2785437ac7fdfdc3cd"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6746126650",
+          "created_at": "2026-11-09T16:59:43Z",
+          "body_sha256": "18f68afa5d322303d65440627f36ca7832b65b8a1ad3dfd091bb5abda7420c67"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5830894813",
+          "created_at": "2026-11-09T18:46:10Z",
+          "body_sha256": "9a0976380c93461f79f4dca36df3479242a7fe1013524051a68005c772bed3e0"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6753593451",
+          "created_at": "2026-11-09T22:50:38Z",
+          "body_sha256": "e94b3299b063353f44d243fddf2bdbead9ff523a12f676b25a481d0f5af72449"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5842434528",
+          "created_at": "2026-11-10T13:15:14Z",
+          "body_sha256": "fb78449bf3292c6acada0e507577808a4b3567a6e89f0b2cbba7a46c8fd175f8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6771262186",
+          "created_at": "2026-11-10T15:21:26Z",
+          "body_sha256": "1c6bb239530cae274461b5b9dc0b1be428b0b114240d0f10a97726e383d35e31"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5852944140",
+          "created_at": "2026-11-11T02:30:08Z",
+          "body_sha256": "637f096fd8c1563832b3de60cc11e1f423813b1a4154a70b9377c6449623dd45"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6787209883",
+          "created_at": "2026-11-11T04:41:11Z",
+          "body_sha256": "ca4ffbaf9752acb720781785589e1ccca6ab38f80ad94a62e6c9e1607117a57e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5854989138",
+          "created_at": "2026-11-11T06:59:52Z",
+          "body_sha256": "e5e4592b9f4c691c65ad5b09893b410bff31846d2af6ddbc38a69a6eb41bea83"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6791760926",
+          "created_at": "2026-11-11T09:07:07Z",
+          "body_sha256": "fe4c5b41c1b7727185efaf719a12828d474fcef69e2b40c9255b39fef98337b1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5857179468",
+          "created_at": "2026-11-11T10:18:10Z",
+          "body_sha256": "6d176f4695a3506efdb1f8975cb9cb2dfd77b4da1caf891f14ea6ee909a03bd3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6795770952",
+          "created_at": "2026-11-11T12:26:22Z",
+          "body_sha256": "d4a18af413c4b9e44e9bec7f236c1fc270953521ee006743158115109e0b31ca"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5859191700",
+          "created_at": "2026-11-11T13:07:05Z",
+          "body_sha256": "d2d3261363c8a510d5335a94d7789b4c815384b5d402ce89b2afde5034046282"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6799120560",
+          "created_at": "2026-11-11T14:54:32Z",
+          "body_sha256": "04eeeeae18da509f7119ab621dca52292631313db4b5aab24543b318c93b5af7"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5863884642",
+          "created_at": "2026-11-11T18:51:54Z",
+          "body_sha256": "c16e52de88e30930855622bfb40135d6a4c6f66335f4957812914a2edb3428ed"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6806391769",
+          "created_at": "2026-11-11T20:23:09Z",
+          "body_sha256": "718301da668a112506d11786e3e3f6257dede950f66d8fa09d99b998d0167866"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5866092831",
+          "created_at": "2026-11-11T22:24:07Z",
+          "body_sha256": "6dbce70b3ef9ad76d532b51cb1b03a14c152e739663760c5cca048055eb42062"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6810736335",
+          "created_at": "2026-11-12T00:31:25Z",
+          "body_sha256": "2b23a1ef6e73e91955d55766577e23c85823979d841ae76e216b1a58d1c2d6b8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5867375529",
+          "created_at": "2026-11-12T00:53:24Z",
+          "body_sha256": "8935489eab03fa5bef43bc64d4b9b284751602516b128a3ed75d94359b22bbf9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6812866845",
+          "created_at": "2026-11-12T02:46:37Z",
+          "body_sha256": "945713eb8de7202c1d975c5ccca636b336c6e40726ab01063b9acb8f26cc4160"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6824558564",
+          "created_at": "2026-11-12T13:11:58Z",
+          "body_sha256": "c70694be90bc6b8c2bbd82b0373113531d24d82f1ae352348976f61d2316095d"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6824899877",
+          "created_at": "2026-11-12T13:27:07Z",
+          "body_sha256": "9def582369f873160924a910346f1d15e596b4cb2bf03b525721b20f0106fe99"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6833469926",
+          "created_at": "2026-11-12T19:16:10Z",
+          "body_sha256": "c7b5568fa8af2a113936ad064945b9e9690a9c4dd8873d58dc453039b4a19cbc"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6834982101",
+          "created_at": "2026-11-12T20:23:21Z",
+          "body_sha256": "2eff1f3f59c1baad1d2647b05c55bd26a8a234729db83c570366643fa73aafc9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6835029636",
+          "created_at": "2026-11-12T20:25:32Z",
+          "body_sha256": "79bba092974d473d1065797be17a566bb5578d23bd667426cf5133977f570f86"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5890433937",
+          "created_at": "2026-11-13T11:49:23Z",
+          "body_sha256": "431c8ed42e3514a048cb3fc5c3bae736d198e277adeafc67c52717fd9b8325d0"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6854799397",
+          "created_at": "2026-11-13T13:48:05Z",
+          "body_sha256": "c2c24da9fd59e4731ede33074e7ae75d93be120d524f3c046c49ab3bb41d5a9c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5898515397",
+          "created_at": "2026-11-13T21:48:13Z",
+          "body_sha256": "278fa9e4c63dcf7771565b0f64e3dfa007b337c12a5f468bdcfe6831db1ecf6f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6866442032",
+          "created_at": "2026-11-13T22:25:39Z",
+          "body_sha256": "fcbd852895be9d78b31fbe3dca69e85190bb598f047308146e38815fc0e83324"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6866473499",
+          "created_at": "2026-11-13T22:27:16Z",
+          "body_sha256": "afdf38c5e2a1536d3bf585d1d4022ecf9ed1b47d86b658ade03b6c2934803a64"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5904109330",
+          "created_at": "2026-11-14T11:32:16Z",
+          "body_sha256": "84b37145a6745374f146a5e79ebab739768b90566a69b3df9dc08bcddcaf7b3f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6876942156",
+          "created_at": "2026-11-14T12:00:16Z",
+          "body_sha256": "0e64b17e9ca74e1fb72351055a693bd2710b726a99d9397d3f13c860d9fbbcbf"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6877116134",
+          "created_at": "2026-11-14T12:15:03Z",
+          "body_sha256": "0f49a21acc986aa59559d4341cbbab5c54618e9a83d1cf08ce46938dee4f6761"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6877163244",
+          "created_at": "2026-11-14T12:19:12Z",
+          "body_sha256": "ba0612def4c801ee7bd2697b76fa080f475d199b2c80fcff197e018d1dfe5a12"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5906925661",
+          "created_at": "2026-11-14T20:25:33Z",
+          "body_sha256": "4b3662c066630ac3b303718562731f5c9139e6f28c268f92d49bd7200861f20e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6884069253",
+          "created_at": "2026-11-14T20:55:30Z",
+          "body_sha256": "1d3c9bd107e2b94816d295eee51343f19eb688c8251c97d8dcaf78987e3c6b12"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6884083311",
+          "created_at": "2026-11-14T20:56:42Z",
+          "body_sha256": "3ba512dec0545a5d525f22602a2b20c75cb96bcff3584842a333b008c9107322"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5907277825",
+          "created_at": "2026-11-14T21:40:52Z",
+          "body_sha256": "439d7c04f74ec3b385dae778811b3568104e4d2d078b3649230db28b444612c8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6885057829",
+          "created_at": "2026-11-14T22:17:16Z",
+          "body_sha256": "03a851b54a9edfc24f1cd89f57b77256974b229aaef6e409bfb8a3d776e4ccb7"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6885076427",
+          "created_at": "2026-11-14T22:18:50Z",
+          "body_sha256": "b1995ba2613e073a2ba7e7129adf507009126bdd844722b61fad54d836eefca1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5910307815",
+          "created_at": "2026-11-15T10:47:21Z",
+          "body_sha256": "ce2c4c96b696ae065eda664edd2328072d3bfa010b9d4473285872511c0ec0ab"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6893607849",
+          "created_at": "2026-11-15T11:26:05Z",
+          "body_sha256": "e657a615cf4ed57d67522a3a1d5c792c3d2070654af86c52d8af0f93d3fd80df"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6893608280",
+          "created_at": "2026-11-15T11:26:07Z",
+          "body_sha256": "33e89c10c979296f01b2fe1206c47c4114064fd3b1f2311845439b548544e38e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6894212842",
+          "created_at": "2026-11-15T12:19:41Z",
+          "body_sha256": "19d129222b205e0b0b29ebee524334ee6d56109fbe1c625cdee743b02db05a5f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6894256076",
+          "created_at": "2026-11-15T12:23:21Z",
+          "body_sha256": "9c9e638051ae7d679caa51ca36db053df28596a58aaa3fae2fa3ae9a96f945a3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5910763802",
+          "created_at": "2026-11-15T12:39:13Z",
+          "body_sha256": "3c5a9771f79e00057be26ddb9d32cce2e8d1b9d1b22184497b775adb9212c35a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6894862594",
+          "created_at": "2026-11-15T13:14:39Z",
+          "body_sha256": "a48408dbddb16961f820432af46f96f837a431b9f39ff20ff056b2bb75411d82"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5910958837",
+          "created_at": "2026-11-15T13:31:50Z",
+          "body_sha256": "09b15a0e12bbf4676b8a7ee3dcc671bd9289088d287fd14782dd6a0b6e283c44"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6895858568",
+          "created_at": "2026-11-15T14:16:52Z",
+          "body_sha256": "d0a5c53ced25265d81e4b8147fcb015694fcc8199b45dce52c15ebbc9de19652"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5911250527",
+          "created_at": "2026-11-15T14:28:29Z",
+          "body_sha256": "50729695dc0594db34c4c9f84b4e4d86cd3613993e80bfdd71f54914bae0679b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6896525022",
+          "created_at": "2026-11-15T15:02:15Z",
+          "body_sha256": "5416f2e1016bee00a6302a79af309babce56a6dc1ebee7c9a1fe4fb177ce1d4d"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5912274938",
+          "created_at": "2026-11-15T18:53:01Z",
+          "body_sha256": "9eb5e10bc2a58c0fa27cdc01634dcce69aa761eacb9a4bcd0f1879e5caf422a4"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6899784821",
+          "created_at": "2026-11-15T19:13:47Z",
+          "body_sha256": "a19ef784fa3befbeeefa5c81d5a535047adef4583d62cb2d070870c142ab07d3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6899818337",
+          "created_at": "2026-11-15T19:16:03Z",
+          "body_sha256": "609e7985efaf3ffb9dee8bb2a539ad4efd436e02a59292a3218b8811b229d647"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5912904989",
+          "created_at": "2026-11-15T20:59:09Z",
+          "body_sha256": "39a665c7587ab0d911e32599919caf628685055079486573a767dcbf61a56f22"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6914592362",
+          "created_at": "2026-11-16T11:02:15Z",
+          "body_sha256": "07869d1df5178631436a4d08abfb1966bf74ff44825374cc537a3d4f3dc2ee8b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5919278380",
+          "created_at": "2026-11-16T11:32:28Z",
+          "body_sha256": "60473d9834bbdb6ceceafbba10647fbc47c2a31d10030a5e34a439b12bf0011c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6915918103",
+          "created_at": "2026-11-16T12:05:28Z",
+          "body_sha256": "fa0faf4b4c514ce670b3f5768a4c06c1c9e6aff36f83ef7599a63669ab939177"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5920066214",
+          "created_at": "2026-11-16T12:37:06Z",
+          "body_sha256": "6e4c1c542e5bd14ce89a6ab2fb67f37614397e3dad72b5686e6c335b7ea570a7"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5921799568",
+          "created_at": "2026-11-16T14:39:02Z",
+          "body_sha256": "99d7fdba4a8f1a5a9fb8fa7ea451403f789b9eb2f2077e26b9e9963fdb6c2290"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6946616831",
+          "created_at": "2026-11-17T11:22:09Z",
+          "body_sha256": "1ded5b74cd19e13f7a92e7d7388b986fc3c072e854e72cf997c987b3cec5d7d4"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5938640789",
+          "created_at": "2026-11-17T12:45:43Z",
+          "body_sha256": "c05621f5b4b7270957662455c7965e4e3550704bb4a214625f12dc592a5659f8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6948524872",
+          "created_at": "2026-11-17T12:50:21Z",
+          "body_sha256": "7f81320a0414f3f616c58fd168bb8c6f4133471fbb264bb7422103a8b2583c61"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5938789436",
+          "created_at": "2026-11-17T12:54:56Z",
+          "body_sha256": "67dc8090aea09fe33a46231249c53676670964c3852515b5486c35e5115440c2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6949617727",
+          "created_at": "2026-11-17T13:36:36Z",
+          "body_sha256": "be78d5b8acde4ba0a1096c3f892279fd26a62b20cb74494dfc52d4b8e5978e58"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5944800262",
+          "created_at": "2026-11-17T19:05:22Z",
+          "body_sha256": "cee11f586019de14cad497b00ecdeeb99c574c6ff590f1ddaf83cea4eb04b88c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6959887673",
+          "created_at": "2026-11-17T20:21:23Z",
+          "body_sha256": "b370728870b74431e222a68db3fffc8927e7fa943b4a6d85dbb465e544d2a25b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5946479953",
+          "created_at": "2026-11-17T20:56:15Z",
+          "body_sha256": "0a6296daf9de60316be5d0d95512e31090e749b36bce9f2511a05fee333e3b60"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6961677807",
+          "created_at": "2026-11-17T21:35:50Z",
+          "body_sha256": "4d41c4343e2e9633940cb99bff35fa6cf7872422b82b08d99e51e0873c98b3d4"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5947198282",
+          "created_at": "2026-11-17T21:50:46Z",
+          "body_sha256": "041a5df0924d3de91c5c52a9403756e99599f78df4ccff905cefdca9262e0ce1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6962344910",
+          "created_at": "2026-11-17T22:06:00Z",
+          "body_sha256": "ab0604fb924d8483b3ed12abd988828e9bb493a6ac740bbe161f112f45a4bacc"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5951486598",
+          "created_at": "2026-11-18T05:55:19Z",
+          "body_sha256": "954715739b3729ec2dbafecf9b44f970b8bbb4d9e9f776b352bfddf13e61d233"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6970805292",
+          "created_at": "2026-11-18T06:17:20Z",
+          "body_sha256": "c5b1edb1263727e6e88c5c993887baf8295600ab24fb51f48ca78712c60d9d42"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6971007825",
+          "created_at": "2026-11-18T06:29:14Z",
+          "body_sha256": "94443197a35b962c7309acaffc9eff8bb00f4f87c31eb7f3a42bfb9e8c99b39e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5953175587",
+          "created_at": "2026-11-18T08:37:34Z",
+          "body_sha256": "db0713800d3086a71e275cf1d5b60f0b1c324c77f031b8fc1742c649993c6228"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#pullrequestreview-5953307092",
+          "created_at": "2026-11-18T08:48:12Z",
+          "body_sha256": "a3c1fcb8355219d21d43c9f0a415f2098ec29e07fa455918d9ec2131fe7d0ec1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/pull/44#issuecomment-6974227212",
+          "created_at": "2026-11-18T09:17:04Z",
+          "body_sha256": "5959f7f6c2f95e127709e8a418320cfa3345a44344888b6abfea85132e5e2e51"
+        }
+      ]
+    },
+    {
+      "source_file": "historical-source-atlas-agents.json",
+      "response_sha256": "70b1adf3e484644f60253d023e1f20683e665032149da6c8ad4f2ed3b5b1e7f6",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/blob/main/AGENTS.md",
+      "git_blob": "cc844df685f22c4d9da4bef784fa99f0c9a06314",
+      "content_bytes": 3080,
+      "content_sha256": "90701e05e48684f54e3a82aca40ca3fd136dcfddf9685fab7571530feebd940f"
+    },
+    {
+      "source_file": "historical-source-atlas-comments.json",
+      "response_sha256": "a6394eca10df90afe74136ffeb4dc970879791bbb6448ede678650f839c13b72",
+      "is_error": false,
+      "comment_count": 23,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5912312048",
+          "created_at": "2026-11-15T19:00:48Z",
+          "body_sha256": "16dbd7aef3b43473256599b1b1fa886268ccd30f566160cc7af36475a4a4af6c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6899628561",
+          "created_at": "2026-11-15T19:02:39Z",
+          "body_sha256": "fcfe4000794d064637c40bad2fecf02c4995ab2d4d217c917d986555bbd9fdcf"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5912417314",
+          "created_at": "2026-11-15T19:20:25Z",
+          "body_sha256": "d873214f3f8cdda9f08367add1d6861a1c2d0a39d0a2a0db1120a7e98e5237a1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5913062177",
+          "created_at": "2026-11-15T21:40:20Z",
+          "body_sha256": "b641ecdea0834d0984a444cdb3ccd7534c28e44c257ffc09a65c25d3de1b5344"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5918968921",
+          "created_at": "2026-11-16T11:06:57Z",
+          "body_sha256": "6a0f039c7007ff2b13ec5f590ee34c0c147df1eee68c448c92e3a38028d796c0"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5919580472",
+          "created_at": "2026-11-16T11:58:05Z",
+          "body_sha256": "dd799f41a2aee4922da5f671b68f29720b4d98ad09c55004b494acead8c601a4"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5920069198",
+          "created_at": "2026-11-16T12:37:19Z",
+          "body_sha256": "890d3bd50e0af8ec61091f31673750745df6c512d1d9603bc3e04cb05070c9c1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5922091789",
+          "created_at": "2026-11-16T14:57:55Z",
+          "body_sha256": "00d89c2a89571598350fa219b21d57738c2e1b0f004778c29d3cd36da361d171"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5927296392",
+          "created_at": "2026-11-16T20:44:19Z",
+          "body_sha256": "df22bc6e250091163dc7df958bfd69ab91d3e9c6ee23fd1a54838c6cfd22a506"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5935673637",
+          "created_at": "2026-11-17T09:09:14Z",
+          "body_sha256": "434ed2179536d9c38cc56e23ce9f570b170f05940aac13fa71ed7000e4f43964"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5937669837",
+          "created_at": "2026-11-17T11:34:11Z",
+          "body_sha256": "0e0fd098fbfd9cdc77c8585fa068161c98cc25480a44af7f542631864347e1da"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6946887909",
+          "created_at": "2026-11-17T11:35:01Z",
+          "body_sha256": "3df910ac5e0734853e9dfa2180aad57aaf1735f7db7144867fa910a9c653d94c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6960199035",
+          "created_at": "2026-11-17T20:33:12Z",
+          "body_sha256": "624ea324f24582790a37bf8e663019bb56bae5cd9f5b764a4438718afd7ccb58"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6960695454",
+          "created_at": "2026-11-17T20:53:23Z",
+          "body_sha256": "ce332229daf00f6a6806ef883fd5a484f886979b71116b2a679d9a1eff3c451b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5946446577",
+          "created_at": "2026-11-17T20:54:03Z",
+          "body_sha256": "7da85347f7a321c4d2deb70b3801d23f8ea794993de567fa34d82b5e1145864a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6961240364",
+          "created_at": "2026-11-17T21:16:13Z",
+          "body_sha256": "aea7d6cc402437354a691d1a5d8058c325e2cf3b0dd1036db19740612cac0d6a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5946780254",
+          "created_at": "2026-11-17T21:18:22Z",
+          "body_sha256": "1367660cdb5b3f91e014e93f37ef8d1504bde2d077c5eb4506b94330b5e6e07a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5946966251",
+          "created_at": "2026-11-17T21:32:50Z",
+          "body_sha256": "8912374342520ae2e870f8b2339e90df94ba01312b6b2acefdda9fa8101b1f59"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6962114578",
+          "created_at": "2026-11-17T21:55:25Z",
+          "body_sha256": "4915643fa7272ebe4d09f9389819bc28f4539f019813831c99f4948d164b3855"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6962683611",
+          "created_at": "2026-11-17T22:20:31Z",
+          "body_sha256": "9f3528553f9cf1b5cb32522fc8da781b2ef2f5b5d3866055edc2c80441eb91e9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5951557212",
+          "created_at": "2026-11-18T06:03:52Z",
+          "body_sha256": "28e4cb61521595bbcf8f18f71671a50d184e6d6d6814396e980ebe704c5891c7"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#pullrequestreview-5953030718",
+          "created_at": "2026-11-18T08:25:08Z",
+          "body_sha256": "e056d11235f12bcc4322860154833a435ce567b6d2cd8d286143d4cd7d6ca6e8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/historical-source-atlas/pull/36#issuecomment-6974246359",
+          "created_at": "2026-11-18T09:17:57Z",
+          "body_sha256": "8ea3c6e303d3efc9df85984f93a4e0ae13caf27c19ed3eac6a48f6f1b891ebea"
+        }
+      ]
+    },
+    {
+      "source_file": "intelligence-ui-museum-comments.json",
+      "response_sha256": "cd5d148307c0137ad36ab529e7a50275a429a4ac8b6e7bb0b812cb9c5c243163",
+      "is_error": false,
+      "comment_count": 2,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/69#issuecomment-6947404245",
+          "created_at": "2026-11-17T11:59:28Z",
+          "body_sha256": "0d48705617dc888cf3f5eb7a1148bbbf5e54e3a77d8b357ba749ff36f475d326"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/69#pullrequestreview-5947686489",
+          "created_at": "2026-11-17T22:28:28Z",
+          "body_sha256": "a7864920d10ab0bbb3bbd82ede654a70c207778281d58f0ddfb112fc186425ce"
+        }
+      ]
+    },
+    {
+      "source_file": "Loading-museum-comments.json",
+      "response_sha256": "dbcb8c271e3df9fc12be45f35b54f22bf6a42142224897a445cd18fcd916e04f",
+      "is_error": false,
+      "comment_count": 82,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5849342609",
+          "created_at": "2026-11-10T21:02:57Z",
+          "body_sha256": "3fbec390577b701f5a1baa7e1fd9d6998637e49832c8fc49d7c142ec3b3f82c5"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5849699209",
+          "created_at": "2026-11-10T21:26:58Z",
+          "body_sha256": "ff7f5563bb72c1bf25af68c02c94c4d5da931e0b1d58bfe1569f277831ebfb5e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5850310030",
+          "created_at": "2026-11-10T22:12:37Z",
+          "body_sha256": "c5b2db7ff2aa95f4ca09d3704d026121de7b9951547a3663e938b14544624f30"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5851710539",
+          "created_at": "2026-11-11T00:34:00Z",
+          "body_sha256": "d61978042f0c2f2a17fe8169edd2aa55853041d0aae50d106fdecbc1f6d9dcf6"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6784718101",
+          "created_at": "2026-11-11T01:56:34Z",
+          "body_sha256": "d7d7e3f607f954d5ca66956e95b2a9a94a0f38de74e97e0a6fc4957b1c8c0e4d"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5852641739",
+          "created_at": "2026-11-11T01:57:16Z",
+          "body_sha256": "f9936bd13e7b03f32811c51d02ab1836564f8bc4ae9c9d9190a3662f9d915524"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5854688317",
+          "created_at": "2026-11-11T06:22:31Z",
+          "body_sha256": "594a19aedbec30508b814f35a4ed90451b9d3fb4d80bdb3d7eca4923773e93ba"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5855099220",
+          "created_at": "2026-11-11T07:11:20Z",
+          "body_sha256": "05ed06f2f389bca49bd088ee0bd0ff7821f38382f7ee0c004d2ad234146f145b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6789691253",
+          "created_at": "2026-11-11T07:20:19Z",
+          "body_sha256": "80cb3801171781830a565bf19ddff6f0aff34246c9033ad9e9812677e50d7aa2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5857404440",
+          "created_at": "2026-11-11T10:36:30Z",
+          "body_sha256": "18e54613f471f2110e7facf1edcd4d0e87dd9356df2194387574466d4cac8b93"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5858254598",
+          "created_at": "2026-11-11T11:50:13Z",
+          "body_sha256": "0475f4e5d763d5fb6d353a638a4029b17ab4c41aff72ca103059b33bddb66c8f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6797043498",
+          "created_at": "2026-11-11T13:25:22Z",
+          "body_sha256": "06b97fbeffbdb1847e8979c8f84ac60033cfd99da8f94141c52cc39215b30d1c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5867116798",
+          "created_at": "2026-11-12T00:19:21Z",
+          "body_sha256": "bc1744a9f5d27d6c00cf74fa9d2cd4ca556623107a74f612260bba782f98a30a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6810736996",
+          "created_at": "2026-11-12T00:31:28Z",
+          "body_sha256": "0ee9d784674e9c5c5acd5f948d6c7faea600b0564498e177ed3cf92c52a22cb8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5867486158",
+          "created_at": "2026-11-12T01:08:06Z",
+          "body_sha256": "8a6955e0ef7b73c8942e022dc4803956f0c3a19989348838f26b5c8e7e3b73e8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5867670214",
+          "created_at": "2026-11-12T01:33:30Z",
+          "body_sha256": "4c811db2248faef56fdf1e9c59f58a312fe7d36280995adbcb265a8d706afa6c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6824713757",
+          "created_at": "2026-11-12T13:18:50Z",
+          "body_sha256": "d24521121704b0881d9035d85a9d156bb85743ceae52b264ddd63ccb3ee4f3dc"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5880459754",
+          "created_at": "2026-11-12T19:08:53Z",
+          "body_sha256": "af18d536a9c195d0425a2b236620fd85bf39b9ec7b46f83409dc0dbe72ede671"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5897920175",
+          "created_at": "2026-11-13T20:54:08Z",
+          "body_sha256": "27f5928868a9de278a8fda17a78eb1350a78b6106e06bf9539bb45467bd2df09"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6865654009",
+          "created_at": "2026-11-13T21:43:32Z",
+          "body_sha256": "7a5a05d482743b25536d0201355ec23f44703b7d53ab521b4b89b8176e5b74fb"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5898473429",
+          "created_at": "2026-11-13T21:44:37Z",
+          "body_sha256": "09a6760010ee4d6f32e07a906a71b16fdd6b5e7fb24db617945baaf6ddd742b1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6865732061",
+          "created_at": "2026-11-13T21:47:33Z",
+          "body_sha256": "4230eef09fde17d2bbe69aeb63c1643bf25447ac4d5407295f469e8823b3df26"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5904088962",
+          "created_at": "2026-11-14T11:28:44Z",
+          "body_sha256": "368986ad7509da9093eee83d617d965f3efc76fb717466250097378ec56afc0c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6884382090",
+          "created_at": "2026-11-14T21:21:19Z",
+          "body_sha256": "8d0cfcaecb561d617f2c9db516cde03896c3cdd71dbda77b6d2a510ff5a757e6"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5907290109",
+          "created_at": "2026-11-14T21:44:21Z",
+          "body_sha256": "441feadfbb60f6815a5e0eb82935c048ab039d45f08bca9a6c18c913ee2e8cac"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5907723408",
+          "created_at": "2026-11-14T23:05:45Z",
+          "body_sha256": "2eb1db6ec7570b5299dbafbf0d88675e261236e44eaaeae0db93cde6475d99e1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6885643256",
+          "created_at": "2026-11-14T23:06:56Z",
+          "body_sha256": "3e85fe1e6824f0db1c9388e38891432916797a084de993396f39ded72deebcb9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5907847827",
+          "created_at": "2026-11-14T23:24:51Z",
+          "body_sha256": "72c4e3a22b22c80e9e14435b9ea52d1de8773c475be06df4f5d0d24a3f67295c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6885907897",
+          "created_at": "2026-11-14T23:29:26Z",
+          "body_sha256": "d9d7c291de15918833921fd5522088cadbef80c616fe1b7d68bd0c0838b3c05f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#discussion_r4576228920",
+          "created_at": "2026-11-14T23:39:54Z",
+          "body_sha256": "b30738102d103aebe2feb8eadf17b69046c80ad69ada27e22d3c3bc09f7938ae"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5907926507",
+          "created_at": "2026-11-14T23:39:54Z",
+          "body_sha256": "75322a7bcbe839febadfccc6f2cb53d24c199599633c2f13e5495813b04d3534"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6886119379",
+          "created_at": "2026-11-14T23:48:23Z",
+          "body_sha256": "8232cb7d298f3e0ba5e45d465ab9966f451511f94e5ff7385e5c9d22e2d61b98"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908039058",
+          "created_at": "2026-11-15T00:05:56Z",
+          "body_sha256": "cf8835f0e6dff36f4e4f10e209813444a064364026bb7007644c493e7a977402"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6886414568",
+          "created_at": "2026-11-15T00:13:14Z",
+          "body_sha256": "0c12df5bb2528a5f5123a821c40c85448000a7b89f02282a3bfa0ef1f6b44693"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908190473",
+          "created_at": "2026-11-15T00:38:01Z",
+          "body_sha256": "a51a9f25e9b3ead263f6fa8b43c55d829e1e25d28c16a5e1fe7d2895912047e1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6887065314",
+          "created_at": "2026-11-15T01:07:00Z",
+          "body_sha256": "d429dfffccd781b46a92764569440df2f4035521e4c3914afa3592545fc066f8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6887448084",
+          "created_at": "2026-11-15T01:41:21Z",
+          "body_sha256": "7cb1a359e4b065f2033d62ca64f4df6c4503f428228f2a3d8469514377fa2420"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908505760",
+          "created_at": "2026-11-15T01:54:15Z",
+          "body_sha256": "37ce47b1b817ca70128a1d437b65761e73a3cbace5040add48b3b9b7546324b3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908620200",
+          "created_at": "2026-11-15T02:32:07Z",
+          "body_sha256": "b9eeac7ddd01b43e6d4b4d1031fd6ee48d8aa8c7eacbeb624143f6df201d6430"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6887998670",
+          "created_at": "2026-11-15T02:33:37Z",
+          "body_sha256": "b8824edcf8efd4088498ac7fa617bdb60a6db3dec57f06f48f2e06b0d8533986"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908691619",
+          "created_at": "2026-11-15T02:43:57Z",
+          "body_sha256": "74e34418fc645173bb2ccce9f88ca554780ee27310e97fadbf43397f1fa54e14"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6888115142",
+          "created_at": "2026-11-15T02:44:47Z",
+          "body_sha256": "72ea3277bcee8703d4bcee6e3a854a845b080eaec7354f8c4512117eeac2051f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908798231",
+          "created_at": "2026-11-15T03:11:29Z",
+          "body_sha256": "401de290babeecfe39fc07fe031df8a77e23fa67f6c2bc19e03ebdef3d789534"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6888397675",
+          "created_at": "2026-11-15T03:12:20Z",
+          "body_sha256": "1a7e0d9b8be617573cce64ba8da67de459afdcd69af40476662b8a789d972c00"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6888431660",
+          "created_at": "2026-11-15T03:15:37Z",
+          "body_sha256": "54d3373c4396772ef23bf99baf4919c47e5d763d55d034c0c93d202106497b15"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908837572",
+          "created_at": "2026-11-15T03:26:03Z",
+          "body_sha256": "80328b01ea13b1abcddf19110e494eaff27163435dbfb6d1df36ef0934a0174d"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5908930981",
+          "created_at": "2026-11-15T03:56:31Z",
+          "body_sha256": "79e1c522654f7a350522938608fc827877921feea90473b3b0b9e3be307c7ee2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6888851936",
+          "created_at": "2026-11-15T03:57:10Z",
+          "body_sha256": "521c598b35fed182cc73f5c7f7eb0c44afac21b10d17c70c1b74a6ad1442fee3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6888863210",
+          "created_at": "2026-11-15T03:58:20Z",
+          "body_sha256": "c30b1fb9a7d979890263f1cb1f2cdfac104ff20dbcec715e6c0e30464747afe3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6889166865",
+          "created_at": "2026-11-15T04:28:30Z",
+          "body_sha256": "0c2d8f0a679b858b47a06761b91319ff97489fc4320aefcaca5b81a64969153f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5909931999",
+          "created_at": "2026-11-15T08:55:27Z",
+          "body_sha256": "6ed891016b855e1e8e4b1371e3052fcc6db0649ab2ba9927c081bc3005772ca9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6892105226",
+          "created_at": "2026-11-15T09:06:55Z",
+          "body_sha256": "9b97fa3204db1e0db7ab89aa95f9c4101461af2e9e8b7060262059f65c989dc5"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6892788500",
+          "created_at": "2026-11-15T10:10:04Z",
+          "body_sha256": "8a552f6c9857fb856d8e5e853f536e2c2b3fdf514f119b25dc088c367bd34219"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5910254653",
+          "created_at": "2026-11-15T10:30:54Z",
+          "body_sha256": "31bd4c2a97fe35d82505192145e47aa91716740ee87fe7a999ab099841cbf60a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6894003430",
+          "created_at": "2026-11-15T12:01:49Z",
+          "body_sha256": "b6863bd6368ae1df1c5af66776eb5ae600ee96458a9c2157186526b6d684b7cf"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5910687316",
+          "created_at": "2026-11-15T12:25:11Z",
+          "body_sha256": "add370cef030f9746ff31f15e6cf3642016c4c13fdedaf4bf285a0b5c021d7f0"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6894922748",
+          "created_at": "2026-11-15T13:19:42Z",
+          "body_sha256": "e70e1b418eb824c386fe367a3b72f90f1c897304606266abffc0d6e1b90bf8be"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6894923007",
+          "created_at": "2026-11-15T13:19:43Z",
+          "body_sha256": "79b8354e6ef8f40add1b66133a763f8685e216daaaa90092e12774710a5f43ad"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6894992627",
+          "created_at": "2026-11-15T13:25:32Z",
+          "body_sha256": "32c4456b337f7d18ea6643c948d3e0afad96ed82b1067dd2f2707cd36c38100a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5910995462",
+          "created_at": "2026-11-15T13:40:41Z",
+          "body_sha256": "eefdf01e5f12c985a844daa37179c76b08ad0ca5891f81c4ba2abf4c3f911151"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6895656541",
+          "created_at": "2026-11-15T14:08:24Z",
+          "body_sha256": "2a7ab0850a6fada2035a419ff65a6607f66082b6e6468bc659032c9e5c767554"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6895657138",
+          "created_at": "2026-11-15T14:08:26Z",
+          "body_sha256": "3e61f82fac4dff8da0c1009138de3931865ae7d129e765ce06832e9554a7472c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6895657837",
+          "created_at": "2026-11-15T14:08:27Z",
+          "body_sha256": "32d89302543c3eae945c05d681cb9827398611f830a19d5fcb8ba8489119e137"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5911239035",
+          "created_at": "2026-11-15T14:25:25Z",
+          "body_sha256": "562fc7b13a796166a8461c7a55f0e78bba9112b3644e7f2ffdbd8afbfeeea7be"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6896488497",
+          "created_at": "2026-11-15T14:59:20Z",
+          "body_sha256": "e02fd5ab5505e53a135d6d5e49ea6dc86e7e1d20ebf4ff1511d6be1e283c82cf"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6896705430",
+          "created_at": "2026-11-15T15:16:17Z",
+          "body_sha256": "7f2c49176c240e7b0e3478b71015dfed04868a93aa5c3b356d4e8610a5a98620"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6897074919",
+          "created_at": "2026-11-15T15:45:10Z",
+          "body_sha256": "f1a44efdbc40e9b5b7f7c7a75cfba44db349619a8b43dddb2e9d6b9bda817e40"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5912338756",
+          "created_at": "2026-11-15T19:07:59Z",
+          "body_sha256": "9fc3dba2bb83b4f74c1ed564bbb21001e549363c59ff2a847ff537adb462353c"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6899970542",
+          "created_at": "2026-11-15T19:26:11Z",
+          "body_sha256": "6507ca897518240cb314c9763672a7a63a7f65ec5c6577259857b8e50382fcd6"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6899983261",
+          "created_at": "2026-11-15T19:27:07Z",
+          "body_sha256": "1f6d9dbff8b381c89418331ea5902eb7744154cf6503163f1b3a6db3653da9fa"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5913038227",
+          "created_at": "2026-11-15T21:34:44Z",
+          "body_sha256": "b52533f2719b1e7a3237c9460984687f12963c13dab4ec7a02c2fae89f1f77c2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5913641852",
+          "created_at": "2026-11-16T00:02:35Z",
+          "body_sha256": "b7a18e68176e77779682821d4f7dec7dc1f7350425f1e66c20cafa34ac814cf9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5914778004",
+          "created_at": "2026-11-16T03:42:16Z",
+          "body_sha256": "e45970245adac1167c3e8b10633aa9251872ef1368f9adbaa8da6900862f9559"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5918715368",
+          "created_at": "2026-11-16T10:46:54Z",
+          "body_sha256": "11c9dce0e2b9ce941352129ea429a31a45b9c7a5fb117daa423dae25825fc150"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5920711809",
+          "created_at": "2026-11-16T13:25:29Z",
+          "body_sha256": "c6bab82a233cff52ad691b2a49ee6eb2829c6ad7d7bb69fafa99f8e14a431b09"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5927145198",
+          "created_at": "2026-11-16T20:35:00Z",
+          "body_sha256": "b60eafb9f11835ea5a56143b1cc31b30e496b6f40458e4c24a6cc310cd259718"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5929090166",
+          "created_at": "2026-11-16T22:36:45Z",
+          "body_sha256": "7a6f33081ae26e31b469cc23809588888625809e864d6fb5d1d0cbe37afcd5b7"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5929249815",
+          "created_at": "2026-11-16T22:47:37Z",
+          "body_sha256": "a19941a86d279f3855fa07984b87aa044bf49fa2e07075dbe348df0c5cd2be16"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5937096867",
+          "created_at": "2026-11-17T10:51:58Z",
+          "body_sha256": "bc17a1f23576c8f95e1de607576355be296e820c792bb47f0c187a1b6e3388aa"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5937489424",
+          "created_at": "2026-11-17T11:20:00Z",
+          "body_sha256": "f70e1e1de5754a2a4aa99082c0619b1aa094ba358c214a817dd07b52927a2ff4"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#issuecomment-6948323239",
+          "created_at": "2026-11-17T12:41:09Z",
+          "body_sha256": "b69cac9c167a6a0099bb18486d5b21d5579f87c44c82eff90e4ef229f72a4a55"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/Loading-museum/pull/88#pullrequestreview-5946944597",
+          "created_at": "2026-11-17T21:31:05Z",
+          "body_sha256": "97c9a7e38e616900c76906a63411c2483bcf8131ca780f3a66cb89d0b1c74a00"
+        }
+      ]
+    },
+    {
+      "source_file": "yamanaka-historical-terrain-agents.json",
+      "response_sha256": "a504aa77d7ba67d595ecc6bed3e8e546242f1e76bb19f4e05f7e3854606db10f",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/blob/main/AGENTS.md",
+      "git_blob": "5f10894a64580bf6245be10e73dbee6ee930ac41",
+      "content_bytes": 7169,
+      "content_sha256": "936ca98265253369b09b4a113f57907156076359b9a77f774444f62192789afb"
+    },
+    {
+      "source_file": "intelligence-ui-museum-agents.json",
+      "response_sha256": "07a0aef23272c0a6f79bd20b49b46bd60774248304173ad31b00d583904ae143",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/main/AGENTS.md",
+      "git_blob": "4e55bdcc496d4aac31572ea9aed75faaec7996bb",
+      "content_bytes": 1468,
+      "content_sha256": "4156e739b8e4995c64203c73ed6242a26e6b319beab40b831caeabeb0c4ac654"
+    },
+    {
+      "source_file": "castle-3d-parts-comments.json",
+      "response_sha256": "17e4ad7fdcabe89f9dd30924f0bbc27ca625b10b6915e641f307d32215b9ed88",
+      "is_error": false,
+      "comment_count": 15,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5913342286",
+          "created_at": "2026-11-15T22:51:03Z",
+          "body_sha256": "bb226e9d6070adf5149a6ed0698f09997e5ef8aa521ba4371ffb232f8530e052"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#issuecomment-6902861205",
+          "created_at": "2026-11-15T23:03:41Z",
+          "body_sha256": "8a345366f082eb71af96c85685b86c77efbe043a015c14e3dfa2ad0c99f61136"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5913483729",
+          "created_at": "2026-11-15T23:26:32Z",
+          "body_sha256": "bc1e303f7d960f6eee47f6cb8d5c6678e9a3c8868f3c1614684de36d9b32777f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5918203999",
+          "created_at": "2026-11-16T10:06:45Z",
+          "body_sha256": "9dd36ddffcd724ce41f6fba9309b500d3387f16e6b79587add3a2cb9c73b7c69"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#issuecomment-6928608337",
+          "created_at": "2026-11-16T20:37:40Z",
+          "body_sha256": "5ee3516eb6ec1dfdc512e2800af3487c6d305111ca763347fd20031c04b11518"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5928269221",
+          "created_at": "2026-11-16T21:43:32Z",
+          "body_sha256": "95ab2f18e3c41081f217bfa85555d2a66e9ebfb89cf792dfb0abc01ebc711307"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#issuecomment-6930407124",
+          "created_at": "2026-11-16T21:48:47Z",
+          "body_sha256": "694e96c9c8b13737924c439e2127ff73823e7e0bc60ab1ad8bbd4fb9f8d02cff"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#issuecomment-6933532367",
+          "created_at": "2026-11-17T00:17:19Z",
+          "body_sha256": "65ac8bb0590aaf59c50bd52106274629648b4021a1ecbcc01a6946fb860aa398"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5937233025",
+          "created_at": "2026-11-17T11:01:23Z",
+          "body_sha256": "5fb5115e540c295454725745d37747f1ab02272ac78194f4f5596b8dc2cc3225"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5937914682",
+          "created_at": "2026-11-17T11:53:57Z",
+          "body_sha256": "5f3f7d9582a1f34db3ce87f42171f24a8d5f2572a948cd62f55017f33e100511"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5945636502",
+          "created_at": "2026-11-17T20:01:00Z",
+          "body_sha256": "a8c78b6202151e11a86a64454fcdd281ebf5e9171170ac88add66e040abcb5c6"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5946085488",
+          "created_at": "2026-11-17T20:29:47Z",
+          "body_sha256": "0d6a26e1f0e1072131f7f4239144f41992e63a9352be8e46061af2ca45145232"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5946598742",
+          "created_at": "2026-11-17T21:04:34Z",
+          "body_sha256": "5f12c17e4634ebd1097b34e1d8359eb3672139369f0a1650448d6815bb108f57"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5953064654",
+          "created_at": "2026-11-18T08:28:06Z",
+          "body_sha256": "be6a1626a5ff6d72dddc9ce89e7674a2ec0e055828ae40caf1b940af9671bebe"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/pull/41#pullrequestreview-5953429397",
+          "created_at": "2026-11-18T08:57:51Z",
+          "body_sha256": "d4facbb40d4b89ed042f9fe9968b0be15917666433eee142c5fe70c78bd76afe"
+        }
+      ]
+    },
+    {
+      "source_file": "central-gate-contracts.md.json",
+      "response_sha256": "9e45902338ef22a43f34db011370dee07f4cd7f16bf46ede9fe6c9c83ccbe453",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/git-preservation-gate/blob/main/docs/gate-contracts.md",
+      "git_blob": "a66161a124990ee81e72fc0e24bd4fbfd4fcc088",
+      "content_bytes": 4258,
+      "content_sha256": "d178360ed68fb55540967140f9460f5bf3e03dd3a5bb60c66c197320b17980b8"
+    },
+    {
+      "source_file": "calculator-memo-comments.json",
+      "response_sha256": "55a3a5e0935f853693e4024f2f22bfdb494c91ab5a8415626ab082418efa2a70",
+      "is_error": false,
+      "comment_count": 20,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5907877955",
+          "created_at": "2026-11-14T23:29:25Z",
+          "body_sha256": "743b193f4347cc2e1aef3452587fc9ca219f96715408e48aa135c681fd888c41"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5907936244",
+          "created_at": "2026-11-14T23:42:44Z",
+          "body_sha256": "37a8147c87112a597ba04c24997196f4527258b11daa168df1a3b58b2379825f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6886093027",
+          "created_at": "2026-11-14T23:45:57Z",
+          "body_sha256": "cccfc0f6fab94e9467084d04bdd26e894df5c31fd692845e90c6a60a1d262a24"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5908137686",
+          "created_at": "2026-11-15T00:30:31Z",
+          "body_sha256": "84e02e3d8336f679287179ccea714bb0d08cd0a2d5a73b6d56e1b959e0a95191"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6886627108",
+          "created_at": "2026-11-15T00:31:17Z",
+          "body_sha256": "995016f23aada7115a554e54711155abff56ff44f320f12ff22a3653b8074661"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6886671946",
+          "created_at": "2026-11-15T00:34:19Z",
+          "body_sha256": "21c989cc9cc33bb90ea83ab6d969826c02a3202c608242a00a740a754166bcf2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5908363910",
+          "created_at": "2026-11-15T01:12:59Z",
+          "body_sha256": "67eb58aa60532ebf4b73f3de1690f38329492369f108ec72d1eda150b78903c3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6887148845",
+          "created_at": "2026-11-15T01:14:24Z",
+          "body_sha256": "a1f5dc44a9cc2af22c859af6402c8331985afab624334cbcf88294d0a2d5a4d1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6887168369",
+          "created_at": "2026-11-15T01:16:11Z",
+          "body_sha256": "7505f3c4c412213a8492d329bfb887cd3f62586d7addf02d127de320703801b8"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6887544698",
+          "created_at": "2026-11-15T01:50:28Z",
+          "body_sha256": "a4c757fed87db0e2bb7a8c9db16d0f5919cad5e009e08db0094f985fdf9669d9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5908554992",
+          "created_at": "2026-11-15T02:11:39Z",
+          "body_sha256": "bd212d3193a2a132f89688ea68b7fb6c8daac43b586a06e0da0008587eccbec3"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6887775501",
+          "created_at": "2026-11-15T02:12:21Z",
+          "body_sha256": "2a5e81cc858d538cdf507237da2b7613377d95784a4fb81c88b4f29a982e0952"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5908839661",
+          "created_at": "2026-11-15T03:26:52Z",
+          "body_sha256": "9612c627b1193f29087f54b2b52822dcf4e597fd505def965f73716d3de1207e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6892955152",
+          "created_at": "2026-11-15T10:25:39Z",
+          "body_sha256": "e6faa932aeb7089d463bee678de174223c20645fd1a54f9d3371415bc9e971ff"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5910448139",
+          "created_at": "2026-11-15T11:31:32Z",
+          "body_sha256": "9e0ddc70921a36c9e5282ec71f16bd5fc6b126205dc0a7612a0829053d85919a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5910908561",
+          "created_at": "2026-11-15T13:17:12Z",
+          "body_sha256": "a0dc2ae52bd863e0520b64e4c52b297a042234a47ad6ea89c3ccf354987c8b47"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6894896603",
+          "created_at": "2026-11-15T13:17:31Z",
+          "body_sha256": "7daf5c6e4cede8ab600b63e5b15277f828ac5f7258ef00869d0db3b0222eb4d0"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5912272184",
+          "created_at": "2026-11-15T18:52:12Z",
+          "body_sha256": "6a64300b96fba74725ad052ec5ba432785450b0dac15e3e05733f9ebf599c556"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#issuecomment-6900102757",
+          "created_at": "2026-11-15T19:36:19Z",
+          "body_sha256": "463e916242eaf46918b59e94359ed6594f1b5661dba15feb440c2d100c0f6213"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/calculator-memo/pull/147#pullrequestreview-5938666058",
+          "created_at": "2026-11-17T12:47:17Z",
+          "body_sha256": "5a280fd7a3efca14bf26b13dffde53ae57b6e137a3e6ed8e6a39811f8d856c2c"
+        }
+      ]
+    },
+    {
+      "source_file": "calculator-memo-agents.json",
+      "response_sha256": "b4bee7f26c73afb1e652b0e90d77ef8d76f9a771026a05507dcf4d55b8850355",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/calculator-memo/blob/main/AGENTS.md",
+      "git_blob": "e2062e2e7922ec74dc2116723038d8cc5c23ac7e",
+      "content_bytes": 5103,
+      "content_sha256": "0f1b2e150f9b82720c449d43301d7f29225060d1576a2e0a4e4fb6e1f821ff43"
+    },
+    {
+      "source_file": "central-security-and-storage.md.json",
+      "response_sha256": "874dacbea7acf3b5382cac9cc1d3760b4fbaf451a10f7e7aba9bad960ed40cb1",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/git-preservation-gate/blob/main/docs/security-and-storage.md",
+      "git_blob": "8db6ae6b1b41b622f40af2fe7ef8030daada34de",
+      "content_bytes": 3523,
+      "content_sha256": "edc990a08df68b2aa22c2f638fc21e026de39cbcca210b37d750b4adc4c59877"
+    },
+    {
+      "source_file": "yamanaka-historical-terrain-comments.json",
+      "response_sha256": "ec07550723e9487c27c0ba38c66ed57ed725ab57f928dbf911a1528d169373a7",
+      "is_error": false,
+      "comment_count": 31,
+      "comments": [
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6899903963",
+          "created_at": "2026-11-15T19:21:36Z",
+          "body_sha256": "376489d8b438ec643f26df70491002d0a12268bcaa3ee47d8fce0e23e44c3957"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6900014695",
+          "created_at": "2026-11-15T19:29:34Z",
+          "body_sha256": "fa490fe964f9aa383dd781976649745c5143ec1f5dc3d6bb1cea79bd596aa74b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6900451346",
+          "created_at": "2026-11-15T20:01:37Z",
+          "body_sha256": "8957466e0d499916ffead71995d1e1079ab3ce2fb2968a622048ce552669c2bd"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6900520020",
+          "created_at": "2026-11-15T20:06:47Z",
+          "body_sha256": "1e71777619fd7c5748a1b4cb5406bfc80a71460ff557c4dfeb1992e430c2c13e"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5913448661",
+          "created_at": "2026-11-15T23:17:46Z",
+          "body_sha256": "c8c1b5e641b3bd0960a3e437db5812c9fe9c75830ada8aec0418e1adf744a33f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6903491058",
+          "created_at": "2026-11-15T23:53:54Z",
+          "body_sha256": "8551c87d153bfd1e8eca9f30ef405f4d024efb3e0d1553668bab08a961ab2cfa"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6903533673",
+          "created_at": "2026-11-15T23:57:19Z",
+          "body_sha256": "03969f5bd7775c89883d736df30994b2ccf6829760face4d8594d87a81624252"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6904238978",
+          "created_at": "2026-11-16T00:47:40Z",
+          "body_sha256": "b41a9d51ecd6fdf58dc64888795af8dea68a0ff17e2f7d1ca2a9601abf4785bf"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5918337193",
+          "created_at": "2026-11-16T10:17:04Z",
+          "body_sha256": "5003acc3d6a6c51ec0c6bc300f6cc23e82d6a21561487e4f65028ad396dd955b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6914342916",
+          "created_at": "2026-11-16T10:50:52Z",
+          "body_sha256": "daf9f6b6aeaa658b2b1ac90edbd156c1cd08e05aa84b887377a53cf81d8e6aeb"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6915493436",
+          "created_at": "2026-11-16T11:45:05Z",
+          "body_sha256": "f4abe933c9920fcfd3781df08cbe2c26afa395cbabd8155edd26e70fa3f2b5b1"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5920454761",
+          "created_at": "2026-11-16T13:07:41Z",
+          "body_sha256": "f0dcbeec952cb02048d53139448deced6dfe300d72ad4f2012fb016ad3ec9d43"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6920527973",
+          "created_at": "2026-11-16T15:18:34Z",
+          "body_sha256": "41103a60c7b3056606326e555bd315a889a2a594c92e02785ef7536833b77a6b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6921489252",
+          "created_at": "2026-11-16T15:55:39Z",
+          "body_sha256": "50c242312a950fc3ee98b4502073f7086f454094ab32dd4842ade4cb5727eab2"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5927037506",
+          "created_at": "2026-11-16T20:27:56Z",
+          "body_sha256": "614b8eac2a6579a313e0678a1ecee96becee5736db4e260eb102806bb15c0694"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5927399746",
+          "created_at": "2026-11-16T20:50:27Z",
+          "body_sha256": "d909671444e899346febd8888d6e1d3e361d9c71e4b68f622987c037446b5fd9"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6929646782",
+          "created_at": "2026-11-16T21:18:00Z",
+          "body_sha256": "7d2a6866b20743fad78d5567fc94c8000f330deb2320674900f077561155147b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5928751895",
+          "created_at": "2026-11-16T22:14:55Z",
+          "body_sha256": "1353253e46f22c14f2eda58cf8ee6df3bf6df3b40353500564fb9b10f70052f6"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6931792523",
+          "created_at": "2026-11-16T22:52:11Z",
+          "body_sha256": "d7dce98a44217ef56f88b742f5e11097e716791ef44aeda2e07f3583d5940789"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5929503366",
+          "created_at": "2026-11-16T23:06:23Z",
+          "body_sha256": "cd3877bfd0591858246d1e5ee7be1851a40d703a889a2573c7c7748c4bee6193"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6933410626",
+          "created_at": "2026-11-17T00:11:33Z",
+          "body_sha256": "c95168e754bb5f9f0f148d82e63e0c8dadb5df62d00377cc10936d08d99d625a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5935611972",
+          "created_at": "2026-11-17T09:04:29Z",
+          "body_sha256": "abab93ad783b076c57f74a004c1331b4cd3670f3c7f8f11d07bdbfc7bd4ab74b"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6945117530",
+          "created_at": "2026-11-17T10:15:00Z",
+          "body_sha256": "6951fed631714b57be47c4d93ac3c3a99143d974cb1ad86914fadd6b38fd139f"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5937046389",
+          "created_at": "2026-11-17T10:48:14Z",
+          "body_sha256": "6b83dfe6ba8b803db7a66e403b8d28d41aaffb4f49a99c4f20de5cb6786ac7ad"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6946367339",
+          "created_at": "2026-11-17T11:10:43Z",
+          "body_sha256": "71a9ab26855d7c6c574c34183108fe7a9557104255191d22c76f7113cd8755ea"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6947192938",
+          "created_at": "2026-11-17T11:49:37Z",
+          "body_sha256": "7dd24ecae3796ddf362c055afbf9037e807f9105a14fb25ac62dcd2b76957edc"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5939212947",
+          "created_at": "2026-11-17T13:20:46Z",
+          "body_sha256": "44f5226c8311eb8f16d284ecb78a4804fad408df2ebe5bc312d562b54973f811"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6961249966",
+          "created_at": "2026-11-17T21:16:39Z",
+          "body_sha256": "4365874363886863a03a368c0a637b21f4d44dee3640168a6055e9593ec974ee"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6962092155",
+          "created_at": "2026-11-17T21:54:23Z",
+          "body_sha256": "62f6305f4412fd0b4f7704ddf7343faf12dfdaa9fff013abd1e28de4ec9fbc5a"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#pullrequestreview-5953542485",
+          "created_at": "2026-11-18T09:06:37Z",
+          "body_sha256": "095588ddeaaeb794b07f66f43f19ebc4b5b46903f554f4046ad349010569cc33"
+        },
+        {
+          "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/55#issuecomment-6974070224",
+          "created_at": "2026-11-18T09:09:56Z",
+          "body_sha256": "7b637251ae63cdd0c38e3ad179cc4cd81d8f8d48766bac278ce4604bd92759b9"
+        }
+      ]
+    },
+    {
+      "source_file": "Math-Art-Lab-agents.json",
+      "response_sha256": "ca4828f0aadbc42c0beae349c718cc5db0cacc81b79fc20ef619b13a479b13d9",
+      "is_error": true
+    },
+    {
+      "source_file": "castle-3d-parts-agents.json",
+      "response_sha256": "7b33fa718a35813b4b945bc812fac9b2b869a7ca26874bf5791ad520484a5955",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/castle-3d-parts/blob/main/AGENTS.md",
+      "git_blob": "9ee305f8f229eb10f0c6fa5b2226783079431676",
+      "content_bytes": 6940,
+      "content_sha256": "214c11b29e29c95284150648314ec7c9faaa41c42e89ab7c365af796f5ab09de"
+    },
+    {
+      "source_file": "calculator-memo-supplement.json",
+      "response_sha256": "fe14620910903fa0f4281ab5fa5e4bddb7ce628ce9594b90040cce8727b00af1",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/calculator-memo/blob/main/docs/agent/verification-policy.md",
+      "git_blob": "cd9bf28415b4870d3d25d2adcf4f367da330d40d",
+      "content_bytes": 5616,
+      "content_sha256": "80e0110c85288594105094375b2a0c35f71f907c777b13c716df5b1f8d609d50"
+    },
+    {
+      "source_file": "Math-Art-Lab-supplement.json",
+      "response_sha256": "b8b6999b377471b56e5f6315ca34cb300a725363272c9ec1dd58830be3d9d8e7",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/Math-Art-Lab/blob/bee889742a769bc0c5ca680dacec2e3d82d6b6cf/docs/three-body/review-44/stage-an/archive-approval.md",
+      "git_blob": "f076912fd35dc4d65d5fc74bfba97b5d4d215493",
+      "content_bytes": 3455,
+      "content_sha256": "a2778ad112faeb170fb642548c435db324c1ee2537b2dbf9dfe0d449a12aec04"
+    },
+    {
+      "source_file": "central-preservation-policy.md.json",
+      "response_sha256": "feb0a0b3db9fca2004a0fb3dfe2541a2fe4d313a7d667bd3d34728a9b047297f",
+      "is_error": false,
+      "url": "https://github.com/tetsujisugimori-coder/git-preservation-gate/blob/main/docs/preservation-policy.md",
+      "git_blob": "102a7f7ecca8321fdeedafe79a79bfc3509d28de",
+      "content_bytes": 6241,
+      "content_sha256": "932a6000db159366726489a4e86c48bceadf70de60f54a40940c136b85900d54"
+    }
+  ]
+}

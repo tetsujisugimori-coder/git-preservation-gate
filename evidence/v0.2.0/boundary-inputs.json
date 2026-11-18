@@ -1,0 +1,1469 @@
+[
+  {
+    "id": "empty",
+    "input": {},
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "array",
+    "input": [],
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "null",
+    "input": null,
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "string",
+    "input": "x",
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_artifact_kind",
+    "input": {
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_level",
+    "input": {
+      "artifact_kind": "zip",
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_risk",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_mode",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_context",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_authorization",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_flags",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_ci_required",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_extra_checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "missing_contract_extra_required",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {}
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_level15",
+    "input": {
+      "artifact_kind": "zip",
+      "level": true,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_level16",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 0,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_mode17",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_artifact_kind18",
+    "input": {
+      "artifact_kind": "other",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_ci_required19",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": 1,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_authorization20",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {},
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_extra_checks21",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "unsafe-name": "PASS"
+      },
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_contract_extra_required22",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [
+        "a",
+        "a"
+      ]
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_risk_confidential",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": 1,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_context_direct_storage",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": 1,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_checks_sha256",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "SUCCESS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_flags_regenerated",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": null,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "bad_authorization_valid",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": null,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  },
+  {
+    "id": "extra_field",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 2,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "extra": "unexpected"
+    },
+    "expected_reason": "SCHEMA_INVALID"
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "obtained_via": "Git clone from public GitHub plus connected GitHub PR/Issue/comment reads",
+  "base": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+  "pr4": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+  "files": [
+    {
+      "path": "docs/preservation-policy.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "102a7f7ecca8321fdeedafe79a79bfc3509d28de",
+      "size": 6241,
+      "sha256": "932a6000db159366726489a4e86c48bceadf70de60f54a40940c136b85900d54"
+    },
+    {
+      "path": "docs/preservation-policy.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "102a7f7ecca8321fdeedafe79a79bfc3509d28de",
+      "size": 6241,
+      "sha256": "932a6000db159366726489a4e86c48bceadf70de60f54a40940c136b85900d54"
+    },
+    {
+      "path": "docs/gate-contracts.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "a66161a124990ee81e72fc0e24bd4fbfd4fcc088",
+      "size": 4258,
+      "sha256": "d178360ed68fb55540967140f9460f5bf3e03dd3a5bb60c66c197320b17980b8"
+    },
+    {
+      "path": "docs/gate-contracts.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "a66161a124990ee81e72fc0e24bd4fbfd4fcc088",
+      "size": 4258,
+      "sha256": "d178360ed68fb55540967140f9460f5bf3e03dd3a5bb60c66c197320b17980b8"
+    },
+    {
+      "path": "docs/security-and-storage.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "8db6ae6b1b41b622f40af2fe7ef8030daada34de",
+      "size": 3523,
+      "sha256": "edc990a08df68b2aa22c2f638fc21e026de39cbcca210b37d750b4adc4c59877"
+    },
+    {
+      "path": "docs/security-and-storage.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "8db6ae6b1b41b622f40af2fe7ef8030daada34de",
+      "size": 3523,
+      "sha256": "edc990a08df68b2aa22c2f638fc21e026de39cbcca210b37d750b4adc4c59877"
+    },
+    {
+      "path": "docs/architecture.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "8ece61cc81a7053367ada778df302ba39ae48a99",
+      "size": 3939,
+      "sha256": "7fff8504dba8b225672dd6b62112222b596a9d39121fbee0efd5ce92fad2bcb2"
+    },
+    {
+      "path": "docs/architecture.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "8ece61cc81a7053367ada778df302ba39ae48a99",
+      "size": 3939,
+      "sha256": "7fff8504dba8b225672dd6b62112222b596a9d39121fbee0efd5ce92fad2bcb2"
+    },
+    {
+      "path": "docs/actor-execution-taxonomy.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "e274a310e2ddb8f9cb1f5d986694a36c840a3b9e",
+      "size": 7132,
+      "sha256": "84639074fda1fbb47c0a478530fd89da4d8b173c9267226acea35ca7584a8f18"
+    },
+    {
+      "path": "docs/execution-provenance-contract.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "61dd008662e78b3c0eda6f00e62870c67ef722ab",
+      "size": 8629,
+      "sha256": "0a640f7744cd90b41aaaaac593a249a3b0d43bea06f19b8f936a66d073001ef3"
+    },
+    {
+      "path": "docs/solo-maintainer-audit-proposal.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "2b9c10b1f69ce8145b8762d01caf0452a2894d9b",
+      "size": 5837,
+      "sha256": "0beb272559910292bef012221d01994b7749dc81d035cb38c4740fc74063c633"
+    },
+    {
+      "path": "docs/pr4-original-zip-limited-recovery.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "5c59ec59b64321867a116428bde0b6e653740e8d",
+      "size": 4559,
+      "sha256": "5e6d84d4fda292b1ae47e41703e1ebaf72340698b94c63b000c16f848aa4f139"
+    },
+    {
+      "path": "tests/actor-classification-cases.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "67cdaddfd1febc2e55f21568cabc982b60cece11",
+      "size": 4294,
+      "sha256": "06f43cc4154ecfb8db70dce0f9500b44f4a285b00e27ff182c0f08fbdf1b6c17"
+    },
+    {
+      "path": "tests/solo-maintainer-audit-scenarios.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "7b23d100abe0b8fce437e9ef8231024e1d54b54d",
+      "size": 2189,
+      "sha256": "4f58369ab0e306ce48ab943fed1420efaeb48f63c8ee11894ff671ca70572c56"
+    },
+    {
+      "path": "README.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "009200d505c9472ff66080a707ad21b4eafe8144",
+      "size": 1223,
+      "sha256": "fa86d3defc2150f3e0b94213041661305fb01e900db6aa1c259306306b475cf1"
+    },
+    {
+      "path": "README.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "065c193a74c6a308e39d3fbb3baee8d6899e9d07",
+      "size": 2075,
+      "sha256": "06d2ec5422663999fdf8303824ae7249464ae1833e55439790b4a3a4fb895e91"
+    },
+    {
+      "path": "tests/test-plan.md",
+      "commit": "68285b5a12bf1ef2707543681ba3b3064c2339d4",
+      "blob": "89eccc03982676dec9b9064f05e1bcb9873b69df",
+      "size": 7419,
+      "sha256": "76e3be624a60bdbe28c0c2ac47ca6eafdcf9ea76aec529b678c72f4d61b7f9e0"
+    },
+    {
+      "path": "tests/test-plan.md",
+      "commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+      "blob": "89eccc03982676dec9b9064f05e1bcb9873b69df",
+      "size": 7419,
+      "sha256": "76e3be624a60bdbe28c0c2ac47ca6eafdcf9ea76aec529b678c72f4d61b7f9e0"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Stage0 synthetic and document review only",
+  "independent_agent": true,
+  "independent_human": "NOT_ESTABLISHED",
+  "shared": [
+    "infrastructure",
+    "account",
+    "workspace",
+    "history"
+  ],
+  "oracle_cases": {
+    "total": 49,
+    "pass": 49,
+    "initial_set": 44,
+    "review_added": 5
+  },
+  "schema_boundary": {
+    "total": 29,
+    "pass": 29
+  },
+  "runner_fault": {
+    "total": 4,
+    "pass": 4,
+    "initial_review_harness_expectation_error_preserved": true
+  },
+  "legacy_AT": {
+    "total": 52,
+    "pass": 52,
+    "source_commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f"
+  },
+  "checker_sha256": "1f6669d6da1d6b1cf263990454d6fdc5d40e500c20988eef129a802b2b00c63d",
+  "oracle_sha256": "9c3042be01fa60ab4c5aea88d6363888b5e3ea986b8c21fcf3f020149f341be4",
+  "runner_sha256": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+  "unresolved_findings": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "real_custody": "NOT_TESTED",
+  "real_gate_permit": false
+}

@@ -1,0 +1,8 @@
+{
+  "exit": 1,
+  "stdout": "{'PASS': 0, 'FAIL': 1, 'UNKNOWN': 0}\n",
+  "stderr": "",
+  "match": true,
+  "timeout": 30,
+  "retry": 0
+}

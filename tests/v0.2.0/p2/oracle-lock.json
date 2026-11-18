@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-18T09:57:32.445237+00:00",
+  "author": "independent reviewer B",
+  "before_repaired_checker_execution": true,
+  "contract": "flat decision/rationale/approval/risks; approval FAIL is FAIL",
+  "files": {
+    "p2-cases.json": "a48160852b060467659ee464c7f63b35b5f77328d6b3668b771b99a328828433",
+    "legacy49-reassessment.json": "a75349e62de91771e60dbf48217cfa65f6de65ca8042ef52bb0c9a77388fc7fc"
+  },
+  "case_count": 32,
+  "old_expected_change": [
+    "V019 only; old input and original expected preserved in old canonical file"
+  ]
+}

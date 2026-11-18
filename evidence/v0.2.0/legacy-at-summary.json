@@ -1,0 +1,279 @@
+{
+  "source_commit": "c1f6f52f531c17e45c3c1f822d53a45c41cbd14f",
+  "original_log_sha256": "bcfd6901bf69020925b1aa690068c973983ec925a08c597bf96a62b746d880de",
+  "started_at": "2026-11-18T09:22:20.575293+00:00",
+  "ended_at": "2026-11-18T09:22:22.100797+00:00",
+  "environment": {
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "input_sha256": {
+    "check.py": "1c1cc10d8a2c2fd960877999e0837f1dd012d192a327ac5b1362c1fe43ea3b02",
+    "run.py": "88d1a8da3d83044ffe2491094c3cf8547dde62831c22c8c16fe8c5b97c2d2d26",
+    "fixtures.json": "9e0f694ee76d11b76923c0944f53db8555964421430cbb3d19bf5bec45aece95",
+    "oracle.json": "a849661e05abbef531332fbad80a61748d2c4b2245199fd20df23d206b3d6873"
+  },
+  "preflight_error": null,
+  "results": [
+    {
+      "case": "AT01",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT01",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT02",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT02",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT03",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT03",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT04",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT04",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT05",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT05",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT06",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT06",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT07",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT07",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT08",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT08",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT09",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT09",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT10",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT10",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT11",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT11",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT12",
+      "variant": "normal",
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT12",
+      "variant": "fault",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-missing-parent",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-cycle",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-cross-repo-parent",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-record-duplicate",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-prior-rewritten",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-sharing-undisclosed",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-source-unavailable",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-valid",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-missing",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-digest-mismatch",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-wrong-binding",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-circular-reference",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-retained-retry",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-commit",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-tree",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-execution_id",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-unverified-reviewer",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-different-record",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-route-claim-only",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-boolean-reviewer",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-renamed-reviewer",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-source-version",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-retriever",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-source-target",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-same-source-destination",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Handoff-blank-ref",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Handoff-boolean-ref",
+      "variant": "additional",
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-invalid-digest",
+      "variant": "additional",
+      "test_status": "PASS"
+    }
+  ]
+}

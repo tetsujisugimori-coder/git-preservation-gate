@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-18T09:58:46.295435+00:00",
+  "case": "V041",
+  "author": "independent reviewer B",
+  "reason": "Initial overlay omitted second Level3 input without a risk_contract. V041 individual approval absence still blocks custody and acceptance, independently its absent risk-specific contract makes verification UNKNOWN. This follows predeclared missing-contract rule, not relaxation after output.",
+  "prior_overlay_sha256": "a75349e62de91771e60dbf48217cfa65f6de65ca8042ef52bb0c9a77388fc7fc",
+  "new_overlay_sha256": "04855410edbd754b5fdf4fe27e8acda21d6ae18a52f6002180571b7525257e07",
+  "old_inputs_unchanged": true,
+  "timing": "after implementation self-test surfaced discrepancy, before independent repaired checker execution",
+  "other_changes": []
+}

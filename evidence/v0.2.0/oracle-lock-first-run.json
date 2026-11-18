@@ -1,0 +1,8 @@
+{
+  "fixed_before_checker_execution": true,
+  "files": {
+    "cases.json": "4b8dbe1d5d220e678ae5d3349b3d8ae03338e676a3a2116d919ff7ec97958e47",
+    "ORACLE-DESIGN.md": "16bc159f0b842a1c624172d26fbe2a693fcd5bac94ef012dab80f6c8dc55812a",
+    "build_oracle.py": "a84d2f7ad9cd75b4a4fdf58c201f9528d144a07eeac38dbe92849472f26d3338"
+  }
+}

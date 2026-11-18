@@ -1,0 +1,5188 @@
+{
+  "started_at": "2026-11-18T10:00:08.474610+00:00",
+  "environment": {
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "input_sha256": {
+    "check.py": "1c1cc10d8a2c2fd960877999e0837f1dd012d192a327ac5b1362c1fe43ea3b02",
+    "run.py": "88d1a8da3d83044ffe2491094c3cf8547dde62831c22c8c16fe8c5b97c2d2d26",
+    "fixtures.json": "9e0f694ee76d11b76923c0944f53db8555964421430cbb3d19bf5bec45aece95",
+    "oracle.json": "a849661e05abbef531332fbad80a61748d2c4b2245199fd20df23d206b3d6873"
+  },
+  "preflight_error": null,
+  "runs": [
+    {
+      "case": "AT01",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "ChatGPT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CHAT-WEB"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "ChatGPT",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CHAT-WEB"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.476894+00:00",
+      "ended_at": "2026-11-18T10:00:08.507465+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CHAT-WEB\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CHAT-WEB"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT01",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "ChatGPT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "WORK-CLOUD-WEB"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "ChatGPT",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CHAT-WEB"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.507486+00:00",
+      "ended_at": "2026-11-18T10:00:08.538303+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CHAT-WEB\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ACTOR_CONTRADICTION\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CHAT-WEB"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT02",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "desktop",
+            "site": "cloud",
+            "declared": "WORK-CLOUD-DESKTOP"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "desktop"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "WORK-CLOUD-DESKTOP"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.538324+00:00",
+      "ended_at": "2026-11-18T10:00:08.561872+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"WORK-CLOUD-DESKTOP\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "WORK-CLOUD-DESKTOP"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT02",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "desktop",
+            "site": "cloud",
+            "declared": "WORK-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "desktop"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "WORK-CLOUD-DESKTOP"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.561889+00:00",
+      "ended_at": "2026-11-18T10:00:08.591811+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"WORK-CLOUD-DESKTOP\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ACTOR_CONTRADICTION\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "WORK-CLOUD-DESKTOP"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT03",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "desktop",
+            "site": "local",
+            "declared": "WORK-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "desktop"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "WORK-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.591832+00:00",
+      "ended_at": "2026-11-18T10:00:08.627260+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"WORK-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "WORK-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT03",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "desktop",
+            "site": "unknown",
+            "declared": "WORK-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "desktop"
+            ],
+            "environment": "unknown"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": null
+        },
+        "input_status": "UNKNOWN",
+        "reason_codes": [
+          "EXECUTION_SITE_UNOBSERVED"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.627278+00:00",
+      "ended_at": "2026-11-18T10:00:08.664766+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": null}, \"input_status\": \"UNKNOWN\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EXECUTION_SITE_UNOBSERVED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": null
+        },
+        "input_status": "UNKNOWN",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXECUTION_SITE_UNOBSERVED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT04",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "mobile",
+            "site": "cloud",
+            "declared": "WORK-CLOUD-MOBILE"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "mobile"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "WORK-CLOUD-MOBILE"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.664788+00:00",
+      "ended_at": "2026-11-18T10:00:08.737566+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"WORK-CLOUD-MOBILE\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "WORK-CLOUD-MOBILE"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT04",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Work",
+            "surface": "mobile",
+            "site": "cloud",
+            "declared": "WORK-CLOUD-WEB"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Work",
+              "mobile"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "WORK-CLOUD-MOBILE"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.737588+00:00",
+      "ended_at": "2026-11-18T10:00:08.788905+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"WORK-CLOUD-MOBILE\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ACTOR_CONTRADICTION\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "WORK-CLOUD-MOBILE"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ACTOR_CONTRADICTION"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT05",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.788929+00:00",
+      "ended_at": "2026-11-18T10:00:08.828574+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT05",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": null
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "DUPLICATE_EXECUTION_ID",
+          "OBSERVATION_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.828596+00:00",
+      "ended_at": "2026-11-18T10:00:08.866701+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": null}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DUPLICATE_EXECUTION_ID\", \"OBSERVATION_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": null
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DUPLICATE_EXECUTION_ID",
+          "OBSERVATION_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT06",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": "handoff-1"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.866765+00:00",
+      "ended_at": "2026-11-18T10:00:08.905026+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT06",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": []
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "DELEGATED_CHILD_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.905048+00:00",
+      "ended_at": "2026-11-18T10:00:08.939768+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DELEGATED_CHILD_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DELEGATED_CHILD_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT07",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": "handoff-1"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.939789+00:00",
+      "ended_at": "2026-11-18T10:00:08.982289+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT07",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": []
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:08.982310+00:00",
+      "ended_at": "2026-11-18T10:00:09.010106+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HANDOFF_EVIDENCE_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT08",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.010127+00:00",
+      "ended_at": "2026-11-18T10:00:09.040027+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT08",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.040047+00:00",
+      "ended_at": "2026-11-18T10:00:09.071754+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EVIDENCE_TARGET_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT09",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.071775+00:00",
+      "ended_at": "2026-11-18T10:00:09.110262+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"PASS\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "PASS",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT09",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-a",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-a"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-a",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SAME_RESPONSIBLE_ACTOR"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.110283+00:00",
+      "ended_at": "2026-11-18T10:00:09.146639+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SAME_RESPONSIBLE_ACTOR\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SAME_RESPONSIBLE_ACTOR"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT10",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a2",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "retry_of_attempt_id": "a1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "prior_records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.146667+00:00",
+      "ended_at": "2026-11-18T10:00:09.175665+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT10",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "retry_of_attempt_id": "a1"
+          }
+        ],
+        "evidence": {
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "prior_records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "PRIOR_RECORD_REMOVED_OR_CHANGED",
+          "RETRY_ATTEMPT_REUSED"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.175688+00:00",
+      "ended_at": "2026-11-18T10:00:09.200474+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"PRIOR_RECORD_REMOVED_OR_CHANGED\", \"RETRY_ATTEMPT_REUSED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "PRIOR_RECORD_REMOVED_OR_CHANGED",
+          "RETRY_ATTEMPT_REUSED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT11",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.200528+00:00",
+      "ended_at": "2026-11-18T10:00:09.228177+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT11",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [],
+            "environment": null
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": null
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "ACTOR_EVIDENCE_MISSING",
+          "ENVIRONMENT_EVIDENCE_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.228201+00:00",
+      "ended_at": "2026-11-18T10:00:09.251610+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": null}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ACTOR_EVIDENCE_MISSING\", \"ENVIRONMENT_EVIDENCE_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": null
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ACTOR_EVIDENCE_MISSING",
+          "ENVIRONMENT_EVIDENCE_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT12",
+      "variant": "normal",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.251633+00:00",
+      "ended_at": "2026-11-18T10:00:09.278468+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"PASS\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "PASS",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "AT12",
+      "variant": "fault",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "workspace_copy",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "WORKSPACE_COPY"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.278487+00:00",
+      "ended_at": "2026-11-18T10:00:09.306646+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"WORKSPACE_COPY\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "WORKSPACE_COPY"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-missing-parent",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "parent_execution_id": "e9"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "PARENT_EXECUTION_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.306689+00:00",
+      "ended_at": "2026-11-18T10:00:09.347011+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"PARENT_EXECUTION_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "PARENT_EXECUTION_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-cycle",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT",
+            "parent_execution_id": "e2"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": "h1"
+          },
+          {
+            "parent": "e2",
+            "child": "e1",
+            "ref": "h2"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "PARENT_CYCLE"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.347034+00:00",
+      "ended_at": "2026-11-18T10:00:09.373934+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"PARENT_CYCLE\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "PARENT_CYCLE"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-cross-repo-parent",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": "h1"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "PARENT_SCOPE_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.373958+00:00",
+      "ended_at": "2026-11-18T10:00:09.404758+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"PARENT_SCOPE_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "PARENT_SCOPE_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-record-duplicate",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r1",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": "handoff-1"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "DUPLICATE_RECORD_ID",
+          "EVIDENCE_TARGET_MISMATCH",
+          "OBSERVATION_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.404782+00:00",
+      "ended_at": "2026-11-18T10:00:09.448252+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-CLOUD\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DUPLICATE_RECORD_ID\", \"EVIDENCE_TARGET_MISMATCH\", \"OBSERVATION_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-CLOUD"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DUPLICATE_RECORD_ID",
+          "EVIDENCE_TARGET_MISMATCH",
+          "OBSERVATION_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-prior-rewritten",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a2",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "retry_of_attempt_id": "a1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "prior_records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "PRIOR_RECORD_REMOVED_OR_CHANGED"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.448278+00:00",
+      "ended_at": "2026-11-18T10:00:09.481495+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"PRIOR_RECORD_REMOVED_OR_CHANGED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "PRIOR_RECORD_REMOVED_OR_CHANGED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-sharing-undisclosed",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SHARING_UNDISCLOSED"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.481518+00:00",
+      "ended_at": "2026-11-18T10:00:09.510751+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SHARING_UNDISCLOSED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SHARING_UNDISCLOSED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-source-unavailable",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "source_unavailable",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "SOURCE_RETRIEVAL_REQUIRED"
+        ],
+        "audit_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.510805+00:00",
+      "ended_at": "2026-11-18T10:00:09.539934+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"BLOCKED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOURCE_RETRIEVAL_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "BLOCKED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOURCE_RETRIEVAL_REQUIRED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-valid",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "receipt-1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"receipt-1\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"PASS\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": {
+            "id": "receipt-1",
+            "record_id": "r1",
+            "sha256": "dd29d1991fd8cae9c9b9c2a727fcaf3680d4adb1ec0c497fe6a4f0b7132a7ae7"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.540120+00:00",
+      "ended_at": "2026-11-18T10:00:09.570825+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-missing",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "receipt-1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"receipt-1\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"PASS\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": null
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "RECEIPT_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.570847+00:00",
+      "ended_at": "2026-11-18T10:00:09.599272+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RECEIPT_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RECEIPT_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-digest-mismatch",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "receipt-1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"receipt-1\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"PASS\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": {
+            "id": "receipt-1",
+            "record_id": "r1",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "RECORD_DIGEST_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.599292+00:00",
+      "ended_at": "2026-11-18T10:00:09.627396+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RECORD_DIGEST_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RECORD_DIGEST_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-wrong-binding",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "receipt-1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"receipt-1\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"PASS\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": {
+            "id": "receipt-1",
+            "record_id": "r9",
+            "sha256": "dd29d1991fd8cae9c9b9c2a727fcaf3680d4adb1ec0c497fe6a4f0b7132a7ae7"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "RECEIPT_BINDING_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.627417+00:00",
+      "ended_at": "2026-11-18T10:00:09.654103+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RECEIPT_BINDING_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RECEIPT_BINDING_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-circular-reference",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"PASS\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": {
+            "id": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "record_id": "r1",
+            "sha256": "550b7483a085b50184e0c4997a0c8f8388c10db7eb30cae60d41ff7cef5ca8d7"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "RECEIPT_REFERENCE_NOT_DETACHED"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.654125+00:00",
+      "ended_at": "2026-11-18T10:00:09.682373+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RECEIPT_REFERENCE_NOT_DETACHED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RECEIPT_REFERENCE_NOT_DETACHED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "ID-retained-retry",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a2",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "retry_of_attempt_id": "a1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "prior_records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "FAIL",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a2",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "retry_of_attempt_id": "a1"
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "reason_codes": [],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.682393+00:00",
+      "ended_at": "2026-11-18T10:00:09.706874+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"PASS\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "PASS",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-commit",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-b",
+            "commit": "cccccccccccccccccccccccccccccccccccccccc",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.706895+00:00",
+      "ended_at": "2026-11-18T10:00:09.740695+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EVIDENCE_TARGET_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-tree",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "cccccccccccccccccccccccccccccccccccccccc",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.740719+00:00",
+      "ended_at": "2026-11-18T10:00:09.767401+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EVIDENCE_TARGET_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Target-wrong-execution_id",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          },
+          "r2": {
+            "repository": "synthetic/repo-b",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.767419+00:00",
+      "ended_at": "2026-11-18T10:00:09.791700+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\", \"r2\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EVIDENCE_TARGET_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL",
+          "r2": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EVIDENCE_TARGET_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-unverified-reviewer",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": null,
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_UNVERIFIED"
+        ],
+        "audit_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.791731+00:00",
+      "ended_at": "2026-11-18T10:00:09.816053+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"BLOCKED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RESPONSIBLE_ACTOR_UNVERIFIED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "BLOCKED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_UNVERIFIED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Receipt-different-record",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL",
+            "record_digest_ref": "receipt-1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "receipt_check": {
+          "record_bytes": "{\"attempt_id\":\"a1\",\"commit\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"declared\":\"CODEX-LOCAL\",\"execution_id\":\"e1\",\"product\":\"Codex\",\"record_digest_ref\":\"receipt-1\",\"record_id\":\"r1\",\"repository\":\"synthetic/repo-a\",\"result\":\"FAIL\",\"site\":\"local\",\"surface\":\"cli\",\"task_id\":\"task-1\",\"tree\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+          "receipt": {
+            "id": "receipt-1",
+            "record_id": "r1",
+            "sha256": "008ad4320eb3bb3bdcb03f92797d8db8ab1d347383f4c4f492e859f664694afe"
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "RECEIPT_BINDING_MISMATCH"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.816074+00:00",
+      "ended_at": "2026-11-18T10:00:09.843389+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RECEIPT_BINDING_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RECEIPT_BINDING_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-route-claim-only",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "ISOLATED_DESTINATION_REQUIRED",
+          "RESPONSIBLE_ACTOR_UNVERIFIED",
+          "SHARING_UNOBSERVED",
+          "SOURCE_PROOF_REQUIRED"
+        ],
+        "audit_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.843410+00:00",
+      "ended_at": "2026-11-18T10:00:09.870368+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"BLOCKED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ISOLATED_DESTINATION_REQUIRED\", \"RESPONSIBLE_ACTOR_UNVERIFIED\", \"SHARING_UNOBSERVED\", \"SOURCE_PROOF_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "BLOCKED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ISOLATED_DESTINATION_REQUIRED",
+          "RESPONSIBLE_ACTOR_UNVERIFIED",
+          "SHARING_UNOBSERVED",
+          "SOURCE_PROOF_REQUIRED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-boolean-reviewer",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": true,
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_UNVERIFIED"
+        ],
+        "audit_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.870389+00:00",
+      "ended_at": "2026-11-18T10:00:09.899130+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"BLOCKED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RESPONSIBLE_ACTOR_UNVERIFIED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "BLOCKED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_UNVERIFIED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-renamed-reviewer",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-x",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_MISMATCH"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.899150+00:00",
+      "ended_at": "2026-11-18T10:00:09.924117+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RESPONSIBLE_ACTOR_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RESPONSIBLE_ACTOR_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-source-version",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v2",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.924137+00:00",
+      "ended_at": "2026-11-18T10:00:09.952312+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOURCE_PROOF_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-retriever",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-x",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.952330+00:00",
+      "ended_at": "2026-11-18T10:00:09.981698+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOURCE_PROOF_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-wrong-source-target",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-b"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:09.981718+00:00",
+      "ended_at": "2026-11-18T10:00:10.010580+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOURCE_PROOF_MISMATCH\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOURCE_PROOF_MISMATCH"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-same-source-destination",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "synthetic-source",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "ISOLATED_DESTINATION_REQUIRED"
+        ],
+        "audit_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:10.010602+00:00",
+      "ended_at": "2026-11-18T10:00:10.039025+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"BLOCKED\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ISOLATED_DESTINATION_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "BLOCKED",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ISOLATED_DESTINATION_REQUIRED"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Handoff-blank-ref",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": " "
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:10.039046+00:00",
+      "ended_at": "2026-11-18T10:00:10.063353+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HANDOFF_EVIDENCE_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Handoff-boolean-ref",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "DOT",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "DOT"
+          },
+          {
+            "record_id": "r2",
+            "execution_id": "e2",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "web",
+            "site": "cloud",
+            "declared": "CODEX-CLOUD",
+            "parent_execution_id": "e1"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "DOT",
+              "web"
+            ],
+            "environment": "cloud"
+          },
+          "r2": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e2",
+            "actor": [
+              "Codex",
+              "web"
+            ],
+            "environment": "cloud"
+          }
+        },
+        "delegations": [
+          {
+            "parent": "e1",
+            "child": "e2"
+          }
+        ],
+        "handoffs": [
+          {
+            "parent": "e1",
+            "child": "e2",
+            "ref": true
+          }
+        ]
+      },
+      "expected": {
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ],
+        "audit_status": "NOT_TESTED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:10.063378+00:00",
+      "ended_at": "2026-11-18T10:00:10.099182+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"NOT_TESTED\", \"classifications\": {\"r1\": \"DOT\", \"r2\": \"CODEX-CLOUD\"}, \"input_status\": \"BLOCKED\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HANDOFF_EVIDENCE_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "NOT_TESTED",
+        "classifications": {
+          "r1": "DOT",
+          "r2": "CODEX-CLOUD"
+        },
+        "input_status": "BLOCKED",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HANDOFF_EVIDENCE_MISSING"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    },
+    {
+      "case": "Audit-invalid-digest",
+      "variant": "additional",
+      "input": {
+        "kind": "stage0-synthetic",
+        "records": [
+          {
+            "record_id": "r1",
+            "execution_id": "e1",
+            "task_id": "task-1",
+            "attempt_id": "a1",
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "result": "PASS",
+            "product": "Codex",
+            "surface": "cli",
+            "site": "local",
+            "declared": "CODEX-LOCAL"
+          }
+        ],
+        "evidence": {
+          "r1": {
+            "repository": "synthetic/repo-a",
+            "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "execution_id": "e1",
+            "actor": [
+              "Codex",
+              "cli"
+            ],
+            "environment": "local"
+          }
+        },
+        "audit": {
+          "producer": "person-a",
+          "custodian": "person-c",
+          "reviewer": "person-b",
+          "actor_label": "different-label",
+          "declared_shared": [
+            "provider",
+            "workspace"
+          ],
+          "route": "approved_source",
+          "isolated_destination": true,
+          "target_record_id": "r1"
+        },
+        "audit_evidence": {
+          "responsible": {
+            "producer": "person-a",
+            "custodian": "person-c",
+            "reviewer": "person-b"
+          },
+          "shared": [
+            "provider",
+            "workspace"
+          ],
+          "approval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "not-a-digest",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            }
+          },
+          "retrieval": {
+            "source": "synthetic-source",
+            "version": "v1",
+            "sha256": "not-a-digest",
+            "target": {
+              "repository": "synthetic/repo-a",
+              "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "execution_id": "e1"
+            },
+            "retriever": "person-b",
+            "destination": "isolated-readback",
+            "isolated_destination": true
+          }
+        }
+      },
+      "expected": {
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "reason_codes": [
+          "SOURCE_DIGEST_INVALID"
+        ],
+        "audit_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        }
+      },
+      "started_at": "2026-11-18T10:00:10.099205+00:00",
+      "ended_at": "2026-11-18T10:00:10.132056+00:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_status\": \"FAIL\", \"classifications\": {\"r1\": \"CODEX-LOCAL\"}, \"input_status\": \"FAIL\", \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOURCE_DIGEST_INVALID\"]}\n",
+      "stderr": "",
+      "actual": {
+        "audit_status": "FAIL",
+        "classifications": {
+          "r1": "CODEX-LOCAL"
+        },
+        "input_status": "FAIL",
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOURCE_DIGEST_INVALID"
+        ]
+      },
+      "exception": null,
+      "test_status": "PASS"
+    }
+  ],
+  "ended_at": "2026-11-18T10:00:10.132077+00:00"
+}

@@ -1,0 +1,4087 @@
+{
+  "started_at": "2026-11-18T10:03:41.412372+00:00",
+  "kind": "SYNTHETIC_ONLY",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "rows": [
+    {
+      "id": "P001",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "5b7bc0d7d009bf9faa68a8c21fd72364d06227ade8e504aaa6972efaf8a485ab",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.414544+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.441435+00:00"
+    },
+    {
+      "id": "P002",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "c37be77fd0a67255a85658da881cdf59ae0e5a2d2a0a2057d4f9e2f062d244e2",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.441503+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.465934+00:00"
+    },
+    {
+      "id": "P003",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "701f77c98f85ed3e8be4edd387e80e253d4495faa9a0171ea15f00abec8dd918",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.466037+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.485899+00:00"
+    },
+    {
+      "id": "P004",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "PASS"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "844b1f3d86c0cc0389ea1c63e0f6494918aa24bf1a0167d6abb971ae0648fa74",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.485962+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.506822+00:00"
+    },
+    {
+      "id": "P005",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "934d720f73271353127f7b88d297c67d430f08cac934634c150462e74379249d",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.506880+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.525331+00:00"
+    },
+    {
+      "id": "P006",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "57123857f097d0285eba5e0150f4211ff42323120f4b4c940eee0c61692c01d1",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.525480+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.543924+00:00"
+    },
+    {
+      "id": "P007",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "PASS"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "93d976116fa9fc7f9829b4a3faa1307f474f49e2e25dbd6f35789da843171156",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.543981+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.562944+00:00"
+    },
+    {
+      "id": "P008",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": true
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "strong_authenticity"
+          ]
+        }
+      },
+      "input_sha256": "d12c9e5c416e1e38ae48fd219eaa80560f72514283d9f257baca6e99501e55a1",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.562995+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.603480+00:00"
+    },
+    {
+      "id": "P009",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": true
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "strong_authenticity"
+          ]
+        }
+      },
+      "input_sha256": "62d0d312404e4454b782f75812bb3d3c52f240191ddbacca8dd3dd79a05291bb",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.603551+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.623387+00:00"
+    },
+    {
+      "id": "P010",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": true
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "PASS"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "strong_authenticity"
+          ]
+        }
+      },
+      "input_sha256": "08fa82327ef08a0a2c6dc2125c9a3b0ffd1bd8ec136d6d7f2bf6b1dc4eb03d07",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.623443+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.648156+00:00"
+    },
+    {
+      "id": "P011",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": true,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "irrecoverable"
+          ]
+        }
+      },
+      "input_sha256": "da3fbce3906a58e0ca1f99ff1b8ff9772beaaebb5289b042f5c96a322f5d3407",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.648217+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.672974+00:00"
+    },
+    {
+      "id": "P012",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": true,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "irrecoverable"
+          ]
+        }
+      },
+      "input_sha256": "cb5a65c15c2d6ec2a0bfc202a9182b843d79c23f855c1b5f5846b2ba5c1d4ded",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.673045+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.693590+00:00"
+    },
+    {
+      "id": "P013",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": true,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "PASS"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "irrecoverable"
+          ]
+        }
+      },
+      "input_sha256": "dd9b471efda27319d7f96a29b3679a57ce7f25a0e57d286d0b7f44799af41ae6",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "started_at": "2026-11-18T10:03:41.693650+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.713183+00:00"
+    },
+    {
+      "id": "P014",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "FAIL",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "cbf8bb9034201ae2ffc43289ba2f0a2e6bffda7b0834e8f0195cf8dd348f3a05",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.713243+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_APPROVAL_FAIL\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_FAIL"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.731082+00:00"
+    },
+    {
+      "id": "P015",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "UNKNOWN",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "39054d03eea6994f83827cfabca290bdcc350d7e46e6e747ca341749763e15ae",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.731142+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_APPROVAL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.750509+00:00"
+    },
+    {
+      "id": "P016",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "NOT_TESTED",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "6226416b600b1605422c0fce145c651fa13e12759f129144cd7eac9bb4cfbee5",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_NOT_TESTED"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.750577+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_APPROVAL_NOT_TESTED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_APPROVAL_NOT_TESTED"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.770776+00:00"
+    },
+    {
+      "id": "P017",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "374e4b81e66f6cfe8a027f213abdd0e10bf600b08949591332723a0a3b81870c",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.770835+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.796784+00:00"
+    },
+    {
+      "id": "P018",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": []
+        }
+      },
+      "input_sha256": "356dc4ea09c7f0b80bdeb497280e0e15f8f2a86c00dc59b5522afb019bcc2790",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.796844+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.818433+00:00"
+    },
+    {
+      "id": "P019",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "UNKNOWN",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "bb07da96bd5d5583d57b24f3e2e767496c30f5e3c44fcdc179561636d68344f4",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.818494+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.837035+00:00"
+    },
+    {
+      "id": "P020",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "PASS"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "confidential"
+          ]
+        }
+      },
+      "input_sha256": "34ef3928b2e8bc21944d63333e87b7ec19784414aeb7a5aaa49c137a316006c4",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.837126+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.857852+00:00"
+    },
+    {
+      "id": "P021",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "FAIL"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "fdf10f92bab2627de84541835c4e32a8b0c6014505275653a5bb9db3d718a490",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_FAIL"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.857913+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_EXTRA_risk_control_FAIL\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_FAIL"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.880865+00:00"
+    },
+    {
+      "id": "P022",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "UNKNOWN"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "02f01c477570750be75b3bbff5fd2d83a1687d1fcb7f2d918c51a93ad19ff18e",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.880934+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_EXTRA_risk_control_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.902509+00:00"
+    },
+    {
+      "id": "P023",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": true,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "risk_control": "NOT_TESTED"
+        },
+        "contract_extra_required": [
+          "risk_control"
+        ],
+        "risk_contract": {
+          "decision": "required",
+          "rationale": "Additional risk check required.",
+          "approval": "PASS",
+          "risks": [
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "e315b22cdcddaf642d673cb1b3af793831773a782bc9138d9462a01658ea7b88",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_NOT_TESTED"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.902577+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_EXTRA_risk_control_NOT_TESTED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_risk_control_NOT_TESTED"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.927509+00:00"
+    },
+    {
+      "id": "P024",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": null,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "20d98837d92d3e3fd50f3c5c4e2d7729c4b67d11b61e2e5b29c41a252072c63c",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.927571+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.947360+00:00"
+    },
+    {
+      "id": "P025",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": null,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "FAIL",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "b16d0ec554cadd47ff98c106f2608763400d158167705a6c6edf04eb8c48debf",
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.947414+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_STORAGE_FAIL\", \"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.967491+00:00"
+    },
+    {
+      "id": "P026",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": null,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "FAIL",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "715fcc95ef30c040a02d779281062da0323891ddf88bef37fa3077f419c8bab1",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.967552+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CI_FAIL\", \"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:41.988266+00:00"
+    },
+    {
+      "id": "P027",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": null,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "NOT_TESTED",
+          "change_control": "NOT_TESTED",
+          "ci": "NOT_TESTED",
+          "review": "NOT_TESTED",
+          "original": "NOT_TESTED",
+          "approval": "NOT_TESTED",
+          "storage": "NOT_TESTED",
+          "receipt": "NOT_TESTED",
+          "retrieval": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "bytes": "NOT_TESTED",
+          "crc": "NOT_TESTED",
+          "manifest": "NOT_TESTED",
+          "archive_safety": "NOT_TESTED",
+          "acl": "NOT_TESTED",
+          "retention": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "object_integrity": "NOT_TESTED"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "64dd1eb4a1fd037bf1a0cf29720e03533c5a54659bb27174a6d9e854e854045c",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:41.988322+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.012826+00:00"
+    },
+    {
+      "id": "P028",
+      "input": {
+        "artifact_kind": "zip",
+        "level": "UNKNOWN",
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "d45cac6862b58f1687f38d6e279ae2902a771715bf1df8080339d9b0895343f3",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:42.012904+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.035070+00:00"
+    },
+    {
+      "id": "P029",
+      "input": {
+        "artifact_kind": "zip",
+        "level": "UNKNOWN",
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "FAIL",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "c0d61d1bfd69e0768881c03339ffd9cbcf4373803ff87a4f06682a99a52e5aa7",
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:42.035129+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_STORAGE_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.057196+00:00"
+    },
+    {
+      "id": "P030",
+      "input": {
+        "artifact_kind": "zip",
+        "level": "UNKNOWN",
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "FAIL",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "537a247063ff1d480a710a7bab9a7c0fe8191a7be15b05c853b9cb278dc36692",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:42.057252+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CI_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.075748+00:00"
+    },
+    {
+      "id": "P031",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "input_sha256": "fed035ba18b5796035ae0b8f74a4aaa42915c9aafdec72ccf1baf513bb02e911",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:42.075800+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.093942+00:00"
+    },
+    {
+      "id": "P032",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [],
+        "risk_contract": {
+          "decision": "not_required",
+          "rationale": "Risk-specific review concludes baseline sufficient.",
+          "approval": "PASS",
+          "risks": [
+            "confidential",
+            "destructive"
+          ]
+        }
+      },
+      "input_sha256": "5c037175e0c91a5fbc82680b8de2f7eb1ca0db8e8c034f3db337402137bad17f",
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "FAIL",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SCHEMA_INVALID"
+        ]
+      },
+      "started_at": "2026-11-18T10:03:42.094018+00:00",
+      "timeout_seconds": 5,
+      "retry": 0,
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SCHEMA_INVALID"
+        ]
+      },
+      "status": "PASS",
+      "ended_at": "2026-11-18T10:03:42.119262+00:00"
+    }
+  ],
+  "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+  "oracle_sha256": "a48160852b060467659ee464c7f63b35b5f77328d6b3668b771b99a328828433",
+  "ended_at": "2026-11-18T10:03:42.119276+00:00",
+  "counts": {
+    "PASS": 32,
+    "FAIL": 0,
+    "UNKNOWN": 0
+  }
+}

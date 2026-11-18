@@ -1,0 +1,530 @@
+{
+  "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+  "input_sha256": "b311399f9faa40ed91e4c1ffe4302a8ff9712b3b12a6cf3f184afd7d4c2cb7c5",
+  "count": 29,
+  "passed": 29,
+  "rows": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.625074+00:00",
+      "end": "2026-11-18T10:00:07.646121+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "empty",
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.646226+00:00",
+      "end": "2026-11-18T10:00:07.673420+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "array",
+      "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.673489+00:00",
+      "end": "2026-11-18T10:00:07.691754+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "null",
+      "input_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.691835+00:00",
+      "end": "2026-11-18T10:00:07.714700+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "string",
+      "input_sha256": "ba2df4903a2c14e86dc3bcca58911b44ac1d2514b7227bf6eb08cfb978f55a1b",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.714792+00:00",
+      "end": "2026-11-18T10:00:07.736617+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_artifact_kind",
+      "input_sha256": "0a4b50a8b579f44efa97c7fb7b0315573a0897e6963565e701c716330432af8c",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.736746+00:00",
+      "end": "2026-11-18T10:00:07.765821+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_level",
+      "input_sha256": "caa18206b4498a52252fa6df333ae1a85270729bfe12118a229b52f3c83021ca",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.765986+00:00",
+      "end": "2026-11-18T10:00:07.788565+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_risk",
+      "input_sha256": "9793a4a5defbb1ae916b9e01fbcb9a024aebb34344c546536ad67da0aeae2da4",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.788659+00:00",
+      "end": "2026-11-18T10:00:07.810367+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_mode",
+      "input_sha256": "7f78df1935d41da13c34f48eaf2bee9d00110db9e1125c5685543cb7aaf00fa6",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.810465+00:00",
+      "end": "2026-11-18T10:00:07.832138+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_checks",
+      "input_sha256": "799421487f503c7ca3ffa80df799e70dee64247ba0ec1045ae08dac60d1a9e2e",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.832291+00:00",
+      "end": "2026-11-18T10:00:07.851515+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_context",
+      "input_sha256": "1abe70e8d68701ad3826217e603215234c33ca1d8bf065f1214f1c80ab0913c7",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.851652+00:00",
+      "end": "2026-11-18T10:00:07.871870+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_authorization",
+      "input_sha256": "ffbea7558398e355a3a483c30cb462e6ae7ff36640e5dab6e9ac506530e34f0d",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.871970+00:00",
+      "end": "2026-11-18T10:00:07.897773+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_flags",
+      "input_sha256": "e819029560ace0d291daf2303efab4682469bb3c734bc8a33c7140abe9ac45ed",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.897884+00:00",
+      "end": "2026-11-18T10:00:07.920475+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_ci_required",
+      "input_sha256": "d64ad088e0db3ebc7f95d9e918f6e777985434dcb6599cc2ca2519fce703d708",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.920575+00:00",
+      "end": "2026-11-18T10:00:07.940092+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_extra_checks",
+      "input_sha256": "1588c5833d9ce7d367fb7ced981cb1bb57d865f24e37a4356b1062a87f67bb98",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.940260+00:00",
+      "end": "2026-11-18T10:00:07.962917+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_contract_extra_required",
+      "input_sha256": "e63196e888f4c2735f75fdaae97280e053a0aeb0e60903682a71d0dbdeaf9d10",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.963049+00:00",
+      "end": "2026-11-18T10:00:07.998401+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_level15",
+      "input_sha256": "4697ef40c50829c573dd594579f118b8b06799572998e522316422192b43a484",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:07.998578+00:00",
+      "end": "2026-11-18T10:00:08.019167+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_level16",
+      "input_sha256": "b4ad2cf0008cf1d055ecd0181d4f571e25460db31ed3dadb96f5709c92776db9",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.019281+00:00",
+      "end": "2026-11-18T10:00:08.039274+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_mode17",
+      "input_sha256": "1906d81c0cc7a0c87ce0f39845000dca9a7e846d5d5b83e71bb44e146d119233",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.039390+00:00",
+      "end": "2026-11-18T10:00:08.060106+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_artifact_kind18",
+      "input_sha256": "44833c7bcbd3fc1af0a0432b9d8cab00e33ae81ffe19267a8b656b20dc1e42a7",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.060269+00:00",
+      "end": "2026-11-18T10:00:08.081990+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_ci_required19",
+      "input_sha256": "9d379b306cdfc2a84dc520815147958bd9359b7891164c16b3144bc70e26af95",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.082084+00:00",
+      "end": "2026-11-18T10:00:08.102485+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_authorization20",
+      "input_sha256": "f161de830e1f54e6655371db694d28133f5e169abd570e1f8b618f6c925701d4",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.102581+00:00",
+      "end": "2026-11-18T10:00:08.129367+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_extra_checks21",
+      "input_sha256": "3eafa1ab80ff38d28474098d23848a79aff9a72f0feefa2ec78a803e64347e83",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.129465+00:00",
+      "end": "2026-11-18T10:00:08.149412+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_contract_extra_required22",
+      "input_sha256": "1106e689e4b82b08457aa8f76b6476481df6056506b9a2e1ddc32474f5468a3b",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.149681+00:00",
+      "end": "2026-11-18T10:00:08.170432+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_risk_confidential",
+      "input_sha256": "10a4773c6c77cd4d2c2684715999d54a9ff7c6399e8f30cddb10b5cb0e9153bf",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.170541+00:00",
+      "end": "2026-11-18T10:00:08.194485+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_context_direct_storage",
+      "input_sha256": "3755981f7e008a774b22ad7551fe6c7ea183052015aeede6475a3e3a8c6c3bdb",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.194593+00:00",
+      "end": "2026-11-18T10:00:08.215855+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_checks_sha256",
+      "input_sha256": "24a18baca1a1c46ed59a528797bc708393e3a2d87c55bfaca815a82aebe4dec7",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.215946+00:00",
+      "end": "2026-11-18T10:00:08.237878+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_flags_regenerated",
+      "input_sha256": "f9c2db50d6f36f123b2db5a0a4dbc09338e61ce7a907193a04e9515a61558bfa",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.237974+00:00",
+      "end": "2026-11-18T10:00:08.257152+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "bad_authorization_valid",
+      "input_sha256": "6987f9add48f64d982aa0397ef690af962e57347bd79064e667436639079c7e9",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "gate-v02-p2-20261118/oracle/review-repo/tests/v0.2.0/check.py"
+      ],
+      "start": "2026-11-18T10:00:08.257322+00:00",
+      "end": "2026-11-18T10:00:08.275328+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"FAIL\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SCHEMA_INVALID\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "extra_field",
+      "input_sha256": "0926de385992dd5e728283e5b300184aefebf06d3e6a621f80fa72fc5612ffa9",
+      "expected_reason": "SCHEMA_INVALID",
+      "match": true
+    }
+  ]
+}

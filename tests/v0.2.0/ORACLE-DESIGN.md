@@ -1,0 +1,9 @@
+# Independent oracle design, 2026-11-18
+
+Author: separate oracle-review AI agent; implementation not opened. Same infrastructure, account and inherited conversation; not independent human or credential audit. This is a synthetic policy decision oracle, not storage evidence.
+
+The oracle is authored from owner requirements before checker execution. Expected negative results are not changed to follow checker output. Schema refinements are recorded before execution. Production permits are false for every synthetic case. Hypothetical eligibility is distinct from authorization.
+
+Normative cases to cover: ordinary PR without archive; missing retrieval; SHA mismatch; CRC corruption; absent manifest; same-owner separated execution; workspace copy; confidential downgraded to L1; expired approval; case-specific approval mismatch; ACL insufficient; original unknown; regenerated original; technical vs third-party claim; history rewrite; bundle restore omission; ordinary CI fail; ordinary review missing; L3 approved strict positive; unknown strict identity; same-owner strict; same session; same execution ID; missing independent input; missing receipt; storage unavailable; retention unknown; policy not adopted; post hoc downgrade; bundle object corruption; missing archive safety; UNKNOWN level; unknown confidentiality; missing schema field; empty input; invalid status; non-bool context; mixed required unknown and not-tested; L1 optional CI unexecuted; valid reusable approval; L2 review fail; L2 CI missing.
+
+Same-owner SOLO verification may be PASS only when direct retrieval and separated session/execution/workspace plus independent input are observed. INDEPENDENCE_STATUS remains LIMITED_SHARED_OWNER. Existence of an owner risk acceptance cannot prove technical checks or human independence. L1 custody/verification are NOT_TESTED with applicability=false, not fabricated PASS.

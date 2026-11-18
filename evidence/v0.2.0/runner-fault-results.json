@@ -1,0 +1,42 @@
+{
+  "redaction": "private execution locator only; original bytes retained locally",
+  "original_sha256": "a6aa1dc901a39eb9fdb450da4c1b67fe9708f91c606d76cfa2597f266d58189b",
+  "record": {
+    "at": "2026-11-18T09:28:39.819204+00:00",
+    "runner_sha256": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+    "cases": [
+      {
+        "case": "missing_cases",
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "log_created": true,
+        "test_status": "FAIL"
+      },
+      {
+        "case": "empty_cases",
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "log_created": true,
+        "test_status": "FAIL"
+      },
+      {
+        "case": "digest_mismatch",
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "log_created": true,
+        "test_status": "FAIL"
+      },
+      {
+        "case": "duplicate_case",
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "log_created": true,
+        "test_status": "FAIL"
+      }
+    ]
+  }
+}

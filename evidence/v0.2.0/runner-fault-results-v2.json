@@ -1,0 +1,133 @@
+{
+  "redaction": "private execution locator only; original bytes retained locally",
+  "original_sha256": "2c6ab31c815134f85b3a77cf429d3c1e30a099fc182ae77a8578f789af709955",
+  "record": {
+    "at": "2026-11-18T09:29:05.894970+00:00",
+    "correction": "Initial review harness wrongly forbade NOT_TESTED failure log; prior run retained. Correct expectation fixed before this rerun.",
+    "runner_sha256": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+    "cases": [
+      {
+        "case": "missing_cases",
+        "expected": {
+          "exit": 2,
+          "test_status": "NOT_TESTED",
+          "runs": [],
+          "production_permit": false
+        },
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "actual": {
+          "started_at": "2026-11-18T09:29:05.778839+00:00",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+          },
+          "kind": "SYNTHETIC_ONLY",
+          "production_permit": false,
+          "runs": [],
+          "preflight_error": "FileNotFoundError: [Errno 2] No such file or directory: '<private-review-workspace>/runner-faults-v2/missing_cases/cases.json'",
+          "test_status": "NOT_TESTED",
+          "ended_at": "2026-11-18T09:29:05.780361+00:00"
+        },
+        "test_status": "PASS"
+      },
+      {
+        "case": "empty_cases",
+        "expected": {
+          "exit": 2,
+          "test_status": "NOT_TESTED",
+          "runs": [],
+          "production_permit": false
+        },
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "actual": {
+          "started_at": "2026-11-18T09:29:05.814338+00:00",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+          },
+          "kind": "SYNTHETIC_ONLY",
+          "production_permit": false,
+          "runs": [],
+          "inputs": {
+            "cases.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "check.py": "1f6669d6da1d6b1cf263990454d6fdc5d40e500c20988eef129a802b2b00c63d",
+            "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+            "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+          },
+          "preflight_error": "ValueError: case inventory invalid",
+          "test_status": "NOT_TESTED",
+          "ended_at": "2026-11-18T09:29:05.816004+00:00"
+        },
+        "test_status": "PASS"
+      },
+      {
+        "case": "digest_mismatch",
+        "expected": {
+          "exit": 2,
+          "test_status": "NOT_TESTED",
+          "runs": [],
+          "production_permit": false
+        },
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "actual": {
+          "started_at": "2026-11-18T09:29:05.848513+00:00",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+          },
+          "kind": "SYNTHETIC_ONLY",
+          "production_permit": false,
+          "runs": [],
+          "inputs": {
+            "cases.json": "d291fbe6f0f30284d0474c434315155e4f520cd7e745a36d396e365317ff057b",
+            "check.py": "1f6669d6da1d6b1cf263990454d6fdc5d40e500c20988eef129a802b2b00c63d",
+            "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+            "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+          },
+          "preflight_error": "ValueError: oracle digest mismatch",
+          "test_status": "NOT_TESTED",
+          "ended_at": "2026-11-18T09:29:05.850698+00:00"
+        },
+        "test_status": "PASS"
+      },
+      {
+        "case": "duplicate_case",
+        "expected": {
+          "exit": 2,
+          "test_status": "NOT_TESTED",
+          "runs": [],
+          "production_permit": false
+        },
+        "exit": 2,
+        "stdout": "",
+        "stderr": "preflight failed; no checker execution\n",
+        "actual": {
+          "started_at": "2026-11-18T09:29:05.886551+00:00",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+          },
+          "kind": "SYNTHETIC_ONLY",
+          "production_permit": false,
+          "runs": [],
+          "inputs": {
+            "cases.json": "fb3bec32bb7421159c392d042ffcfd0d7287c90e957110092e90b759b92ebe62",
+            "check.py": "1f6669d6da1d6b1cf263990454d6fdc5d40e500c20988eef129a802b2b00c63d",
+            "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+            "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+          },
+          "preflight_error": "ValueError: case inventory invalid",
+          "test_status": "NOT_TESTED",
+          "ended_at": "2026-11-18T09:29:05.888836+00:00"
+        },
+        "test_status": "PASS"
+      }
+    ]
+  }
+}

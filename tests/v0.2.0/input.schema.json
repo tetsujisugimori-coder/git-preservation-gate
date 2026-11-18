@@ -1,0 +1,428 @@
+{
+  "type": "object",
+  "properties": {
+    "artifact_kind": {
+      "enum": [
+        "ordinary",
+        "evidence",
+        "zip",
+        "bundle"
+      ]
+    },
+    "level": {
+      "enum": [
+        1,
+        2,
+        3,
+        "UNKNOWN"
+      ]
+    },
+    "risk": {
+      "type": "object",
+      "properties": {
+        "confidential": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "irrecoverable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "destructive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "strong_authenticity": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "confidential",
+        "irrecoverable",
+        "destructive",
+        "strong_authenticity"
+      ],
+      "additionalProperties": false
+    },
+    "mode": {
+      "enum": [
+        "SOLO_STANDARD",
+        "STRICT_INDEPENDENT"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "git_trace": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "change_control": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "ci": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "review": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "original": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "approval": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "storage": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "receipt": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "retrieval": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "size": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "sha256": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "bytes": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "crc": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "manifest": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "archive_safety": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "acl": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "retention": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "bundle_restore": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        },
+        "object_integrity": {
+          "enum": [
+            "BLOCKED",
+            "FAIL",
+            "NOT_TESTED",
+            "PARTIAL",
+            "PASS",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "git_trace",
+        "change_control",
+        "ci",
+        "review",
+        "original",
+        "approval",
+        "storage",
+        "receipt",
+        "retrieval",
+        "size",
+        "sha256",
+        "bytes",
+        "crc",
+        "manifest",
+        "archive_safety",
+        "acl",
+        "retention",
+        "bundle_restore",
+        "object_integrity"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "session_separated": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "execution_separated": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "workspace_separated": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "direct_storage": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "independent_input": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "human_independent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "credential_independent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "session_separated",
+        "execution_separated",
+        "workspace_separated",
+        "direct_storage",
+        "independent_input",
+        "human_independent",
+        "credential_independent"
+      ],
+      "additionalProperties": false
+    },
+    "authorization": {
+      "type": "object",
+      "properties": {
+        "scope_matches": {
+          "type": "boolean"
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "adopted": {
+          "type": "boolean"
+        },
+        "individual": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scope_matches",
+        "valid",
+        "adopted",
+        "individual"
+      ],
+      "additionalProperties": false
+    },
+    "flags": {
+      "type": "object",
+      "properties": {
+        "regenerated": {
+          "type": "boolean"
+        },
+        "retroactive_pass": {
+          "type": "boolean"
+        },
+        "level_downgrade": {
+          "type": "boolean"
+        },
+        "claims_third_party": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "regenerated",
+        "retroactive_pass",
+        "level_downgrade",
+        "claims_third_party"
+      ],
+      "additionalProperties": false
+    },
+    "ci_required": {
+      "type": "boolean"
+    },
+    "extra_checks": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "BLOCKED",
+          "FAIL",
+          "NOT_TESTED",
+          "PARTIAL",
+          "PASS",
+          "UNKNOWN"
+        ]
+      },
+      "propertyNames": {
+        "pattern": "^[A-Za-z0-9_]+$"
+      }
+    },
+    "contract_extra_required": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_]+$"
+      }
+    }
+  },
+  "required": [
+    "artifact_kind",
+    "level",
+    "risk",
+    "mode",
+    "checks",
+    "context",
+    "authorization",
+    "flags",
+    "ci_required",
+    "extra_checks",
+    "contract_extra_required"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Synthetic input only; check.py enforces this shape without external dependencies."
+}

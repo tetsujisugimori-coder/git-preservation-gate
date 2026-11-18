@@ -1,0 +1,5586 @@
+{
+  "started_at": "2026-11-18T09:26:00.763281+00:00",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "kind": "SYNTHETIC_ONLY",
+  "production_permit": false,
+  "runs": [
+    {
+      "id": "V001",
+      "title": "L1 ordinary without archive",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "NOT_TESTED",
+          "approval": "NOT_TESTED",
+          "storage": "NOT_TESTED",
+          "receipt": "NOT_TESTED",
+          "retrieval": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "bytes": "NOT_TESTED",
+          "crc": "NOT_TESTED",
+          "manifest": "NOT_TESTED",
+          "archive_safety": "NOT_TESTED",
+          "acl": "NOT_TESTED",
+          "retention": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "object_integrity": "NOT_TESTED"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "rationale": "Ordinary change does not require archives or separation.",
+      "started_at": "2026-11-18T09:26:00.768878+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.802997+00:00"
+    },
+    {
+      "id": "V002",
+      "title": "L2 saved but retrieval unexecuted",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "NOT_TESTED",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETRIEVAL_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Save and verification are distinct.",
+      "started_at": "2026-11-18T09:26:00.803012+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RETRIEVAL_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETRIEVAL_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.826838+00:00"
+    },
+    {
+      "id": "V003",
+      "title": "SHA mismatch",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Observed mismatch cannot be accepted.",
+      "started_at": "2026-11-18T09:26:00.826853+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.845319+00:00"
+    },
+    {
+      "id": "V004",
+      "title": "CRC corruption",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "FAIL",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CRC_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "ZIP corruption is a demonstrated contradiction.",
+      "started_at": "2026-11-18T09:26:00.845330+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CRC_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CRC_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.862584+00:00"
+    },
+    {
+      "id": "V005",
+      "title": "Manifest unavailable",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "BLOCKED",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_MANIFEST_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Missing required manifest blocks ZIP verification.",
+      "started_at": "2026-11-18T09:26:00.862594+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_MANIFEST_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_MANIFEST_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.881044+00:00"
+    },
+    {
+      "id": "V006",
+      "title": "SOLO same owner separated verification",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Technical PASS does not claim human independence.",
+      "started_at": "2026-11-18T09:26:00.881057+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.898398+00:00"
+    },
+    {
+      "id": "V007",
+      "title": "Workspace copy",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": false,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "A workspace copy cannot substitute direct storage retrieval.",
+      "started_at": "2026-11-18T09:26:00.898412+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DIRECT_STORAGE_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.917446+00:00"
+    },
+    {
+      "id": "V008",
+      "title": "Confidential L1",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "rationale": "Known confidential risk requires Level 3. Independent oracle correction: invalid classification cannot grant the archive exemption; do not infer actual corruption from classification alone.",
+      "started_at": "2026-11-18T09:26:00.917460+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.937415+00:00"
+    },
+    {
+      "id": "V009",
+      "title": "Expired approval",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": false,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_EXPIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Expired authorization cannot be reused.",
+      "started_at": "2026-11-18T09:26:00.937426+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"AUTH_EXPIRED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_EXPIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.957033+00:00"
+    },
+    {
+      "id": "V010",
+      "title": "Case-specific approval scope mismatch",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": false,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_SCOPE_MISMATCH",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "A different case does not inherit approval.",
+      "started_at": "2026-11-18T09:26:00.957045+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"AUTH_SCOPE_MISMATCH\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_SCOPE_MISMATCH",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:00.974549+00:00"
+    },
+    {
+      "id": "V011",
+      "title": "ACL insufficient",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "BLOCKED",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ACL_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Insufficient required access blocks custody, not unrelated documentation.",
+      "started_at": "2026-11-18T09:26:00.974558+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ACL_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ACL_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.006930+00:00"
+    },
+    {
+      "id": "V012",
+      "title": "Original location unknown",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "UNKNOWN",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ORIGINAL_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Unknown is not absence and cannot pass original identity.",
+      "started_at": "2026-11-18T09:26:01.006945+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ORIGINAL_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ORIGINAL_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.025344+00:00"
+    },
+    {
+      "id": "V013",
+      "title": "Regenerated substitute",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": true,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ORIGINAL_SUBSTITUTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Regenerated bytes do not recover historical original. Independent oracle correction: explicit substitution invalidates both target-original custody and verification, without disproving session independence.",
+      "started_at": "2026-11-18T09:26:01.025355+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ORIGINAL_SUBSTITUTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ORIGINAL_SUBSTITUTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.044295+00:00"
+    },
+    {
+      "id": "V014",
+      "title": "Technical PASS claimed third party",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": true
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_OVERCLAIM"
+        ]
+      },
+      "rationale": "SOLO limitations cannot be rewritten to independent human PASS.",
+      "started_at": "2026-11-18T09:26:01.044305+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"THIRD_PARTY_OVERCLAIM\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_OVERCLAIM"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.062389+00:00"
+    },
+    {
+      "id": "V015",
+      "title": "Past BLOCKED overwritten",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": true,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HISTORY_REWRITTEN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Old decisions must remain immutable history.",
+      "started_at": "2026-11-18T09:26:01.062400+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HISTORY_REWRITTEN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HISTORY_REWRITTEN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.081584+00:00"
+    },
+    {
+      "id": "V016",
+      "title": "Bundle restore omitted",
+      "input": {
+        "artifact_kind": "bundle",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "NOT_TESTED",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BUNDLE_RESTORE_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Level 2 cannot waive recovery acceptance purpose.",
+      "started_at": "2026-11-18T09:26:01.081599+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_BUNDLE_RESTORE_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BUNDLE_RESTORE_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.099485+00:00"
+    },
+    {
+      "id": "V017",
+      "title": "L1 required CI failed",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "FAIL",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_CI_FAIL"
+        ]
+      },
+      "rationale": "Lower custody burden does not weaken required CI.",
+      "started_at": "2026-11-18T09:26:01.099495+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\", \"CHECK_CI_FAIL\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_CI_FAIL"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.124302+00:00"
+    },
+    {
+      "id": "V018",
+      "title": "L1 review unexecuted",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "NOT_TESTED",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_REVIEW_NOT_TESTED"
+        ]
+      },
+      "rationale": "Review is separate from preservation applicability.",
+      "started_at": "2026-11-18T09:26:01.124315+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\", \"CHECK_REVIEW_NOT_TESTED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_REVIEW_NOT_TESTED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.142070+00:00"
+    },
+    {
+      "id": "V019",
+      "title": "L3 STRICT all observed",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": true,
+          "credential_independent": true
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "rationale": "Explicit strict evidence and all mandatory checks permit hypothetical acceptance.",
+      "started_at": "2026-11-18T09:26:01.142081+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": []}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": []
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.159635+00:00"
+    },
+    {
+      "id": "V020",
+      "title": "STRICT human identity unknown",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": null,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_UNKNOWN"
+        ]
+      },
+      "rationale": "Unknown human independence remains unknown.",
+      "started_at": "2026-11-18T09:26:01.159645+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HUMAN_INDEPENDENT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_UNKNOWN"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.176832+00:00"
+    },
+    {
+      "id": "V021",
+      "title": "STRICT same owner",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "STRICT_INDEPENDENT",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_MISSING"
+        ]
+      },
+      "rationale": "Strict mode cannot silently become SOLO.",
+      "started_at": "2026-11-18T09:26:01.176843+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HUMAN_INDEPENDENT_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_MISSING"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.195458+00:00"
+    },
+    {
+      "id": "V022",
+      "title": "SOLO same session",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": false,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SESSION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Separate session is a SOLO technical condition.",
+      "started_at": "2026-11-18T09:26:01.195466+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SESSION_SEPARATED_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SESSION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.213243+00:00"
+    },
+    {
+      "id": "V023",
+      "title": "SOLO execution reused",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": false,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXECUTION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "One execution relabeled B is not distinct verification.",
+      "started_at": "2026-11-18T09:26:01.213253+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EXECUTION_SEPARATED_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXECUTION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.231000+00:00"
+    },
+    {
+      "id": "V024",
+      "title": "SOLO workspace reused",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": false,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "WORKSPACE_SEPARATED_MISSING"
+        ]
+      },
+      "rationale": "Verification must use separate area.",
+      "started_at": "2026-11-18T09:26:01.231010+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"WORKSPACE_SEPARATED_MISSING\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "WORKSPACE_SEPARATED_MISSING"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.248481+00:00"
+    },
+    {
+      "id": "V025",
+      "title": "Producer report only",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": false,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDEPENDENT_INPUT_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Producer log cannot substitute bytes.",
+      "started_at": "2026-11-18T09:26:01.248492+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"INDEPENDENT_INPUT_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDEPENDENT_INPUT_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.266762+00:00"
+    },
+    {
+      "id": "V026",
+      "title": "Missing receipt",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "NOT_TESTED",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RECEIPT_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Custody receipt is mandatory and not inferred from verification.",
+      "started_at": "2026-11-18T09:26:01.266773+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RECEIPT_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RECEIPT_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.285944+00:00"
+    },
+    {
+      "id": "V027",
+      "title": "Storage unreachable",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "BLOCKED",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Unavailable destination cannot yield custody PASS.",
+      "started_at": "2026-11-18T09:26:01.285954+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_STORAGE_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.303630+00:00"
+    },
+    {
+      "id": "V028",
+      "title": "Retention unknown",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "UNKNOWN",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETENTION_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Owner term and storage mechanism are distinct.",
+      "started_at": "2026-11-18T09:26:01.303640+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RETENTION_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETENTION_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.324405+00:00"
+    },
+    {
+      "id": "V029",
+      "title": "Policy not adopted",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": false,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "POLICY_NOT_ADOPTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Design candidate does not authorize actual migration.",
+      "started_at": "2026-11-18T09:26:01.324418+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"POLICY_NOT_ADOPTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "POLICY_NOT_ADOPTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.342949+00:00"
+    },
+    {
+      "id": "V030",
+      "title": "Post-hoc downgrade",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": true,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_DOWNGRADE",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Cannot lower level to hide failures.",
+      "started_at": "2026-11-18T09:26:01.342960+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_DOWNGRADE\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_DOWNGRADE",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.363071+00:00"
+    },
+    {
+      "id": "V031",
+      "title": "Bundle object corruption",
+      "input": {
+        "artifact_kind": "bundle",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "FAIL"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_OBJECT_INTEGRITY_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Bundle restore alone does not prove all objects.",
+      "started_at": "2026-11-18T09:26:01.363082+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_OBJECT_INTEGRITY_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_OBJECT_INTEGRITY_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.381726+00:00"
+    },
+    {
+      "id": "V032",
+      "title": "Archive safety untested",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "NOT_TESTED",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ARCHIVE_SAFETY_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "CRC does not detect unsafe archive names.",
+      "started_at": "2026-11-18T09:26:01.381739+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ARCHIVE_SAFETY_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ARCHIVE_SAFETY_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.406140+00:00"
+    },
+    {
+      "id": "V033",
+      "title": "Level unclassified",
+      "input": {
+        "artifact_kind": "zip",
+        "level": "UNKNOWN",
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "rationale": "Only safe documentation continues; no transfer or acceptance permit.",
+      "started_at": "2026-11-18T09:26:01.406153+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.426697+00:00"
+    },
+    {
+      "id": "V034",
+      "title": "L1 CI explicitly not required",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "NOT_TESTED",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": false,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "rationale": "Required set fixed beforehand can exclude CI but leaves observed NOT_TESTED.",
+      "started_at": "2026-11-18T09:26:01.426713+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.460561+00:00"
+    },
+    {
+      "id": "V035",
+      "title": "Approved reusable scope matches",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Matching valid scope approval needs no new per-artifact owner form.",
+      "started_at": "2026-11-18T09:26:01.460575+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.479648+00:00"
+    },
+    {
+      "id": "V036",
+      "title": "L2 review failed",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "FAIL",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_REVIEW_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Preservation PASS does not override product/document review FAIL.",
+      "started_at": "2026-11-18T09:26:01.479662+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_REVIEW_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_REVIEW_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.502212+00:00"
+    },
+    {
+      "id": "V037",
+      "title": "L2 CI unexecuted",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "NOT_TESTED",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Required CI remains outstanding.",
+      "started_at": "2026-11-18T09:26:01.502223+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CI_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.520963+00:00"
+    },
+    {
+      "id": "V038",
+      "title": "Verification mixed unknown and untested",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "UNKNOWN",
+          "bytes": "NOT_TESTED",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PARTIAL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BYTES_NOT_TESTED",
+          "CHECK_SHA256_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Mixed missing observations do not become PASS.",
+      "started_at": "2026-11-18T09:26:01.520973+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PARTIAL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_BYTES_NOT_TESTED\", \"CHECK_SHA256_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BYTES_NOT_TESTED",
+          "CHECK_SHA256_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.541875+00:00"
+    },
+    {
+      "id": "V039",
+      "title": "SOLO retrieval route unknown",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": null,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Unknown route does not prove direct retrieval.",
+      "started_at": "2026-11-18T09:26:01.541886+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DIRECT_STORAGE_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.561621+00:00"
+    },
+    {
+      "id": "V040",
+      "title": "Important evidence misclassified L1",
+      "input": {
+        "artifact_kind": "evidence",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "rationale": "Irreplaceable experiment evidence cannot use ordinary-PR exemption. Independent oracle correction: invalid classification cannot grant the archive exemption; do not infer actual corruption from classification alone.",
+      "started_at": "2026-11-18T09:26:01.561634+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.581858+00:00"
+    },
+    {
+      "id": "V041",
+      "title": "L3 individual approval absent",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": false
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDIVIDUAL_APPROVAL_REQUIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Reusable scope alone does not replace L3 individual approval.",
+      "started_at": "2026-11-18T09:26:01.581870+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"INDIVIDUAL_APPROVAL_REQUIRED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDIVIDUAL_APPROVAL_REQUIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.600802+00:00"
+    },
+    {
+      "id": "V042",
+      "title": "Mandatory extra check missing",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": [
+          "isolation"
+        ]
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXTRA_CHECK_MISSING_isolation",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Case-specific required checks cannot disappear.",
+      "started_at": "2026-11-18T09:26:01.600812+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EXTRA_CHECK_MISSING_isolation\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXTRA_CHECK_MISSING_isolation",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.627513+00:00"
+    },
+    {
+      "id": "V043",
+      "title": "Mandatory extra check failed",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {
+          "isolation": "FAIL"
+        },
+        "contract_extra_required": [
+          "isolation"
+        ]
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_isolation_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "rationale": "Additional contract safety condition remains mandatory.",
+      "started_at": "2026-11-18T09:26:01.627529+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_EXTRA_isolation_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_isolation_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.645988+00:00"
+    },
+    {
+      "id": "V044",
+      "title": "Third party claim identity unverified",
+      "input": {
+        "artifact_kind": "zip",
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "PASS",
+          "approval": "PASS",
+          "storage": "PASS",
+          "receipt": "PASS",
+          "retrieval": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "bytes": "PASS",
+          "crc": "PASS",
+          "manifest": "PASS",
+          "archive_safety": "PASS",
+          "acl": "PASS",
+          "retention": "PASS",
+          "bundle_restore": "PASS",
+          "object_integrity": "PASS"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": null,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": true,
+          "valid": true,
+          "adopted": true,
+          "individual": true
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": true
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_UNVERIFIED"
+        ]
+      },
+      "rationale": "Unknown identity is unproven, not demonstrated false.",
+      "started_at": "2026-11-18T09:26:01.646000+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"THIRD_PARTY_UNVERIFIED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_UNVERIFIED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.673868+00:00"
+    },
+    {
+      "id": "V045",
+      "title": "L1 without separate storage approval",
+      "input": {
+        "artifact_kind": "ordinary",
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "irrecoverable": false,
+          "destructive": false,
+          "strong_authenticity": false
+        },
+        "mode": "SOLO_STANDARD",
+        "checks": {
+          "git_trace": "PASS",
+          "change_control": "PASS",
+          "ci": "PASS",
+          "review": "PASS",
+          "original": "NOT_TESTED",
+          "approval": "NOT_TESTED",
+          "storage": "NOT_TESTED",
+          "receipt": "NOT_TESTED",
+          "retrieval": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "bytes": "NOT_TESTED",
+          "crc": "NOT_TESTED",
+          "manifest": "NOT_TESTED",
+          "archive_safety": "NOT_TESTED",
+          "acl": "NOT_TESTED",
+          "retention": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "object_integrity": "NOT_TESTED"
+        },
+        "context": {
+          "session_separated": true,
+          "execution_separated": true,
+          "workspace_separated": true,
+          "direct_storage": true,
+          "independent_input": true,
+          "human_independent": false,
+          "credential_independent": false
+        },
+        "authorization": {
+          "scope_matches": false,
+          "valid": false,
+          "adopted": true,
+          "individual": false
+        },
+        "flags": {
+          "regenerated": false,
+          "retroactive_pass": false,
+          "level_downgrade": false,
+          "claims_third_party": false
+        },
+        "ci_required": true,
+        "extra_checks": {},
+        "contract_extra_required": []
+      },
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "rationale": "Storage authorization is not required for ordinary Git/PR-only artifact; adopted policy and case CI/review remain required.",
+      "started_at": "2026-11-18T09:26:01.673880+00:00",
+      "command": [
+        "python",
+        "-I",
+        "check.py"
+      ],
+      "timeout_seconds": 5,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "test_status": "PASS",
+      "ended_at": "2026-11-18T09:26:01.703340+00:00"
+    }
+  ],
+  "inputs": {
+    "cases.json": "1c3ddd6d6c95f6cda7ea01ed21cb5a3e81510e63c4d251cd11d981b6ba2c522a",
+    "check.py": "5162515ce77e6d6b0b5a80bd2e100100a006f23b27fc000bc1ce3c6419b9a20b",
+    "run.py": "0cde74b151153788c20c9e6ecea5b9502df6a483f78a79c1d63e8a0ff321d5f5",
+    "oracle-lock.json": "afc611b0c2c3bc11abe8719abbf6e6caa2c8e95d0b906707eafe0678cca8af6b"
+  },
+  "ended_at": "2026-11-18T09:26:01.703353+00:00",
+  "counts": {
+    "PASS": 45,
+    "FAIL": 0,
+    "UNKNOWN": 0,
+    "NOT_TESTED": 0
+  }
+}

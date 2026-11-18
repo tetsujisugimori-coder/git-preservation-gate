@@ -1,6 +1,8 @@
-# 中央保全・監査統合規約 v0.2.0 案
+# 中央保全・監査統合規約 v0.2.0（正式採用）
 
-**DESIGN_PROPOSED / Stage 0のみ。未採用。** 正本v0.1.0を変更しない。PR #4のv0.1.1は未採用案であり本案の設計入力。文書受入・規約採用・案件適用・Stage 1実運用・マージは別判断。本案の合成試験は実保存や強制ゲートの証明ではない。
+**ADOPTED / 承認日・発効日：2026-11-18 JST。** 本文は中央規約の現行正本。所有者の正式承認は [Issue #5](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/5)、対象・版差分・発効条件は [採用記録](adoption-record.md) を参照。発効は正式化PRがmainへマージされた時点からとし、旧結果を遡及変更しない。v0.1.0は旧正本として保持し、PR #4のv0.1.1は未採用の歴史的設計入力として扱う。
+
+**中央採用と案件適用・Stage 1実運用・具体的な保存操作・PR受入/マージの許可は別判断。** Stage 1-Aは開発・Linux合成検証の範囲に限られ、実原物の保存・復元、Windows、強制ゲート、実permitは未受入。本規約の設計・合成試験は実保存や強制ゲートの証明ではない。
 
 ## 1. 原則と対象固定
 取得済み原物の喪失防止を優先する。リポジトリ全体でなく、成果物・証拠・操作ごとに分類し、同じPRの通常文書と重要原ZIPを別票にする。対象ID、repository、完全HEAD/tree/parents、参照ref、規約version/commit、案件契約、分類理由、監査方式を開始前に固定。旧原票と失敗履歴は追記で保持する。結果を見た後のレベル引下げや方式変更で失敗を隠さない。
@@ -30,7 +32,7 @@ L1の追加archive custody/verification/independenceはNOT_TESTED・非適用。
 Git bundleの自己完結性/復元が目的の案件はv0.1.0 P01/P02/P04を維持。prerequisite、shallow、partial、alternates依存を確認し、空bare復元・fsck・raw OID・tree/parents/ref集合・全blobを照合。Level 2やSOLOを理由に省略しない。非Git/LFS/submodule等は別対象として必要性を固定。暗黙にbundle収録済みとしない。
 
 ## 5. 実運用採用ゲート
-本案・合成器は本番の許可を発行しない。合成gate_eligibilityと実permitを別出力とし、Stage 0 permitは常にfalse。実運用には版採用、対象ごとの契約、実データ取得手順/期限/停止方式、権限、独立設計レビューが必要。規約更新は自動配布しない。他案件の旧FAIL/BLOCKEDを変更しない。
+本規約の採用と合成器は本番の許可を発行しない。合成gate_eligibilityと実permitを別出力とし、Stage 0 permitは常にfalse。実運用には版採用、対象ごとの契約、実データ取得手順/期限/停止方式、権限、独立設計レビューが必要。規約更新は自動配布しない。他案件の旧FAIL/BLOCKEDを変更しない。
 
 分類UNKNOWNは既知の矛盾を隠す理由ではない。機密=true等で最低Level3が確定するのにLevel1/2を申告したらFAIL。分類未確定でも、実証されたSHA/CRC等のFAILは対応する保存/検証軸に保持し、受入をFAILにする。未分類だから全てUNKNOWNへ巻き戻さない。
 

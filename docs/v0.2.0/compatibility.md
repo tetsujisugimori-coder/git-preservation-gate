@@ -1,9 +1,10 @@
 # v0.1.0 / v0.1.1 / v0.2.0 互換性
 
-開始main `68285b5a12bf1ef2707543681ba3b3064c2339d4`、tree `c5a3b3b90c353369a4bd0e339cb1dcda1e9255c5`。
-PR #4は `c1f6f52f531c17e45c3c1f822d53a45c41cbd14f`、tree `ef838f22d6433195db3008dc1f5c648ab2c25986`、OPEN/Draft。v0.1.0はmain正本。本文はStage 0提案版で実運用/他repo採用は別承認。v0.1.1はPR4上の未採用補訂案。PR4未回収ZIPはUNKNOWN/BLOCKEDのまま。
+**現行中央正本は v0.2.0（2026-11-18 JST正式採用）。** この文書の比較表は設計時の固定版対照であり、版差分の公式要約は [採用記録](adoption-record.md) を参照。正式採用で本番ゲートや他repoを自動適用せず、PR #4の未回収ZIP・旧BLOCKEDは維持する。
 
-本PRはmainから独立して作る新規案であり、PR4をmerge/rebaseせず、その履歴と未採用状態を保持する。
+以下はStage 0着手時の履歴：開始main `68285b5a12bf1ef2707543681ba3b3064c2339d4`、tree `c5a3b3b90c353369a4bd0e339cb1dcda1e9255c5`。PR #4当時の固定版は `c1f6f52f531c17e45c3c1f822d53a45c41cbd14f`、tree `ef838f22d6433195db3008dc1f5c648ab2c25986`（当時OPEN/Draft）。当時のv0.1.0はmain正本、v0.1.1はPR #4上の未採用補訂案だった。
+
+v0.2.0の設計PR #6は当初mainから独立して作成し、PR #4をmerge/rebaseせず、その歴史と未採用状態を保持した。正式化PRも既存原票・旧判定を書き換えない。
 
 |規約項目|維持/変更|
 |---|---|

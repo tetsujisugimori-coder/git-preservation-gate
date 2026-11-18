@@ -44,3 +44,12 @@ python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p2/legacy
 python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p2/extra-boundary-cases.json extra3.json
 ```
 初回evidence/submission-manifestは初回HEAD専用。本補訂の提出集合は新しいp2/submission-manifestで別に管理。
+
+## 分類違反・独立性の追加境界（I01〜I07）
+既存の49件・P2の32件・X01〜03の元入力および元期待は変更しない。別ファイル `p3/independence-boundary-cases.json` に、STRICT人的分離の既知不成立、技術分離の既知不成立、SOLOの同一所有者、人的独立性の未観測の対照を7件固定した。実行例:
+
+```sh
+python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p3/independence-boundary-cases.json independence7.json
+```
+
+実行時は新規ログ名を使い、`rows=7`・`PASS=7`・`FAIL=UNKNOWN=0` を検証する。ログを取得・照合するまで本追加7件の実行状態は `NOT_TESTED` とする。既存CIも0件なら `NOT_TESTED` のまま維持する。

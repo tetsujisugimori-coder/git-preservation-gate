@@ -1,0 +1,673 @@
+{
+  "command": [
+    "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "${WINDOWS_TASK_ROOT}\\readback_self_v2.py"
+  ],
+  "started_at": "2026-11-18T13:11:01.035717+00:00",
+  "status": "PASS",
+  "reason": "OK",
+  "process_state": "JOB_EMPTY",
+  "production_permit": false,
+  "retry": 0,
+  "command_timeout": 5,
+  "total_timeout": 10.0,
+  "stop_wait": 2.0,
+  "fault": null,
+  "observations": [
+    {
+      "elapsed": 0.00875619999897026,
+      "active": 1,
+      "total": 1,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.018907099998614285,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.02941599999940081,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.03985420000026352,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.05016040000009525,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.06085770000026969,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.0713036999986798,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.0816419999991922,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.09176139999908628,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.10186619999876712,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.11217909999868425,
+      "active": 3,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.12228599999980361,
+      "active": 3,
+      "total": 5,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.13270919999922626,
+      "active": 4,
+      "total": 6,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.14291839999896183,
+      "active": 4,
+      "total": 6,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.15322879999985162,
+      "active": 3,
+      "total": 7,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.16360989999884623,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.1741850999987946,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.18481699999938428,
+      "active": 5,
+      "total": 9,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.19544589999895834,
+      "active": 5,
+      "total": 10,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.20592599999872618,
+      "active": 4,
+      "total": 10,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.21631489999890618,
+      "active": 5,
+      "total": 11,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.22681519999969169,
+      "active": 3,
+      "total": 12,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.23708350000015344,
+      "active": 4,
+      "total": 13,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2475600999987364,
+      "active": 5,
+      "total": 14,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.25779569999940577,
+      "active": 4,
+      "total": 14,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.267916900000273,
+      "active": 5,
+      "total": 15,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2783985999994911,
+      "active": 5,
+      "total": 15,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2889549999999872,
+      "active": 5,
+      "total": 16,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.29923629999939294,
+      "active": 5,
+      "total": 16,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3097983999996359,
+      "active": 3,
+      "total": 17,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.32027539999944565,
+      "active": 4,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3305014999987179,
+      "active": 4,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3411770000002434,
+      "active": 2,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3517226000003575,
+      "active": 4,
+      "total": 20,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3624290999996447,
+      "active": 4,
+      "total": 20,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.37322259999928065,
+      "active": 3,
+      "total": 20,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3838187999990623,
+      "active": 3,
+      "total": 21,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.394162900000083,
+      "active": 4,
+      "total": 22,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4043580999987171,
+      "active": 4,
+      "total": 22,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4146165000001929,
+      "active": 4,
+      "total": 22,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4247637999997096,
+      "active": 4,
+      "total": 22,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.43496330000016314,
+      "active": 3,
+      "total": 23,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.44516569999905187,
+      "active": 4,
+      "total": 24,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.455372599999464,
+      "active": 4,
+      "total": 24,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4656959000003553,
+      "active": 4,
+      "total": 24,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4758488999996189,
+      "active": 3,
+      "total": 24,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.48630079999929876,
+      "active": 3,
+      "total": 25,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.49679209999885643,
+      "active": 4,
+      "total": 26,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5073178000002372,
+      "active": 4,
+      "total": 26,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.51788999999917,
+      "active": 4,
+      "total": 26,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5283110000000306,
+      "active": 3,
+      "total": 27,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5388439999987895,
+      "active": 4,
+      "total": 28,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5491590999990876,
+      "active": 4,
+      "total": 28,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5596925999998348,
+      "active": 3,
+      "total": 28,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.569895099999485,
+      "active": 3,
+      "total": 29,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5800569000002724,
+      "active": 4,
+      "total": 30,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5902549000002182,
+      "active": 3,
+      "total": 30,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6006046000002243,
+      "active": 3,
+      "total": 31,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6107618999994884,
+      "active": 4,
+      "total": 32,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6208876999990025,
+      "active": 3,
+      "total": 32,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6310990000001766,
+      "active": 4,
+      "total": 34,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6413496999994095,
+      "active": 4,
+      "total": 34,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6516799000000901,
+      "active": 2,
+      "total": 34,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6620301000002655,
+      "active": 4,
+      "total": 36,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6721390999991854,
+      "active": 4,
+      "total": 36,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6827080999992177,
+      "active": 3,
+      "total": 36,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6933692000002338,
+      "active": 4,
+      "total": 38,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7038455000001704,
+      "active": 4,
+      "total": 38,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7141709999996237,
+      "active": 2,
+      "total": 38,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7247546999988117,
+      "active": 4,
+      "total": 40,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7352940000000672,
+      "active": 4,
+      "total": 40,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7457572999992408,
+      "active": 4,
+      "total": 40,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7558482000004005,
+      "active": 3,
+      "total": 41,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7661411999997654,
+      "active": 4,
+      "total": 42,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7765602999988914,
+      "active": 4,
+      "total": 42,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7867589999987104,
+      "active": 4,
+      "total": 42,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7969434999995428,
+      "active": 3,
+      "total": 43,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8071189999991475,
+      "active": 4,
+      "total": 44,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8174687999999151,
+      "active": 4,
+      "total": 44,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8277305999999953,
+      "active": 3,
+      "total": 45,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8382167999989178,
+      "active": 4,
+      "total": 46,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8486665999989782,
+      "active": 4,
+      "total": 46,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8589080000001559,
+      "active": 3,
+      "total": 47,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.869175499999983,
+      "active": 4,
+      "total": 48,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8793814999989991,
+      "active": 4,
+      "total": 48,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8897170000000187,
+      "active": 3,
+      "total": 48,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9004086999993888,
+      "active": 4,
+      "total": 50,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9106279999996332,
+      "active": 4,
+      "total": 50,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9209181999995053,
+      "active": 4,
+      "total": 50,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9311791999989509,
+      "active": 3,
+      "total": 51,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9415877999999793,
+      "active": 4,
+      "total": 52,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9522773999997298,
+      "active": 3,
+      "total": 52,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9627547999989474,
+      "active": 4,
+      "total": 54,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9729234999995242,
+      "active": 4,
+      "total": 54,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9834398000002693,
+      "active": 3,
+      "total": 55,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9938787999999477,
+      "active": 4,
+      "total": 56,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0042467999992368,
+      "active": 4,
+      "total": 56,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0148000999997748,
+      "active": 3,
+      "total": 57,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0251289999996516,
+      "active": 4,
+      "total": 58,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0353832000000693,
+      "active": 4,
+      "total": 58,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0458203999987745,
+      "active": 3,
+      "total": 59,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0562076999995043,
+      "active": 4,
+      "total": 60,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0663263999995252,
+      "active": 4,
+      "total": 60,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0766308999991452,
+      "active": 2,
+      "total": 60,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.087120899999718,
+      "active": 4,
+      "total": 62,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0974549000002298,
+      "active": 4,
+      "total": 62,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.107953999999154,
+      "active": 3,
+      "total": 62,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.1184529999991355,
+      "active": 0,
+      "total": 62,
+      "terminated": 0
+    }
+  ],
+  "pid": 3436,
+  "exit_code": 0,
+  "elapsed": 1.118679199998951,
+  "ended_at": "2026-11-18T13:11:02.154660+00:00",
+  "stdout": "{\"match\": true, \"sha256\": \"b8b6f7e0099be24ded719f1f8b895359a72f90002005e494201d5ac1560fa87b\", \"size\": 1075}\r\n",
+  "stderr": ""
+}

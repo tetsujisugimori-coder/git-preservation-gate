@@ -1,0 +1,269 @@
+[
+  {
+    "case": 0,
+    "kwargs": {
+      "command_timeout": "nan"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 1,
+    "kwargs": {
+      "command_timeout": "inf"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 2,
+    "kwargs": {
+      "command_timeout": "-1"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 3,
+    "kwargs": {
+      "total_timeout": "0"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 4,
+    "kwargs": {
+      "stop_wait": "121"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 5,
+    "kwargs": {
+      "retry": "1"
+    },
+    "actual": "RETRY_NOT_IMPLEMENTED",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 6,
+    "kwargs": {
+      "retry": "inf"
+    },
+    "actual": "RETRY_NOT_IMPLEMENTED",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": 7,
+    "kwargs": {
+      "command_timeout": "True"
+    },
+    "actual": "INVALID_BOUND",
+    "expected": "REJECT",
+    "match": true,
+    "root_created": false
+  },
+  {
+    "case": "overall-deadline",
+    "expected": "TIMEOUT then JOB_EMPTY_AFTER_TERMINATE",
+    "actual": {
+      "command": [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import time;time.sleep(20)"
+      ],
+      "started_at": "2026-11-18T13:11:20.761060+00:00",
+      "status": "UNKNOWN",
+      "reason": "TIMEOUT",
+      "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+      "production_permit": false,
+      "retry": 0,
+      "command_timeout": 20,
+      "total_timeout": 0.25,
+      "stop_wait": 2,
+      "fault": null,
+      "observations": [
+        {
+          "elapsed": 0.010766499999590451,
+          "active": 1,
+          "total": 1,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.020939899999575573,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.031490400000620866,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.04185539999889443,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.052431599999181344,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.062994300000355,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.07336880000002566,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.08378869999978633,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.09410860000025423,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.10461310000027879,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.11507449999953678,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.12535459999890008,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.13562049999927694,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.1457594000003155,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.1560298000003968,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.16634589999921445,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.17682330000025104,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.18705149999914283,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.19743559999915306,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.20791280000048573,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.21841089999907126,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.22866590000012366,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.23909660000026633,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.24956559999918682,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.2601606999996875,
+          "active": 2,
+          "total": 2,
+          "terminated": 0
+        },
+        {
+          "elapsed": 0.2602361999997811,
+          "active": 0,
+          "total": 2,
+          "terminated": 0
+        }
+      ],
+      "pid": 28524,
+      "exit_code": 124,
+      "elapsed": 0.2603199000004679,
+      "ended_at": "2026-11-18T13:11:21.021632+00:00",
+      "stdout": "",
+      "stderr": ""
+    },
+    "match": true
+  }
+]

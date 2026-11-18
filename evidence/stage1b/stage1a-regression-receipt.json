@@ -1,0 +1,6 @@
+{
+  "source_sha256": "a93903e3fdc631818b9dafdc0b5dd6186031cc6045109b421e9f0b0483541a74",
+  "published_sha256": "edd91fbf6b7bc83974efb8f52ccd5d8ecd02c8e1dec2f4757a0d2e29a7166c2c",
+  "transformation": "absolute private workspace prefixes replaced",
+  "scope": "new Linux execution of unchanged merged Stage1A; not Windows"
+}

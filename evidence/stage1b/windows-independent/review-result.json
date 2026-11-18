@@ -1,0 +1,226 @@
+{
+  "file": "review-result.json",
+  "raw_size": 8470,
+  "raw_sha256": "81eb8f5f9e1693a5297bcb9485ea262512a75bdeb1f07d8982e611e8d270e7b5",
+  "sanitized_record": {
+    "at": "2026-11-18T13:14:55.691975+00:00",
+    "actor": "reviewer-b independent AI session shared owner Windows filesystem",
+    "scope": "synthetic test storage only; not permanent preservation",
+    "source": "<IMPLEMENTER_AREA>\\bundle-run01\\archive",
+    "size": 1075,
+    "sha256": "b8b6f7e0099be24ded719f1f8b895359a72f90002005e494201d5ac1560fa87b",
+    "all_bytes": "PASS",
+    "refs": 3,
+    "objects": 10,
+    "result": "PASS",
+    "environment": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.7",
+    "commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "--bare",
+          "<REVIEW_AREA>\\restored.git"
+        ],
+        "exit_code": 0,
+        "stdout": "Initialized empty Git repository in <REVIEW_AREA>/restored.git/\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "bundle",
+          "verify",
+          "<REVIEW_AREA>\\original.bundle"
+        ],
+        "exit_code": 0,
+        "stdout": "The bundle contains these 4 refs:\n32bb39b225503a7c6eca717a455083b4c28138f7 refs/heads/feature\n14d7095fcef590aaee908d347c28c68f5abbb555 refs/heads/main\n8c2f1091024ecb3ecceefcc40dedb1f15d0f6918 refs/tags/synthetic-v1\n14d7095fcef590aaee908d347c28c68f5abbb555 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+        "stderr": "<REVIEW_AREA>/original.bundle is okay\n"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "fetch",
+          "<REVIEW_AREA>\\original.bundle",
+          "refs/*:refs/*"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "From <REVIEW_AREA>\\original.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "fsck",
+          "--full",
+          "--strict"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "for-each-ref",
+          "--format=%(refname) %(objectname)"
+        ],
+        "exit_code": 0,
+        "stdout": "refs/heads/feature 32bb39b225503a7c6eca717a455083b4c28138f7\nrefs/heads/main 14d7095fcef590aaee908d347c28c68f5abbb555\nrefs/tags/synthetic-v1 8c2f1091024ecb3ecceefcc40dedb1f15d0f6918\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "--batch-all-objects",
+          "--batch-check=%(objectname)"
+        ],
+        "exit_code": 0,
+        "stdout": "14d7095fcef590aaee908d347c28c68f5abbb555\n180a285530da0dc5a876231fe3eea870ddd4ea63\n32bb39b225503a7c6eca717a455083b4c28138f7\n8c2f1091024ecb3ecceefcc40dedb1f15d0f6918\n9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b\nac069234d986cd52ec3df98fb8b416ae44e4e4a8\nb20ee8b820914ec81386a56f1bde9cf742a4a413\nc4851e157282dc6bc71fe2e9b181ac398079d602\nf11c01ad5f57b81ec0ff750220ea252c9a8d36f4\nf5f61c39a6d235c5768470b3600a2dca0fad9734\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "commit",
+          "14d7095fcef590aaee908d347c28c68f5abbb555"
+        ],
+        "exit_code": 0,
+        "stdout": "tree 9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b\nparent ac069234d986cd52ec3df98fb8b416ae44e4e4a8\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "tree",
+          "180a285530da0dc5a876231fe3eea870ddd4ea63"
+        ],
+        "exit_code": 0,
+        "stdout": "100644 sample.txt\u0000\ufffd\u000e\ufffd \ufffdN\ufffd\u0013\ufffd\ufffdo\u001b\u079c\ufffdB\ufffd\ufffd\u0013",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "commit",
+          "32bb39b225503a7c6eca717a455083b4c28138f7"
+        ],
+        "exit_code": 0,
+        "stdout": "tree f11c01ad5f57b81ec0ff750220ea252c9a8d36f4\nparent 14d7095fcef590aaee908d347c28c68f5abbb555\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "tag",
+          "8c2f1091024ecb3ecceefcc40dedb1f15d0f6918"
+        ],
+        "exit_code": 0,
+        "stdout": "object 32bb39b225503a7c6eca717a455083b4c28138f7\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "tree",
+          "9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b"
+        ],
+        "exit_code": 0,
+        "stdout": "100644 sample.txt\u0000\ufffd\ufffd\u001c9\ufffd\ufffd5\ufffdv\ufffdp\ufffd`\n-\ufffd\u000f\ufffd\ufffd4",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "commit",
+          "ac069234d986cd52ec3df98fb8b416ae44e4e4a8"
+        ],
+        "exit_code": 0,
+        "stdout": "tree 180a285530da0dc5a876231fe3eea870ddd4ea63\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "blob",
+          "b20ee8b820914ec81386a56f1bde9cf742a4a413"
+        ],
+        "exit_code": 0,
+        "stdout": "synthetic first\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "blob",
+          "c4851e157282dc6bc71fe2e9b181ac398079d602"
+        ],
+        "exit_code": 0,
+        "stdout": "synthetic branch\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "tree",
+          "f11c01ad5f57b81ec0ff750220ea252c9a8d36f4"
+        ],
+        "exit_code": 0,
+        "stdout": "100644 feature.txt\u0000\u0105\u001e\u0015r\ufffd\ufffdk\ufffd\u001f\ufffd\u9c41\ufffd9\ufffdy\ufffd\u0002100644 sample.txt\u0000\ufffd\ufffd\u001c9\ufffd\ufffd5\ufffdv\ufffdp\ufffd`\n-\ufffd\u000f\ufffd\ufffd4",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<REVIEW_AREA>\\restored.git",
+          "cat-file",
+          "blob",
+          "f5f61c39a6d235c5768470b3600a2dca0fad9734"
+        ],
+        "exit_code": 0,
+        "stdout": "synthetic second\r\n",
+        "stderr": ""
+      }
+    ]
+  }
+}

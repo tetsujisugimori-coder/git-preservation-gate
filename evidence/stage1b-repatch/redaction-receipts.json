@@ -1,0 +1,8 @@
+[
+  {
+    "path": "stage1a32.json",
+    "raw_sha256": "54ce8fbf64299083dec2fd759bfc4e247d68fca0e694f14bc179b4f48e321b92",
+    "public_sha256": "c37f0a59148f4a7e404da52571b0d13c17178200e20f8657ea46149529524cdc",
+    "transformation": "case workspace path replaced with placeholder; raw retained separately"
+  }
+]

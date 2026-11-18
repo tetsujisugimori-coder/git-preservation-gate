@@ -1,0 +1,43 @@
+name: Stage1B limited synthetic recheck
+on:
+  push:
+    branches:
+      - feat/stage1b-storage-contract-windows
+permissions:
+  contents: read
+concurrency:
+  group: stage1b-limited-recheck
+  cancel-in-progress: true
+jobs:
+  linux-contract-and-stage1a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contract 50, independent fixed 10, new P2 18
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/stage1b/run_contract_batch.py "$RUNNER_TEMP/stage1b-contract-${GITHUB_RUN_ID}"
+          python3 tests/stage1b/run_independent10.py
+          python3 tests/stage1b/run_p2_regression.py
+          python3 tests/stage1b/run_review_regression.py
+          python3 tests/stage1b/run_review_regression.py --additional
+          python3 tests/stage1b/test_publication_scan.py
+      - name: Stage1A 32 original Linux cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/stage1a/run_suite.py --root "$RUNNER_TEMP/stage1a-${GITHUB_RUN_ID}"
+  windows-owned-job-21:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Windows owned Job 21 synthetic checks
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          python --version
+          python tools/stage1b/windows_suite.py --root (Join-Path $env:RUNNER_TEMP ("stage1b-win-" + $env:GITHUB_RUN_ID))
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

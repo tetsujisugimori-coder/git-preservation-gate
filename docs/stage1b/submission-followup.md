@@ -1,0 +1,9 @@
+# Submission follow-up
+
+Initial submitted HEAD94b7bac used text-mode serialization and normalized CRLF in30 Windows source/evidence paths. Its submitted-byte check FAILED; the mismatch ticket is retained. It was not a Windows execution failure. The next normal commit5260f0e restored original bytes without changing semantics and included the independent Windows trial evidence. All87 submitted paths matched the local byte originals on readback.
+
+Immediately afterward, previous cloud task directories became unavailable while the reported working directory stayed the same and a different listing appeared. No delete/move operation was performed by this task; the cause is UNKNOWN. This is not proof of permanent loss. Unpublished cloud raw availability is UNKNOWN. A fresh checkout of public5260f0e was obtained and its67-file evidence manifest set/size/SHA matched. Contract50 was rerun successfully. Windows raw belongs to a separate host; independent reconfirmation is requested. Public derivatives do not become raw originals by this recovery.
+
+This incident does not justify a claim of durable preservation. New Archive/Vault/Library transfer was not performed. Files already in GitHub remain versioned; synthetic originals and raw Windows evidence are not recreated as historical originals. Final independent review and CI counts are reported against their exact version below/in the PR review.
+
+During derivative preparation, two preliminary unreferenced review-evidence GitHub blobs retained Windows working-path spellings that had not been fully redacted. Neither was included in any branch/PR; corrected derivatives were used instead. No authentication secret was involved. The preliminary blobs’ continued existence/accessibility is UNKNOWN; this report does not claim deletion or inaccessibility. Their locators are not repeated here. No destructive history/object operation was attempted.

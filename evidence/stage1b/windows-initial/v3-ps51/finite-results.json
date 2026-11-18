@@ -1,0 +1,1329 @@
+{
+  "checker_sha256": "cfe2abfdcc38e5e832d9166f9c8faf9025a3c78720e60b9cbf058fab5915588e",
+  "cases": [
+    {
+      "id": "normal",
+      "expected_status": "PASS",
+      "expected_state": "JOB_EMPTY",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "print(\"normal\")"
+        ],
+        "started_at": "2026-11-18T13:09:32.691535+00:00",
+        "status": "PASS",
+        "reason": "OK",
+        "process_state": "JOB_EMPTY",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 2,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [
+          {
+            "elapsed": 0.009044599999469938,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.019403599999350263,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.02972109999973327,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.04027169999972102,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.05086180000034801,
+            "active": 0,
+            "total": 2,
+            "terminated": 0
+          }
+        ],
+        "pid": 25704,
+        "exit_code": 0,
+        "elapsed": 0.051339999999981956,
+        "ended_at": "2026-11-18T13:09:32.743390+00:00",
+        "stdout": "normal\r\n",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "nonzero",
+      "expected_status": "FAIL",
+      "expected_state": "JOB_EMPTY",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import sys;print(\"bad\");sys.exit(7)"
+        ],
+        "started_at": "2026-11-18T13:09:32.744682+00:00",
+        "status": "FAIL",
+        "reason": "COMMAND_NONZERO",
+        "process_state": "JOB_EMPTY",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 2,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [
+          {
+            "elapsed": 0.005743100000472623,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.01634809999995923,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.026720100000602542,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.03692880000016885,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.04762680000021646,
+            "active": 0,
+            "total": 2,
+            "terminated": 0
+          }
+        ],
+        "pid": 8028,
+        "exit_code": 7,
+        "elapsed": 0.04803140000149142,
+        "ended_at": "2026-11-18T13:09:32.792926+00:00",
+        "stdout": "bad\r\n",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "missing",
+      "expected_status": "BLOCKED",
+      "expected_state": "NOT_STARTED",
+      "actual": {
+        "command": [
+          "${WINDOWS_TASK_ROOT}\\v3-ps51\\absent-git.exe"
+        ],
+        "started_at": "2026-11-18T13:09:32.794054+00:00",
+        "status": "BLOCKED",
+        "reason": "SPAWN_OR_SETUP_FAILED",
+        "process_state": "NOT_STARTED",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 2,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [],
+        "error": "FileNotFoundError(2, '\u6307\u5b9a\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002', None, 2, None)",
+        "elapsed": 0.0004890999989584088,
+        "ended_at": "2026-11-18T13:09:32.794743+00:00",
+        "stdout": "",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "hang",
+      "expected_status": "UNKNOWN",
+      "expected_state": "JOB_EMPTY_AFTER_TERMINATE",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import time;print(\"hang\",flush=True);time.sleep(20)"
+        ],
+        "started_at": "2026-11-18T13:09:32.795513+00:00",
+        "status": "UNKNOWN",
+        "reason": "TIMEOUT",
+        "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 0.3,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [
+          {
+            "elapsed": 0.005002000001695706,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.015181900000243331,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.02545530000134022,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.03553800000008778,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.04581050000160758,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.05629340000086813,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.0665954000014608,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.07686920000014652,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.08730410000134725,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.09764540000105626,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.10785450000003038,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1183831000016653,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.12844620000032592,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.13893460000144842,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1493748000011692,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.15979570000126841,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.17012400000021444,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.18080280000140192,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.19152780000149505,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2022095000011177,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.21313160000136122,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2236748000013904,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.23413310000069032,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.24492690000079165,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.25575950000165903,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.26629420000062964,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.27645010000014736,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2864993000002869,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.29693180000140273,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3074614000015572,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.30748920000041835,
+            "active": 0,
+            "total": 2,
+            "terminated": 0
+          }
+        ],
+        "pid": 6548,
+        "exit_code": 124,
+        "elapsed": 0.30752380000012636,
+        "ended_at": "2026-11-18T13:09:33.103216+00:00",
+        "stdout": "hang\r\n",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "descendants",
+      "expected_status": "UNKNOWN",
+      "expected_state": "JOB_EMPTY_AFTER_TERMINATE",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import subprocess,sys,time;subprocess.Popen([sys.executable,\"-B\",\"-c\",'import subprocess,sys,time;subprocess.Popen([sys.executable,\"-B\",\"-c\",\\'import time;time.sleep(20)\\']);time.sleep(20)']);time.sleep(20)"
+        ],
+        "started_at": "2026-11-18T13:09:33.113999+00:00",
+        "status": "UNKNOWN",
+        "reason": "TIMEOUT",
+        "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 0.7,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [
+          {
+            "elapsed": 0.004624600000170176,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.015113700001165853,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.025286800000685616,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.03575559999990219,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.04640530000142462,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.05686190000051283,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.06730100000095263,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.07774050000080024,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.08844590000080643,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.09887840000010328,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.10935690000042086,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.11972750000131782,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.13011700000060955,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.14043170000149985,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.15052170000126353,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1608711000008043,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1710562000007485,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1813067000002775,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.19171760000062932,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.20197340000049735,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.21245290000115347,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.22287040000082925,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.23313450000023295,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.24322030000075756,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2536478000001807,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2638545999998314,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2741088000002492,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2842201000003115,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2949506000004476,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3053966000006767,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.31574450000152865,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3261482000016258,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3363109000001714,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.34677080000074056,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3569862000003923,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.367201600000044,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3775015999999596,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.38778369999999995,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3980994000012288,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.40835540000080073,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4185840999998618,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4287841000004846,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4393541000008554,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4498256000006222,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.46027130000038596,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.47069809999993595,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.48157110000101966,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.491999300000316,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5025390999999217,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5129860000015469,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.523538000001281,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5339220000005298,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5444422000000486,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.555059500000425,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5653054000013071,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.575810400001501,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5859969000011915,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5963229000008141,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6069628000004741,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6172172000005958,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6276668999998947,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6380549000004976,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6487065000001166,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.659678600000916,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.669803700000557,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6801183000006858,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.6906026000015117,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.7014090000011493,
+            "active": 4,
+            "total": 4,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.7014679000003525,
+            "active": 0,
+            "total": 4,
+            "terminated": 0
+          }
+        ],
+        "pid": 5596,
+        "exit_code": 124,
+        "elapsed": 0.7015052000006108,
+        "ended_at": "2026-11-18T13:09:33.816192+00:00",
+        "stdout": "",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "parent_exit_child",
+      "expected_status": "UNKNOWN",
+      "expected_state": "JOB_EMPTY_AFTER_TERMINATE",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import subprocess,sys;subprocess.Popen([sys.executable,\"-B\",\"-c\",\"import time;time.sleep(20)\"])"
+        ],
+        "started_at": "2026-11-18T13:09:33.817582+00:00",
+        "status": "UNKNOWN",
+        "reason": "TIMEOUT",
+        "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 0.5,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": null,
+        "observations": [
+          {
+            "elapsed": 0.00866429999950924,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.019197100000383216,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.02965539999968314,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.039861999999629916,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.05016760000034992,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.0607412999997905,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.0712617000008322,
+            "active": 3,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.08156159999998636,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.09202860000004875,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.10274089999984426,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.11320320000049833,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.12356689999978698,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1340044000007765,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.14486260000012408,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1559138000011444,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1667331999997259,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1775376999994478,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.18816770000012184,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1985051999999996,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.20856219999950554,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.21900930000083463,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2294949999995879,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2396798999998282,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2502552999994805,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.26085539999985485,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2718208999995113,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2829944000004616,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.29349960000035935,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.30391770000096585,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.31461789999957546,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3250967000003584,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3355912000006356,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3458442000010109,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.35663990000102785,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.3670110000002751,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.377436900000248,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.38786609999988286,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.39822319999984757,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.408469400001195,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.419129800000519,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4299200999994355,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.44039669999983744,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4505817000008392,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.46121020000100543,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.471746000001076,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.4825758000006317,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.49318250000033004,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5037384000006568,
+            "active": 2,
+            "total": 3,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.5037690999997722,
+            "active": 0,
+            "total": 3,
+            "terminated": 0
+          }
+        ],
+        "pid": 23112,
+        "exit_code": 0,
+        "elapsed": 0.5038079999994807,
+        "ended_at": "2026-11-18T13:09:34.321613+00:00",
+        "stdout": "",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "query_failure",
+      "expected_status": "UNKNOWN",
+      "expected_state": "RUNNING_IN_OWN_JOB",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import time;time.sleep(1)"
+        ],
+        "started_at": "2026-11-18T13:09:34.322563+00:00",
+        "status": "UNKNOWN",
+        "reason": "CONTROL_FAILED",
+        "process_state": "RUNNING_IN_OWN_JOB",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 0.2,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": "query",
+        "observations": [],
+        "pid": 22928,
+        "error": "OSError('INJECTED_QUERY_FAILURE')",
+        "elapsed": 0.00549460000002,
+        "ended_at": "2026-11-18T13:09:34.328246+00:00",
+        "stdout": "",
+        "stderr": ""
+      },
+      "match": true
+    },
+    {
+      "id": "terminate_failure",
+      "expected_status": "UNKNOWN",
+      "expected_state": "RUNNING_IN_OWN_JOB",
+      "actual": {
+        "command": [
+          "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-c",
+          "import time;time.sleep(1)"
+        ],
+        "started_at": "2026-11-18T13:09:34.330971+00:00",
+        "status": "UNKNOWN",
+        "reason": "CONTROL_FAILED",
+        "process_state": "RUNNING_IN_OWN_JOB",
+        "production_permit": false,
+        "retry": 0,
+        "command_timeout": 0.2,
+        "total_timeout": 3,
+        "stop_wait": 2,
+        "fault": "terminate",
+        "observations": [
+          {
+            "elapsed": 0.005233100000623381,
+            "active": 1,
+            "total": 1,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.015728299998954753,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.025951800000257208,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.03612229999998817,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.046837599998980295,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.057553599999664584,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.06799949999913224,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.0795588000000862,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.08999319999929867,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.10066729999925883,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.11119359999975131,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.12179459999970277,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.13265080000019225,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.14292889999887848,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1538168000006408,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.16431609999926877,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1759105000001,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.1867117000001599,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.19703459999982442,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          },
+          {
+            "elapsed": 0.2079572000002372,
+            "active": 2,
+            "total": 2,
+            "terminated": 0
+          }
+        ],
+        "pid": 18960,
+        "error": "OSError('INJECTED_TERMINATE_FAILURE')",
+        "elapsed": 0.20825320000039937,
+        "ended_at": "2026-11-18T13:09:34.539687+00:00",
+        "stdout": "",
+        "stderr": ""
+      },
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,1917 @@
+{
+  "command": [
+    "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "${WINDOWS_TASK_ROOT}\\submitted\\tools\\stage1a\\synthetic_bundle_gate.py",
+    "--root",
+    "${WINDOWS_TASK_ROOT}\\bundle-run01"
+  ],
+  "started_at": "2026-11-18T13:09:54.254941+00:00",
+  "status": "PASS",
+  "reason": "OK",
+  "process_state": "JOB_EMPTY",
+  "production_permit": false,
+  "retry": 0,
+  "command_timeout": 25.0,
+  "total_timeout": 10.0,
+  "stop_wait": 2.0,
+  "fault": null,
+  "observations": [
+    {
+      "elapsed": 0.008757699999478064,
+      "active": 1,
+      "total": 1,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.01902929999960179,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.029700299999603885,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.040060700001049554,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.050488799999584444,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.06105860000025132,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.07158759999947506,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.08174719999988156,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.09217060000082711,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.10263130000021192,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.11311100000057195,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.12362410000059754,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.13398179999967397,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.1446722000000591,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.15488550000009127,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.16537609999977576,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.17551020000064455,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.1858250000004773,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.1962072000005719,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.20657609999943816,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2169850000009319,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.22751240000070538,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.23825460000080056,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.24847179999960645,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.25871469999947294,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2690554000000702,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2792124999996304,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.2897333000000799,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.30002199999944423,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.31018089999997756,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3206502000011824,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3311064000008628,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3415067000005365,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3518048000005365,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3622649000008096,
+      "active": 3,
+      "total": 3,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.37246200000117824,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3829734000009921,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.3934478000010131,
+      "active": 4,
+      "total": 4,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4037936000004265,
+      "active": 3,
+      "total": 5,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4142898999998579,
+      "active": 4,
+      "total": 6,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.42454220000036,
+      "active": 4,
+      "total": 6,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4348637000002782,
+      "active": 3,
+      "total": 6,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.44509500000094704,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.455316400000811,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.46583930000088003,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4760375000005297,
+      "active": 4,
+      "total": 8,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4865635000005568,
+      "active": 5,
+      "total": 9,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.4968272000005527,
+      "active": 3,
+      "total": 10,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5072658000008232,
+      "active": 4,
+      "total": 11,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5177834000005532,
+      "active": 4,
+      "total": 11,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5279074000009132,
+      "active": 4,
+      "total": 11,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.538480500001242,
+      "active": 4,
+      "total": 11,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5490028000003804,
+      "active": 5,
+      "total": 12,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5597379999999248,
+      "active": 3,
+      "total": 13,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5702375000000757,
+      "active": 4,
+      "total": 14,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5803037000005133,
+      "active": 4,
+      "total": 14,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.5904396999994788,
+      "active": 4,
+      "total": 14,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6006302999994659,
+      "active": 3,
+      "total": 15,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6108819000000949,
+      "active": 4,
+      "total": 16,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6211099000011018,
+      "active": 4,
+      "total": 16,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6317307000008441,
+      "active": 4,
+      "total": 16,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6419409999998607,
+      "active": 3,
+      "total": 17,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6521143999998458,
+      "active": 4,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6626831000012317,
+      "active": 4,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6727683000008255,
+      "active": 4,
+      "total": 18,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6828640000003361,
+      "active": 5,
+      "total": 19,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.6930709999996907,
+      "active": 5,
+      "total": 19,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7035389000011492,
+      "active": 3,
+      "total": 20,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.713777700000719,
+      "active": 4,
+      "total": 21,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.724114800001189,
+      "active": 4,
+      "total": 21,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7347012000009272,
+      "active": 4,
+      "total": 21,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7450355000000854,
+      "active": 3,
+      "total": 22,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7555747999995219,
+      "active": 4,
+      "total": 23,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.765898699999525,
+      "active": 4,
+      "total": 23,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7762999999995372,
+      "active": 4,
+      "total": 23,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7865870000005089,
+      "active": 3,
+      "total": 24,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.7969874999998865,
+      "active": 4,
+      "total": 25,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8070779999998194,
+      "active": 4,
+      "total": 25,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8173108999999386,
+      "active": 3,
+      "total": 26,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8279339000000618,
+      "active": 4,
+      "total": 27,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8384779000007256,
+      "active": 4,
+      "total": 27,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8490165000002889,
+      "active": 3,
+      "total": 28,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.859174900000653,
+      "active": 4,
+      "total": 29,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8697167000009358,
+      "active": 4,
+      "total": 29,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8799120000003313,
+      "active": 4,
+      "total": 29,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.8904667999995581,
+      "active": 3,
+      "total": 30,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.901019400000223,
+      "active": 4,
+      "total": 31,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9111394999999902,
+      "active": 4,
+      "total": 31,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9212310000002617,
+      "active": 4,
+      "total": 31,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9316445000004023,
+      "active": 3,
+      "total": 32,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9420313999999053,
+      "active": 4,
+      "total": 33,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.952123400000346,
+      "active": 4,
+      "total": 33,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.962716800000635,
+      "active": 4,
+      "total": 33,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9729621000005864,
+      "active": 3,
+      "total": 34,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9835191000001942,
+      "active": 4,
+      "total": 35,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.9939888999997493,
+      "active": 4,
+      "total": 35,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0045033999995212,
+      "active": 4,
+      "total": 35,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0148761000000377,
+      "active": 2,
+      "total": 35,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0253286999995908,
+      "active": 3,
+      "total": 36,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0356341999995493,
+      "active": 4,
+      "total": 37,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0461563999997452,
+      "active": 4,
+      "total": 37,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.056604100000186,
+      "active": 2,
+      "total": 37,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0668683000003512,
+      "active": 3,
+      "total": 38,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0774593000005552,
+      "active": 4,
+      "total": 39,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.0880171999997401,
+      "active": 4,
+      "total": 39,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.098084999999628,
+      "active": 3,
+      "total": 40,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.1082748000007996,
+      "active": 4,
+      "total": 41,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.118573900001138,
+      "active": 4,
+      "total": 41,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.129061699999511,
+      "active": 3,
+      "total": 42,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.1395635999997467,
+      "active": 4,
+      "total": 43,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.1496554000004835,
+      "active": 4,
+      "total": 43,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.160148200000549,
+      "active": 4,
+      "total": 43,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.170272000001205,
+      "active": 3,
+      "total": 44,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.1807494000004226,
+      "active": 4,
+      "total": 45,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.190971800000625,
+      "active": 4,
+      "total": 45,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.201594699999987,
+      "active": 3,
+      "total": 46,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.211869700000534,
+      "active": 4,
+      "total": 47,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2223647000009805,
+      "active": 4,
+      "total": 47,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2324222999995982,
+      "active": 4,
+      "total": 47,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2426260000011098,
+      "active": 3,
+      "total": 48,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2527643000012176,
+      "active": 4,
+      "total": 49,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2628285999999207,
+      "active": 4,
+      "total": 49,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.2729490000001533,
+      "active": 3,
+      "total": 50,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.283047599999918,
+      "active": 4,
+      "total": 51,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.293624699999782,
+      "active": 4,
+      "total": 51,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3041157999996358,
+      "active": 3,
+      "total": 52,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3143290000007255,
+      "active": 4,
+      "total": 53,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3247584000000643,
+      "active": 4,
+      "total": 53,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3349519000003056,
+      "active": 4,
+      "total": 53,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3453233000000182,
+      "active": 3,
+      "total": 54,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.355707300001086,
+      "active": 4,
+      "total": 55,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3663520999998582,
+      "active": 4,
+      "total": 55,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3767984000005526,
+      "active": 3,
+      "total": 55,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3871300000009796,
+      "active": 3,
+      "total": 56,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.3975702999996429,
+      "active": 4,
+      "total": 57,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4081623000001855,
+      "active": 4,
+      "total": 57,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4185677999994368,
+      "active": 3,
+      "total": 58,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.428876500000115,
+      "active": 4,
+      "total": 59,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.439071500000864,
+      "active": 4,
+      "total": 59,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4495396000002074,
+      "active": 3,
+      "total": 60,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4599075999994966,
+      "active": 4,
+      "total": 61,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4699995000009949,
+      "active": 4,
+      "total": 61,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4806361999999353,
+      "active": 4,
+      "total": 61,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.4907409999996162,
+      "active": 3,
+      "total": 62,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5008840999998938,
+      "active": 4,
+      "total": 63,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5114205999998376,
+      "active": 4,
+      "total": 63,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5216782999996212,
+      "active": 3,
+      "total": 64,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5320554999998421,
+      "active": 4,
+      "total": 65,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.542339699999502,
+      "active": 4,
+      "total": 65,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5530419000006077,
+      "active": 3,
+      "total": 66,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5632038000003377,
+      "active": 4,
+      "total": 67,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5734032000000298,
+      "active": 4,
+      "total": 67,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5838892000010674,
+      "active": 2,
+      "total": 67,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.5940853000010975,
+      "active": 4,
+      "total": 69,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6043931000003795,
+      "active": 4,
+      "total": 69,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6146895000001678,
+      "active": 4,
+      "total": 69,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6248424999994313,
+      "active": 3,
+      "total": 70,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.635185500001171,
+      "active": 4,
+      "total": 71,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.645767199999682,
+      "active": 4,
+      "total": 71,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6560680000002321,
+      "active": 3,
+      "total": 72,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6666086000004725,
+      "active": 4,
+      "total": 73,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6769724000005226,
+      "active": 4,
+      "total": 73,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.687362700000449,
+      "active": 3,
+      "total": 74,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.6977777000010974,
+      "active": 4,
+      "total": 75,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7082762999998522,
+      "active": 4,
+      "total": 75,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7189465999999811,
+      "active": 5,
+      "total": 76,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7292190000007395,
+      "active": 5,
+      "total": 76,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7394966000010754,
+      "active": 3,
+      "total": 76,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.749669000000722,
+      "active": 3,
+      "total": 77,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7602814000001672,
+      "active": 4,
+      "total": 78,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7704579000001104,
+      "active": 4,
+      "total": 78,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.7809682000006433,
+      "active": 4,
+      "total": 78,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.791030000000319,
+      "active": 3,
+      "total": 79,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.801381000001129,
+      "active": 4,
+      "total": 80,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8116294000010384,
+      "active": 4,
+      "total": 80,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8220534000010957,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8323333999996976,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8426899000005506,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8531787000010809,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8643697000006796,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8750914000011107,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8854627000000619,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.8962081000008766,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9064044000006106,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9172299000001658,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9276893999995082,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9386088999999629,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9489692999995896,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.959425299999566,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9701987000007648,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9805102000009356,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 1.9915899999996327,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.0018641000006028,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.0122922000009567,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.022974900000918,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.033604700000069,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.0438742999995156,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.054709800000637,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.065249200000835,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.0757991000009497,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.086414200000945,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.097182600000451,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.108112500000061,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.119018200000937,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1298561000003247,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1402390000002924,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1505916000005527,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.160949500001152,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1717625000001135,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1823466999994707,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.1929873999997653,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2033719000010024,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.213574100000187,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2242941000004066,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2346286000010878,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2453817000005074,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2557384000010643,
+      "active": 3,
+      "total": 81,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.266212300000916,
+      "active": 4,
+      "total": 82,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2765464000003703,
+      "active": 4,
+      "total": 82,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2867786999995587,
+      "active": 5,
+      "total": 83,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.2970384000000195,
+      "active": 5,
+      "total": 83,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.307653300000311,
+      "active": 5,
+      "total": 83,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.317811500000971,
+      "active": 5,
+      "total": 84,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.328212700000222,
+      "active": 5,
+      "total": 84,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.3386372000004485,
+      "active": 5,
+      "total": 85,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.3491379999995843,
+      "active": 3,
+      "total": 85,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.3594513000007282,
+      "active": 3,
+      "total": 86,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.369863500000065,
+      "active": 4,
+      "total": 87,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.3802027000001544,
+      "active": 5,
+      "total": 88,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.3908179000009113,
+      "active": 5,
+      "total": 88,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.4010312000009435,
+      "active": 5,
+      "total": 88,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.411391100000401,
+      "active": 5,
+      "total": 89,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.421748700000535,
+      "active": 5,
+      "total": 89,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.431891199999882,
+      "active": 5,
+      "total": 90,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.442042099999526,
+      "active": 5,
+      "total": 90,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.452240599999641,
+      "active": 4,
+      "total": 90,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.4625551000008272,
+      "active": 3,
+      "total": 91,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.4726549000006344,
+      "active": 4,
+      "total": 92,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.483236100000795,
+      "active": 4,
+      "total": 92,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.493458799999644,
+      "active": 3,
+      "total": 93,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5037081000009493,
+      "active": 4,
+      "total": 94,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5142035000008036,
+      "active": 4,
+      "total": 94,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.52439349999986,
+      "active": 4,
+      "total": 94,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5346465000002354,
+      "active": 3,
+      "total": 95,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.545348499999818,
+      "active": 4,
+      "total": 96,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.555765600000086,
+      "active": 4,
+      "total": 96,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5660100000004604,
+      "active": 3,
+      "total": 97,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.576944899999944,
+      "active": 4,
+      "total": 98,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5872980000003736,
+      "active": 4,
+      "total": 98,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.5977125000008527,
+      "active": 2,
+      "total": 98,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.6084202000001824,
+      "active": 4,
+      "total": 100,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.618919599999572,
+      "active": 4,
+      "total": 100,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.6294352000004437,
+      "active": 4,
+      "total": 100,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.6396881000000576,
+      "active": 3,
+      "total": 101,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.649794299999485,
+      "active": 4,
+      "total": 102,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.660121099999742,
+      "active": 4,
+      "total": 102,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.670536699999502,
+      "active": 3,
+      "total": 103,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.6809900000007474,
+      "active": 4,
+      "total": 104,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.6913134999995236,
+      "active": 4,
+      "total": 104,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.701739899999666,
+      "active": 3,
+      "total": 105,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.7121979000003194,
+      "active": 4,
+      "total": 106,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.7224359000010736,
+      "active": 4,
+      "total": 106,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.73293620000004,
+      "active": 3,
+      "total": 107,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.7435688999994454,
+      "active": 4,
+      "total": 108,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.753903300001184,
+      "active": 4,
+      "total": 108,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.764039800000319,
+      "active": 4,
+      "total": 108,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.7741573000002973,
+      "active": 3,
+      "total": 109,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.784527600000729,
+      "active": 4,
+      "total": 110,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.7951028999996197,
+      "active": 4,
+      "total": 110,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.805236500000319,
+      "active": 3,
+      "total": 111,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8156878000008874,
+      "active": 4,
+      "total": 112,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8258184000005713,
+      "active": 4,
+      "total": 112,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8359553000009328,
+      "active": 3,
+      "total": 113,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.846162199999526,
+      "active": 4,
+      "total": 114,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.85657540000102,
+      "active": 4,
+      "total": 114,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8671699999995326,
+      "active": 3,
+      "total": 114,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.877463799999532,
+      "active": 3,
+      "total": 115,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8880850999994436,
+      "active": 4,
+      "total": 116,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.8982919000009133,
+      "active": 4,
+      "total": 116,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.9084787000010692,
+      "active": 3,
+      "total": 117,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.918869299999642,
+      "active": 4,
+      "total": 118,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.9292817000005016,
+      "active": 4,
+      "total": 118,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.9398755000001984,
+      "active": 3,
+      "total": 119,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.950260400000843,
+      "active": 3,
+      "total": 119,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.9608239000008325,
+      "active": 4,
+      "total": 120,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.9715095999999903,
+      "active": 4,
+      "total": 120,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.981793299999481,
+      "active": 3,
+      "total": 121,
+      "terminated": 0
+    },
+    {
+      "elapsed": 2.992178000000422,
+      "active": 4,
+      "total": 122,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.002765499999441,
+      "active": 4,
+      "total": 122,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.013330499999938,
+      "active": 3,
+      "total": 122,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.023476899999878,
+      "active": 3,
+      "total": 123,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.0340713999994477,
+      "active": 4,
+      "total": 124,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.044601800000237,
+      "active": 4,
+      "total": 124,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.054924199999732,
+      "active": 3,
+      "total": 125,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.065355400000044,
+      "active": 4,
+      "total": 126,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.075603700001011,
+      "active": 4,
+      "total": 126,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.08591239999987,
+      "active": 3,
+      "total": 127,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.0962022000003344,
+      "active": 4,
+      "total": 128,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.106592300000557,
+      "active": 4,
+      "total": 128,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.117235800000344,
+      "active": 3,
+      "total": 128,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.127436700000544,
+      "active": 3,
+      "total": 129,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.137936000000991,
+      "active": 4,
+      "total": 130,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.1480484000003344,
+      "active": 4,
+      "total": 130,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.158276100000876,
+      "active": 3,
+      "total": 131,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.1684965000004013,
+      "active": 4,
+      "total": 132,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.179100400000607,
+      "active": 4,
+      "total": 132,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.1895612999996956,
+      "active": 3,
+      "total": 133,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.1999116000006325,
+      "active": 4,
+      "total": 134,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.2106743000003917,
+      "active": 4,
+      "total": 134,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.220806799999991,
+      "active": 3,
+      "total": 135,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.23106320000079,
+      "active": 4,
+      "total": 136,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.2416270000012446,
+      "active": 4,
+      "total": 136,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.252164999999877,
+      "active": 2,
+      "total": 136,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.262742900000376,
+      "active": 2,
+      "total": 136,
+      "terminated": 0
+    },
+    {
+      "elapsed": 3.273275300000023,
+      "active": 0,
+      "total": 136,
+      "terminated": 0
+    }
+  ],
+  "pid": 26192,
+  "exit_code": 0,
+  "elapsed": 3.2736708000011276,
+  "ended_at": "2026-11-18T13:09:57.528994+00:00",
+  "stdout": "{\"status\": \"PASS\", \"production_permit\": false}\r\n",
+  "stderr": ""
+}

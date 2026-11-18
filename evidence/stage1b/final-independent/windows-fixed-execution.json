@@ -1,0 +1,18 @@
+{
+  "path": "windows-fixed-execution.json",
+  "raw_size": 520,
+  "raw_sha256": "85e2faabc69a5ef075125304fa13c137db55b14bc4f3ef0b3cc01cd11bcb2154",
+  "record": {
+    "command": [
+      "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "tools/stage1b/windows_suite.py",
+      "--root",
+      "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\windows21-fixed"
+    ],
+    "exit_code": 0,
+    "source_sha256": "a76faa8ba301b70c589dfd0551d95f4474f8219bc402e35e69e3f9d45e24076d",
+    "git_blob_bytes": "PASS",
+    "correction": "prior command used nonexisting tests/stage1b path; exit2 retained; no test was run by that command"
+  }
+}

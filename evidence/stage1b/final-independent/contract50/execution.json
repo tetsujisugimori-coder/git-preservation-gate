@@ -1,0 +1,60 @@
+{
+  "path": "contract50/execution.json",
+  "raw_size": 1396,
+  "raw_sha256": "1ffa8626561f2d396b1888bd3ffc9eb208ea04b0fd3bc9908c89a1c42bc44a8c",
+  "record": {
+    "environment": {
+      "python": "3.14.7",
+      "system": "Windows"
+    },
+    "commands": [
+      {
+        "command": [
+          "python",
+          "tests/stage1b/run_contract_tests.py"
+        ],
+        "started_at": "2026-11-18T13:31:54.126533+00:00",
+        "ended_at": "2026-11-18T13:31:54.439506+00:00",
+        "exit_code": 0,
+        "timeout_seconds": 20,
+        "timed_out": false,
+        "retry": 0,
+        "stdout": "0.stdout.json",
+        "stderr": "0.stderr.txt",
+        "result": "PASS"
+      },
+      {
+        "command": [
+          "python",
+          "tests/stage1b/run_record_tests.py",
+          "<new-ledger>"
+        ],
+        "started_at": "2026-11-18T13:31:54.439516+00:00",
+        "ended_at": "2026-11-18T13:31:54.501763+00:00",
+        "exit_code": 0,
+        "timeout_seconds": 20,
+        "timed_out": false,
+        "retry": 0,
+        "stdout": "1.stdout.json",
+        "stderr": "1.stderr.txt",
+        "result": "PASS"
+      },
+      {
+        "command": [
+          "python",
+          "tests/stage1b/run_boundary_tests.py"
+        ],
+        "started_at": "2026-11-18T13:31:54.501772+00:00",
+        "ended_at": "2026-11-18T13:31:54.559242+00:00",
+        "exit_code": 0,
+        "timeout_seconds": 20,
+        "timed_out": false,
+        "retry": 0,
+        "stdout": "2.stdout.json",
+        "stderr": "2.stderr.txt",
+        "result": "PASS"
+      }
+    ],
+    "production_permit": false
+  }
+}

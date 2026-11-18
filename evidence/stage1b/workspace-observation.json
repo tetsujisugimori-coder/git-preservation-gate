@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-11-18T13:22:29.231474+00:00",
+  "event": "previous task directories unavailable at same reported cwd; alternate file listing observed",
+  "cause": "UNKNOWN",
+  "agent_delete_move_actions": false,
+  "previous_readback": "87 submitted paths all-byte match observed before disappearance",
+  "public_recovery_head": "5260f0e5120c29128239d41059e02119f92cda8e",
+  "unpublished_cloud_raw_availability": "UNKNOWN",
+  "windows_raw": "separate host; reconfirm requested"
+}

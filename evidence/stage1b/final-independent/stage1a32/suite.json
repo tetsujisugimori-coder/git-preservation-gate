@@ -1,0 +1,713 @@
+{
+  "path": "stage1a32/suite.json",
+  "raw_size": 128466,
+  "raw_sha256": "1f14e227934f5a493cc2b399adf36dd92f82095aee374b0e06e3891466d2cb77",
+  "record": {
+    "checker_sha256": "4bc7a9771164ee7a759a3810cf82c1cff91943f7d3289cc004713550923ef5cb",
+    "count": 32,
+    "ended_at": "2026-11-18T13:32:45.586669+00:00",
+    "environment": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "git_version": "git version 2.53.0.windows.1",
+    "kind": "SYNTHETIC_LOCAL_EXECUTION",
+    "limits": [
+      "no durable archive or ACL test",
+      "same host/account",
+      "timeout tests only known direct child; general descendant containment UNKNOWN"
+    ],
+    "oracle_sha256": "ccebf7b7a83d148d730b2f7c7ad4f22b63255f747af8b1d9d2bed68514533ae4",
+    "original_anchors": {
+      "manifest.json": "a12925aec4582d09392a7a7c288bd3b68e97e82cb20d7b5cc6e9ea780455d111",
+      "original.bundle": "b8b6f7e0099be24ded719f1f8b895359a72f90002005e494201d5ac1560fa87b"
+    },
+    "originals_unchanged": true,
+    "passed": 32,
+    "production_permit": false,
+    "result": "PASS",
+    "retries": 0,
+    "runner_sha256": "a3fc42bf4da87a2d4bfc715fcae6aaad421620b3c31ad61f41eea73428aea782",
+    "setup_commands": [
+      {
+        "command": [
+          "git",
+          "init",
+          "--object-format=sha1",
+          "-b",
+          "main",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source"
+        ],
+        "ended_at": "2026-11-18T13:32:39.371454+00:00",
+        "exit_code": 0,
+        "pid": 27780,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.319663+00:00",
+        "stderr": "",
+        "stdout": "Initialized empty Git repository in <USER_HOME>/Dev-Workspace/gate-stage1b-fixed-results-20261118/stage1a32/source/.git/\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "add",
+          "sample.txt"
+        ],
+        "ended_at": "2026-11-18T13:32:39.406113+00:00",
+        "exit_code": 0,
+        "pid": 26956,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.371827+00:00",
+        "stderr": "",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "commit",
+          "-m",
+          "synthetic first"
+        ],
+        "ended_at": "2026-11-18T13:32:39.459788+00:00",
+        "exit_code": 0,
+        "pid": 21216,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.406197+00:00",
+        "stderr": "",
+        "stdout": "[main (root-commit) ac06923] synthetic first\n 1 file changed, 1 insertion(+)\n create mode 100644 sample.txt\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "commit",
+          "-am",
+          "synthetic second"
+        ],
+        "ended_at": "2026-11-18T13:32:39.511783+00:00",
+        "exit_code": 0,
+        "pid": 24688,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.460132+00:00",
+        "stderr": "",
+        "stdout": "[main 14d7095] synthetic second\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "checkout",
+          "-b",
+          "feature"
+        ],
+        "ended_at": "2026-11-18T13:32:39.548866+00:00",
+        "exit_code": 0,
+        "pid": 5168,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.511866+00:00",
+        "stderr": "Switched to a new branch 'feature'\n",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "add",
+          "feature.txt"
+        ],
+        "ended_at": "2026-11-18T13:32:39.583294+00:00",
+        "exit_code": 0,
+        "pid": 22392,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.549189+00:00",
+        "stderr": "",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "commit",
+          "-m",
+          "synthetic feature"
+        ],
+        "ended_at": "2026-11-18T13:32:39.635220+00:00",
+        "exit_code": 0,
+        "pid": 1780,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.583381+00:00",
+        "stderr": "",
+        "stdout": "[feature 32bb39b] synthetic feature\n 1 file changed, 1 insertion(+)\n create mode 100644 feature.txt\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "tag",
+          "-a",
+          "synthetic-v1",
+          "-m",
+          "synthetic annotated tag"
+        ],
+        "ended_at": "2026-11-18T13:32:39.672688+00:00",
+        "exit_code": 0,
+        "pid": 26980,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.635323+00:00",
+        "stderr": "",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "checkout",
+          "main"
+        ],
+        "ended_at": "2026-11-18T13:32:39.709964+00:00",
+        "exit_code": 0,
+        "pid": 27776,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.672769+00:00",
+        "stderr": "Switched to branch 'main'\n",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "rev-parse",
+          "--absolute-git-dir"
+        ],
+        "ended_at": "2026-11-18T13:32:39.739453+00:00",
+        "exit_code": 0,
+        "pid": 26216,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.710069+00:00",
+        "stderr": "",
+        "stdout": "<USER_HOME>/Dev-Workspace/gate-stage1b-fixed-results-20261118/stage1a32/source/.git\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "config",
+          "--local",
+          "--list"
+        ],
+        "ended_at": "2026-11-18T13:32:39.769699+00:00",
+        "exit_code": 0,
+        "pid": 28328,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.739594+00:00",
+        "stderr": "",
+        "stdout": "core.repositoryformatversion=0\ncore.filemode=false\ncore.bare=false\ncore.logallrefupdates=true\ncore.symlinks=false\ncore.ignorecase=true\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "status",
+          "--porcelain"
+        ],
+        "ended_at": "2026-11-18T13:32:39.802584+00:00",
+        "exit_code": 0,
+        "pid": 6176,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.769895+00:00",
+        "stderr": "",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "for-each-ref",
+          "--format=%(refname) %(objectname)"
+        ],
+        "ended_at": "2026-11-18T13:32:39.835265+00:00",
+        "exit_code": 0,
+        "pid": 23864,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.802664+00:00",
+        "stderr": "",
+        "stdout": "refs/heads/feature 32bb39b225503a7c6eca717a455083b4c28138f7\nrefs/heads/main 14d7095fcef590aaee908d347c28c68f5abbb555\nrefs/tags/synthetic-v1 8c2f1091024ecb3ecceefcc40dedb1f15d0f6918\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "rev-list",
+          "--objects",
+          "--all"
+        ],
+        "ended_at": "2026-11-18T13:32:39.877615+00:00",
+        "exit_code": 0,
+        "pid": 28756,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.835356+00:00",
+        "stderr": "",
+        "stdout": "32bb39b225503a7c6eca717a455083b4c28138f7\n14d7095fcef590aaee908d347c28c68f5abbb555\nac069234d986cd52ec3df98fb8b416ae44e4e4a8\n8c2f1091024ecb3ecceefcc40dedb1f15d0f6918 synthetic-v1\nf11c01ad5f57b81ec0ff750220ea252c9a8d36f4 \nc4851e157282dc6bc71fe2e9b181ac398079d602 feature.txt\nf5f61c39a6d235c5768470b3600a2dca0fad9734 sample.txt\n9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b \n180a285530da0dc5a876231fe3eea870ddd4ea63 \nb20ee8b820914ec81386a56f1bde9cf742a4a413 sample.txt\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "14d7095fcef590aaee908d347c28c68f5abbb555"
+        ],
+        "ended_at": "2026-11-18T13:32:39.910206+00:00",
+        "exit_code": 0,
+        "pid": 27952,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.877722+00:00",
+        "stderr": "",
+        "stdout": "commit\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "commit",
+          "14d7095fcef590aaee908d347c28c68f5abbb555"
+        ],
+        "ended_at": "2026-11-18T13:32:39.941119+00:00",
+        "exit_code": 0,
+        "pid": 27696,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.910282+00:00",
+        "stderr": "",
+        "stdout": "tree 9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b\nparent ac069234d986cd52ec3df98fb8b416ae44e4e4a8\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "180a285530da0dc5a876231fe3eea870ddd4ea63"
+        ],
+        "ended_at": "2026-11-18T13:32:39.972427+00:00",
+        "exit_code": 0,
+        "pid": 24224,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.941238+00:00",
+        "stderr": "",
+        "stdout": "tree\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "tree",
+          "180a285530da0dc5a876231fe3eea870ddd4ea63"
+        ],
+        "ended_at": "2026-11-18T13:32:40.003652+00:00",
+        "exit_code": 0,
+        "pid": 26456,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:39.972472+00:00",
+        "stderr": "",
+        "stdout": "100644 sample.txt\u0000\ufffd\u000e\ufffd \ufffdN\ufffd\u0013\ufffd\ufffdo\u001b\u079c\ufffdB\ufffd\ufffd\u0013",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "32bb39b225503a7c6eca717a455083b4c28138f7"
+        ],
+        "ended_at": "2026-11-18T13:32:40.034254+00:00",
+        "exit_code": 0,
+        "pid": 7696,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.003754+00:00",
+        "stderr": "",
+        "stdout": "commit\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "commit",
+          "32bb39b225503a7c6eca717a455083b4c28138f7"
+        ],
+        "ended_at": "2026-11-18T13:32:40.063515+00:00",
+        "exit_code": 0,
+        "pid": 27604,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.034347+00:00",
+        "stderr": "",
+        "stdout": "tree f11c01ad5f57b81ec0ff750220ea252c9a8d36f4\nparent 14d7095fcef590aaee908d347c28c68f5abbb555\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "8c2f1091024ecb3ecceefcc40dedb1f15d0f6918"
+        ],
+        "ended_at": "2026-11-18T13:32:40.093182+00:00",
+        "exit_code": 0,
+        "pid": 13368,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.063627+00:00",
+        "stderr": "",
+        "stdout": "tag\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "tag",
+          "8c2f1091024ecb3ecceefcc40dedb1f15d0f6918"
+        ],
+        "ended_at": "2026-11-18T13:32:40.121839+00:00",
+        "exit_code": 0,
+        "pid": 19272,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.093268+00:00",
+        "stderr": "",
+        "stdout": "object 32bb39b225503a7c6eca717a455083b4c28138f7\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b"
+        ],
+        "ended_at": "2026-11-18T13:32:40.151830+00:00",
+        "exit_code": 0,
+        "pid": 25064,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.121939+00:00",
+        "stderr": "",
+        "stdout": "tree\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "tree",
+          "9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b"
+        ],
+        "ended_at": "2026-11-18T13:32:40.181636+00:00",
+        "exit_code": 0,
+        "pid": 4160,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.151916+00:00",
+        "stderr": "",
+        "stdout": "100644 sample.txt\u0000\ufffd\ufffd\u001c9\ufffd\ufffd5\ufffdv\ufffdp\ufffd`\n-\ufffd\u000f\ufffd\ufffd4",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "ac069234d986cd52ec3df98fb8b416ae44e4e4a8"
+        ],
+        "ended_at": "2026-11-18T13:32:40.211553+00:00",
+        "exit_code": 0,
+        "pid": 8704,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.181745+00:00",
+        "stderr": "",
+        "stdout": "commit\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "commit",
+          "ac069234d986cd52ec3df98fb8b416ae44e4e4a8"
+        ],
+        "ended_at": "2026-11-18T13:32:40.241683+00:00",
+        "exit_code": 0,
+        "pid": 24304,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.211631+00:00",
+        "stderr": "",
+        "stdout": "tree 180a285530da0dc5a876231fe3eea870ddd4ea63\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "b20ee8b820914ec81386a56f1bde9cf742a4a413"
+        ],
+        "ended_at": "2026-11-18T13:32:40.271932+00:00",
+        "exit_code": 0,
+        "pid": 11536,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.241785+00:00",
+        "stderr": "",
+        "stdout": "blob\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "blob",
+          "b20ee8b820914ec81386a56f1bde9cf742a4a413"
+        ],
+        "ended_at": "2026-11-18T13:32:40.301645+00:00",
+        "exit_code": 0,
+        "pid": 28676,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.272011+00:00",
+        "stderr": "",
+        "stdout": "synthetic first\r\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "c4851e157282dc6bc71fe2e9b181ac398079d602"
+        ],
+        "ended_at": "2026-11-18T13:32:40.334310+00:00",
+        "exit_code": 0,
+        "pid": 29340,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.301754+00:00",
+        "stderr": "",
+        "stdout": "blob\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "blob",
+          "c4851e157282dc6bc71fe2e9b181ac398079d602"
+        ],
+        "ended_at": "2026-11-18T13:32:40.365650+00:00",
+        "exit_code": 0,
+        "pid": 11868,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.334387+00:00",
+        "stderr": "",
+        "stdout": "synthetic branch\r\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "f11c01ad5f57b81ec0ff750220ea252c9a8d36f4"
+        ],
+        "ended_at": "2026-11-18T13:32:40.395639+00:00",
+        "exit_code": 0,
+        "pid": 27284,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.365698+00:00",
+        "stderr": "",
+        "stdout": "tree\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "tree",
+          "f11c01ad5f57b81ec0ff750220ea252c9a8d36f4"
+        ],
+        "ended_at": "2026-11-18T13:32:40.430746+00:00",
+        "exit_code": 0,
+        "pid": 24920,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.395714+00:00",
+        "stderr": "",
+        "stdout": "100644 feature.txt\u0000\u0105\u001e\u0015r\ufffd\ufffdk\ufffd\u001f\ufffd\u9c41\ufffd9\ufffdy\ufffd\u0002100644 sample.txt\u0000\ufffd\ufffd\u001c9\ufffd\ufffd5\ufffdv\ufffdp\ufffd`\n-\ufffd\u000f\ufffd\ufffd4",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "-t",
+          "f5f61c39a6d235c5768470b3600a2dca0fad9734"
+        ],
+        "ended_at": "2026-11-18T13:32:40.462275+00:00",
+        "exit_code": 0,
+        "pid": 26924,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.430860+00:00",
+        "stderr": "",
+        "stdout": "blob\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "cat-file",
+          "blob",
+          "f5f61c39a6d235c5768470b3600a2dca0fad9734"
+        ],
+        "ended_at": "2026-11-18T13:32:40.493787+00:00",
+        "exit_code": 0,
+        "pid": 2620,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.462357+00:00",
+        "stderr": "",
+        "stdout": "synthetic second\r\n",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\source",
+          "bundle",
+          "create",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32\\original.bundle",
+          "--all"
+        ],
+        "ended_at": "2026-11-18T13:32:40.549202+00:00",
+        "exit_code": 0,
+        "pid": 24456,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.493909+00:00",
+        "stderr": "",
+        "stdout": "",
+        "timeout_seconds": 8
+      },
+      {
+        "command": [
+          "git",
+          "--version"
+        ],
+        "ended_at": "2026-11-18T13:32:40.567327+00:00",
+        "exit_code": 0,
+        "pid": 28156,
+        "process_state": "DIRECT_CHILD_REAPED",
+        "retry": 0,
+        "started_at": "2026-11-18T13:32:40.549820+00:00",
+        "stderr": "",
+        "stdout": "git version 2.53.0.windows.1\n",
+        "timeout_seconds": 8
+      }
+    ],
+    "started_at": "2026-11-18T13:32:39.240707+00:00",
+    "timeout_per_command_seconds": 8
+  }
+}

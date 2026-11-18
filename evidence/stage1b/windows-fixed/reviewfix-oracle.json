@@ -1,0 +1,21 @@
+{
+  "wait_cases": [
+    [
+      0,
+      "UNASSIGNED_CHILD_STOPPED"
+    ],
+    [
+      258,
+      "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+    ],
+    [
+      4294967295,
+      "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+    ]
+  ],
+  "parent_nonzero_child": [
+    "FAIL",
+    "COMMAND_NONZERO_WITH_TIMEOUT",
+    "JOB_EMPTY_AFTER_TERMINATE"
+  ]
+}

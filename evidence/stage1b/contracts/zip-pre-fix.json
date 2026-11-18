@@ -1,0 +1,12 @@
+{
+  "contract_status": "PASS",
+  "reason_codes": [
+    "CONTRACT_VALID"
+  ],
+  "CUSTODY_STATUS": "PASS",
+  "VERIFICATION_STATUS": "PASS",
+  "INDEPENDENCE_STATUS": "PARTIAL",
+  "ACCEPTANCE_STATUS": "PASS",
+  "human_independence": "LIMITED_SHARED_OWNER",
+  "production_permit": false
+}

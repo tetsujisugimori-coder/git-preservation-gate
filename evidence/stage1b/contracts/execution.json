@@ -1,0 +1,19 @@
+{
+  "commands": [
+    {
+      "command": "python tests/stage1b/run_contract_tests.py",
+      "exit_code": 0,
+      "stdout": "results.json",
+      "stderr": "stderr.txt",
+      "retry": 0
+    },
+    {
+      "command": "python tests/stage1b/run_record_tests.py <new-test-ledger>",
+      "exit_code": 0,
+      "stdout": "record-results.json",
+      "stderr": "record-stderr.txt",
+      "retry": 0
+    }
+  ],
+  "note": "initial run exit1 retained; final commands executed in Linux, no Windows claim; outer deadline tested separately"
+}

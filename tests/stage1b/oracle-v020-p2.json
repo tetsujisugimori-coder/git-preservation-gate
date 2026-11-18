@@ -1,0 +1,26 @@
+{
+  "schema_version": "v0.2.0-P2-addendum",
+  "old_fixture_sha256": "b4e0a777672ff61a5b9f73fdf1145256412b10764bf68b0105ce3773fb88b56e",
+  "scope": "Frozen pre-implementation expectations preserved; v0.2.0 P2 per-case corrections applied in test runner",
+  "reason": "v0.2.0 acceptance only uses BLOCKED for blocking conditions and PARTIAL for otherwise incomplete review/CI/storage",
+  "case_overrides": {
+    "C01": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    },
+    "C16": {
+      "VERIFICATION_STATUS": "PARTIAL"
+    },
+    "C17": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    },
+    "C21": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    },
+    "C26": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    },
+    "C27": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    }
+  }
+}

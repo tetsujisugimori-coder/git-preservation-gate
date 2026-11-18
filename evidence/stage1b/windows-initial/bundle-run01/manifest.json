@@ -1,0 +1,85 @@
+{
+  "bundle_sha256": "b8b6f7e0099be24ded719f1f8b895359a72f90002005e494201d5ac1560fa87b",
+  "bundle_size": 1075,
+  "format": "stage1a-synthetic-v2",
+  "kind": "synthetic-git-bundle",
+  "target": {
+    "objects": [
+      {
+        "oid": "14d7095fcef590aaee908d347c28c68f5abbb555",
+        "parents": [
+          "ac069234d986cd52ec3df98fb8b416ae44e4e4a8"
+        ],
+        "sha256": "348488bab67f28672e0a4101587d5eb756c08522dfe3ce266a12058fda6038b2",
+        "size": 253,
+        "tree": "9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b",
+        "type": "commit"
+      },
+      {
+        "oid": "180a285530da0dc5a876231fe3eea870ddd4ea63",
+        "sha256": "10a355712b5d800a0b871dd86e4197f2af3f0dcd8f3e76ca521739e63e2bb487",
+        "size": 38,
+        "type": "tree"
+      },
+      {
+        "oid": "32bb39b225503a7c6eca717a455083b4c28138f7",
+        "parents": [
+          "14d7095fcef590aaee908d347c28c68f5abbb555"
+        ],
+        "sha256": "36ba6ee36d19736a1dc1307f2ace9bedc3cd78fb70a28176611b178fa043546c",
+        "size": 254,
+        "tree": "f11c01ad5f57b81ec0ff750220ea252c9a8d36f4",
+        "type": "commit"
+      },
+      {
+        "oid": "8c2f1091024ecb3ecceefcc40dedb1f15d0f6918",
+        "sha256": "e4c67923f936aabbe44ba382dcd9563bb3f20bf7efdfd74372a8ea37f992c466",
+        "size": 171,
+        "type": "tag"
+      },
+      {
+        "oid": "9ef5ace4e98e7ae95223900ed9c99f6337ab7f0b",
+        "sha256": "9a985e275b17f9ffa04f88ddad56a05462b17e79282fb2d834b8ef570e11aa1e",
+        "size": 38,
+        "type": "tree"
+      },
+      {
+        "oid": "ac069234d986cd52ec3df98fb8b416ae44e4e4a8",
+        "parents": [],
+        "sha256": "10508e174878029affac90e806f6f6d6f7c07e7fec9070ee23a2fac07fd70597",
+        "size": 204,
+        "tree": "180a285530da0dc5a876231fe3eea870ddd4ea63",
+        "type": "commit"
+      },
+      {
+        "oid": "b20ee8b820914ec81386a56f1bde9cf742a4a413",
+        "sha256": "40a2450bdd947e8b918a79cba015d57801864de889e8eb87f0e59925c1c56e25",
+        "size": 17,
+        "type": "blob"
+      },
+      {
+        "oid": "c4851e157282dc6bc71fe2e9b181ac398079d602",
+        "sha256": "0c42265fdbdfe0f43929747ab7e5fb38977ec3c5a65f41f5198fe5342594cb98",
+        "size": 18,
+        "type": "blob"
+      },
+      {
+        "oid": "f11c01ad5f57b81ec0ff750220ea252c9a8d36f4",
+        "sha256": "0d692740b966dc22e70639e37b6af4fefb92ca860c77a3ff49feaae72e957ba9",
+        "size": 77,
+        "type": "tree"
+      },
+      {
+        "oid": "f5f61c39a6d235c5768470b3600a2dca0fad9734",
+        "sha256": "5ff1d07b5721e2a9f2763fac6ef429747daf4474077d275d0257d62faed623fe",
+        "size": 18,
+        "type": "blob"
+      }
+    ],
+    "refs": [
+      "refs/heads/feature 32bb39b225503a7c6eca717a455083b4c28138f7",
+      "refs/heads/main 14d7095fcef590aaee908d347c28c68f5abbb555",
+      "refs/tags/synthetic-v1 8c2f1091024ecb3ecceefcc40dedb1f15d0f6918"
+    ]
+  }
+}

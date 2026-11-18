@@ -1,0 +1,97 @@
+{
+  "command": [
+    "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "-B",
+    "${WINDOWS_TASK_ROOT}\\readback_self.py"
+  ],
+  "started_at": "2026-11-18T13:10:38.507623+00:00",
+  "status": "FAIL",
+  "reason": "COMMAND_NONZERO",
+  "process_state": "JOB_EMPTY",
+  "production_permit": false,
+  "retry": 0,
+  "command_timeout": 5,
+  "total_timeout": 10.0,
+  "stop_wait": 2.0,
+  "fault": null,
+  "observations": [
+    {
+      "elapsed": 0.008206000000427593,
+      "active": 1,
+      "total": 1,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.018392199999652803,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.028577499999300926,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.039247499998964486,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.049463299999843,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.059870900000532856,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.07047179999972286,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.08059219999995548,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.09070629999951052,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.10115120000045863,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.11182039999948756,
+      "active": 2,
+      "total": 2,
+      "terminated": 0
+    },
+    {
+      "elapsed": 0.12228700000014214,
+      "active": 0,
+      "total": 2,
+      "terminated": 0
+    }
+  ],
+  "pid": 27376,
+  "exit_code": 1,
+  "elapsed": 0.12259669999912148,
+  "ended_at": "2026-11-18T13:10:38.630519+00:00",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"${WINDOWS_TASK_ROOT}\\readback_self.py\", line 9, in <module>\r\n    r=Runner();result=restore(r,root/'original.bundle',root/'manifest.json',sha(source/'manifest.json'),root/'restored.git')\r\nTypeError: Runner.__init__() missing 1 required positional argument: 'root'\r\n"
+}

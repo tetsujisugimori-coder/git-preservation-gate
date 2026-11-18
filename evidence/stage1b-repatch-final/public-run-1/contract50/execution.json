@@ -1,0 +1,55 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "system": "Linux"
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "tests/stage1b/run_contract_tests.py"
+      ],
+      "started_at": "2026-11-18T21:10:56.990371+00:00",
+      "ended_at": "2026-11-18T21:10:57.070936+00:00",
+      "exit_code": 0,
+      "timeout_seconds": 20,
+      "timed_out": false,
+      "retry": 0,
+      "stdout": "0.stdout.json",
+      "stderr": "0.stderr.txt",
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "python",
+        "tests/stage1b/run_record_tests.py",
+        "<new-ledger>"
+      ],
+      "started_at": "2026-11-18T21:10:57.070951+00:00",
+      "ended_at": "2026-11-18T21:10:57.142941+00:00",
+      "exit_code": 0,
+      "timeout_seconds": 20,
+      "timed_out": false,
+      "retry": 0,
+      "stdout": "1.stdout.json",
+      "stderr": "1.stderr.txt",
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "python",
+        "tests/stage1b/run_boundary_tests.py"
+      ],
+      "started_at": "2026-11-18T21:10:57.142955+00:00",
+      "ended_at": "2026-11-18T21:10:57.183549+00:00",
+      "exit_code": 0,
+      "timeout_seconds": 20,
+      "timed_out": false,
+      "retry": 0,
+      "stdout": "2.stdout.json",
+      "stderr": "2.stderr.txt",
+      "result": "PASS"
+    }
+  ],
+  "production_permit": false
+}

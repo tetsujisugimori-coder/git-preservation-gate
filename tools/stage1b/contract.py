@@ -100,7 +100,9 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     if not set(c['required_checks'])<=supported:
         fault('UNKNOWN','CHECK_ADAPTER_UNKNOWN')
         if out['VERIFICATION_STATUS']!='FAIL':out['VERIFICATION_STATUS']='NOT_TESTED'
-    if c['object']['kind']=='zip' and out['VERIFICATION_STATUS']!='FAIL':out['VERIFICATION_STATUS']='NOT_TESTED'
+    if c['object']['kind']=='zip' and out['VERIFICATION_STATUS']!='FAIL':
+        out['VERIFICATION_STATUS']='NOT_TESTED'
+        reasons.append('ZIP_ADAPTER_NOT_IMPLEMENTED')
     minlevel=3 if any(c['risk'][k] for k in ['confidential','destructive','strong_authenticity']) else (1 if c['object']['kind']=='git-document' else 2)
     if c['level']<minlevel:fault('FAIL','LEVEL_TOO_LOW')
     if observed_head is None:fault('UNKNOWN','HEAD_UNCONFIRMED')
@@ -150,7 +152,8 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     if c['ci_required']:acceptance.append(o['ci'])
     if c['level']>=2:acceptance += [out['CUSTODY_STATUS'],out['VERIFICATION_STATUS'], 'PASS' if out['INDEPENDENCE_STATUS']=='PARTIAL' and c['audit_mode']=='SOLO_STANDARD' else out['INDEPENDENCE_STATUS']]
     blockers={'POLICY_UNCONFIRMED','APPROVAL_UNVERIFIED','HEAD_UNCONFIRMED',
-              'CHECK_ADAPTER_UNKNOWN','EXTRA_CONTRACT_UNKNOWN','EXTRA_APPROVAL_UNKNOWN'}
+              'CHECK_ADAPTER_UNKNOWN','EXTRA_CONTRACT_UNKNOWN','EXTRA_APPROVAL_UNKNOWN',
+              'ZIP_ADAPTER_NOT_IMPLEMENTED'}
     blocked=(status=='BLOCKED' or out['INDEPENDENCE_STATUS']=='BLOCKED'
              or any(code in blockers or code.startswith('ACL_') for code in reasons))
     out['ACCEPTANCE_STATUS']=('FAIL' if 'FAIL' in acceptance else

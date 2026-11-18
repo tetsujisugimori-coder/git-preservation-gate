@@ -38,3 +38,14 @@ ZIP execution adapters are not implemented here. Even with base observations all
 
 ## Independent review corrections
 Risk-specific L3 approval must explicitly list every active `confidential`, `destructive`, `strong_authenticity` flag in `extra_decision.covered_risks`; omission is UNKNOWN, not an implicit waiver. A generic old 'no special risk' assertion cannot waive newly active risks. Both approved and requested retention must extend beyond the evaluation timestamp. An unknown shared-owner state does not yield INDEPENDENCE PASS. Initial review counterexamples are preserved and rerun unchanged. These are trusted-record consistency checks, not external approval authentication.
+
+## P2-01 to P2-03 v0.2.0 review amendment
+Frozen 28-case historical oracle remains unchanged. Corrections are explicitly overlaid by `tests/stage1b/oracle-v020-p2.json` with old expected values also retained by the runner; C16's missing L3 decision is added to verification. The 18 new preregistered synthetic regression cases are `tests/stage1b/run_p2_regression.py`.
+
+P2-01: FAIL takes precedence, then BLOCKED, then one kind of incomplete state, else mixed PARTIAL. An incomplete required CI/review/readback without an actual blocker gives acceptance PARTIAL. Real blockers (scope/approval uncertainty, missing audit separation) remain BLOCKED. Known content failure remains FAIL.
+
+P2-02: `extra_decision.approved=false` without optional `approval_state` denotes explicit denial (FAIL), never UNKNOWN. Optional `approval_state` is PASS/FAIL/UNKNOWN/NOT_TESTED and must agree with the legacy boolean. Those states contribute to the extra contract and verification; actual approval authentication is still outside the module.
+
+P2-03: A false `ci_required` requires `ci_exemption` with nonempty rationale, exact repository/ref/head/object_id. Missing or mismatched waiver is BLOCKED; invalid structure/schema fails. A waiver cannot coexist with `ci_required=true`. Waiving CI never changes the CI observation to PASS.
+
+This development-stage amendment does not authenticate external approval, save anything to a durable destination, claim an independent human audit or enable production permit.

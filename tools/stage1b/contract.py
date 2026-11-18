@@ -20,7 +20,7 @@ def state(x):
 def boolean(x):
     if type(x) is not bool: raise Invalid('bool')
 def schema(c):
-    exact(c,'schema_version attempt_id repository ref head tree parents object level risk policy approval_id destination operations actor classification retention_until delete_move_overwrite audit_mode required_checks extra_checks extra_decision observations ci_required sessions')
+    exact(c,'schema_version attempt_id repository ref head tree parents object level risk policy approval_id destination operations actor classification retention_until delete_move_overwrite audit_mode required_checks extra_checks extra_decision observations ci_required sessions'+(' ci_exemption' if isinstance(c,dict) and 'ci_exemption' in c else ''))
     for k in ['attempt_id','repository','ref','approval_id','destination','actor','classification']:string(c[k])
     if c['schema_version']!='1' or type(c['level']) is not int or c['level'] not in (1,2,3):raise Invalid('version/level')
     for k in ['head','tree']:hexid(c[k],40)
@@ -36,7 +36,10 @@ def schema(c):
     if not c['operations'] or not set(c['operations'])<= {'create','read'}:raise Invalid('operations')
     stamp(c['retention_until'])
     if c['delete_move_overwrite']!='prohibited' or c['audit_mode'] not in ('SOLO_STANDARD','STRICT_INDEPENDENT'):raise Invalid('mode')
-    d=c['extra_decision']; exact(d,'decision rationale approved'+(' covered_risks' if isinstance(d,dict) and 'covered_risks' in d else ''));string(d['rationale']);boolean(d['approved'])
+    d=c['extra_decision']; exact(d,'decision rationale approved'+(' covered_risks' if isinstance(d,dict) and 'covered_risks' in d else '')+(' approval_state' if isinstance(d,dict) and 'approval_state' in d else ''));string(d['rationale']);boolean(d['approved'])
+    if 'approval_state' in d:
+        if d['approval_state'] not in ('PASS','FAIL','UNKNOWN','NOT_TESTED'):raise Invalid('extra approval state')
+        if d['approved'] != (d['approval_state']=='PASS'):raise Invalid('extra approval contradiction')
     if 'covered_risks' in d:
         strings(d['covered_risks'])
         if not set(d['covered_risks']) <= {'confidential','destructive','strong_authenticity'}:raise Invalid('risk coverage')
@@ -44,6 +47,11 @@ def schema(c):
     exact(c['observations'],'storage readback size sha256 all_bytes bundle_restore ci review')
     for v in c['observations'].values():state(v)
     boolean(c['ci_required'])
+    if 'ci_exemption' in c:
+        e=c['ci_exemption'];exact(e,'rationale repository ref head object_id')
+        for key in ['rationale','repository','ref','object_id']:string(e[key])
+        hexid(e['head'],40)
+        if c['ci_required']:raise Invalid('CI exemption conflicts with required CI')
     exact(c['sessions'],'separate_session separate_execution separate_area direct_retrieval human_independent shared_owner')
     for v in c['sessions'].values():
         if v is not None and type(v) is not bool:raise Invalid('session')
@@ -58,9 +66,12 @@ def approval_schema(a):
     state(a['acl']);boolean(a['authorization_verified'])
     if a['delete_move_overwrite']!='prohibited':raise Invalid('destruction policy')
 def aggregate(values):
-    for v in ['FAIL','BLOCKED','UNKNOWN','PARTIAL','NOT_TESTED']:
-        if v in values:return v
-    return 'PASS'
+    """v0.2.0: known FAIL, then BLOCKED, singleton non-PASS, else PARTIAL."""
+    if not values or any(v not in STATES for v in values):raise Invalid('aggregate status')
+    if 'FAIL' in values:return 'FAIL'
+    if 'BLOCKED' in values:return 'BLOCKED'
+    pending={v for v in values if v!='PASS'}
+    return 'PASS' if not pending else (next(iter(pending)) if len(pending)==1 else 'PARTIAL')
 def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     """Eligibility only; approval provenance must be checked outside this pure function."""
     reasons=[];out={'contract_status':'FAIL','reason_codes':reasons,'CUSTODY_STATUS':'UNKNOWN','VERIFICATION_STATUS':'UNKNOWN','INDEPENDENCE_STATUS':'UNKNOWN','ACCEPTANCE_STATUS':'FAIL','human_independence':'UNKNOWN','production_permit':False}
@@ -114,10 +125,21 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
                 if stamp(c['retention_until'])<=n or stamp(a['retention_until'])<=n:fault('BLOCKED','RETENTION_EXPIRED')
                 if stamp(c['retention_until'])>stamp(a['retention_until']):fault('BLOCKED','RETENTION_SCOPE')
                 if a['acl']!='PASS':fault('BLOCKED' if a['acl']=='FAIL' else 'UNKNOWN','ACL_'+a['acl'])
+    if not c['ci_required']:
+        e=c.get('ci_exemption')
+        if e is None:fault('BLOCKED','CI_EXEMPTION_MISSING')
+        elif any(e[key]!=value for key,value in [('repository',c['repository']),('ref',c['ref']),('head',c['head']),('object_id',c['object']['id'])]):
+            fault('BLOCKED','CI_EXEMPTION_SCOPE')
     if c['level']==3:
         d=c['extra_decision']
         risks={k for k in ['confidential','destructive','strong_authenticity'] if c['risk'][k]}
-        if not risks<=set(d.get('covered_risks',[])) or not d['approved'] or d['decision']=='UNKNOWN' or (d['decision']=='required' and not c['extra_checks']) or (d['decision']=='not_required' and c['extra_checks']):fault('UNKNOWN','EXTRA_CONTRACT_UNKNOWN')
+        approval_state=d.get('approval_state','PASS' if d['approved'] else 'FAIL')
+        if approval_state!='PASS':
+            fault(approval_state,{'FAIL':'EXTRA_APPROVAL_DENIED','UNKNOWN':'EXTRA_APPROVAL_UNKNOWN','NOT_TESTED':'EXTRA_APPROVAL_NOT_TESTED'}[approval_state])
+            out['VERIFICATION_STATUS']=aggregate([out['VERIFICATION_STATUS'],approval_state])
+        if not risks<=set(d.get('covered_risks',[])) or d['decision']=='UNKNOWN' or (d['decision']=='required' and not c['extra_checks']) or (d['decision']=='not_required' and c['extra_checks']):
+            fault('UNKNOWN','EXTRA_CONTRACT_UNKNOWN')
+            out['VERIFICATION_STATUS']=aggregate([out['VERIFICATION_STATUS'],'UNKNOWN'])
     if not reasons:reasons.append('LEVEL1_GIT_ONLY' if c['level']==1 else 'CONTRACT_VALID')
     out['contract_status']=status
     for axis,key in [('CUSTODY','storage'),('VERIFICATION','sha256'),('CI','ci'),('REVIEW','review')]:
@@ -127,7 +149,13 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     if c['level']==3 and c['extra_checks']:acceptance.append('NOT_TESTED') # extra execution evidence is not implemented
     if c['ci_required']:acceptance.append(o['ci'])
     if c['level']>=2:acceptance += [out['CUSTODY_STATUS'],out['VERIFICATION_STATUS'], 'PASS' if out['INDEPENDENCE_STATUS']=='PARTIAL' and c['audit_mode']=='SOLO_STANDARD' else out['INDEPENDENCE_STATUS']]
-    out['ACCEPTANCE_STATUS']='FAIL' if 'FAIL' in acceptance else ('PASS' if all(x=='PASS' for x in acceptance) else 'BLOCKED')
+    blockers={'POLICY_UNCONFIRMED','APPROVAL_UNVERIFIED','HEAD_UNCONFIRMED',
+              'CHECK_ADAPTER_UNKNOWN','EXTRA_CONTRACT_UNKNOWN','EXTRA_APPROVAL_UNKNOWN'}
+    blocked=(status=='BLOCKED' or out['INDEPENDENCE_STATUS']=='BLOCKED'
+             or any(code in blockers or code.startswith('ACL_') for code in reasons))
+    out['ACCEPTANCE_STATUS']=('FAIL' if 'FAIL' in acceptance else
+                              'BLOCKED' if blocked or 'BLOCKED' in acceptance else
+                              'PASS' if all(x=='PASS' for x in acceptance) else 'PARTIAL')
     return out
 
 def validate_manifest(m):

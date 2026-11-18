@@ -1,0 +1,8 @@
+# Independent B follow-up
+Public fixed HEAD caa57bba4aaa92e8b713c0c6e3fcf21b83123744 newly fetched from GitHub. Actual main() fixed 11 synthetic report mutations: old 1/11 matched, corrected 11/11 matched. assess_report 11/11 and independent additional 6/6 rejection boundaries. These are synthetic subprocess report tests, not Windows save executions. P2-B2-CI01 limited CLOSED; malformed risk P3 limited CLOSED.
+
+Old 30-condition oracle mapping remains an immutable pre-storage snapshot. B2-19 now has appended direct Windows Archive readback evidence for direct/handoff objects and Windows raw evidence ZIP. It is not 30 homogeneous executed cases. Remaining race/adversarial confinement, synchronous kernel I/O interruption, broad ACL/capacity/lock faults and future retention guarantees remain outside demonstrated acceptance. A's ordinary Windows exclusive-lock observation is distinct from universal lock fault coverage.
+
+Windows evidence ZIP direct readback: source/store/new B copy all bytes, size/SHA, receipt/manifest, ZIP 739 CRC and internal manifest 738 set/size/SHA matched. Saved after synthetic pilot; subsequent save/B audit and later ci_probe Windows runs are outside that ZIP. Private raw contents and approval details are not published. LIMITED_SHARED_OWNER; technical separate session/method/area, not third-party human independence.
+
+Provisional overall PARTIAL; limited pilot technical acceptance and merge recommendation YES subject to final submitted content/readback/CI. No production permit, Stage 1-C or other-repository deployment approval. Final documentation-only HEAD verification pending.

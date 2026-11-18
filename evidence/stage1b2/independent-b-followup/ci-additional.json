@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wrong_expected",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {},
+      "case_status": "FAIL",
+      "record_validation": "FAIL"
+    },
+    "pass": true,
+    "input_sha256": "a047eaa1a613089a588b553ece993c94c68e31276389b5d11dcd13d57304b3ae"
+  },
+  {
+    "id": "actual_null",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {},
+      "case_status": "FAIL",
+      "record_validation": "FAIL"
+    },
+    "pass": true,
+    "input_sha256": "9926f83c3ecff6b307d6f8c9424317346a40db544ce89c0fc8c60d8529f6d84a"
+  },
+  {
+    "id": "case_scalar",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {},
+      "case_status": "FAIL",
+      "record_validation": "FAIL"
+    },
+    "pass": true,
+    "input_sha256": "2230788f9bde0ae5b99867220eea52a6e35b114b0b250ad92c2e442d6fc15806"
+  },
+  {
+    "id": "id_list",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {},
+      "case_status": "FAIL",
+      "record_validation": "FAIL"
+    },
+    "pass": true,
+    "input_sha256": "827a9224011afbf7c2d37d7f218f74d00a5bb259cd2d8ac29f5587053608f820"
+  },
+  {
+    "id": "unknown_skip_reason",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {},
+      "case_status": "FAIL",
+      "record_validation": "FAIL"
+    },
+    "pass": true,
+    "input_sha256": "d4ea2bcee87c6b03f951c26c74ad3cc3e360fac6dc2dc17b886bfc99bff7553c"
+  },
+  {
+    "id": "explicit_fail",
+    "expected": "FAIL",
+    "actual": {
+      "case_counts": {
+        "PASS": 33,
+        "FAIL": 1,
+        "NOT_TESTED": 0
+      },
+      "case_status": "FAIL",
+      "record_validation": "PASS"
+    },
+    "pass": true,
+    "input_sha256": "a6ee8d70c18704d653abd85b1cd57a68c47ea24e0ba82edcf95be65cfc7c08fa"
+  }
+]

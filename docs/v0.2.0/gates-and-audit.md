@@ -27,3 +27,6 @@ C成立はpush/mergeの承認を自動作成しない。CIが0件ならNOT_TESTE
 optional `risk_contract` は `{decision, rationale, approval, risks}`。decisionは `required / not_required / UNKNOWN`、approvalは `PASS / FAIL / UNKNOWN / NOT_TESTED`、risksはtrueとなったrisk keyの集合。型・未知key・重複・非該当riskはschema拒否。L3で未提供、UNKNOWN、空白理由、全risk未網羅、requiredなのに必須追加検査が空、not_requiredなのに必須追加検査ありの場合は `RISK_CONTRACT_UNKNOWN`。承認の非PASSは別理由コードで保持し、verificationへ集約する。空理由はschema異常ではなく根拠不足UNKNOWN。
 
 Gate Aの対象同定と、追加安全契約を必要とするB/Cを分ける。正しく承認されたnot_requiredなら基本検査だけでB/Cの合成eligibleは可能。requiredなら従来のextra_checksを全て検査する。低すぎる分類は全eligible=false、acceptance FAIL。保存/検証の既知FAILだけ対応軸に保持し、それ以外はUNKNOWN。Stage 0の実permitは全ケースfalse。
+
+## 分類違反時の既知独立性不成立（追加補訂）
+分類が過小または未確定でも、別session・別execution・別workspace・保存先からの直接取得・独立照合入力の必須技術要素が `false` と観測済みなら、`INDEPENDENCE_STATUS=BLOCKED` と対応する `*_MISSING` 理由を保持する。STRICT方式で人的独立性が `false` と確認済みの場合も同様に `HUMAN_INDEPENDENT_MISSING` を保持する。未確認（`null`）はUNKNOWNのまま、分類不成立から独立性PASSを推定しない。SOLO方式の同一所有者・同一資格情報だけを理由としてBLOCKEDにしない。これは合成入力の判定規則であり、実人員・実権限の証明ではない。

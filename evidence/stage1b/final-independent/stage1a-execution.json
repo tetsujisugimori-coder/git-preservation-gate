@@ -1,0 +1,17 @@
+{
+  "path": "stage1a-execution.json",
+  "raw_size": 262,
+  "raw_sha256": "b1623ddc2bc64918b553e5b94d1aebd3e635a2666efd6615b41c8efc9d2b57c2",
+  "record": {
+    "command": [
+      "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "tools/stage1a/run_suite.py",
+      "--root",
+      "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\stage1a32"
+    ],
+    "exit_code": 0,
+    "timeout": 90,
+    "retry": 0
+  }
+}

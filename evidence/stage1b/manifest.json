@@ -1,5 +1,5 @@
 {
-  "scope": "public derived evidence; raw retained separately; excludes manifest",
+  "scope": "public derivatives; raw separate; excludes this manifest",
   "files": [
     {
       "path": "evidence/stage1b/contract-review/execution.json",
@@ -135,6 +135,51 @@
       "path": "evidence/stage1b/contracts/zip-pre-fix.json",
       "size": 283,
       "sha256": "3aef43338549d4f72eac17b2f3fee7f27376b0bbf21a59b99cf8dc95fbe06a61"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/contract50/execution.json",
+      "size": 1608,
+      "sha256": "45552e70244e0fa37ba05f97473b366300dfd4b69d04fc5b831747bd63176dd9"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/readback.json",
+      "size": 24127,
+      "sha256": "ac9c8210fc323338f59fafe6503918975946494eb054594741f6b2863b239c41"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/review.json",
+      "size": 7807,
+      "sha256": "2de1c2172d7e2cc3b5d35d390b784e3ff57396f7cc513b981c708fbb2a8ddb5a"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/scope.json",
+      "size": 169,
+      "sha256": "313cde8f76db1b89815edd6632ebe525f1234735d988f0a653735b49f852b2fb"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/stage1a-execution.json",
+      "size": 464,
+      "sha256": "581a2442589e00c878b1cfc09499a760d0aedc2431fd81bef5eb2e47cbeb707d"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/stage1a32/suite.json",
+      "size": 24247,
+      "sha256": "a29650aa1aefb9e2c84dee3558e10e3efed3d075c8d1f7695b40527622d9521b"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/windows-fixed-execution.json",
+      "size": 684,
+      "sha256": "773b2f8b69ff9cd89e9632f6221bd8fd444663e9901f85a8e7d89776937e8c64"
+    },
+    {
+      "path": "evidence/stage1b/final-independent/windows21-fixed/results.json",
+      "size": 53939,
+      "sha256": "f27ae50995844b18109c58827e4a2c0b24b020f0c0989bc56209fc403a495300"
+    },
+    {
+      "path": "evidence/stage1b/manifest-recovery.json",
+      "size": 260,
+      "sha256": "c21a93aefe7ab5bbae440a20dc1b46e30cc3f8748641c786270e69c0ebd097bd"
     },
     {
       "path": "evidence/stage1b/stage1a-regression-receipt.json",
@@ -335,6 +380,11 @@
       "path": "evidence/stage1b/windows-initial/v3-ps51/finite-results.json",
       "size": 35122,
       "sha256": "a647a1d495ac7b3ea9e135cf09497739cb8382228a00fb8cd6013aca1e65f7d0"
+    },
+    {
+      "path": "evidence/stage1b/workspace-observation.json",
+      "size": 487,
+      "sha256": "18c2335da54d8b7cd52b086af5d08c6bb1ac83951f5d2b20fe6664f5b8469922"
     }
   ]
 }

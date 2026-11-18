@@ -1,0 +1,222 @@
+{
+  "path": "review.json",
+  "raw_size": 7575,
+  "raw_sha256": "bc0ae3b7ce4cf6b55c33bc3618bead39baae2485d4543c8d7ee97d9bdaaf4f93",
+  "record": {
+    "at": "2026-11-18T13:31:54.005300+00:00",
+    "files": [
+      {
+        "path": "tools/stage1b/contract.py",
+        "sha256": "142a9e59eab589118ac585cfea841dcb93a03d8142b75d4b31eaacc2bd62bb33",
+        "size": 12080,
+        "git_blob_bytes": "PASS"
+      },
+      {
+        "path": "tools/stage1b/finite_process.py",
+        "sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1",
+        "size": 7846,
+        "git_blob_bytes": "PASS"
+      }
+    ],
+    "commands": [
+      {
+        "command": [
+          "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "tests/stage1b/run_contract_batch.py",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\contract50"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"environment\": {\"python\": \"3.14.7\", \"system\": \"Windows\"}, \"commands\": [{\"command\": [\"python\", \"tests/stage1b/run_contract_tests.py\"], \"started_at\": \"2026-11-18T13:31:54.126533+00:00\", \"ended_at\": \"2026-11-18T13:31:54.439506+00:00\", \"exit_code\": 0, \"timeout_seconds\": 20, \"timed_out\": false, \"retry\": 0, \"stdout\": \"0.stdout.json\", \"stderr\": \"0.stderr.txt\", \"result\": \"PASS\"}, {\"command\": [\"python\", \"tests/stage1b/run_record_tests.py\", \"<new-ledger>\"], \"started_at\": \"2026-11-18T13:31:54.439516+00:00\", \"ended_at\": \"2026-11-18T13:31:54.501763+00:00\", \"exit_code\": 0, \"timeout_seconds\": 20, \"timed_out\": false, \"retry\": 0, \"stdout\": \"1.stdout.json\", \"stderr\": \"1.stderr.txt\", \"result\": \"PASS\"}, {\"command\": [\"python\", \"tests/stage1b/run_boundary_tests.py\"], \"started_at\": \"2026-11-18T13:31:54.501772+00:00\", \"ended_at\": \"2026-11-18T13:31:54.559242+00:00\", \"exit_code\": 0, \"timeout_seconds\": 20, \"timed_out\": false, \"retry\": 0, \"stdout\": \"2.stdout.json\", \"stderr\": \"2.stderr.txt\", \"result\": \"PASS\"}], \"production_permit\": false}\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "tests/stage1b/windows_suite.py",
+          "--root",
+          "<USER_HOME>\\Dev-Workspace\\gate-stage1b-fixed-results-20261118\\windows21"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python314\\python.exe: can't open file '<LOCAL_PATH> [Errno 2] No such file or directory\r\n"
+      }
+    ],
+    "B10": [
+      {
+        "id": "B01-normal",
+        "expected": "PASS",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "PASS",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B02-risk-uncovered",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "UNKNOWN",
+          "reason_codes": [
+            "EXTRA_CONTRACT_UNKNOWN"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B03-retention-expired",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "BLOCKED",
+          "reason_codes": [
+            "RETENTION_EXPIRED"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B04-storagefail",
+        "expected": "FAIL",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID",
+            "CUSTODY_FAIL"
+          ],
+          "CUSTODY_STATUS": "FAIL",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "FAIL",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B05-shafail",
+        "expected": "FAIL",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID",
+            "VERIFICATION_FAIL"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "FAIL",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "FAIL",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B06-unknown-owner",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "UNKNOWN",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "UNKNOWN",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B07-strict-same-owner",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B08-wrongscope",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "BLOCKED",
+          "reason_codes": [
+            "SCOPE_DESTINATION"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B09-unverified",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "UNKNOWN",
+          "reason_codes": [
+            "APPROVAL_UNVERIFIED"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      },
+      {
+        "id": "B10-zip",
+        "expected": "NOT_PASS",
+        "actual": {
+          "contract_status": "PASS",
+          "reason_codes": [
+            "CONTRACT_VALID"
+          ],
+          "CUSTODY_STATUS": "PASS",
+          "VERIFICATION_STATUS": "NOT_TESTED",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "ACCEPTANCE_STATUS": "BLOCKED",
+          "human_independence": "LIMITED_SHARED_OWNER",
+          "production_permit": false
+        },
+        "match": true
+      }
+    ],
+    "oracle_sha256": "9869bbd7143d4954edb327020a39a906394f348ed2675b370e3f3d60b6fc219d"
+  }
+}

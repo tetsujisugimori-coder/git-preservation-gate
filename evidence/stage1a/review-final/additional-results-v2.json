@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "actual": "RECORD_MISSING",
+      "id": "B01",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "B02",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {}
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "B03",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {
+            "exit_code": null,
+            "process_state": "RUNNING"
+          }
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "B04",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {
+            "exit_code": 1,
+            "process_state": "DIRECT_CHILD_REAPED"
+          }
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "B05",
+      "input": {
+        "actual": {
+          "status": "FAIL"
+        },
+        "case_id": "normal",
+        "commands": [],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "checker_sha256": "b5266806999222a1d4029193be675d72b99cb824e6654a38586f3fe016367b86"
+}

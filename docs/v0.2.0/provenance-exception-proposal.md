@@ -1,0 +1,47 @@
+# 歴史的証拠の来歴不完全時の判定案（所有者承認後の補訂提案）
+
+2026-11-18 JST 所有者は「Stage 1開始」「他repoへの段階展開」とともに、過去の証拠履歴の追跡が困難なときの柔軟な運用を承認した。記録：Issue #5 #issuecomment-6976945433。中央規約v0.2.0の正式な文言改訂は本Draft PRの独立審査を経る。既存原票・旧判定は変更しない。
+
+## 判断の順序
+1. **先に残存原物を保全**。既存証拠・履歴の削除、移動、上書きをしない。取れた原物の内容、取得先、実byte、サイズとSHAを別票に固定する。
+2. **探索には境界を設ける**。既知保存先、GitHub固定commit/blob、残存manifest、PR/CI/レビューの原票、既知セッションの手掛かりなど、関連が直接説明できる範囲を読取専用で探す。無制限の全履歴探索を完了条件にしない。
+3. **内容整合と出自を分離**。原物同一性（全byteやSHAの検査結果）、保存・再取得の成立、作成者/作成環境/作成時刻/旧版連鎖の来歴、独立性の状態を混同しない。
+4. **不明を隠さず範囲で判定**。一部来歴が追えないなら、確認済み事実、失われた項目、代替根拠の強度、リスクと依存対象を明示する。文書整理・別成果物の開発など独立した安全工程は続行可。
+5. **具体的なFAILは保持**。原物破損、既知SHA不一致、保存先不達、必須CI FAIL、既知の独立性不成立、機密情報の漏洩危険は、来歴不足を理由にPASSやUNKNOWNへ変更しない。
+
+## 追加の記録軸（案）
+- PROVENANCE_COMPLETENESS = COMPLETE / PARTIAL / UNKNOWN / NOT_TESTED
+- CONTENT_INTEGRITY = PASS / FAIL / UNKNOWN / NOT_TESTED
+- CUSTODY_STATUS / VERIFICATION_STATUS / INDEPENDENCE_STATUS / ACCEPTANCE_STATUS は中央規約の四状態を引き続き使用。
+- ACCEPTANCE_SCOPE = DOCUMENTATION_ONLY / SYNTHETIC_TEST_ONLY / LIMITED_NON_DESTRUCTIVE / FULL (採用判断の適用範囲であり、未測定状態をPASSへ変換する値ではない)
+- 元判定、元規約commit、後続の新attempt、代替資料一覧とその取得元・hash、追跡不能の理由を追記型で保持。
+
+## ケースの分離
+|確認できるもの|認められる判定|禁止される誤認|
+|---|---|---|
+|現存する原物を保存先から再取得し全byte一致|該当原物の内容照合PASS。来歴が一部不明ならPROVENANCE=PARTIAL|作成時点の真正性/全chainまでPASS|
+|旧原物は見つからないが既存manifest・既知hash・固定Git blobだけある|存在と参照の確認済み部分のみ認定、原物の全byteはUNKNOWN/NOT_TESTED|再生成物を旧原物と称する|
+|過去セッションの取得不能だが新規合成試験は実行できる|新規試験は新attemptで判定|失われた旧テストをPASS扱い|
+|個別対象の保全条件が未達|該当成果物の正式保全/受入はBLOCKED/PARTIAL等|独立な文書整理や別成果物まで一律停止|
+|SHA不一致または重大な機密/破壊安全条件の違反|既知FAILを維持し、該当危険操作を止める|承認だけでFAIL解除|
+
+## Level別の限界
+- L1通常の公開コード/文書では、固定Git履歴、必要CI/レビューと契約一致を優先し、存在しない過去ZIPの探索を追加archiveの一律必須条件にしない。
+- L2重要原物では、取得済み原物の直接再取得と全byte・manifest等の必要検査を省略しない。旧来歴不足は別軸に残す。
+- L3特別保全では、個別承認、機密ACL、強真正性等の必要な追加契約を守る。来歴の弱さを代替根拠で受容できるかはリスクごとに別審査し、必要な真正性の証明不成立はHOLDする。
+- SOLO_STANDARDは同一所有者・accountでの別session技術監査を許すが、第三者人的独立性を証明したものではない。
+
+## 本PRの限界
+合成検査の成功は実原物の保全成立や持続的保持を証明しない。規約採用、個別成果物の受入、他repo設定変更は引き続き分離する。
+
+## Stage 1-A補訂追補（2026-11-18）
+今回の実装は次の独立4軸を扱う。前節の`PROVENANCE_COMPLETENESS`は旧案の語彙として保持し、現在の記録では`PROVENANCE_STATUS`を使用する。旧値のCOMPLETEを新PASSへ自動変換せず、対象証拠と審査範囲を確認する。
+
+|軸|意味|
+|---|---|
+|CONTENT_INTEGRITY|現在取得した内容のsize/SHA/全byte照合|
+|PROVENANCE_STATUS|作成履歴・取得経路の追跡可能性|
+|RESTORE_STATUS|対象範囲の実復元結果|
+|INDEPENDENCE_STATUS|別セッション/領域/取得/判定の分離と共有要素|
+
+例：現存原ZIPの一致PASS、旧作成session消失UNKNOWN、復元未実施NOT_TESTED、同一所有者の技術監査PARTIALは同時に成立する。既知破損FAILと未回収UNKNOWNは区別し、再生成物を原物の代用品としない。`axes()`と合成fixtureはこの分離を検査するのみで、歴史的原物を検査していない。必要なL2実物照合やbundle復元、L3追加安全契約は維持する。正式採用の文言改訂と所有者によるStage1開始/段階展開承認を分離する。

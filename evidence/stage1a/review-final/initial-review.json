@@ -1,0 +1,11 @@
+{
+  "baseline_head": "7949e2fc642852b7b3c2463dc1ebc8a02afa565f",
+  "tree": "b0d556e1cc5b3f6124ebdbed15394adf9679383e",
+  "initial_probe_exit": 0,
+  "initial_probe_result": "PASS",
+  "independent_fetch": "fresh HTTPS git clone and detached checkout",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "existing probe only, not expanded acceptance",
+  "checker_sha256": "0e7e09de4b5782b2d2d953a2debc26b66e04c294c9edfec3d46e767a363ac723"
+}

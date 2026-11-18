@@ -1,0 +1,327 @@
+{
+  "kind": "STAGE1A_SYNTHETIC_ONLY",
+  "started_at": "2026-11-18T11:44:45.847698+00:00",
+  "production_permit": false,
+  "test_case": "T01/T05/T06 limited",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "-b",
+        "main",
+        "${TASK_ROOT}/repo/../initial-run/source"
+      ],
+      "started_at": "2026-11-18T11:44:45.847791+00:00",
+      "ended_at": "2026-11-18T11:44:45.852032+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "Initialized empty Git repository in ${TASK_ROOT}/initial-run/source/.git/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "add",
+        "sample.txt"
+      ],
+      "started_at": "2026-11-18T11:44:45.852199+00:00",
+      "ended_at": "2026-11-18T11:44:45.854162+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "commit",
+        "-m",
+        "synthetic first"
+      ],
+      "started_at": "2026-11-18T11:44:45.854171+00:00",
+      "ended_at": "2026-11-18T11:44:45.858837+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "[main (root-commit) ba4e5b0] synthetic first\n 1 file changed, 1 insertion(+)\n create mode 100644 sample.txt\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "commit",
+        "-am",
+        "synthetic second"
+      ],
+      "started_at": "2026-11-18T11:44:45.859030+00:00",
+      "ended_at": "2026-11-18T11:44:45.870315+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "[main ba45bad] synthetic second\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "tag",
+        "synthetic-v1"
+      ],
+      "started_at": "2026-11-18T11:44:45.870332+00:00",
+      "ended_at": "2026-11-18T11:44:45.873404+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)"
+      ],
+      "started_at": "2026-11-18T11:44:45.873416+00:00",
+      "ended_at": "2026-11-18T11:44:45.874815+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "refs/heads/main ba45bad35d69469e2b5651a2c7561d60dafd37d1\nrefs/tags/synthetic-v1 ba45bad35d69469e2b5651a2c7561d60dafd37d1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "rev-list",
+        "--objects",
+        "--all"
+      ],
+      "started_at": "2026-11-18T11:44:45.874829+00:00",
+      "ended_at": "2026-11-18T11:44:45.876618+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "ba45bad35d69469e2b5651a2c7561d60dafd37d1\nba4e5b090047e0ab4f6dfc591f9e83a4d2c0dbf0\n3f8c67818d1767087bcd823039f1dab8f3ff1885 \nb657a12de9db15468c8fe2fcf15e1bc0c276d423 sample.txt\n90921ed32d87bf98ea3de13c5185b18b4e33464b \ne55b2e9c65d9b30b46e338caa0944b8f1265e1d2 sample.txt\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "started_at": "2026-11-18T11:44:45.876635+00:00",
+      "ended_at": "2026-11-18T11:44:45.878450+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "ba45bad35d69469e2b5651a2c7561d60dafd37d1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "started_at": "2026-11-18T11:44:45.878460+00:00",
+      "ended_at": "2026-11-18T11:44:45.880022+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "3f8c67818d1767087bcd823039f1dab8f3ff1885\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "show",
+        "--format=%P",
+        "-s",
+        "HEAD"
+      ],
+      "started_at": "2026-11-18T11:44:45.880030+00:00",
+      "ended_at": "2026-11-18T11:44:45.881837+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "ba4e5b090047e0ab4f6dfc591f9e83a4d2c0dbf0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "${TASK_ROOT}/repo/../initial-run/source",
+        "bundle",
+        "create",
+        "${TASK_ROOT}/repo/../initial-run/original.bundle",
+        "--all"
+      ],
+      "started_at": "2026-11-18T11:44:45.881884+00:00",
+      "ended_at": "2026-11-18T11:44:45.886361+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "init",
+        "--bare",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore"
+      ],
+      "started_at": "2026-11-18T11:44:45.886925+00:00",
+      "ended_at": "2026-11-18T11:44:45.889658+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "Initialized empty Git repository in ${TASK_ROOT}/initial-run/empty-bare-restore/\n",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n"
+    },
+    {
+      "command": [
+        "git",
+        "--git-dir",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore",
+        "count-objects",
+        "-v"
+      ],
+      "started_at": "2026-11-18T11:44:45.889665+00:00",
+      "ended_at": "2026-11-18T11:44:45.892282+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "count: 0\nsize: 0\nin-pack: 0\npacks: 0\nsize-pack: 0\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "--git-dir",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore",
+        "fetch",
+        "--no-tags",
+        "${TASK_ROOT}/repo/../initial-run/retrieved/readback.bundle",
+        "+refs/heads/*:refs/heads/*",
+        "+refs/tags/*:refs/tags/*"
+      ],
+      "started_at": "2026-11-18T11:44:45.892292+00:00",
+      "ended_at": "2026-11-18T11:44:45.903488+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From ${TASK_ROOT}/repo/../initial-run/retrieved/readback.bundle\n * [new branch]      main         -> main\n * [new tag]         synthetic-v1 -> synthetic-v1\n"
+    },
+    {
+      "command": [
+        "git",
+        "--git-dir",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore",
+        "fsck",
+        "--full",
+        "--strict",
+        "--no-reflogs"
+      ],
+      "started_at": "2026-11-18T11:44:45.903504+00:00",
+      "ended_at": "2026-11-18T11:44:45.911644+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "notice: HEAD points to an unborn branch (master)\n"
+    },
+    {
+      "command": [
+        "git",
+        "--git-dir",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)"
+      ],
+      "started_at": "2026-11-18T11:44:45.911660+00:00",
+      "ended_at": "2026-11-18T11:44:45.912941+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "refs/heads/main ba45bad35d69469e2b5651a2c7561d60dafd37d1\nrefs/tags/synthetic-v1 ba45bad35d69469e2b5651a2c7561d60dafd37d1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "--git-dir",
+        "${TASK_ROOT}/repo/../initial-run/empty-bare-restore",
+        "rev-list",
+        "--objects",
+        "--all"
+      ],
+      "started_at": "2026-11-18T11:44:45.912956+00:00",
+      "ended_at": "2026-11-18T11:44:45.914841+00:00",
+      "timeout_seconds": 8,
+      "retry": 0,
+      "exit_code": 0,
+      "stdout": "ba45bad35d69469e2b5651a2c7561d60dafd37d1\nba4e5b090047e0ab4f6dfc591f9e83a4d2c0dbf0\n3f8c67818d1767087bcd823039f1dab8f3ff1885 \nb657a12de9db15468c8fe2fcf15e1bc0c276d423 sample.txt\n90921ed32d87bf98ea3de13c5185b18b4e33464b \ne55b2e9c65d9b30b46e338caa0944b8f1265e1d2 sample.txt\n",
+      "stderr": ""
+    }
+  ],
+  "checks": {
+    "no_bundle_prerequisites": "PASS",
+    "storage_retrieval_sha_bytes": "PASS",
+    "empty_bare_restore_fsck_refs_objects": "PASS",
+    "T05_corrupt_copy_rejected": "PASS",
+    "T06_wrong_expected_sha_rejected": "PASS"
+  },
+  "limitations": [
+    "No real repository or owner data was read",
+    "No independent human / credential / host principal",
+    "No long-term storage, ACL, or retention guarantee",
+    "No production acceptance and no real authorization"
+  ],
+  "target": {
+    "source_refs": [
+      "refs/heads/main ba45bad35d69469e2b5651a2c7561d60dafd37d1",
+      "refs/tags/synthetic-v1 ba45bad35d69469e2b5651a2c7561d60dafd37d1"
+    ],
+    "source_object_ids": [
+      "3f8c67818d1767087bcd823039f1dab8f3ff1885",
+      "90921ed32d87bf98ea3de13c5185b18b4e33464b",
+      "b657a12de9db15468c8fe2fcf15e1bc0c276d423",
+      "ba45bad35d69469e2b5651a2c7561d60dafd37d1",
+      "ba4e5b090047e0ab4f6dfc591f9e83a4d2c0dbf0",
+      "e55b2e9c65d9b30b46e338caa0944b8f1265e1d2"
+    ],
+    "head": "ba45bad35d69469e2b5651a2c7561d60dafd37d1",
+    "tree": "3f8c67818d1767087bcd823039f1dab8f3ff1885",
+    "parents": [
+      "ba4e5b090047e0ab4f6dfc591f9e83a4d2c0dbf0"
+    ]
+  },
+  "restore_preflight": "count: 0\nsize: 0\nin-pack: 0\npacks: 0\nsize-pack: 0\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0",
+  "result": "PASS",
+  "ended_at": "2026-11-18T11:44:45.915052+00:00"
+}

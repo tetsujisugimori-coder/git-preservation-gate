@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "actual": "ACCEPTED",
+      "expected": "REJECT",
+      "id": "B01",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      }
+    },
+    {
+      "actual": "ACCEPTED",
+      "expected": "REJECT",
+      "id": "B02",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {}
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      }
+    },
+    {
+      "actual": "ACCEPTED",
+      "expected": "REJECT",
+      "id": "B03",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {
+            "exit_code": null,
+            "process_state": "RUNNING"
+          }
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      }
+    },
+    {
+      "actual": "ACCEPTED",
+      "expected": "REJECT",
+      "id": "B04",
+      "input": {
+        "actual": {
+          "status": "PASS"
+        },
+        "case_id": "normal",
+        "commands": [
+          {
+            "exit_code": 1,
+            "process_state": "DIRECT_CHILD_REAPED"
+          }
+        ],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      }
+    },
+    {
+      "actual": "ACCEPTED",
+      "expected": "REJECT",
+      "id": "B05",
+      "input": {
+        "actual": {
+          "status": "FAIL"
+        },
+        "case_id": "normal",
+        "commands": [],
+        "ended_at": "2026-11-18T11:48:23.871672+00:00",
+        "expected": {
+          "status": "PASS"
+        },
+        "production_permit": false,
+        "started_at": "2026-11-18T11:48:23.871661+00:00",
+        "verdict": "PASS"
+      }
+    }
+  ],
+  "checker_sha256": "abfe3133a7ba6d7420079789cf8693132a027a2651c11cb4d0c1bc88480f3593"
+}

@@ -1,0 +1,24 @@
+{
+  "expected": "REJECT",
+  "input": {
+    "actual": {
+      "reason": "OK",
+      "status": "PASS"
+    },
+    "case_id": "S01",
+    "commands": [],
+    "elapsed_seconds": 0.06899335799971595,
+    "ended_at": "2026-11-18T11:49:40.769984+00:00",
+    "expected": {
+      "reason": "OK",
+      "status": "PASS"
+    },
+    "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+    "mode": "state-contract-injection",
+    "production_permit": false,
+    "retries": 0,
+    "scenario": "unknown-scenario",
+    "started_at": "2026-11-18T11:49:40.700989+00:00",
+    "verdict": "PASS"
+  }
+}

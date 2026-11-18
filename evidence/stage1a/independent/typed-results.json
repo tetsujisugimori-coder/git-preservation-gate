@@ -1,0 +1,71 @@
+{
+  "checker_sha256": "b5266806999222a1d4029193be675d72b99cb824e6654a38586f3fe016367b86",
+  "normal": true,
+  "results": [
+    {
+      "actual": "RECORD_COMMAND_MISSING",
+      "id": "T00",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "T01",
+      "pass_rejection": true
+    },
+    {
+      "actual": "PROCESS_END_UNKNOWN",
+      "id": "T02",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_FALSE_PASS",
+      "id": "T03",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_VERDICT_MISMATCH",
+      "id": "T04",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "T05",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "T06",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_STATE_INVALID",
+      "id": "T07",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_STATE_INVALID",
+      "id": "T08",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_TIME_INVALID",
+      "id": "T09",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_TIME_INVALID",
+      "id": "T10",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "T11",
+      "pass_rejection": true
+    },
+    {
+      "actual": "RECORD_MODE_INVALID",
+      "id": "T12",
+      "pass_rejection": true
+    }
+  ]
+}

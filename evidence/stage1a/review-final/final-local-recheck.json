@@ -1,0 +1,105 @@
+{
+  "cases": [
+    {
+      "actual": "RECORD_MODE_INVALID",
+      "id": "same-mode-bypass",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_SCENARIO_INVALID",
+      "id": "unknown-scenario",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "same-B-0",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "same-B-1",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "same-B-2",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "same-B-3",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "same-B-4",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_COMMAND_MISSING",
+      "id": "typed-0",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "typed-1",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "PROCESS_END_UNKNOWN",
+      "id": "typed-2",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_FALSE_PASS",
+      "id": "typed-3",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_VERDICT_MISMATCH",
+      "id": "typed-4",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "typed-5",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_COMMAND_INVALID",
+      "id": "typed-6",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_STATE_INVALID",
+      "id": "typed-7",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_STATE_INVALID",
+      "id": "typed-8",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_TIME_INVALID",
+      "id": "typed-9",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_TIME_INVALID",
+      "id": "typed-10",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MISSING",
+      "id": "typed-11",
+      "verdict": "PASS"
+    },
+    {
+      "actual": "RECORD_MODE_INVALID",
+      "id": "typed-12",
+      "verdict": "PASS"
+    }
+  ],
+  "checker_sha256": "4bc7a9771164ee7a759a3810cf82c1cff91943f7d3289cc004713550923ef5cb"
+}

@@ -1,0 +1,7 @@
+{
+  "case": "BASELINE-LAUNCH-MISSING",
+  "exception": "FileNotFoundError",
+  "log": [],
+  "finding": "launch failure has no per-command record",
+  "scope": "initial submission only"
+}

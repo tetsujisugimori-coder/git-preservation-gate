@@ -1,0 +1,36 @@
+{
+  "record_type": "tool-output-transcription-not-process-raw",
+  "records": [
+    {
+      "run": "suite-first",
+      "exit": 1,
+      "stdout": "{\"PASS\": 13, \"FAIL\": 21, \"NOT_TESTED\": 0}\n"
+    },
+    {
+      "run": "suite-corrected",
+      "exit": 0,
+      "stdout": "{\"PASS\": 34, \"FAIL\": 0, \"NOT_TESTED\": 0}\n"
+    },
+    {
+      "run": "suite-final",
+      "exit": 1,
+      "stdout": "{\"PASS\": 16, \"FAIL\": 18, \"NOT_TESTED\": 0}\n"
+    },
+    {
+      "run": "boundaries-first",
+      "exit": 1,
+      "failure": "AssertionError before normal saved prerequisite; original tool traceback retained privately"
+    },
+    {
+      "run": "suite-final-corrected",
+      "exit": 0,
+      "stdout": "{\"PASS\": 34, \"FAIL\": 0, \"NOT_TESTED\": 0}\n"
+    },
+    {
+      "run": "boundaries-corrected",
+      "exit": 0,
+      "stdout": "{\"PASS\": 5, \"FAIL\": 0}\n"
+    }
+  ],
+  "production_permit": false
+}

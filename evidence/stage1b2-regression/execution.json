@@ -1,0 +1,90 @@
+[
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/run_contract_batch.py",
+      "<case-workspace>"
+    ],
+    "start": "2026-11-18T22:22:01.037614+00:00",
+    "end": "2026-11-18T22:22:01.321128+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "940ab04828d1f4a6ac3a463eab744c1a95f16b24c7bd1002f422edac4e099261"
+  },
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/run_independent10.py"
+    ],
+    "start": "2026-11-18T22:22:01.321533+00:00",
+    "end": "2026-11-18T22:22:01.379826+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "6cf75fe5b7aff8b79f80d0a1face6bd020f135a909e934074b235e496b9c6aa9"
+  },
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/run_p2_regression.py"
+    ],
+    "start": "2026-11-18T22:22:01.380198+00:00",
+    "end": "2026-11-18T22:22:01.420431+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "bb57b3ae5c2de9b0bb5a80792ef100d84b8a5e8d666a09a31eca1566e165c47f"
+  },
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/run_review_regression.py"
+    ],
+    "start": "2026-11-18T22:22:01.420834+00:00",
+    "end": "2026-11-18T22:22:01.461539+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1"
+  },
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/run_review_regression.py",
+      "--additional"
+    ],
+    "start": "2026-11-18T22:22:01.461845+00:00",
+    "end": "2026-11-18T22:22:01.502753+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1"
+  },
+  {
+    "command": [
+      "python3",
+      "tests/stage1b/test_publication_scan.py"
+    ],
+    "start": "2026-11-18T22:22:01.503047+00:00",
+    "end": "2026-11-18T22:22:01.651129+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "068ad8bb9cb216dc94aabbefa894e503006e5835dcdf63237932b5a84ce2c8a6"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/stage1a/run_suite.py",
+      "--root",
+      "<case-workspace>"
+    ],
+    "start": "2026-11-18T22:22:01.651594+00:00",
+    "end": "2026-11-18T22:22:02.717049+00:00",
+    "exit": 0,
+    "timeout": 240,
+    "retry": 0,
+    "source_sha256": "a3fc42bf4da87a2d4bfc715fcae6aaad421620b3c31ad61f41eea73428aea782"
+  }
+]

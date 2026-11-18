@@ -1,0 +1,13 @@
+{
+  "stage": "1-B2",
+  "state": "IN_PROGRESS",
+  "CUSTODY_STATUS": "NOT_TESTED",
+  "VERIFICATION_STATUS": "NOT_TESTED",
+  "INDEPENDENCE_STATUS": "NOT_TESTED",
+  "ACCEPTANCE_STATUS": "NOT_TESTED",
+  "production_permit": false,
+  "stage1c": "HOLD",
+  "other_repository_rollout": false,
+  "archive_approval": "Owner explicitly approved this nonsecret synthetic pilot, one-year retention, create/read only; exact private contract separately checked",
+  "limits": ["No existing original migration", "No ACL/security change", "No service registration", "No merge"]
+}

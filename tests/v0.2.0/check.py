@@ -76,8 +76,19 @@ def evaluate(d):
             if d['flags'][flag]: flag_fail=True; reasons.append(code)
         if d['flags']['regenerated']: custody_fail=True; verify_fail=True
         if d['flags']['claims_third_party'] and d['context']['human_independent'] is False: flag_fail=True; reasons.append('THIRD_PARTY_OVERCLAIM')
+        # A classification failure must not hide independently observed separation failures.
+        # Unknown separation observations stay UNKNOWN; SOLO shared ownership is not
+        # a blocker unless a required technical separation is known to be missing.
+        separation_keys=('session_separated','execution_separated','workspace_separated',
+                         'direct_storage','independent_input')
+        independence_blockers=[key.upper()+'_MISSING' for key in separation_keys
+                               if d['context'][key] is False]
+        if d['mode']=='STRICT_INDEPENDENT' and d['context']['human_independent'] is False:
+            independence_blockers.append('HUMAN_INDEPENDENT_MISSING')
+        reasons.extend(independence_blockers)
+        independence='BLOCKED' if independence_blockers else 'UNKNOWN'
         failed=custody_fail or verify_fail or flag_fail or any(checks[x]=='FAIL' for x in relevant)
-        return result('FAIL' if custody_fail else 'UNKNOWN','FAIL' if verify_fail else 'UNKNOWN','UNKNOWN','FAIL' if failed or low else 'PARTIAL',True,[False]*3,reasons)
+        return result('FAIL' if custody_fail else 'UNKNOWN','FAIL' if verify_fail else 'UNKNOWN',independence,'FAIL' if failed or low else 'PARTIAL',True,[False]*3,reasons)
     invalid=[]
     for flag,code in [('regenerated','ORIGINAL_SUBSTITUTED'),('retroactive_pass','HISTORY_REWRITTEN'),('level_downgrade','LEVEL_DOWNGRADE')]:
         if d['flags'][flag]: invalid.append(code)

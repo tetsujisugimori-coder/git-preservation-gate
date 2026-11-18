@@ -1,0 +1,13 @@
+{
+  "schema_version": "v0.2.0-P2-addendum",
+  "old_fixture_sha256": "b4e0a777672ff61a5b9f73fdf1145256412b10764bf68b0105ce3773fb88b56e",
+  "scope": "Original oracle cases retained unchanged; v0.2.0 correction for acceptance of incomplete but non-blocked evidence",
+  "acceptance_overrides": {
+    "C01": "PARTIAL",
+    "C17": "PARTIAL",
+    "C21": "PARTIAL",
+    "C26": "PARTIAL",
+    "C27": "PARTIAL"
+  },
+  "reason": "v0.2.0 acceptance only uses BLOCKED for blocking conditions and PARTIAL for otherwise incomplete review/CI/storage"
+}

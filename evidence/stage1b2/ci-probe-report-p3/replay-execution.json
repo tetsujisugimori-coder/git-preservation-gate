@@ -1,0 +1,12 @@
+{
+  "finding_id": "P2-B2-CI01",
+  "severity": "P2",
+  "full_red_exit": 1,
+  "full_red_matches": 1,
+  "full_red_mismatches": 10,
+  "full_green_exit": 0,
+  "full_green_matches": 11,
+  "synthetic_subprocess_records_not_real_Windows": true,
+  "same_fixed_oracle": true,
+  "production_permit": false
+}

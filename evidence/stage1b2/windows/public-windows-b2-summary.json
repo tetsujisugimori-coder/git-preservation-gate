@@ -1,0 +1,415 @@
+{
+  "archived_objects": [
+    {
+      "final_code_read_only_retrieval": {
+        "count": 3,
+        "elapsed": 0.03389020000031451,
+        "manifest_sha256": "18256357587b86a9d8d5a2d21e04bbe929493b1436431fe9cde4c1a0110c433e",
+        "object_id": "stage1b2-direct-synthetic",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "56c656249cb9a7108bdb9905f405cc405651247291bfed83492a01a2521cace2",
+        "status": "PASS"
+      },
+      "independent_retrieval": "SEPARATE_B_PENDING",
+      "manifest": {
+        "attempt_id": "direct-approved-001",
+        "files": [
+          {
+            "path": "data.bin",
+            "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+            "size": 256
+          },
+          {
+            "path": "hello.txt",
+            "sha256": "b88278b617801845efa20181f03377835ac0fce919598fdce0fb0471896fd6ce",
+            "size": 36
+          },
+          {
+            "path": "sample-unicode.txt",
+            "sha256": "8f93a30452b7cd3005c8156f7ad9bdf96fa9b45dcb8865a62609a94429a4e4c7",
+            "size": 22
+          }
+        ],
+        "object_id": "stage1b2-direct-synthetic",
+        "schema": "stage1b2-manifest-1"
+      },
+      "mode": "direct",
+      "receipt": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "actor": "owner-authorized-nonadmin-windows-A",
+        "approval_sha256": "80f521d80e06209ef0d2894c049fa34c6c83fb6438d368646e990a8de801e60a",
+        "attempt_id": "direct-approved-001",
+        "created_at": "2026-11-18T22:30:03.433774+00:00",
+        "delete_move_overwrite": "prohibited",
+        "manifest_sha256": "18256357587b86a9d8d5a2d21e04bbe929493b1436431fe9cde4c1a0110c433e",
+        "mode": "direct",
+        "object_id": "stage1b2-direct-synthetic",
+        "production_permit": false,
+        "request_sha256": "839132fba49e1d3472ac9a7f11bfd4a2239da0484a9f060ad13e77587dc46a42",
+        "retention_until": "2027-11-18T22:30:03.383784+00:00",
+        "schema": "stage1b2-receipt-1",
+        "synthetic_only": true
+      },
+      "save_head": "cace6edf91c63b86c8db5b62b9af43edf590a641",
+      "save_result": {
+        "attempt_id": "direct-approved-001",
+        "elapsed": 0.05154459999903338,
+        "manifest_sha256": "18256357587b86a9d8d5a2d21e04bbe929493b1436431fe9cde4c1a0110c433e",
+        "production_permit": false,
+        "reason": "SAVED_SYNTHETIC_ONLY",
+        "receipt_sha256": "56c656249cb9a7108bdb9905f405cc405651247291bfed83492a01a2521cace2",
+        "status": "PASS"
+      }
+    },
+    {
+      "final_code_read_only_retrieval": {
+        "count": 3,
+        "elapsed": 0.03269000000000233,
+        "manifest_sha256": "4081a963e837190cde3d675b1797e47f0c6bbca8eeadaa577a976fc85c092f79",
+        "object_id": "stage1b2-handoff-synthetic",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "0a2c2a834181673f7d27037a362869ebb8fe6fff02c93e0b3b4678f29ba8997e",
+        "status": "PASS"
+      },
+      "independent_retrieval": "SEPARATE_B_PENDING",
+      "manifest": {
+        "attempt_id": "handoff-approved-001",
+        "files": [
+          {
+            "path": "data.bin",
+            "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+            "size": 256
+          },
+          {
+            "path": "hello.txt",
+            "sha256": "b88278b617801845efa20181f03377835ac0fce919598fdce0fb0471896fd6ce",
+            "size": 36
+          },
+          {
+            "path": "sample-unicode.txt",
+            "sha256": "8f93a30452b7cd3005c8156f7ad9bdf96fa9b45dcb8865a62609a94429a4e4c7",
+            "size": 22
+          }
+        ],
+        "object_id": "stage1b2-handoff-synthetic",
+        "schema": "stage1b2-manifest-1"
+      },
+      "mode": "handoff",
+      "receipt": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "actor": "owner-authorized-nonadmin-windows-A",
+        "approval_sha256": "72d9f12cd38d6da67e5b71cf121550bf2408ff97821aaf0522fa0bb37d2a2eba",
+        "attempt_id": "handoff-approved-001",
+        "created_at": "2026-11-18T22:30:03.585854+00:00",
+        "delete_move_overwrite": "prohibited",
+        "manifest_sha256": "4081a963e837190cde3d675b1797e47f0c6bbca8eeadaa577a976fc85c092f79",
+        "mode": "handoff",
+        "object_id": "stage1b2-handoff-synthetic",
+        "production_permit": false,
+        "request_sha256": "ccb152084408e5859c876bd9749a174f0364c4a93c18f65ccceb0db43e4dab3f",
+        "retention_until": "2027-11-18T22:30:03.383784+00:00",
+        "schema": "stage1b2-receipt-1",
+        "synthetic_only": true
+      },
+      "save_head": "cace6edf91c63b86c8db5b62b9af43edf590a641",
+      "save_result": {
+        "attempt_id": "handoff-approved-001",
+        "elapsed": 0.053314199998567346,
+        "manifest_sha256": "4081a963e837190cde3d675b1797e47f0c6bbca8eeadaa577a976fc85c092f79",
+        "production_permit": false,
+        "reason": "SAVED_SYNTHETIC_ONLY",
+        "receipt_sha256": "0a2c2a834181673f7d27037a362869ebb8fe6fff02c93e0b3b4678f29ba8997e",
+        "status": "PASS"
+      }
+    }
+  ],
+  "environment": {
+    "admin_token": false,
+    "powershell": [
+      "5.1.26100.9818",
+      "7.6.9"
+    ],
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "extra_actual_faults_initial_head": [
+    {
+      "actual": {
+        "elapsed": 0.004426200001034886,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "actual_lock": true,
+      "expected_status": "BLOCKED",
+      "id": "real-sharing-lock",
+      "match": true,
+      "receipt_absent": true
+    },
+    {
+      "actual": {
+        "elapsed": 0.00019210000027669594,
+        "production_permit": false,
+        "reason": "LINK_OR_REPARSE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "expected": [
+        "FAIL",
+        "LINK_OR_REPARSE"
+      ],
+      "id": "source-junction",
+      "match": true
+    },
+    {
+      "actual": {
+        "elapsed": 0.0002334000018890947,
+        "production_permit": false,
+        "reason": "LINK_OR_REPARSE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "expected": [
+        "FAIL",
+        "LINK_OR_REPARSE"
+      ],
+      "id": "destination-junction",
+      "match": true
+    },
+    {
+      "id": "long-unicode-path",
+      "reason": "FileNotFoundError",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "head": "23353dce01c92cd7402a19ed9d0724b5ea4bcef8",
+  "independence": "A_WINDOWS_EXECUTION_NOT_INDEPENDENT_B",
+  "initial_runs": [
+    {
+      "ended_at": "2026-11-18T22:28:53.080120+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:28:51.119539+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"PASS\": 33, \"FAIL\": 0, \"NOT_TESTED\": 1}\r\n",
+      "suite": "suite34"
+    },
+    {
+      "ended_at": "2026-11-18T22:28:53.657034+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:28:53.086963+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"PASS\": 5, \"FAIL\": 0}\r\n",
+      "suite": "boundaries5"
+    },
+    {
+      "ended_at": "2026-11-18T22:28:56.902319+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:28:53.658867+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"passed\": 21, \"total\": 21}\r\n",
+      "suite": "finite21"
+    },
+    {
+      "ended_at": "2026-11-18T22:28:58.757313+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:28:56.905654+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"PASS\": 33, \"FAIL\": 0, \"NOT_TESTED\": 1}\r\n",
+      "suite": "suite34"
+    },
+    {
+      "ended_at": "2026-11-18T22:28:59.504929+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:28:58.760402+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"PASS\": 5, \"FAIL\": 0}\r\n",
+      "suite": "boundaries5"
+    },
+    {
+      "ended_at": "2026-11-18T22:29:02.690722+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:28:59.507611+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"passed\": 21, \"total\": 21}\r\n",
+      "suite": "finite21"
+    }
+  ],
+  "limitations": [
+    "ACL and actual disk-full failure NOT_TESTED; injected cases are not actual faults",
+    "Long path fixture NOT_TESTED; no setting change",
+    "Symlink privilege NOT_TESTED; actual junction rejection confirmed separately",
+    "Controller death and universal descendants UNKNOWN",
+    "Retention is contract, not enforcement proof",
+    "Existing archive objects not rewritten after code patch"
+  ],
+  "retries": 0,
+  "runs": [
+    {
+      "ended_at": "2026-11-18T22:32:44.677038+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:32:42.949186+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"environment\": {\"platform\": \"win32\", \"python\": \"3.14.7\", \"windows_admin_token\": false}}\r\n{\"case_id\": \"B201\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B202\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B203\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B204\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"DIRECTORY_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B205\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"APPROVAL_SCOPE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B206\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"APPROVAL_NOT_VERIFIED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B207\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"APPROVAL_EXPIRED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B208\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ATTEMPT_EXISTS\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B209\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B210\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"SOURCE_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B211\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"SOURCE_CHANGED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B212\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B213\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B214\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B215\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B216\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B217\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"INCOMPLETE_OR_EXTRA\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B218\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"RECEIPT_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B219\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"RECORD_SCHEMA\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B220\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"CONTENT_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B221\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"FILE_SET_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B222\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"DIRECTORY_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B223\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"RECEIVER_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B224\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"APPROVAL_SCOPE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B225\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"UNSAFE_PATH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B226\", \"expected\": \"NOT_TESTED\", \"actual_status\": \"NOT_TESTED\", \"reason\": \"LEVEL1_ARCHIVE_NOT_APPLICABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B227\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"LEVEL2_ARCHIVE_REQUIRED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B228\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"LEVEL_UNSUPPORTED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B229\", \"expected\": \"UNKNOWN\", \"actual_status\": \"UNKNOWN\", \"reason\": \"DEADLINE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B230\", \"expected\": \"FAIL\", \"actual_status\": \"NOT_TESTED\", \"reason\": \"LINK_CREATION_NOT_ALLOWED\", \"test_verdict\": \"NOT_TESTED\"}\r\n{\"case_id\": \"B231\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"FILE_SET_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B232\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"DUPLICATE_PATH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B233\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"REQUEST_NOT_BOUND\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B234\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"LEVEL_TOO_LOW\", \"test_verdict\": \"PASS\"}\r\n{\"PASS\": 33, \"FAIL\": 0, \"NOT_TESTED\": 1}\r\n",
+      "suite": "suite34"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:45.249506+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:32:44.679479+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"PASS\": 5, \"FAIL\": 0}\r\n",
+      "suite": "boundaries5"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:48.380410+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:32:45.252746+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"passed\": 21, \"total\": 21}\r\n",
+      "suite": "finite21"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:48.714611+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps51",
+      "started_at": "2026-11-18T22:32:48.393684+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "5.1.26100.9818\r\n{\"PASS\": 4, \"FAIL\": 0}\r\n",
+      "suite": "risk4"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:50.466517+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:32:48.717081+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"environment\": {\"platform\": \"win32\", \"python\": \"3.14.7\", \"windows_admin_token\": false}}\r\n{\"case_id\": \"B201\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B202\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B203\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B204\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"DIRECTORY_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B205\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"APPROVAL_SCOPE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B206\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"APPROVAL_NOT_VERIFIED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B207\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"APPROVAL_EXPIRED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B208\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ATTEMPT_EXISTS\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B209\", \"expected\": \"PASS\", \"actual_status\": \"PASS\", \"reason\": \"DIRECT_RETRIEVAL_ALL_BYTES\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B210\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"SOURCE_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B211\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"SOURCE_CHANGED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B212\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B213\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B214\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B215\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B216\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"IO_OR_SCHEMA_ERROR\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B217\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"INCOMPLETE_OR_EXTRA\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B218\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"RECEIPT_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B219\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"RECORD_SCHEMA\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B220\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"CONTENT_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B221\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"FILE_SET_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B222\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"DIRECTORY_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B223\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"RECEIVER_UNAVAILABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B224\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"APPROVAL_SCOPE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B225\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"UNSAFE_PATH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B226\", \"expected\": \"NOT_TESTED\", \"actual_status\": \"NOT_TESTED\", \"reason\": \"LEVEL1_ARCHIVE_NOT_APPLICABLE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B227\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"LEVEL2_ARCHIVE_REQUIRED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B228\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"LEVEL_UNSUPPORTED\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B229\", \"expected\": \"UNKNOWN\", \"actual_status\": \"UNKNOWN\", \"reason\": \"DEADLINE\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B230\", \"expected\": \"FAIL\", \"actual_status\": \"NOT_TESTED\", \"reason\": \"LINK_CREATION_NOT_ALLOWED\", \"test_verdict\": \"NOT_TESTED\"}\r\n{\"case_id\": \"B231\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"FILE_SET_MISMATCH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B232\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"DUPLICATE_PATH\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B233\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"REQUEST_NOT_BOUND\", \"test_verdict\": \"PASS\"}\r\n{\"case_id\": \"B234\", \"expected\": \"FAIL\", \"actual_status\": \"FAIL\", \"reason\": \"LEVEL_TOO_LOW\", \"test_verdict\": \"PASS\"}\r\n{\"PASS\": 33, \"FAIL\": 0, \"NOT_TESTED\": 1}\r\n",
+      "suite": "suite34"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:51.210251+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:32:50.469928+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"PASS\": 5, \"FAIL\": 0}\r\n",
+      "suite": "boundaries5"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:54.394281+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:32:51.215562+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"passed\": 21, \"total\": 21}\r\n",
+      "suite": "finite21"
+    },
+    {
+      "ended_at": "2026-11-18T22:32:54.893176+00:00",
+      "exit_code": 0,
+      "process_state": "JOB_EMPTY",
+      "retry": 0,
+      "shell": "ps7",
+      "started_at": "2026-11-18T22:32:54.399099+00:00",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "7.6.9\r\n{\"PASS\": 4, \"FAIL\": 0}\r\n",
+      "suite": "risk4"
+    }
+  ],
+  "source_audit": [
+    {
+      "all_bytes_equal": true,
+      "blob": "cae619469030531d7c033e6c69ce48aa9d8d363e",
+      "path": "tools/stage1b2/adapter.py",
+      "sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7",
+      "size": 14826
+    },
+    {
+      "all_bytes_equal": true,
+      "blob": "dc1ebe05eca2d998c53d485461f439a1cb867caa",
+      "path": "tools/stage1b/finite_process.py",
+      "sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1",
+      "size": 7846
+    },
+    {
+      "all_bytes_equal": true,
+      "blob": "19616a536bffc13c0ce71ff8a177b29bfdfa9d46",
+      "path": "tests/stage1b2/oracle.json",
+      "sha256": "a02fa1d85d2d1972da5997312f9221121a92720066c8ecb7f5e2b178921dd36a",
+      "size": 3486
+    },
+    {
+      "all_bytes_equal": true,
+      "blob": "3849e89624985a20b27e41426ab34b075d66814f",
+      "path": "tests/stage1b2/boundaries.json",
+      "sha256": "537ae4bc130710af7ec7634a230853bed0298055748a6f9e6d513fa7e55f193a",
+      "size": 342
+    },
+    {
+      "all_bytes_equal": true,
+      "blob": "b470766f96af5224c081263260dd748d7dbb0d2e",
+      "path": "tests/stage1b2/risk-schema-oracle.json",
+      "sha256": "dc20b03a5058c5793702ee3ad10400b1a81691cb5dfd2fe56fc50dd91508c938",
+      "size": 448
+    }
+  ],
+  "timeout_seconds": 120,
+  "tree": "10ab5b800a0ba054cc6edf248b2b831ed528e563"
+}

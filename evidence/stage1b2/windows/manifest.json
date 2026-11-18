@@ -1,0 +1,10 @@
+{
+  "scope": "Windows public derivative; raw kept in Windows; no private approval/locator published",
+  "files": [
+    {
+      "path": "public-windows-b2-summary.json",
+      "size": 24031,
+      "sha256": "a56440b29ae6993a8f795cd7f2deb36903f8e649ceb457c22f8df92c313113ad"
+    }
+  ]
+}

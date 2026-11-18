@@ -1,0 +1,128 @@
+{
+  "run_id": "fd5ae9a6-44c2-409c-9c6f-73f927e86cf0",
+  "observed_at": "2026-11-18T22:31:52.268666+00:00",
+  "python": "3.14.7",
+  "os": "Windows-11-10.0.26300-SP0",
+  "elevated": false,
+  "independence": "LIMITED_SHARED_OWNER",
+  "method": "independent pathlib/hashlib implementation, separate session and new verification directory; stored files unchanged",
+  "rows": [
+    {
+      "mode": "direct",
+      "source_route": "direct filesystem read from approved Archive, not A workspace copy",
+      "file_count": 5,
+      "total_bytes": 1686,
+      "receipt_sha256": "56c656249cb9a7108bdb9905f405cc405651247291bfed83492a01a2521cace2",
+      "manifest_sha256": "18256357587b86a9d8d5a2d21e04bbe929493b1436431fe9cde4c1a0110c433e",
+      "receipt": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "actor": "owner-authorized-nonadmin-windows-A",
+        "approval_sha256": "80f521d80e06209ef0d2894c049fa34c6c83fb6438d368646e990a8de801e60a",
+        "attempt_id": "direct-approved-001",
+        "created_at": "2026-11-18T22:30:03.433774+00:00",
+        "delete_move_overwrite": "prohibited",
+        "manifest_sha256": "18256357587b86a9d8d5a2d21e04bbe929493b1436431fe9cde4c1a0110c433e",
+        "mode": "direct",
+        "object_id": "stage1b2-direct-synthetic",
+        "production_permit": false,
+        "request_sha256": "839132fba49e1d3472ac9a7f11bfd4a2239da0484a9f060ad13e77587dc46a42",
+        "retention_until": "2027-11-18T22:30:03.383784+00:00",
+        "schema": "stage1b2-receipt-1",
+        "synthetic_only": true
+      },
+      "set_match": true,
+      "checks": [
+        {
+          "path": "data.bin",
+          "size": 256,
+          "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        },
+        {
+          "path": "hello.txt",
+          "size": 36,
+          "sha256": "b88278b617801845efa20181f03377835ac0fce919598fdce0fb0471896fd6ce",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        },
+        {
+          "path": "sample-unicode.txt",
+          "size": 22,
+          "sha256": "8f93a30452b7cd3005c8156f7ad9bdf96fa9b45dcb8865a62609a94429a4e4c7",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "mode": "handoff",
+      "source_route": "direct filesystem read from approved Archive, not A workspace copy",
+      "file_count": 5,
+      "total_bytes": 1691,
+      "receipt_sha256": "0a2c2a834181673f7d27037a362869ebb8fe6fff02c93e0b3b4678f29ba8997e",
+      "manifest_sha256": "4081a963e837190cde3d675b1797e47f0c6bbca8eeadaa577a976fc85c092f79",
+      "receipt": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "actor": "owner-authorized-nonadmin-windows-A",
+        "approval_sha256": "72d9f12cd38d6da67e5b71cf121550bf2408ff97821aaf0522fa0bb37d2a2eba",
+        "attempt_id": "handoff-approved-001",
+        "created_at": "2026-11-18T22:30:03.585854+00:00",
+        "delete_move_overwrite": "prohibited",
+        "manifest_sha256": "4081a963e837190cde3d675b1797e47f0c6bbca8eeadaa577a976fc85c092f79",
+        "mode": "handoff",
+        "object_id": "stage1b2-handoff-synthetic",
+        "production_permit": false,
+        "request_sha256": "ccb152084408e5859c876bd9749a174f0364c4a93c18f65ccceb0db43e4dab3f",
+        "retention_until": "2027-11-18T22:30:03.383784+00:00",
+        "schema": "stage1b2-receipt-1",
+        "synthetic_only": true
+      },
+      "set_match": true,
+      "checks": [
+        {
+          "path": "data.bin",
+          "size": 256,
+          "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        },
+        {
+          "path": "hello.txt",
+          "size": 36,
+          "sha256": "b88278b617801845efa20181f03377835ac0fce919598fdce0fb0471896fd6ce",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        },
+        {
+          "path": "sample-unicode.txt",
+          "size": 22,
+          "sha256": "8f93a30452b7cd3005c8156f7ad9bdf96fa9b45dcb8865a62609a94429a4e4c7",
+          "size_match": true,
+          "sha_match": true,
+          "all_bytes_equal": true
+        }
+      ],
+      "PASS": true
+    }
+  ],
+  "all_pass": true,
+  "production_permit": false,
+  "limits": [
+    "No power loss or long-term retention guarantee",
+    "Same account/host, not independent human",
+    "Plain files: ZIP CRC not applicable"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "fixed_before_execution": true,
+  "admin": {"save_status":"BLOCKED","save_reason":"ELEVATED_WINDOWS_TOKEN","destination_entries":0,"guard_tests":1,"ordinary_suite":"NOT_TESTED","boundaries":"NOT_TESTED","risk_schema":"NOT_TESTED"},
+  "nonadmin": {"run_suite":34,"run_boundaries":5,"run_risk_schema":4,"expected_exit":0},
+  "unknown": {"ordinary_suite":"NOT_TESTED","guard_tests":0,"probe_status":"BLOCKED"},
+  "production_permit":false
+}

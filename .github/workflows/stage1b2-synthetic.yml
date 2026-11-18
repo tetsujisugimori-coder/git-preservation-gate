@@ -15,6 +15,7 @@ jobs:
           python3 tests/stage1b2/run_suite.py --root "$RUNNER_TEMP/b2-${GITHUB_RUN_ID}"
           python3 tests/stage1b2/run_boundaries.py --root "$RUNNER_TEMP/b2-boundaries-${GITHUB_RUN_ID}"
           python3 tests/stage1b2/run_risk_schema.py --root "$RUNNER_TEMP/b2-risk-${GITHUB_RUN_ID}"
+          python3 tests/stage1b2/test_ci_probe_reports.py --root "$RUNNER_TEMP/b2-report-${GITHUB_RUN_ID}"
       - name: Unchanged contracts and bundle regressions
         run: |
           set -euo pipefail
@@ -30,12 +31,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: New synthetic cases and unchanged owned-job21
+      - name: Windows token applicability and adapter probe
         shell: pwsh
         run: |
-          python tests/stage1b2/run_suite.py --root (Join-Path $env:RUNNER_TEMP ("b2-" + $env:GITHUB_RUN_ID))
+          python tests/stage1b2/ci_probe.py --root (Join-Path $env:RUNNER_TEMP ("b2-probe-" + $env:GITHUB_RUN_ID))
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python tests/stage1b2/run_boundaries.py --root (Join-Path $env:RUNNER_TEMP ("b2-boundaries-" + $env:GITHUB_RUN_ID))
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Unchanged owned-job21 (separate scope)
+        shell: pwsh
+        run: |
           python tools/stage1b/windows_suite.py --root (Join-Path $env:RUNNER_TEMP ("b2-old21-" + $env:GITHUB_RUN_ID))
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

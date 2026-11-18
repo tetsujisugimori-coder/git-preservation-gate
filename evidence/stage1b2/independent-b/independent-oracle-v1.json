@@ -1,0 +1,157 @@
+{
+  "frozen_at": "2026-11-18T22:21:30.807341+00:00",
+  "policy_head": "732175213158b11b0f91529ee0d10c17ad6ea4fe",
+  "scope": "Independent semantic oracle fixed before adapter outputs; mapping to API later, no implicit actual storage authorization",
+  "cases": [
+    {
+      "id": "B2-01",
+      "input_condition": "通常ファイル・有効な限定承認・新保存領域・異なる再取得領域",
+      "expected": "保存と直接読戻し内容照合PASS、permit=false"
+    },
+    {
+      "id": "B2-02",
+      "input_condition": "具体保存先承認なし",
+      "expected": "BLOCKED、保存先に書込なし"
+    },
+    {
+      "id": "B2-03",
+      "input_condition": "承認scope外の元ファイルまたは保存先",
+      "expected": "拒否、scope外副作用なし"
+    },
+    {
+      "id": "B2-04",
+      "input_condition": "期限切れ承認",
+      "expected": "BLOCKED、保存なし"
+    },
+    {
+      "id": "B2-05",
+      "input_condition": "同attemptの二重実行",
+      "expected": "二回目拒否、先行原物/receipt不変"
+    },
+    {
+      "id": "B2-06",
+      "input_condition": "同attempt同時実行",
+      "expected": "最大1成功、他は拒否、混合manifestを受入しない"
+    },
+    {
+      "id": "B2-07",
+      "input_condition": "保存先既存ファイル競合",
+      "expected": "拒否、既存bytes不変"
+    },
+    {
+      "id": "B2-08",
+      "input_condition": "保存先が存在しないか親不達",
+      "expected": "事前固定契約に従い停止、保存成功を宣言しない"
+    },
+    {
+      "id": "B2-09",
+      "input_condition": "相対..、絶対path、UNC、drive別名による逸脱",
+      "expected": "拒否、範囲外I/Oなし"
+    },
+    {
+      "id": "B2-10",
+      "input_condition": "保存元/保存先祖先のsymlinkまたはjunction",
+      "expected": "拒否または実証された固定先安全検査、未検証ならUNKNOWN"
+    },
+    {
+      "id": "B2-11",
+      "input_condition": "検査後保存前のlink先変更",
+      "expected": "安全停止または残余競合をUNKNOWN、無条件safe PASS禁止"
+    },
+    {
+      "id": "B2-12",
+      "input_condition": "原物の読取中変更",
+      "expected": "期待hash/size不一致拒否、完成receiptなし"
+    },
+    {
+      "id": "B2-13",
+      "input_condition": "部分書込/容量不足注入",
+      "expected": "FAIL、部分ファイルを成功原物として扱わない"
+    },
+    {
+      "id": "B2-14",
+      "input_condition": "保存中process終了",
+      "expected": "完全保存receiptなしなら成功不可、残留物保持、再実行上書きなし"
+    },
+    {
+      "id": "B2-15",
+      "input_condition": "receipt欠落/破損/別attempt/別object",
+      "expected": "検証拒否、content一致とcustody根拠を分離"
+    },
+    {
+      "id": "B2-16",
+      "input_condition": "manifest欠落/余分/不足/重複/サイズ不一致",
+      "expected": "検証拒否、空集合一致不可"
+    },
+    {
+      "id": "B2-17",
+      "input_condition": "保存後1byte改変",
+      "expected": "VERIFICATION FAIL、旧原物不変"
+    },
+    {
+      "id": "B2-18",
+      "input_condition": "保存後消失/読取拒否/再接続失敗",
+      "expected": "UNKNOWN/BLOCKED等を原因別記録、再取得PASS不可"
+    },
+    {
+      "id": "B2-19",
+      "input_condition": "A workspaceコピーをB検証入力にする",
+      "expected": "独立直接再取得要件未成立、INDEPENDENCE非PASS"
+    },
+    {
+      "id": "B2-20",
+      "input_condition": "L1追加archive非適用",
+      "expected": "archive NOT_TESTED+理由、通常Git条件は別検査"
+    },
+    {
+      "id": "B2-21",
+      "input_condition": "L2/3重要原物をL1申告",
+      "expected": "FAIL/拒否、保存必須を迂回しない"
+    },
+    {
+      "id": "B2-22",
+      "input_condition": "STRICT共有ownerがtrue",
+      "expected": "BLOCKED、SOLO共有ownerとは区別"
+    },
+    {
+      "id": "B2-23",
+      "input_condition": "handoff依頼の保存先/元hash/操作を差替え",
+      "expected": "拒否、任意ファイルI/Oやコマンド実行禁止"
+    },
+    {
+      "id": "B2-24",
+      "input_condition": "handoff受取側が実行不能/元データ読取不能",
+      "expected": "未成立、送信側ログだけで保存PASS禁止"
+    },
+    {
+      "id": "B2-25",
+      "input_condition": "timeoutまたは終了状態観測不能",
+      "expected": "有限期限で親停止、未確認子孫はUNKNOWN"
+    },
+    {
+      "id": "B2-26",
+      "input_condition": "合成fault注入成功",
+      "expected": "テスト成功と実ACL/容量/lock故障実測を区別"
+    },
+    {
+      "id": "B2-27",
+      "input_condition": "保存PASS・B読戻し未実施",
+      "expected": "CUSTODY限定PASS可、VERIFICATION NOT_TESTED、ACCEPTANCE未成立"
+    },
+    {
+      "id": "B2-28",
+      "input_condition": "非機密通常合成file以外のbundle/ZIP",
+      "expected": "必要内部整合/復元未検証を明記、単なるbyteコピーで受入PASS禁止"
+    },
+    {
+      "id": "B2-29",
+      "input_condition": "原物がsource/target同一または保存先内",
+      "expected": "拒否、原物の上書き・再帰保存を行わない"
+    },
+    {
+      "id": "B2-30",
+      "input_condition": "取得済データと期待SHAだけ整合するが比較元原bytes不在",
+      "expected": "hash一致のみ、全byte NOT_TESTED/UNKNOWN"
+    }
+  ]
+}

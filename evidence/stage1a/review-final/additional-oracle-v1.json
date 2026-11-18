@@ -1,0 +1,30 @@
+{
+  "fixed_at": "2026-11-18T11:48:14.280908+00:00",
+  "cases": [
+    {
+      "id": "B01",
+      "input": "record with all outer required keys but commands empty and actual PASS",
+      "expected": "REJECT missing operational command evidence"
+    },
+    {
+      "id": "B02",
+      "input": "record actual PASS commands [{}]",
+      "expected": "REJECT missing command fields"
+    },
+    {
+      "id": "B03",
+      "input": "record actual PASS commands process_state RUNNING exit_code null",
+      "expected": "REJECT incomplete process observation"
+    },
+    {
+      "id": "B04",
+      "input": "record actual PASS commands exit_code 1 DIRECT_CHILD_REAPED",
+      "expected": "REJECT contradictory command failure"
+    },
+    {
+      "id": "B05",
+      "input": "record actual FAIL but verdict PASS and expected PASS",
+      "expected": "REJECT inconsistent verdict"
+    }
+  ]
+}

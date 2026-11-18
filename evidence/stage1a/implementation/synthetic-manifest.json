@@ -1,0 +1,85 @@
+{
+  "bundle_sha256": "4785919fa2697cf0f62beab3ee5052082a3eef312e0177ce9e0d2eb9fdba0b89",
+  "bundle_size": 1069,
+  "format": "stage1a-synthetic-v2",
+  "kind": "synthetic-git-bundle",
+  "target": {
+    "objects": [
+      {
+        "oid": "0b1c550742934ca340e4166b3e143504ce5cb226",
+        "sha256": "0c192299943ff61356877fe1cad635784e0ff71f6dec1630f16b1961ab72b4da",
+        "size": 17,
+        "type": "blob"
+      },
+      {
+        "oid": "2152e0755ffddbceda9bbb3f6825e0d447ad93f1",
+        "sha256": "c194a8e31e8c5d17820067830ad31db6a87e966877c53c8360c1aa909cf4f202",
+        "size": 171,
+        "type": "tag"
+      },
+      {
+        "oid": "2ee3306e45236811da74defc688acf725117cdec",
+        "parents": [],
+        "sha256": "1f8ef37b6d5bad22c4efef4b77d5eda9f1f9a650c58c71b8130228eca86d5023",
+        "size": 204,
+        "tree": "34de3514bd4973877876d7d419d423cb17445e21",
+        "type": "commit"
+      },
+      {
+        "oid": "34de3514bd4973877876d7d419d423cb17445e21",
+        "sha256": "af39cd0ff624d3a08bf46dfacc3633974ec3666671ebdc3648bc8d02ae10d6e4",
+        "size": 38,
+        "type": "tree"
+      },
+      {
+        "oid": "3b8cbd359f2a7e0467247b536cea04d5fbe2b166",
+        "sha256": "c4036d35461e86c9c7ae00a860f387730c05bd4c7b60a78fec8d35615bd4b28a",
+        "size": 17,
+        "type": "blob"
+      },
+      {
+        "oid": "5203f795167a174a63ba10c7e89b42408ec9fc54",
+        "parents": [
+          "2ee3306e45236811da74defc688acf725117cdec"
+        ],
+        "sha256": "ea0584610edd9f91034d9bf2bf8e5576ab30e20103b4000d0140bbe954c54bf8",
+        "size": 253,
+        "tree": "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc",
+        "type": "commit"
+      },
+      {
+        "oid": "82dc3c33fd1f4776403a9564cba24f03776c3bd2",
+        "parents": [
+          "5203f795167a174a63ba10c7e89b42408ec9fc54"
+        ],
+        "sha256": "ca90ed796961657b2b3186ccfa448bc825a1889ae7d418ed9c820ff951d043ea",
+        "size": 254,
+        "tree": "e662fac01e6691737ada3f3ea9c38557e6ca6da2",
+        "type": "commit"
+      },
+      {
+        "oid": "abfb58e5d834edf38654e512882d1e291d30e6d9",
+        "sha256": "d8ca5681d2ff74f34fd3acf023a8370ca994af06372c90084f3ea8c91da3f127",
+        "size": 16,
+        "type": "blob"
+      },
+      {
+        "oid": "e662fac01e6691737ada3f3ea9c38557e6ca6da2",
+        "sha256": "9b275a7345adad7fa6a4f167c029399bbfed23bb55a68ca8ae4520775bc81a69",
+        "size": 77,
+        "type": "tree"
+      },
+      {
+        "oid": "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc",
+        "sha256": "e93481f4406847c4647aa991a27872331c1fd61e56e1a121469dcf3bb9945c46",
+        "size": 38,
+        "type": "tree"
+      }
+    ],
+    "refs": [
+      "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2",
+      "refs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54",
+      "refs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"result": "PASS", "checks": {"no_bundle_prerequisites": "PASS", "storage_retrieval_sha_bytes": "PASS", "empty_bare_restore_fsck_refs_objects": "PASS", "T05_corrupt_copy_rejected": "PASS", "T06_wrong_expected_sha_rejected": "PASS"}, "evidence": "${TASK_ROOT}/repo/../initial-run/result.json", "production_permit": false}

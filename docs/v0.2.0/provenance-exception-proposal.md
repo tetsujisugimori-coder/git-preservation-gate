@@ -33,3 +33,15 @@
 
 ## 本PRの限界
 合成検査の成功は実原物の保全成立や持続的保持を証明しない。規約採用、個別成果物の受入、他repo設定変更は引き続き分離する。
+
+## Stage 1-A補訂追補（2026-11-18）
+今回の実装は次の独立4軸を扱う。前節の`PROVENANCE_COMPLETENESS`は旧案の語彙として保持し、現在の記録では`PROVENANCE_STATUS`を使用する。旧値のCOMPLETEを新PASSへ自動変換せず、対象証拠と審査範囲を確認する。
+
+|軸|意味|
+|---|---|
+|CONTENT_INTEGRITY|現在取得した内容のsize/SHA/全byte照合|
+|PROVENANCE_STATUS|作成履歴・取得経路の追跡可能性|
+|RESTORE_STATUS|対象範囲の実復元結果|
+|INDEPENDENCE_STATUS|別セッション/領域/取得/判定の分離と共有要素|
+
+例：現存原ZIPの一致PASS、旧作成session消失UNKNOWN、復元未実施NOT_TESTED、同一所有者の技術監査PARTIALは同時に成立する。既知破損FAILと未回収UNKNOWNは区別し、再生成物を原物の代用品としない。`axes()`と合成fixtureはこの分離を検査するのみで、歴史的原物を検査していない。必要なL2実物照合やbundle復元、L3追加安全契約は維持する。正式採用の文言改訂と所有者によるStage1開始/段階展開承認を分離する。

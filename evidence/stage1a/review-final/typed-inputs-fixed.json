@@ -1,0 +1,4900 @@
+{
+  "expectation": "all rejected; normal seed accepted",
+  "inputs": [
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {}
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": null,
+          "pid": 51,
+          "process_state": "RUNNING",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 1,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "failure",
+        "status": "FAIL"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": null,
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": "text",
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": null,
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": [],
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "notdate",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "1999-01-01T00:00:00+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": true,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T11:49:40.706329+00:00",
+          "exit_code": 0,
+          "pid": 51,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.702232+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in ${REVIEW_ROOT}/suite-fixed-local/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "bundle",
+            "verify",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T11:49:40.707680+00:00",
+          "exit_code": 0,
+          "pid": 52,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.706354+00:00",
+          "stderr": "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T11:49:40.720362+00:00",
+          "exit_code": 0,
+          "pid": 53,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.707719+00:00",
+          "stderr": "From ${REVIEW_ROOT}/suite-fixed-local/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T11:49:40.728076+00:00",
+          "exit_code": 0,
+          "pid": 62,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.720431+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.729630+00:00",
+          "exit_code": 0,
+          "pid": 66,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.728090+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T11:49:40.731263+00:00",
+          "exit_code": 0,
+          "pid": 67,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.729644+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.732815+00:00",
+          "exit_code": 0,
+          "pid": 68,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.731281+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T11:49:40.734636+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.732825+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.736118+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.734657+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T11:49:40.740014+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.736131+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.743985+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.740034+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T11:49:40.746157+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.743995+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.747675+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.746210+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T11:49:40.749366+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.747684+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.750894+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.749380+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T11:49:40.752327+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.750903+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.753882+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.752341+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T11:49:40.755633+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.753894+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.757359+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.755671+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.758964+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.757370+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.760535+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.758984+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T11:49:40.762020+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.760544+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.763356+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.762036+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T11:49:40.764869+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.763365+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.766303+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.764883+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T11:49:40.767826+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.766312+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "${REVIEW_ROOT}/suite-fixed-local/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T11:49:40.769678+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T11:49:40.767847+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.06899335799971595,
+      "ended_at": "2026-11-18T11:49:40.769984+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "wrong",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T11:49:40.700989+00:00",
+      "verdict": "PASS"
+    }
+  ]
+}

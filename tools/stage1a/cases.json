@@ -1,0 +1,311 @@
+[
+  {
+    "id": "S01",
+    "scenario": "normal",
+    "expected": {
+      "status": "PASS",
+      "reason": "OK"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S02",
+    "scenario": "missing_bundle",
+    "expected": {
+      "status": "FAIL",
+      "reason": "BUNDLE_MISSING"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S03",
+    "scenario": "empty_bundle",
+    "expected": {
+      "status": "FAIL",
+      "reason": "BUNDLE_INTEGRITY"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S04",
+    "scenario": "truncated_bundle",
+    "expected": {
+      "status": "FAIL",
+      "reason": "BUNDLE_INTEGRITY"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S05",
+    "scenario": "modified_byte",
+    "expected": {
+      "status": "FAIL",
+      "reason": "BUNDLE_INTEGRITY"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S06",
+    "scenario": "wrong_sha",
+    "expected": {
+      "status": "FAIL",
+      "reason": "BUNDLE_INTEGRITY"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S07",
+    "scenario": "missing_manifest",
+    "expected": {
+      "status": "FAIL",
+      "reason": "MANIFEST_MISSING"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S08",
+    "scenario": "invalid_manifest",
+    "expected": {
+      "status": "FAIL",
+      "reason": "MANIFEST_INVALID"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S09",
+    "scenario": "replaced_manifest",
+    "expected": {
+      "status": "FAIL",
+      "reason": "MANIFEST_CHANGED"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S10",
+    "scenario": "prerequisite_bundle",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "BUNDLE_PREREQUISITES"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S11",
+    "scenario": "shallow_source",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "SHALLOW_SOURCE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S12",
+    "scenario": "partial_source",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "PARTIAL_SOURCE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S13",
+    "scenario": "alternates_source",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "ALTERNATES_SOURCE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S14",
+    "scenario": "dirty_restore",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "RESTORE_NOT_NEW"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S15",
+    "scenario": "storage_unreachable",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "STORAGE_UNAVAILABLE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S16",
+    "scenario": "retrieval_unavailable",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "RETRIEVAL_UNAVAILABLE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S17",
+    "scenario": "git_unlaunchable",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "SPAWN_FAILED"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S18",
+    "scenario": "git_nonzero",
+    "expected": {
+      "status": "FAIL",
+      "reason": "COMMAND_NONZERO"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S19",
+    "scenario": "timeout",
+    "expected": {
+      "status": "UNKNOWN",
+      "reason": "TIMEOUT"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S20",
+    "scenario": "exception",
+    "expected": {
+      "status": "UNKNOWN",
+      "reason": "UNEXPECTED_EXCEPTION"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S21",
+    "scenario": "process_end_unknown",
+    "expected": {
+      "status": "UNKNOWN",
+      "reason": "PROCESS_END_UNKNOWN"
+    },
+    "mode": "state-contract-injection"
+  },
+  {
+    "id": "S22",
+    "scenario": "missing_record",
+    "expected": {
+      "status": "FAIL",
+      "reason": "RECORD_MISSING"
+    },
+    "mode": "state-contract-injection"
+  },
+  {
+    "id": "S23",
+    "scenario": "normal_repeat",
+    "expected": {
+      "status": "PASS",
+      "reason": "OK"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S24",
+    "scenario": "axes_provenance_unknown",
+    "expected": {
+      "status": "PASS",
+      "reason": "OK",
+      "axes": {
+        "CONTENT_INTEGRITY": "PASS",
+        "PROVENANCE_STATUS": "UNKNOWN",
+        "RESTORE_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "production_permit": false
+      }
+    },
+    "mode": "state-contract-injection"
+  },
+  {
+    "id": "S25",
+    "scenario": "axes_corrupt_unknown",
+    "expected": {
+      "status": "PASS",
+      "reason": "OK",
+      "axes": {
+        "CONTENT_INTEGRITY": "FAIL",
+        "PROVENANCE_STATUS": "UNKNOWN",
+        "RESTORE_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "production_permit": false
+      }
+    },
+    "mode": "state-contract-injection"
+  },
+  {
+    "id": "S26",
+    "scenario": "axes_unrecovered",
+    "expected": {
+      "status": "PASS",
+      "reason": "OK",
+      "axes": {
+        "CONTENT_INTEGRITY": "UNKNOWN",
+        "PROVENANCE_STATUS": "UNKNOWN",
+        "RESTORE_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "production_permit": false
+      }
+    },
+    "mode": "state-contract-injection"
+  },
+  {
+    "id": "S27",
+    "scenario": "existing_root",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "ROOT_NOT_NEW"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S28",
+    "scenario": "schema_manifest",
+    "expected": {
+      "status": "FAIL",
+      "reason": "MANIFEST_INVALID"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S29",
+    "scenario": "wrong_inventory",
+    "expected": {
+      "status": "FAIL",
+      "reason": "RESTORE_INVENTORY_MISMATCH"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S30",
+    "scenario": "corrupt_pack_with_updated_sha",
+    "expected": {
+      "status": "FAIL",
+      "reason": "COMMAND_NONZERO"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S31",
+    "scenario": "dirty_source",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "DIRTY_OR_UNTRACKED_SOURCE"
+    },
+    "mode": "local-synthetic-operation"
+  },
+  {
+    "id": "S32",
+    "scenario": "untracked_source",
+    "expected": {
+      "status": "BLOCKED",
+      "reason": "DIRTY_OR_UNTRACKED_SOURCE"
+    },
+    "mode": "local-synthetic-operation"
+  }
+]

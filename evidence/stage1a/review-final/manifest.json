@@ -1,0 +1,83 @@
+{
+  "transformation": "Absolute task/review workspace prefixes replaced with ${TASK_ROOT}/${REVIEW_ROOT}; originals retained privately. Digests of source and public derivative are distinct.",
+  "files": [
+    {
+      "path": "oracle-v1.json",
+      "size": 5209,
+      "sha256": "b11b341569752fd58702ce0aefec361574e98ad37a7d31a21f06fbe6dd5414d9",
+      "source_sha256": "b11b341569752fd58702ce0aefec361574e98ad37a7d31a21f06fbe6dd5414d9"
+    },
+    {
+      "path": "additional-oracle-v1.json",
+      "size": 880,
+      "sha256": "5c55c79604f62a3bbef5955bb9d0627f91610925424b0ac6672e8a1cb97b1697",
+      "source_sha256": "5c55c79604f62a3bbef5955bb9d0627f91610925424b0ac6672e8a1cb97b1697"
+    },
+    {
+      "path": "additional-results-v1.json",
+      "size": 2645,
+      "sha256": "97d90798fbf02a3e3b6ac1395911f962f1bc8add017893866d9a89ba2bea2bdc",
+      "source_sha256": "97d90798fbf02a3e3b6ac1395911f962f1bc8add017893866d9a89ba2bea2bdc"
+    },
+    {
+      "path": "additional-results-v2.json",
+      "size": 2660,
+      "sha256": "555de989b423580ff5d0f39a078f469d905552a08537657b258694339b221775",
+      "source_sha256": "555de989b423580ff5d0f39a078f469d905552a08537657b258694339b221775"
+    },
+    {
+      "path": "typed-inputs-fixed.json",
+      "size": 182392,
+      "sha256": "6a29d47abc8fd5a37fffc6323d7fa5e9b3ed542f30f0aaeb031ace33c3f583da",
+      "source_sha256": "d3ae6681b5403aa304b6b9272c16cc747166d5c393aaf51c5f25d0b65e5a82df"
+    },
+    {
+      "path": "typed-results.json",
+      "size": 1439,
+      "sha256": "de565c3c0787c8799c3a686404f70ecb7d822fd6bda271adf00dc4e32b046a6c",
+      "source_sha256": "de565c3c0787c8799c3a686404f70ecb7d822fd6bda271adf00dc4e32b046a6c"
+    },
+    {
+      "path": "mode-bypass-input.json",
+      "size": 632,
+      "sha256": "b4e1d48beafe1cdb3f65a8e11384bb752a66efb1f72f707556bcbefd20e89131",
+      "source_sha256": "b4e1d48beafe1cdb3f65a8e11384bb752a66efb1f72f707556bcbefd20e89131"
+    },
+    {
+      "path": "mode-bypass-result.json",
+      "size": 115,
+      "sha256": "c9d793fd451e78a11afb8f5dacdfd1abf2f44c877551d21ccdf20e945439316e",
+      "source_sha256": "c9d793fd451e78a11afb8f5dacdfd1abf2f44c877551d21ccdf20e945439316e"
+    },
+    {
+      "path": "unknown-scenario-input.json",
+      "size": 611,
+      "sha256": "2cd56da4a09778424bf10202aadabbeefabac53c61a627907745096999c57890",
+      "source_sha256": "2cd56da4a09778424bf10202aadabbeefabac53c61a627907745096999c57890"
+    },
+    {
+      "path": "final-local-recheck.json",
+      "size": 2104,
+      "sha256": "cc8a182c48b8be7a003c2fe4f94cc62d790b3450d152c7ea9766d587a7be411e",
+      "source_sha256": "cc8a182c48b8be7a003c2fe4f94cc62d790b3450d152c7ea9766d587a7be411e"
+    },
+    {
+      "path": "initial-review.json",
+      "size": 474,
+      "sha256": "291dfa53e962164d2aa93288cb99722080d25a63fd02c8adb20e7d800c333ec5",
+      "source_sha256": "291dfa53e962164d2aa93288cb99722080d25a63fd02c8adb20e7d800c333ec5"
+    },
+    {
+      "path": "baseline-launch-finding.json",
+      "size": 184,
+      "sha256": "208747d599744a3b915b36a220766aae62bbf43feb5c2fcc9d80a72bfa436147",
+      "source_sha256": "208747d599744a3b915b36a220766aae62bbf43feb5c2fcc9d80a72bfa436147"
+    },
+    {
+      "path": "suite-final-local--suite.json",
+      "size": 116151,
+      "sha256": "cb8aeeb72dea35d6c892752714cb1d33482fa8979d319399424e98746c7a9cca",
+      "source_sha256": "f34b30a75f9e3c4b49c2006639a0bcb2625d80a7a27b736f11b50059e3b7a842"
+    }
+  ]
+}

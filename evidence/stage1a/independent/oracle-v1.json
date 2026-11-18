@@ -1,0 +1,178 @@
+{
+  "oracle_version": "independent-semantic-v1",
+  "fixed_at": "2026-11-18T11:45:16.109456+00:00",
+  "author_role": "B independent AI agent",
+  "basis": "owner Stage1-A request, before revised implementation inspection",
+  "baseline_head": "7949e2fc642852b7b3c2463dc1ebc8a02afa565f",
+  "cases": [
+    {
+      "id": "S01",
+      "scenario": "normal",
+      "expected": "PASS",
+      "reason": "complete multi-commit/multi-branch bundle, direct storage readback and isolated restore match all objects"
+    },
+    {
+      "id": "S02",
+      "scenario": "missing_bundle",
+      "expected": "REJECT",
+      "reason": "missing bundle cannot pass"
+    },
+    {
+      "id": "S03",
+      "scenario": "empty_bundle",
+      "expected": "REJECT",
+      "reason": "empty file cannot pass"
+    },
+    {
+      "id": "S04",
+      "scenario": "truncated_bundle",
+      "expected": "REJECT",
+      "reason": "truncated bundle cannot pass"
+    },
+    {
+      "id": "S05",
+      "scenario": "modified_byte",
+      "expected": "REJECT",
+      "reason": "modified copied byte rejected; original retained"
+    },
+    {
+      "id": "S06",
+      "scenario": "wrong_sha",
+      "expected": "REJECT",
+      "reason": "expected SHA mismatch rejected"
+    },
+    {
+      "id": "S07",
+      "scenario": "missing_manifest",
+      "expected": "REJECT",
+      "reason": "absent manifest rejected"
+    },
+    {
+      "id": "S08",
+      "scenario": "invalid_manifest",
+      "expected": "REJECT",
+      "reason": "malformed/schema-invalid manifest rejected"
+    },
+    {
+      "id": "S09",
+      "scenario": "replaced_manifest",
+      "expected": "REJECT",
+      "reason": "valid but wrong target/hash manifest rejected"
+    },
+    {
+      "id": "S10",
+      "scenario": "prerequisite_bundle",
+      "expected": "REJECT",
+      "reason": "prerequisite-bearing bundle cannot count self-contained in empty restore"
+    },
+    {
+      "id": "S11",
+      "scenario": "shallow_source",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "shallow condition explicitly rejected, not historical completeness PASS"
+    },
+    {
+      "id": "S12",
+      "scenario": "partial_source",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "promisor or missing object condition not accepted"
+    },
+    {
+      "id": "S13",
+      "scenario": "alternates_source",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "dependency condition explicitly rejected or proven eliminated with full restore; no unproven PASS"
+    },
+    {
+      "id": "S14",
+      "scenario": "dirty_restore",
+      "expected": "REJECT",
+      "reason": "nonempty destination rejected without overwriting"
+    },
+    {
+      "id": "S15",
+      "scenario": "storage_unreachable",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "no storage PASS when actual copy fails"
+    },
+    {
+      "id": "S16",
+      "scenario": "retrieval_unavailable",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "no verification PASS without bytes from storage"
+    },
+    {
+      "id": "S17",
+      "scenario": "git_unlaunchable",
+      "expected": "REJECT_OR_BLOCKED",
+      "reason": "launch error preserved in record"
+    },
+    {
+      "id": "S18",
+      "scenario": "git_nonzero",
+      "expected": "REJECT",
+      "reason": "nonzero exit code/stdout/stderr preserved"
+    },
+    {
+      "id": "S19",
+      "scenario": "timeout",
+      "expected": "UNKNOWN",
+      "reason": "bounded return with timeout and actual process-end observation distinct"
+    },
+    {
+      "id": "S20",
+      "scenario": "exception",
+      "expected": "UNKNOWN_OR_FAIL",
+      "reason": "exception recorded, never PASS"
+    },
+    {
+      "id": "S21",
+      "scenario": "process_end_unknown",
+      "expected": "UNKNOWN",
+      "reason": "no verified finite-stop PASS with unconfirmed termination"
+    },
+    {
+      "id": "S22",
+      "scenario": "missing_record",
+      "expected": "REJECT",
+      "reason": "empty/missing/truncated records cannot be accepted"
+    },
+    {
+      "id": "S23",
+      "scenario": "normal_false_fail",
+      "expected": "PASS",
+      "reason": "normal intact counterpart still passes"
+    },
+    {
+      "id": "S24",
+      "scenario": "provenance_unknown",
+      "expected": "PASS_UNKNOWN_NOT_TESTED",
+      "reason": "CONTENT=PASS, PROVENANCE=UNKNOWN, RESTORE=NOT_TESTED retained separately"
+    },
+    {
+      "id": "S25",
+      "scenario": "corrupt_provenance_unknown",
+      "expected": "FAIL_UNKNOWN",
+      "reason": "CONTENT=FAIL retained regardless provenance UNKNOWN"
+    },
+    {
+      "id": "S26",
+      "scenario": "same_owner_separate_session",
+      "expected": "LIMITED",
+      "reason": "technical independence scope only; never third-party human independence"
+    },
+    {
+      "id": "S27",
+      "scenario": "unrecovered_original",
+      "expected": "UNKNOWN",
+      "reason": "regenerated file never historical original"
+    },
+    {
+      "id": "S28",
+      "scenario": "production_permission",
+      "expected": "FALSE",
+      "reason": "every result production_permit false"
+    }
+  ],
+  "note": "REJECT means non-PASS with explicit reason; UNKNOWN/FAIL distinction must reflect measured integrity vs inability. No actual production permit."
+}

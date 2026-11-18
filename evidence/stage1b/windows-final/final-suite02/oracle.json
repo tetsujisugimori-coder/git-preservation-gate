@@ -1,0 +1,200 @@
+{
+  "execution": [
+    [
+      "normal",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "print(\"normal\")"
+      ],
+      2,
+      null,
+      "PASS",
+      "JOB_EMPTY"
+    ],
+    [
+      "nonzero",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import sys;sys.exit(7)"
+      ],
+      2,
+      null,
+      "FAIL",
+      "JOB_EMPTY"
+    ],
+    [
+      "missing",
+      [
+        "${WINDOWS_TASK_ROOT}\\final-suite02\\missing-git.exe"
+      ],
+      2,
+      null,
+      "BLOCKED",
+      "NOT_STARTED"
+    ],
+    [
+      "hang",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import time;time.sleep(20)"
+      ],
+      0.3,
+      null,
+      "UNKNOWN",
+      "JOB_EMPTY_AFTER_TERMINATE"
+    ],
+    [
+      "descendants",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import subprocess,sys,time;subprocess.Popen([sys.executable,\"-B\",\"-c\",'import subprocess,sys,time;subprocess.Popen([sys.executable,\"-B\",\"-c\",\\'import time;time.sleep(20)\\']);time.sleep(20)']);time.sleep(20)"
+      ],
+      0.7,
+      null,
+      "UNKNOWN",
+      "JOB_EMPTY_AFTER_TERMINATE"
+    ],
+    [
+      "parent_exit_child",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import subprocess,sys;subprocess.Popen([sys.executable,\"-B\",\"-c\",'import time;time.sleep(20)'])"
+      ],
+      0.5,
+      null,
+      "UNKNOWN",
+      "JOB_EMPTY_AFTER_TERMINATE"
+    ],
+    [
+      "query_failure",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import time;time.sleep(1)"
+      ],
+      0.2,
+      "query",
+      "UNKNOWN",
+      "RUNNING_IN_OWN_JOB"
+    ],
+    [
+      "terminate_failure",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import time;time.sleep(1)"
+      ],
+      0.2,
+      "terminate",
+      "UNKNOWN",
+      "RUNNING_IN_OWN_JOB"
+    ],
+    [
+      "parent_nonzero_child",
+      [
+        "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-c",
+        "import subprocess,sys;subprocess.Popen([sys.executable,\"-B\",\"-c\",'import time;time.sleep(20)']);sys.exit(7)"
+      ],
+      0.5,
+      null,
+      "FAIL",
+      "JOB_EMPTY_AFTER_TERMINATE"
+    ]
+  ],
+  "bounds": [
+    {
+      "id": "nan",
+      "kwargs": {
+        "command_timeout": "nan"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "inf",
+      "kwargs": {
+        "command_timeout": "inf"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "negative",
+      "kwargs": {
+        "command_timeout": "-1"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "zero",
+      "kwargs": {
+        "total_timeout": "0"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "excessive",
+      "kwargs": {
+        "stop_wait": "121"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "retry",
+      "kwargs": {
+        "retry": "1"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "infinite_retry",
+      "kwargs": {
+        "retry": "inf"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    },
+    {
+      "id": "boolean",
+      "kwargs": {
+        "command_timeout": "True"
+      },
+      "expected": "REJECT_BEFORE_ROOT"
+    }
+  ],
+  "wait_return": [
+    [
+      0,
+      "UNASSIGNED_CHILD_STOPPED"
+    ],
+    [
+      258,
+      "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+    ],
+    [
+      4294967295,
+      "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+    ]
+  ],
+  "overall": {
+    "command_timeout": 20,
+    "total_timeout": 0.25,
+    "stop_wait": 2,
+    "expected": [
+      "UNKNOWN",
+      "TIMEOUT",
+      "JOB_EMPTY_AFTER_TERMINATE"
+    ]
+  }
+}

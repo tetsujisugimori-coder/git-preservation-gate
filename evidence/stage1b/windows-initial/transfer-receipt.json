@@ -1,0 +1,139 @@
+{
+  "kind": "redacted-derivatives-not-raw",
+  "transform": "UTF8 BOM removed; task root and user profile paths replaced",
+  "files": [
+    {
+      "path": "finite_process.py",
+      "raw_size": 7258,
+      "raw_sha256": "cfe2abfdcc38e5e832d9166f9c8faf9025a3c78720e60b9cbf058fab5915588e",
+      "public_size": 7258,
+      "public_sha256": "cfe2abfdcc38e5e832d9166f9c8faf9025a3c78720e60b9cbf058fab5915588e"
+    },
+    {
+      "path": "test_finite.py",
+      "raw_size": 1928,
+      "raw_sha256": "b1a8be1fb2506e6433e8765f81513fe91128768228d4512830409cec69054bbe",
+      "public_size": 1928,
+      "public_sha256": "b1a8be1fb2506e6433e8765f81513fe91128768228d4512830409cec69054bbe"
+    },
+    {
+      "path": "test_finite_v2.py",
+      "raw_size": 2440,
+      "raw_sha256": "ac4a1ec10ccc2a55a65fec32d98d27e5de0f3b3c9d556840ca0b1b0bc649ab86",
+      "public_size": 2440,
+      "public_sha256": "ac4a1ec10ccc2a55a65fec32d98d27e5de0f3b3c9d556840ca0b1b0bc649ab86"
+    },
+    {
+      "path": "test_finite_ps51.py",
+      "raw_size": 2445,
+      "raw_sha256": "32d92c145a07cf1fbc5c3e4d7bc998639b2ed5fcc58584b3a3972224b8765f47",
+      "public_size": 2445,
+      "public_sha256": "32d92c145a07cf1fbc5c3e4d7bc998639b2ed5fcc58584b3a3972224b8765f47"
+    },
+    {
+      "path": "test_bounds.py",
+      "raw_size": 1120,
+      "raw_sha256": "e65d240d747b96d0973dfb03a74b90cfee6cf0302fcde7bc65afeddeb4dda58f",
+      "public_size": 1120,
+      "public_sha256": "e65d240d747b96d0973dfb03a74b90cfee6cf0302fcde7bc65afeddeb4dda58f"
+    },
+    {
+      "path": "readback_self.py",
+      "raw_size": 1089,
+      "raw_sha256": "bbf926186d1ea7a804ba4d3a9f8a44c9d187f56b650ee557738cc3d9629df4fa",
+      "public_size": 1046,
+      "public_sha256": "c675b654c0e756086f544767c763dfddfd1cf8baeed71666f930920abc704d64"
+    },
+    {
+      "path": "readback_self_v2.py",
+      "raw_size": 1052,
+      "raw_sha256": "27855165dc9ee79abe7a033370a7caeaacefb51111d95c577fee48e64ac58fa6",
+      "public_size": 1009,
+      "public_sha256": "4ab7f13b71915a52d12803db0a1cc178a78ebb67b53d087f4279376b43f68385"
+    },
+    {
+      "path": "finite-oracle.json",
+      "raw_size": 2270,
+      "raw_sha256": "c47ed300def5c9302edc06c3f4c56b18e1a1b7293ee0645f6481a320233d7d91",
+      "public_size": 2209,
+      "public_sha256": "d2766b4bd350a20b99a17416209777e300ca175f4772ae83c22c1a20bbd534e5"
+    },
+    {
+      "path": "finite-results.json",
+      "raw_size": 26416,
+      "raw_sha256": "d45cc2e4ac61965c7abb9c6a6973a8a2a34e8594d7f69d4d0347d0be4427a423",
+      "public_size": 26355,
+      "public_sha256": "bb710482a3ee32b102fba4bd0038d749a9f686d62ffa4874bf57be43b42e6036"
+    },
+    {
+      "path": "v2/finite-oracle-corrected.json",
+      "raw_size": 2274,
+      "raw_sha256": "180270f81e9b055a4265ba2c1c29a5d65a107fc7dc71aded25112eb837faffdd",
+      "public_size": 2213,
+      "public_sha256": "612ad821d0c38819c7a1518bb3cd05aa88025a0905c6d90dfbb15a2fe81f8a94"
+    },
+    {
+      "path": "v2/finite-results.json",
+      "raw_size": 35359,
+      "raw_sha256": "23cf0df8ad2c9a0cc8d8645a7804dcdb9ba05e9305e5ac4fd1869c8f8dcff52f",
+      "public_size": 35298,
+      "public_sha256": "7ba212d4c5aecd52c0b11e65ab46e7e12adb5f714a0fca8704b1f5bfcd4be1ff"
+    },
+    {
+      "path": "v3-ps51/finite-results.json",
+      "raw_size": 35183,
+      "raw_sha256": "48e7c55a0b62283d6197b1fc856ce9c02c4718b9afa10213acf58626881a9970",
+      "public_size": 35122,
+      "public_sha256": "a647a1d495ac7b3ea9e135cf09497739cb8382228a00fb8cd6013aca1e65f7d0"
+    },
+    {
+      "path": "bounds-results.json",
+      "raw_size": 6015,
+      "raw_sha256": "21fd976a68307209f31e46a1a1bd817709989b084df073412298372c76e2c47a",
+      "public_size": 6013,
+      "public_sha256": "d13b0843980acf7bb9694bd7c897075cda493eca5f169417535b0e3a4dea0d01"
+    },
+    {
+      "path": "bundle-run01/result.json",
+      "raw_size": 44809,
+      "raw_sha256": "dceb338de8da294ee5f23b3cc16d7b4cdc1147e3a36dcc2dd7b81a7b5a325484",
+      "public_size": 41707,
+      "public_sha256": "c296dd9b17dca071dea31b54a994e2a7ea71a7e10150bb25336195088b0d32a9"
+    },
+    {
+      "path": "bundle-run01/manifest.json",
+      "raw_size": 2969,
+      "raw_sha256": "a12925aec4582d09392a7a7c288bd3b68e97e82cb20d7b5cc6e9ea780455d111",
+      "public_size": 2969,
+      "public_sha256": "a12925aec4582d09392a7a7c288bd3b68e97e82cb20d7b5cc6e9ea780455d111"
+    },
+    {
+      "path": "bundle-controller01/result.json",
+      "raw_size": 37341,
+      "raw_sha256": "00b1f0a84f402407074803777a482a0a1329bcce5f1c607e85b874c55606403e",
+      "public_size": 37245,
+      "public_sha256": "a3e7088cf7a48e754481547159afa165e385988b8c776417f4b37917ae50f10a"
+    },
+    {
+      "path": "readback-controller02/result.json",
+      "raw_size": 2429,
+      "raw_sha256": "5ec5c6b49cc1d3a63003d64e7f442a645728ebd6b5a4a765f439889ac4082de1",
+      "public_size": 2333,
+      "public_sha256": "b2bde6b89faaea113ee85f284f74e009bad726bda456600a6eb380d28f4d2876"
+    },
+    {
+      "path": "readback-controller03/result.json",
+      "raw_size": 13304,
+      "raw_sha256": "fefd3093a8f0857a5882fed17e56625705dfd58cb93a890d64c992cec3179a4a",
+      "public_size": 13255,
+      "public_sha256": "7a43545ba313d9833023302278bf114a8932691ece6789f29c1b122df69d3a75"
+    },
+    {
+      "path": "readback-self03/result.json",
+      "raw_size": 22571,
+      "raw_sha256": "dc42fa2e0eb6283642cd561571569f3ad7036410be54a22b5e97542a704e3ecf",
+      "public_size": 21161,
+      "public_sha256": "6d17efc26d8e52c7e2568e26ef122ab04b0864e71df121dc9f3215eb6b397a94"
+    }
+  ]
+}

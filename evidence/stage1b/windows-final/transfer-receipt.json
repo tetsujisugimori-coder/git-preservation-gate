@@ -1,0 +1,26 @@
+{
+  "kind": "final-windows-suite-redacted-derivatives",
+  "files": [
+    {
+      "path": "final2/windows_suite.py",
+      "raw_size": 4463,
+      "raw_sha256": "a76faa8ba301b70c589dfd0551d95f4474f8219bc402e35e69e3f9d45e24076d",
+      "public_size": 4463,
+      "public_sha256": "a76faa8ba301b70c589dfd0551d95f4474f8219bc402e35e69e3f9d45e24076d"
+    },
+    {
+      "path": "final-suite02/oracle.json",
+      "raw_size": 4394,
+      "raw_sha256": "e6ac9d57444359bfbde7acc31b99689f36b50a4784ea98de0dc27a59c4615ef6",
+      "public_size": 4331,
+      "public_sha256": "78fbc924a5dc55bf63f715206b30d966009b3c7c929921363ca931d808ad4098"
+    },
+    {
+      "path": "final-suite02/results.json",
+      "raw_size": 50924,
+      "raw_sha256": "361c1f188783c105cc70d76d83145c509facda6fb736cd8d927eb9a1c6b93b24",
+      "public_size": 50859,
+      "public_sha256": "bc02d44cb0babe88ea16447d194741bd223d6725e5aa131c5a8dc5aa1c6c2012"
+    }
+  ]
+}

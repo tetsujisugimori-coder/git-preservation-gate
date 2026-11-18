@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "python",
+      "run_contract_tests.py"
+    ],
+    "start": "2026-11-18T13:14:05.781162+00:00",
+    "end": "2026-11-18T13:14:05.835898+00:00",
+    "exit_code": 0,
+    "timeout": 20,
+    "retry": 0
+  },
+  {
+    "command": [
+      "python",
+      "run_boundary_tests.py"
+    ],
+    "start": "2026-11-18T13:14:05.835908+00:00",
+    "end": "2026-11-18T13:14:05.865377+00:00",
+    "exit_code": 0,
+    "timeout": 20,
+    "retry": 0
+  },
+  {
+    "command": [
+      "python",
+      "run_record_tests.py",
+      "${TASK_ROOT}/reviewer-b/ledger01"
+    ],
+    "start": "2026-11-18T13:14:05.865387+00:00",
+    "end": "2026-11-18T13:14:05.902992+00:00",
+    "exit_code": 0,
+    "timeout": 20,
+    "retry": 0
+  }
+]

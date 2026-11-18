@@ -1,0 +1,47 @@
+{
+  "kind": "review-fix-derived-evidence",
+  "files": [
+    {
+      "path": "finite_process_v2.py",
+      "raw_size": 7846,
+      "raw_sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1",
+      "public_size": 7846,
+      "public_sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1"
+    },
+    {
+      "path": "test_finite_reviewfix.py",
+      "raw_size": 2456,
+      "raw_sha256": "38adab5433fa1fb97a33f198428d5a67e4ca271a50cda9b424573281b3675f8e",
+      "public_size": 2456,
+      "public_sha256": "38adab5433fa1fb97a33f198428d5a67e4ca271a50cda9b424573281b3675f8e"
+    },
+    {
+      "path": "v4-reviewfix/finite-results.json",
+      "raw_size": 35475,
+      "raw_sha256": "e924c238b36cef30ce8cbd8b854afb5e47ddd0015fd66635639b418ab40e66dd",
+      "public_size": 35414,
+      "public_sha256": "925678e73e0fae2250bdd83ef0da4197f1466b978555f8e16763549db1584338"
+    },
+    {
+      "path": "test_reviewfix.py",
+      "raw_size": 1290,
+      "raw_sha256": "a838606e1bcbb24b127cc321f334130ded2963ae2f11f55fa01bc829b18e6739",
+      "public_size": 1290,
+      "public_sha256": "a838606e1bcbb24b127cc321f334130ded2963ae2f11f55fa01bc829b18e6739"
+    },
+    {
+      "path": "reviewfix-oracle.json",
+      "raw_size": 351,
+      "raw_sha256": "2d267eecf5c786d3cc26cb07f3c8512aae9e1684ec7982ae7ae540da4f7c248a",
+      "public_size": 351,
+      "public_sha256": "2d267eecf5c786d3cc26cb07f3c8512aae9e1684ec7982ae7ae540da4f7c248a"
+    },
+    {
+      "path": "reviewfix-results.json",
+      "raw_size": 6815,
+      "raw_sha256": "d6d4e02b6918c2f70e82780954caf644d6c1127a942915d4b404969f3d6ff0d9",
+      "public_size": 6813,
+      "public_sha256": "e8cccec8f3e75e5f18fd23968a5c191670fecedca4777e6c07ec8d84085d8418"
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "started_at": "2026-11-18T13:10:29.050411+00:00",
+  "ended_at": "2026-11-18T13:10:29.051010+00:00",
+  "checker_sha256": "5318cdda82b3107cef1ddeb76cc715cbfe6a6c208cb5a7c63e8b09276ca419ff",
+  "oracle_sha256": "fa8d0d27e5ab0a163086fc382c296e7d4bc76646d256ec554441cec24016d7d8",
+  "cases": [
+    {
+      "id": "R01",
+      "scenario": "valid_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": [
+          {
+            "path": "sample.bundle",
+            "size": 200,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      },
+      "input_sha256": "da831429368d263fcc2ea01860b82b80765b13b8decc73710afa1cf7b302cef5",
+      "expected_accept": true,
+      "actual_accept": true,
+      "error": null,
+      "verdict": "PASS"
+    },
+    {
+      "id": "R02",
+      "scenario": "empty_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": []
+      },
+      "input_sha256": "55615959f5d7d4f72c08cc72a621923819990e792d208eba8b0c745b96548516",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "manifest",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R03",
+      "scenario": "duplicate_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": [
+          {
+            "path": "sample.bundle",
+            "size": 200,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "path": "sample.bundle",
+            "size": 200,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      },
+      "input_sha256": "29a0d8836d0b70a325fb3ebfe59e51e53ca7ca0e28e39c670dd63d49c058b924",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "unsafe/duplicate path",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R04",
+      "scenario": "traversal_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": [
+          {
+            "path": "../bad",
+            "size": 200,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      },
+      "input_sha256": "ed8f177014e27babea9bd2d22b2699088fc2a75f15ffa069da5c94d44ff8258f",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "unsafe/duplicate path",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R05",
+      "scenario": "absolute_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": [
+          {
+            "path": "/bad",
+            "size": 200,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      },
+      "input_sha256": "4784316f104edb78b764b80b7603434cd8b197fc28142c893407a7f7309c1b2e",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "unsafe/duplicate path",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R06",
+      "scenario": "bad_hash_manifest",
+      "input": {
+        "schema_version": "1",
+        "files": [
+          {
+            "path": "sample.bundle",
+            "size": 200,
+            "sha256": "bad"
+          }
+        ]
+      },
+      "input_sha256": "de5f187973294c4c823e2493ebcb518bbabf6fb49feb6799edb3156b7b08e6c5",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "hash",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R07",
+      "scenario": "valid_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "PASS"
+      },
+      "input_sha256": "b2925fdbeeae7b23d79086b0927d24fea263adf61733f784373829838fa843c5",
+      "expected_accept": true,
+      "actual_accept": true,
+      "error": null,
+      "verdict": "PASS"
+    },
+    {
+      "id": "R08",
+      "scenario": "wrong_attempt_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "other",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "PASS"
+      },
+      "input_sha256": "6fb49ed50e29c98051cca89cddcc0aeedcfe049461a3398f098652ed1ee91c1d",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "receipt identity",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R09",
+      "scenario": "wrong_sha_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "PASS"
+      },
+      "input_sha256": "6e47873a5940e22582600f747c71f85a07cd8ea7c682d7e9885de95fe7381ea2",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "receipt identity",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R10",
+      "scenario": "wrong_size_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 201,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "PASS"
+      },
+      "input_sha256": "42a0726b9a5bf8ab7f7a5603eb86b9a0c360ba5c8aaf700fd8e7134a5d6d5621",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "receipt identity",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R11",
+      "scenario": "custody_only_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "NOT_TESTED"
+      },
+      "input_sha256": "1e716fda14a7d0c7799a5a5e1fb3d3628af07eb25e431e856d02741e1a059525",
+      "expected_accept": true,
+      "actual_accept": true,
+      "error": null,
+      "verdict": "PASS"
+    },
+    {
+      "id": "R12",
+      "scenario": "failed_receipt",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "FAIL",
+        "readback_status": "NOT_TESTED"
+      },
+      "input_sha256": "c7cc79a1e251f5ede01f781f1a26d54a56856ebe65fd277651308affe989e943",
+      "expected_accept": true,
+      "actual_accept": true,
+      "error": null,
+      "verdict": "PASS"
+    },
+    {
+      "id": "R13",
+      "scenario": "unknown_receipt_field",
+      "input": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "object_id": "synthetic.bundle",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 200,
+        "destination": "synthetic-store",
+        "stored_at": "2026-11-18T00:00:00+00:00",
+        "operation": "create",
+        "storage_status": "PASS",
+        "readback_status": "PASS",
+        "unexpected": true
+      },
+      "input_sha256": "fde42166e5371a522719d07ab16b6214d50f657175b215fb9ec3482aad153c3f",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "keys",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R14",
+      "scenario": "new_attempt",
+      "input": {
+        "attempt_id": "new"
+      },
+      "input_sha256": "b31dd5d11dd3e2de3571a24808e512cd0abe1c869bb2e62dc6e7c4f6af6853e6",
+      "expected_accept": true,
+      "actual_accept": true,
+      "error": null,
+      "verdict": "PASS"
+    },
+    {
+      "id": "R15",
+      "scenario": "duplicate_attempt",
+      "input": {
+        "attempt_id": "new"
+      },
+      "input_sha256": "b31dd5d11dd3e2de3571a24808e512cd0abe1c869bb2e62dc6e7c4f6af6853e6",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "ATTEMPT_ALREADY_EXISTS",
+      "verdict": "PASS"
+    },
+    {
+      "id": "R16",
+      "scenario": "unsafe_attempt",
+      "input": {
+        "attempt_id": "../bad"
+      },
+      "input_sha256": "2d26792367f9c9ac9f3850a48f1490f35dae03286feb3433714c7b8e22268c1f",
+      "expected_accept": false,
+      "actual_accept": false,
+      "error": "attempt id",
+      "verdict": "PASS"
+    }
+  ],
+  "result": "PASS",
+  "production_permit": false
+}

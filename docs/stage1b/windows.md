@@ -1,0 +1,19 @@
+# Windows execution and finite-stop evidence
+
+Normal-user Windows was reachable. PowerShell 7.6.9 executable and PowerShell5.1 5.1.26100.9818, Git2.53.0.windows.1, Python3.14.7 were directly observed. Initial read-only tool sandbox did not permit a new trial directory; the explicit scoped write request was approved. No administrator elevation, ACL change or protection bypass was used. This sandbox approval is not an Archive/Vault authorization.
+
+`tools/stage1b/finite_process.py` is Windows-only. It creates a private unnamed Job with KILL_ON_JOB_CLOSE, creates the child suspended, assigns it to that Job before resume, and queries active-process accounting. Only the new owned Job is terminated. A parent exit alone is not JOB_EMPTY. Known nonzero parent exit is retained independently when a child remains and termination is needed. A failed query/terminate or unconfirmed cleanup is UNKNOWN, never assumed empty.
+
+Default command deadline5s, total10s, stop wait2s, retry0. Bounds must be finite positive numbers <=120s; retries are not implemented and any nonzero request is rejected. A complete multi-step synthetic bundle workflow can be launched as the owned child, so the whole sequence is under the Job deadline, not only each Git call. The deadline applies to managed work; controller filesystem writes/OS calls themselves are not an independently supervised hard-real-time process. No universal guarantee against arbitrary OS failure or service-mediated detached work.
+
+## Observed stages
+Initial finite suite: 7/8 expected; the descendant fixture had invalid Python syntax. The old input/results were retained, input corrected in a separately identified v2 oracle. Corrected8/8 under PS7 and8/8 through PS5.1. Boundary suite:8 invalid-bound/retry rejections plus one actual overall deadline =9/9. These are not9 distinct durable saves.
+
+P0 fixed Stage1A code was newly cloned from GitHub. Windows synthetic bundle generation, trial-store/readback, SHA/all-byte/manifest, empty bare restore/fsck/object inventory passed. Saved bundle:1075 bytes, SHA256 `b8b6f7e0099be24ded719f1f8b895359a72f90002005e494201d5ac1560fa87b`. Full workflow inside a Job:10s total budget, observed3.27s and JOB_EMPTY. A second trial-area direct retrieval/restoration was also performed by the same Windows implementer; it is self-verification, not independent B. An initial helper argument error was retained.
+
+Self-review found two further boundaries: nonzero parent plus hanging child could be hidden by timeout UNKNOWN; unassigned-child wait result was not checked before claiming stopped. v2 implementation preserves parent failure, checks WAIT_OBJECT_0, and retains UNKNOWN for timeout/failed wait. Same8 cases rerun; three wait-result injections and a real exit7-parent/remaining-child case were added with pre-fixed expectations. Injected wait-result tests are not actual OS cleanup failures.
+
+## Evidence transfer and limits
+Raw evidence remains on the Windows trial host. Returning the worker to cloud failed twice; raw cloud transfer was not completed. Public code and path-redacted derivatives were sent via GitHub content-addressed blobs and independently fetched into the cloud; every transferred derivative's size/SHA was checked. Transfer receipts distinguish raw SHA from derived SHA, BOM removal and path substitution. This is not a claim that raw Windows bytes were independently re-acquired into cloud. No Library/Archive upload or eternal retention claim.
+
+Only new synthetic test artifacts were used. Actual Windows file-lock/ENOSPC/storage ACL denial scenarios and an authenticated durable-save adapter remain separately unverified; a contractual synthetic status is not their OS-level execution. LFS/submodule internals/uncommitted files remain outside bundle scope. Final fixed-source rerun and independent B outcomes are recorded in the PR review/results, not inferred from the earlier version.

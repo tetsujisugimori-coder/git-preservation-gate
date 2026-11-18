@@ -1,0 +1,299 @@
+{
+  "source_sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1",
+  "waits": [
+    {
+      "input": 0,
+      "expected": "UNASSIGNED_CHILD_STOPPED",
+      "actual": "UNASSIGNED_CHILD_STOPPED",
+      "match": true,
+      "mode": "return-value-contract-injection"
+    },
+    {
+      "input": 258,
+      "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+      "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+      "match": true,
+      "mode": "return-value-contract-injection"
+    },
+    {
+      "input": 4294967295,
+      "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+      "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+      "match": true,
+      "mode": "return-value-contract-injection"
+    }
+  ],
+  "parent_case": {
+    "command": [
+      "${USERPROFILE}\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-c",
+      "import subprocess,sys;subprocess.Popen([sys.executable,\"-B\",\"-c\",\"import time;time.sleep(20)\"]);sys.exit(7)"
+    ],
+    "started_at": "2026-11-18T13:14:44.675850+00:00",
+    "status": "FAIL",
+    "reason": "COMMAND_NONZERO_WITH_TIMEOUT",
+    "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+    "production_permit": false,
+    "retry": 0,
+    "command_timeout": 0.4,
+    "total_timeout": 2,
+    "stop_wait": 2,
+    "fault": null,
+    "observations": [
+      {
+        "elapsed": 0.008556299999327166,
+        "active": 1,
+        "total": 1,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.018979799999215174,
+        "active": 2,
+        "total": 2,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.02913789999911387,
+        "active": 2,
+        "total": 2,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.0394546999996237,
+        "active": 2,
+        "total": 2,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.04988559999947029,
+        "active": 2,
+        "total": 2,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.06001719999949273,
+        "active": 3,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.07055299999956333,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.08064159999958065,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.09092760000021372,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.10140519999913522,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.1119672000004357,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.12248709999948915,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.13276029999906314,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.14333809999880032,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.15350799999941955,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.16378599999916332,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.17449850000048173,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.1851182999998855,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.19606089999979304,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.20652719999998226,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.2170803999997588,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.2274001000005228,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.2377985000002809,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.2485233999996126,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.2591592999997374,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.26968399999896064,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.28024120000009134,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.29068869999900926,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.30081070000051113,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.31090369999947143,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.32104809999873396,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.3311045999998896,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.3414080999991711,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.35185119999914605,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.3621497999993153,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.3727476000003662,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.38287490000038815,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.39338820000011765,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.4039376999990054,
+        "active": 2,
+        "total": 3,
+        "terminated": 0
+      },
+      {
+        "elapsed": 0.4039813999988837,
+        "active": 0,
+        "total": 3,
+        "terminated": 0
+      }
+    ],
+    "pid": 24940,
+    "observed_parent_exit": 7,
+    "exit_code": 7,
+    "elapsed": 0.40406199999961245,
+    "ended_at": "2026-11-18T13:14:45.080166+00:00",
+    "stdout": "",
+    "stderr": ""
+  },
+  "expected": [
+    "FAIL",
+    "COMMAND_NONZERO_WITH_TIMEOUT",
+    "JOB_EMPTY_AFTER_TERMINATE"
+  ],
+  "match": true
+}

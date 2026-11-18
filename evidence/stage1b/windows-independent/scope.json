@@ -1,0 +1,4 @@
+{
+  "independence": "separate AI/session/retrieval/area; same Windows account and host; NOT third-party human audit",
+  "scope": "synthetic test storage; NOT permanent custody"
+}

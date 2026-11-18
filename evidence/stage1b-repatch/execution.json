@@ -1,0 +1,131 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "records": [
+    {
+      "id": 0,
+      "command": [
+        "python",
+        "tests/stage1b/run_review_regression.py",
+        "--contract-source",
+        "<baseline-source>"
+      ],
+      "start": "2026-11-18T16:39:39.440225+00:00",
+      "end": "2026-11-18T16:39:39.525541+00:00",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "0.stdout",
+      "stderr": "0.stderr",
+      "runner_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1",
+      "checker_sha256": "79fd18eaf44246fc94b7b2194ca20ed8e40b55cf237abde754b9ddcede6e86d1"
+    },
+    {
+      "id": 1,
+      "command": [
+        "python",
+        "tests/stage1b/run_review_regression.py"
+      ],
+      "start": "2026-11-18T16:39:39.525877+00:00",
+      "end": "2026-11-18T16:39:39.579112+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "1.stdout",
+      "stderr": "1.stderr",
+      "runner_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    },
+    {
+      "id": 2,
+      "command": [
+        "python",
+        "tests/stage1b/run_review_regression.py",
+        "--additional"
+      ],
+      "start": "2026-11-18T16:39:39.579695+00:00",
+      "end": "2026-11-18T16:39:39.620715+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "2.stdout",
+      "stderr": "2.stderr",
+      "runner_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    },
+    {
+      "id": 3,
+      "command": [
+        "python",
+        "tests/stage1b/run_contract_batch.py",
+        "<fresh-output>"
+      ],
+      "start": "2026-11-18T16:39:39.621366+00:00",
+      "end": "2026-11-18T16:39:39.855177+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "3.stdout",
+      "stderr": "3.stderr",
+      "runner_sha256": "940ab04828d1f4a6ac3a463eab744c1a95f16b24c7bd1002f422edac4e099261",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    },
+    {
+      "id": 4,
+      "command": [
+        "python",
+        "tests/stage1b/run_independent10.py"
+      ],
+      "start": "2026-11-18T16:39:39.855557+00:00",
+      "end": "2026-11-18T16:39:39.914964+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "4.stdout",
+      "stderr": "4.stderr",
+      "runner_sha256": "6cf75fe5b7aff8b79f80d0a1face6bd020f135a909e934074b235e496b9c6aa9",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    },
+    {
+      "id": 5,
+      "command": [
+        "python",
+        "tests/stage1b/run_p2_regression.py"
+      ],
+      "start": "2026-11-18T16:39:39.915412+00:00",
+      "end": "2026-11-18T16:39:39.957510+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "5.stdout",
+      "stderr": "5.stderr",
+      "runner_sha256": "bb57b3ae5c2de9b0bb5a80792ef100d84b8a5e8d666a09a31eca1566e165c47f",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    },
+    {
+      "id": 6,
+      "command": [
+        "python",
+        "tests/stage1b/test_publication_scan.py"
+      ],
+      "start": "2026-11-18T16:39:39.957918+00:00",
+      "end": "2026-11-18T16:39:40.064512+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "timeout": 60,
+      "retry": 0,
+      "stdout": "6.stdout",
+      "stderr": "6.stderr",
+      "runner_sha256": "a717a6a765b59337213724bbc06b408d104dcad94e87e3614b57646103bd03bb",
+      "checker_sha256": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1"
+    }
+  ]
+}

@@ -1,0 +1,3392 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S01",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git"
+          ],
+          "ended_at": "2026-11-18T16:38:52.960945+00:00",
+          "exit_code": 0,
+          "pid": 54,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:52.955928+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in <case-workspace>/private/stage1a/S01/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "bundle",
+            "verify",
+            "<case-workspace>/repo/../private/stage1a/S01/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T16:38:52.963200+00:00",
+          "exit_code": 0,
+          "pid": 55,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:52.960987+00:00",
+          "stderr": "<case-workspace>/repo/../private/stage1a/S01/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "fetch",
+            "--no-tags",
+            "<case-workspace>/repo/../private/stage1a/S01/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T16:38:52.986872+00:00",
+          "exit_code": 0,
+          "pid": 56,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:52.963224+00:00",
+          "stderr": "From <case-workspace>/repo/../private/stage1a/S01/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T16:38:53.008580+00:00",
+          "exit_code": 0,
+          "pid": 65,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:52.986967+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T16:38:53.011301+00:00",
+          "exit_code": 0,
+          "pid": 69,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.008630+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T16:38:53.014671+00:00",
+          "exit_code": 0,
+          "pid": 70,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.011320+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.018136+00:00",
+          "exit_code": 0,
+          "pid": 71,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.014700+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.021545+00:00",
+          "exit_code": 0,
+          "pid": 72,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.018149+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.024017+00:00",
+          "exit_code": 0,
+          "pid": 73,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.021592+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.027216+00:00",
+          "exit_code": 0,
+          "pid": 74,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.024030+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.042916+00:00",
+          "exit_code": 0,
+          "pid": 75,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.027285+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.045362+00:00",
+          "exit_code": 0,
+          "pid": 76,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.042933+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.048305+00:00",
+          "exit_code": 0,
+          "pid": 77,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.045399+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.050731+00:00",
+          "exit_code": 0,
+          "pid": 78,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.048321+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.053544+00:00",
+          "exit_code": 0,
+          "pid": 79,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.050752+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.057426+00:00",
+          "exit_code": 0,
+          "pid": 80,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.053560+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.060141+00:00",
+          "exit_code": 0,
+          "pid": 81,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.057451+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.062688+00:00",
+          "exit_code": 0,
+          "pid": 82,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.060156+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.065182+00:00",
+          "exit_code": 0,
+          "pid": 83,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.062748+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.068449+00:00",
+          "exit_code": 0,
+          "pid": 84,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.065195+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.076491+00:00",
+          "exit_code": 0,
+          "pid": 85,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.068483+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.078867+00:00",
+          "exit_code": 0,
+          "pid": 86,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.076508+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.081678+00:00",
+          "exit_code": 0,
+          "pid": 87,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.078889+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.087076+00:00",
+          "exit_code": 0,
+          "pid": 88,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.081692+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.090489+00:00",
+          "exit_code": 0,
+          "pid": 89,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.087101+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.096909+00:00",
+          "exit_code": 0,
+          "pid": 90,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.090506+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S01/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T16:38:53.100880+00:00",
+          "exit_code": 0,
+          "pid": 91,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.096957+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.14731448600105068,
+      "ended_at": "2026-11-18T16:38:53.102204+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "9410cfc91f2bcf6505d8570e2a2af5dae0f15cf60e96b24451d65b6341ec046d",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal",
+      "started_at": "2026-11-18T16:38:52.954893+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_MISSING",
+        "status": "FAIL"
+      },
+      "case_id": "S02",
+      "commands": [],
+      "elapsed_seconds": 0.001315670000622049,
+      "ended_at": "2026-11-18T16:38:53.105137+00:00",
+      "expected": {
+        "reason": "BUNDLE_MISSING",
+        "status": "FAIL"
+      },
+      "input_sha256": "f9b5d6574ff13a43542e012ff391d43d6b6f96b1e354193c7de7368850fea70c",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "missing_bundle",
+      "started_at": "2026-11-18T16:38:53.103801+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "case_id": "S03",
+      "commands": [],
+      "elapsed_seconds": 0.00017529399883642327,
+      "ended_at": "2026-11-18T16:38:53.105725+00:00",
+      "expected": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "input_sha256": "8bf43a2b8f45ba2d2c051fa50158340e5d8f7c4a47c853f689fbe314b79b53bc",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "empty_bundle",
+      "started_at": "2026-11-18T16:38:53.105547+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "case_id": "S04",
+      "commands": [],
+      "elapsed_seconds": 0.0005628559993056115,
+      "ended_at": "2026-11-18T16:38:53.106624+00:00",
+      "expected": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "input_sha256": "83c67a1c99e4cb3c480091a96cc3b2c04c64f6b4781fc9d45913c51c37297da6",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "truncated_bundle",
+      "started_at": "2026-11-18T16:38:53.106065+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "case_id": "S05",
+      "commands": [],
+      "elapsed_seconds": 0.0007089139999152394,
+      "ended_at": "2026-11-18T16:38:53.108175+00:00",
+      "expected": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "input_sha256": "b53c6b0923d96fd400cd5338a36b25b6d5507b9ebcafedd5d829e914efda4825",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "modified_byte",
+      "started_at": "2026-11-18T16:38:53.107465+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "case_id": "S06",
+      "commands": [],
+      "elapsed_seconds": 0.00048457400043844245,
+      "ended_at": "2026-11-18T16:38:53.109130+00:00",
+      "expected": {
+        "reason": "BUNDLE_INTEGRITY",
+        "status": "FAIL"
+      },
+      "input_sha256": "04199dd099b1168298c6286dc99af0590b2fb496d64051c2a6d6f8f4344200ae",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "wrong_sha",
+      "started_at": "2026-11-18T16:38:53.108644+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "MANIFEST_MISSING",
+        "status": "FAIL"
+      },
+      "case_id": "S07",
+      "commands": [],
+      "elapsed_seconds": 0.00013457199929689523,
+      "ended_at": "2026-11-18T16:38:53.109715+00:00",
+      "expected": {
+        "reason": "MANIFEST_MISSING",
+        "status": "FAIL"
+      },
+      "input_sha256": "d8fa993ae719ea97948cdb06e1e2e669c5b78c246ebb51edf15f0f4788a9830b",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "missing_manifest",
+      "started_at": "2026-11-18T16:38:53.109577+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "MANIFEST_INVALID",
+        "status": "FAIL"
+      },
+      "case_id": "S08",
+      "commands": [],
+      "elapsed_seconds": 0.0009146089996647788,
+      "ended_at": "2026-11-18T16:38:53.111182+00:00",
+      "expected": {
+        "reason": "MANIFEST_INVALID",
+        "status": "FAIL"
+      },
+      "input_sha256": "be5def99c059a61289b2bb8b2daa39c84b9d4ce93f3b8b671efc049be818dbcd",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "invalid_manifest",
+      "started_at": "2026-11-18T16:38:53.110269+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "MANIFEST_CHANGED",
+        "status": "FAIL"
+      },
+      "case_id": "S09",
+      "commands": [],
+      "elapsed_seconds": 0.0005580070010182681,
+      "ended_at": "2026-11-18T16:38:53.112284+00:00",
+      "expected": {
+        "reason": "MANIFEST_CHANGED",
+        "status": "FAIL"
+      },
+      "input_sha256": "cb8b2d378f7d9b07d754c777cb60c4f35073860ce39137993137c9ac0856a16f",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "replaced_manifest",
+      "started_at": "2026-11-18T16:38:53.111726+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "BUNDLE_PREREQUISITES",
+        "status": "BLOCKED"
+      },
+      "case_id": "S10",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "bundle",
+            "create",
+            "<case-workspace>/repo/../private/stage1a/S10/incremental.bundle",
+            "main~1..main"
+          ],
+          "ended_at": "2026-11-18T16:38:53.120778+00:00",
+          "exit_code": 0,
+          "pid": 92,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.112912+00:00",
+          "stderr": "",
+          "stdout": "",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.008543825999367982,
+      "ended_at": "2026-11-18T16:38:53.121401+00:00",
+      "expected": {
+        "reason": "BUNDLE_PREREQUISITES",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "b48de84367413615d1478b6f6ef75c3233f2a73863b0d628ea167fbeb3e548a3",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "prerequisite_bundle",
+      "started_at": "2026-11-18T16:38:53.112853+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "SHALLOW_SOURCE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S11",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "clone",
+            "--no-local",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "<case-workspace>/repo/../private/stage1a/S11/source-copy"
+          ],
+          "ended_at": "2026-11-18T16:38:53.186976+00:00",
+          "exit_code": 0,
+          "pid": 94,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.121913+00:00",
+          "stderr": "Cloning into '<case-workspace>/repo/../private/stage1a/S11/source-copy'...\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S11/source-copy",
+            "rev-parse",
+            "HEAD"
+          ],
+          "ended_at": "2026-11-18T16:38:53.189416+00:00",
+          "exit_code": 0,
+          "pid": 106,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.187010+00:00",
+          "stderr": "",
+          "stdout": "5203f795167a174a63ba10c7e89b42408ec9fc54\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S11/source-copy",
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "ended_at": "2026-11-18T16:38:53.192191+00:00",
+          "exit_code": 0,
+          "pid": 107,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.189599+00:00",
+          "stderr": "",
+          "stdout": "<case-workspace>/private/stage1a/S11/source-copy/.git\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.07046753499889746,
+      "ended_at": "2026-11-18T16:38:53.192329+00:00",
+      "expected": {
+        "reason": "SHALLOW_SOURCE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "05e583c4f294b15933aef49d9c4595934a6a14a2009e422bb35126def3e726f0",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "shallow_source",
+      "started_at": "2026-11-18T16:38:53.121860+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "PARTIAL_SOURCE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S12",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "clone",
+            "--no-local",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "<case-workspace>/repo/../private/stage1a/S12/source-copy"
+          ],
+          "ended_at": "2026-11-18T16:38:53.257177+00:00",
+          "exit_code": 0,
+          "pid": 108,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.193309+00:00",
+          "stderr": "Cloning into '<case-workspace>/repo/../private/stage1a/S12/source-copy'...\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S12/source-copy",
+            "config",
+            "remote.origin.promisor",
+            "true"
+          ],
+          "ended_at": "2026-11-18T16:38:53.259813+00:00",
+          "exit_code": 0,
+          "pid": 120,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.257201+00:00",
+          "stderr": "",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S12/source-copy",
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "ended_at": "2026-11-18T16:38:53.262210+00:00",
+          "exit_code": 0,
+          "pid": 121,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.259828+00:00",
+          "stderr": "",
+          "stdout": "<case-workspace>/private/stage1a/S12/source-copy/.git\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S12/source-copy",
+            "config",
+            "--local",
+            "--list"
+          ],
+          "ended_at": "2026-11-18T16:38:53.264618+00:00",
+          "exit_code": 0,
+          "pid": 122,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.262329+00:00",
+          "stderr": "",
+          "stdout": "core.repositoryformatversion=0\ncore.filemode=true\ncore.bare=false\ncore.logallrefupdates=true\nremote.origin.url=<case-workspace>/repo/../private/stage1a/source\nremote.origin.fetch=+refs/heads/*:refs/remotes/origin/*\nremote.origin.promisor=true\nbranch.main.remote=origin\nbranch.main.merge=refs/heads/main\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.07149370200022531,
+      "ended_at": "2026-11-18T16:38:53.264692+00:00",
+      "expected": {
+        "reason": "PARTIAL_SOURCE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "49c2b00148b5d938665fe0e2a5c88b1916097c4ebdcba90ce6d53ea3bc1e4ebc",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "partial_source",
+      "started_at": "2026-11-18T16:38:53.193193+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "ALTERNATES_SOURCE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S13",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "clone",
+            "--no-local",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "<case-workspace>/repo/../private/stage1a/S13/source-copy"
+          ],
+          "ended_at": "2026-11-18T16:38:53.312486+00:00",
+          "exit_code": 0,
+          "pid": 123,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.265188+00:00",
+          "stderr": "Cloning into '<case-workspace>/repo/../private/stage1a/S13/source-copy'...\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S13/source-copy",
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "ended_at": "2026-11-18T16:38:53.321399+00:00",
+          "exit_code": 0,
+          "pid": 135,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.312717+00:00",
+          "stderr": "",
+          "stdout": "<case-workspace>/private/stage1a/S13/source-copy/.git\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.05647762199987483,
+      "ended_at": "2026-11-18T16:38:53.321609+00:00",
+      "expected": {
+        "reason": "ALTERNATES_SOURCE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "1fcc662630030b2f62141afa7636e98646d8b2a0a2433240b2c6b56397710cc3",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "alternates_source",
+      "started_at": "2026-11-18T16:38:53.265131+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "RESTORE_NOT_NEW",
+        "status": "BLOCKED"
+      },
+      "case_id": "S14",
+      "commands": [],
+      "elapsed_seconds": 0.00035401999957684893,
+      "ended_at": "2026-11-18T16:38:53.322369+00:00",
+      "expected": {
+        "reason": "RESTORE_NOT_NEW",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "d99345d228f8173d6a2c4b2ea037b75c22cc15ed16ca22d628a765af397bb611",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "dirty_restore",
+      "started_at": "2026-11-18T16:38:53.322014+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "STORAGE_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S15",
+      "commands": [],
+      "elapsed_seconds": 0.0002540119985496858,
+      "ended_at": "2026-11-18T16:38:53.322882+00:00",
+      "expected": {
+        "reason": "STORAGE_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "8d26ae4c17122b635edfe06e463eeb20d76470276a5734640e6669befff58759",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "storage_unreachable",
+      "started_at": "2026-11-18T16:38:53.322629+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "RETRIEVAL_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S16",
+      "commands": [],
+      "elapsed_seconds": 0.00010138099969481118,
+      "ended_at": "2026-11-18T16:38:53.323381+00:00",
+      "expected": {
+        "reason": "RETRIEVAL_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "4c5c0774a608b3c6ade0b576d75bd78d703a21171440a9c073c8a799c7051488",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "retrieval_unavailable",
+      "started_at": "2026-11-18T16:38:53.323278+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "SPAWN_FAILED",
+        "status": "BLOCKED"
+      },
+      "case_id": "S17",
+      "commands": [
+        {
+          "command": [
+            "<case-workspace>/repo/../private/stage1a/S17/nonexistent-git",
+            "--version"
+          ],
+          "ended_at": "2026-11-18T16:38:53.326480+00:00",
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<case-workspace>/repo/../private/stage1a/S17/nonexistent-git'",
+          "exit_code": null,
+          "process_state": "NOT_STARTED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.323943+00:00",
+          "stderr": "",
+          "stdout": "",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.0028283760002523195,
+      "ended_at": "2026-11-18T16:38:53.326526+00:00",
+      "expected": {
+        "reason": "SPAWN_FAILED",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "196d7e056ceecd72466bc456c044302ed2678df725725ce40271c384c2ce926c",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "git_unlaunchable",
+      "started_at": "2026-11-18T16:38:53.323843+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "COMMAND_NONZERO",
+        "status": "FAIL"
+      },
+      "case_id": "S18",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "stage1a-command-does-not-exist"
+          ],
+          "ended_at": "2026-11-18T16:38:53.331226+00:00",
+          "exit_code": 1,
+          "pid": 137,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.327301+00:00",
+          "stderr": "git: 'stage1a-command-does-not-exist' is not a git command. See 'git --help'.\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.004089949999979581,
+      "ended_at": "2026-11-18T16:38:53.331292+00:00",
+      "expected": {
+        "reason": "COMMAND_NONZERO",
+        "status": "FAIL"
+      },
+      "input_sha256": "8de73e1863ee8d7fd4e4dfe45e2686a62a7704dbf659bd037b012549e25c7d34",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "git_nonzero",
+      "started_at": "2026-11-18T16:38:53.327198+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "TIMEOUT",
+        "status": "UNKNOWN"
+      },
+      "case_id": "S19",
+      "commands": [
+        {
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-c",
+            "import time; print(\"before-timeout\",flush=True); time.sleep(60)"
+          ],
+          "descendant_state": "NOT_INDEPENDENTLY_AUDITED",
+          "ended_at": "2026-11-18T16:38:53.534446+00:00",
+          "exit_code": -9,
+          "pid": 138,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.332422+00:00",
+          "stderr": "",
+          "stdout": "before-timeout\n",
+          "timeout_seconds": 0.2
+        }
+      ],
+      "elapsed_seconds": 0.20227986400095688,
+      "ended_at": "2026-11-18T16:38:53.534524+00:00",
+      "expected": {
+        "reason": "TIMEOUT",
+        "status": "UNKNOWN"
+      },
+      "input_sha256": "134bd910071536a71b6745a19e67d8bcbfe5175a03783d536bf566d8ab4b5dc8",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "timeout",
+      "started_at": "2026-11-18T16:38:53.332308+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "error": "ValueError('synthetic exception injection')",
+        "reason": "UNEXPECTED_EXCEPTION",
+        "status": "UNKNOWN"
+      },
+      "case_id": "S20",
+      "commands": [],
+      "elapsed_seconds": 0.0001609739993000403,
+      "ended_at": "2026-11-18T16:38:53.535510+00:00",
+      "expected": {
+        "reason": "UNEXPECTED_EXCEPTION",
+        "status": "UNKNOWN"
+      },
+      "input_sha256": "111b4fe1aabc20ce645dcc848bcdafb215685591f6dcd2926fb36cb8f557c3f8",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "exception",
+      "started_at": "2026-11-18T16:38:53.535347+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "PROCESS_END_UNKNOWN",
+        "status": "UNKNOWN"
+      },
+      "case_id": "S21",
+      "commands": [],
+      "elapsed_seconds": 0.00014004699914949015,
+      "ended_at": "2026-11-18T16:38:53.535969+00:00",
+      "expected": {
+        "reason": "PROCESS_END_UNKNOWN",
+        "status": "UNKNOWN"
+      },
+      "input_sha256": "c466004d7227200e85289e9e61366f5db36569fbbff4b5c8a69eec8c3fb89db6",
+      "mode": "state-contract-injection",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "process_end_unknown",
+      "started_at": "2026-11-18T16:38:53.535828+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "RECORD_MISSING",
+        "status": "FAIL"
+      },
+      "case_id": "S22",
+      "commands": [],
+      "elapsed_seconds": 6.79200002196012e-05,
+      "ended_at": "2026-11-18T16:38:53.536417+00:00",
+      "expected": {
+        "reason": "RECORD_MISSING",
+        "status": "FAIL"
+      },
+      "input_sha256": "5092946bf47f52527e6954e3a276078780a189cec8b37b25dea0769623db08e3",
+      "mode": "state-contract-injection",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "missing_record",
+      "started_at": "2026-11-18T16:38:53.536349+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S23",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git"
+          ],
+          "ended_at": "2026-11-18T16:38:53.543608+00:00",
+          "exit_code": 0,
+          "pid": 139,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.537766+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in <case-workspace>/private/stage1a/S23/restored.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "bundle",
+            "verify",
+            "<case-workspace>/repo/../private/stage1a/S23/back/data.bundle"
+          ],
+          "ended_at": "2026-11-18T16:38:53.550772+00:00",
+          "exit_code": 0,
+          "pid": 140,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.543662+00:00",
+          "stderr": "<case-workspace>/repo/../private/stage1a/S23/back/data.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "fetch",
+            "--no-tags",
+            "<case-workspace>/repo/../private/stage1a/S23/back/data.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T16:38:53.575816+00:00",
+          "exit_code": 0,
+          "pid": 141,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.550791+00:00",
+          "stderr": "From <case-workspace>/repo/../private/stage1a/S23/back/data.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T16:38:53.597571+00:00",
+          "exit_code": 0,
+          "pid": 150,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.575945+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T16:38:53.600475+00:00",
+          "exit_code": 0,
+          "pid": 154,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.597591+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T16:38:53.604268+00:00",
+          "exit_code": 0,
+          "pid": 155,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.600494+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.611492+00:00",
+          "exit_code": 0,
+          "pid": 156,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.604294+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.614076+00:00",
+          "exit_code": 0,
+          "pid": 157,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.611509+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.621798+00:00",
+          "exit_code": 0,
+          "pid": 158,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.614104+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.625298+00:00",
+          "exit_code": 0,
+          "pid": 159,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.621815+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.627770+00:00",
+          "exit_code": 0,
+          "pid": 160,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.625327+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.630646+00:00",
+          "exit_code": 0,
+          "pid": 161,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.627782+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.633625+00:00",
+          "exit_code": 0,
+          "pid": 162,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.630678+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.636034+00:00",
+          "exit_code": 0,
+          "pid": 163,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.633654+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.640939+00:00",
+          "exit_code": 0,
+          "pid": 164,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.636060+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.647805+00:00",
+          "exit_code": 0,
+          "pid": 165,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.640956+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.650951+00:00",
+          "exit_code": 0,
+          "pid": 166,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.647831+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.653865+00:00",
+          "exit_code": 0,
+          "pid": 167,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.650968+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.656437+00:00",
+          "exit_code": 0,
+          "pid": 168,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.653900+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.659365+00:00",
+          "exit_code": 0,
+          "pid": 169,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.656448+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.661810+00:00",
+          "exit_code": 0,
+          "pid": 170,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.659397+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.666219+00:00",
+          "exit_code": 0,
+          "pid": 171,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.661822+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.669129+00:00",
+          "exit_code": 0,
+          "pid": 172,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.666273+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.672493+00:00",
+          "exit_code": 0,
+          "pid": 173,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.669144+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.674854+00:00",
+          "exit_code": 0,
+          "pid": 174,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.672517+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.682964+00:00",
+          "exit_code": 0,
+          "pid": 175,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.674868+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S23/restored.git",
+            "cat-file",
+            "--batch-all-objects",
+            "--batch-check=%(objectname)"
+          ],
+          "ended_at": "2026-11-18T16:38:53.686153+00:00",
+          "exit_code": 0,
+          "pid": 176,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.683001+00:00",
+          "stderr": "",
+          "stdout": "0b1c550742934ca340e4166b3e143504ce5cb226\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n2ee3306e45236811da74defc688acf725117cdec\n34de3514bd4973877876d7d419d423cb17445e21\n3b8cbd359f2a7e0467247b536cea04d5fbe2b166\n5203f795167a174a63ba10c7e89b42408ec9fc54\n82dc3c33fd1f4776403a9564cba24f03776c3bd2\nabfb58e5d834edf38654e512882d1e291d30e6d9\ne662fac01e6691737ada3f3ea9c38557e6ca6da2\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.14957822899850726,
+      "ended_at": "2026-11-18T16:38:53.686516+00:00",
+      "expected": {
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "277f974cdb50ea77768b0ae8ec93cfe81dbfebbe81ab741afc96da5ce8cb7d96",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "normal_repeat",
+      "started_at": "2026-11-18T16:38:53.536939+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "axes": {
+          "CONTENT_INTEGRITY": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S24",
+      "commands": [],
+      "elapsed_seconds": 0.0002007100010814611,
+      "ended_at": "2026-11-18T16:38:53.687580+00:00",
+      "expected": {
+        "axes": {
+          "CONTENT_INTEGRITY": "PASS",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "1149b30c5fa6fa2e6d5fef924278874fcd76a4eabfe036413e63cd586485ffa2",
+      "mode": "state-contract-injection",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "axes_provenance_unknown",
+      "started_at": "2026-11-18T16:38:53.687377+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "axes": {
+          "CONTENT_INTEGRITY": "FAIL",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S25",
+      "commands": [],
+      "elapsed_seconds": 0.00017235299856110942,
+      "ended_at": "2026-11-18T16:38:53.688213+00:00",
+      "expected": {
+        "axes": {
+          "CONTENT_INTEGRITY": "FAIL",
+          "INDEPENDENCE_STATUS": "PARTIAL",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "1ec5d70e2b00a032159d9a6d5a623351e5a9eb3db1548f1b9968a4f0245cafcd",
+      "mode": "state-contract-injection",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "axes_corrupt_unknown",
+      "started_at": "2026-11-18T16:38:53.687883+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "axes": {
+          "CONTENT_INTEGRITY": "UNKNOWN",
+          "INDEPENDENCE_STATUS": "UNKNOWN",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "case_id": "S26",
+      "commands": [],
+      "elapsed_seconds": 0.00014509999891743064,
+      "ended_at": "2026-11-18T16:38:53.688714+00:00",
+      "expected": {
+        "axes": {
+          "CONTENT_INTEGRITY": "UNKNOWN",
+          "INDEPENDENCE_STATUS": "UNKNOWN",
+          "PROVENANCE_STATUS": "UNKNOWN",
+          "RESTORE_STATUS": "NOT_TESTED",
+          "production_permit": false
+        },
+        "reason": "OK",
+        "status": "PASS"
+      },
+      "input_sha256": "aea80b0ce26a2e69c424045ebfc0d09524bf6ea1c58137d9678161f6e3f0b314",
+      "mode": "state-contract-injection",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "axes_unrecovered",
+      "started_at": "2026-11-18T16:38:53.688568+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "ROOT_NOT_NEW",
+        "status": "BLOCKED"
+      },
+      "case_id": "S27",
+      "commands": [],
+      "elapsed_seconds": 7.221400119306054e-05,
+      "ended_at": "2026-11-18T16:38:53.689075+00:00",
+      "expected": {
+        "reason": "ROOT_NOT_NEW",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "250cfb7364f2b4e1b52b52f822312c366abf760eb8be5d3b82d39e1576a22c4f",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "existing_root",
+      "started_at": "2026-11-18T16:38:53.689001+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "MANIFEST_INVALID",
+        "status": "FAIL"
+      },
+      "case_id": "S28",
+      "commands": [],
+      "elapsed_seconds": 0.00040537299901188817,
+      "ended_at": "2026-11-18T16:38:53.689734+00:00",
+      "expected": {
+        "reason": "MANIFEST_INVALID",
+        "status": "FAIL"
+      },
+      "input_sha256": "e222de199f0398b87fa950f81d749acc5a666dae45d20f627d89b680111202fc",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "schema_manifest",
+      "started_at": "2026-11-18T16:38:53.689330+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "RESTORE_INVENTORY_MISMATCH",
+        "status": "FAIL"
+      },
+      "case_id": "S29",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git"
+          ],
+          "ended_at": "2026-11-18T16:38:53.698480+00:00",
+          "exit_code": 0,
+          "pid": 177,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.691044+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in <case-workspace>/private/stage1a/S29/restore.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "bundle",
+            "verify",
+            "<case-workspace>/repo/../private/stage1a/original.bundle"
+          ],
+          "ended_at": "2026-11-18T16:38:53.703215+00:00",
+          "exit_code": 0,
+          "pid": 178,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.698606+00:00",
+          "stderr": "<case-workspace>/repo/../private/stage1a/original.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "fetch",
+            "--no-tags",
+            "<case-workspace>/repo/../private/stage1a/original.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T16:38:53.746984+00:00",
+          "exit_code": 0,
+          "pid": 179,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.703270+00:00",
+          "stderr": "From <case-workspace>/repo/../private/stage1a/original.bundle\n * [new tag]         synthetic-v1 -> synthetic-v1\n * [new branch]      main         -> main\n * [new branch]      feature      -> feature\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "fsck",
+            "--full",
+            "--strict",
+            "--no-reflogs"
+          ],
+          "ended_at": "2026-11-18T16:38:53.762484+00:00",
+          "exit_code": 0,
+          "pid": 188,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.747196+00:00",
+          "stderr": "notice: HEAD points to an unborn branch (master)\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "for-each-ref",
+            "--format=%(refname) %(objectname)"
+          ],
+          "ended_at": "2026-11-18T16:38:53.765188+00:00",
+          "exit_code": 0,
+          "pid": 192,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.762503+00:00",
+          "stderr": "",
+          "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "rev-list",
+            "--objects",
+            "--all"
+          ],
+          "ended_at": "2026-11-18T16:38:53.767847+00:00",
+          "exit_code": 0,
+          "pid": 193,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.765200+00:00",
+          "stderr": "",
+          "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.770622+00:00",
+          "exit_code": 0,
+          "pid": 194,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.767870+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "blob",
+            "0b1c550742934ca340e4166b3e143504ce5cb226"
+          ],
+          "ended_at": "2026-11-18T16:38:53.773166+00:00",
+          "exit_code": 0,
+          "pid": 195,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.770637+00:00",
+          "stderr": "",
+          "stdout": "synthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.775605+00:00",
+          "exit_code": 0,
+          "pid": 196,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.773254+00:00",
+          "stderr": "",
+          "stdout": "tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "tag",
+            "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+          ],
+          "ended_at": "2026-11-18T16:38:53.782285+00:00",
+          "exit_code": 0,
+          "pid": 197,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.775619+00:00",
+          "stderr": "",
+          "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.785037+00:00",
+          "exit_code": 0,
+          "pid": 198,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.782310+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "commit",
+            "2ee3306e45236811da74defc688acf725117cdec"
+          ],
+          "ended_at": "2026-11-18T16:38:53.787387+00:00",
+          "exit_code": 0,
+          "pid": 199,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.785049+00:00",
+          "stderr": "",
+          "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.792828+00:00",
+          "exit_code": 0,
+          "pid": 200,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.787417+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "tree",
+            "34de3514bd4973877876d7d419d423cb17445e21"
+          ],
+          "ended_at": "2026-11-18T16:38:53.800070+00:00",
+          "exit_code": 0,
+          "pid": 201,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.792843+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.802843+00:00",
+          "exit_code": 0,
+          "pid": 202,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.800096+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "blob",
+            "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+          ],
+          "ended_at": "2026-11-18T16:38:53.806771+00:00",
+          "exit_code": 0,
+          "pid": 203,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.802860+00:00",
+          "stderr": "",
+          "stdout": "synthetic branch\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.810556+00:00",
+          "exit_code": 0,
+          "pid": 204,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.806797+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "commit",
+            "5203f795167a174a63ba10c7e89b42408ec9fc54"
+          ],
+          "ended_at": "2026-11-18T16:38:53.813129+00:00",
+          "exit_code": 0,
+          "pid": 205,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.810577+00:00",
+          "stderr": "",
+          "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.818921+00:00",
+          "exit_code": 0,
+          "pid": 206,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.813169+00:00",
+          "stderr": "",
+          "stdout": "commit\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "commit",
+            "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.821282+00:00",
+          "exit_code": 0,
+          "pid": 207,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.818936+00:00",
+          "stderr": "",
+          "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.823880+00:00",
+          "exit_code": 0,
+          "pid": 208,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.821314+00:00",
+          "stderr": "",
+          "stdout": "blob\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "blob",
+            "abfb58e5d834edf38654e512882d1e291d30e6d9"
+          ],
+          "ended_at": "2026-11-18T16:38:53.826275+00:00",
+          "exit_code": 0,
+          "pid": 209,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.823958+00:00",
+          "stderr": "",
+          "stdout": "synthetic first\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.828651+00:00",
+          "exit_code": 0,
+          "pid": 210,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.826295+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "tree",
+            "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+          ],
+          "ended_at": "2026-11-18T16:38:53.831394+00:00",
+          "exit_code": 0,
+          "pid": 211,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.828664+00:00",
+          "stderr": "",
+          "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "-t",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.842725+00:00",
+          "exit_code": 0,
+          "pid": 212,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.831417+00:00",
+          "stderr": "",
+          "stdout": "tree\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S29/restore.git",
+            "cat-file",
+            "tree",
+            "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+          ],
+          "ended_at": "2026-11-18T16:38:53.849137+00:00",
+          "exit_code": 0,
+          "pid": 213,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.842739+00:00",
+          "stderr": "",
+          "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.158857504999105,
+      "ended_at": "2026-11-18T16:38:53.849222+00:00",
+      "expected": {
+        "reason": "RESTORE_INVENTORY_MISMATCH",
+        "status": "FAIL"
+      },
+      "input_sha256": "d966b67496dd076168045b43c88b0c9c3248b13254ea6b5d141bdf0c4647ea17",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "wrong_inventory",
+      "started_at": "2026-11-18T16:38:53.690361+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "COMMAND_NONZERO",
+        "status": "FAIL"
+      },
+      "case_id": "S30",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "init",
+            "--bare",
+            "--object-format=sha1",
+            "<case-workspace>/repo/../private/stage1a/S30/restore.git"
+          ],
+          "ended_at": "2026-11-18T16:38:53.856596+00:00",
+          "exit_code": 0,
+          "pid": 214,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.850999+00:00",
+          "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n",
+          "stdout": "Initialized empty Git repository in <case-workspace>/private/stage1a/S30/restore.git/\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S30/restore.git",
+            "bundle",
+            "verify",
+            "<case-workspace>/repo/../private/stage1a/S30/fault.bundle"
+          ],
+          "ended_at": "2026-11-18T16:38:53.859290+00:00",
+          "exit_code": 0,
+          "pid": 215,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.856613+00:00",
+          "stderr": "<case-workspace>/repo/../private/stage1a/S30/fault.bundle is okay\n",
+          "stdout": "The bundle contains these 4 refs:\n82dc3c33fd1f4776403a9564cba24f03776c3bd2 refs/heads/feature\n5203f795167a174a63ba10c7e89b42408ec9fc54 refs/heads/main\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 refs/tags/synthetic-v1\n5203f795167a174a63ba10c7e89b42408ec9fc54 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "--git-dir",
+            "<case-workspace>/repo/../private/stage1a/S30/restore.git",
+            "fetch",
+            "--no-tags",
+            "<case-workspace>/repo/../private/stage1a/S30/fault.bundle",
+            "refs/*:refs/*"
+          ],
+          "ended_at": "2026-11-18T16:38:53.867352+00:00",
+          "exit_code": 1,
+          "pid": 216,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.859306+00:00",
+          "stderr": "fatal: pack is corrupted (SHA1 mismatch)\nerror: index-pack died\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.01725494200036337,
+      "ended_at": "2026-11-18T16:38:53.867414+00:00",
+      "expected": {
+        "reason": "COMMAND_NONZERO",
+        "status": "FAIL"
+      },
+      "input_sha256": "cf1188398437baf58acff06fe2d61bf48266092b56529f008541444378719c40",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "corrupt_pack_with_updated_sha",
+      "started_at": "2026-11-18T16:38:53.850156+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "DIRTY_OR_UNTRACKED_SOURCE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S31",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "clone",
+            "--no-local",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "<case-workspace>/repo/../private/stage1a/S31/source-copy"
+          ],
+          "ended_at": "2026-11-18T16:38:53.948179+00:00",
+          "exit_code": 0,
+          "pid": 220,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.867966+00:00",
+          "stderr": "Cloning into '<case-workspace>/repo/../private/stage1a/S31/source-copy'...\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S31/source-copy",
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "ended_at": "2026-11-18T16:38:53.956744+00:00",
+          "exit_code": 0,
+          "pid": 232,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.950337+00:00",
+          "stderr": "",
+          "stdout": "<case-workspace>/private/stage1a/S31/source-copy/.git\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S31/source-copy",
+            "config",
+            "--local",
+            "--list"
+          ],
+          "ended_at": "2026-11-18T16:38:53.959387+00:00",
+          "exit_code": 0,
+          "pid": 233,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.956863+00:00",
+          "stderr": "",
+          "stdout": "core.repositoryformatversion=0\ncore.filemode=true\ncore.bare=false\ncore.logallrefupdates=true\nremote.origin.url=<case-workspace>/repo/../private/stage1a/source\nremote.origin.fetch=+refs/heads/*:refs/remotes/origin/*\nbranch.main.remote=origin\nbranch.main.merge=refs/heads/main\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S31/source-copy",
+            "status",
+            "--porcelain"
+          ],
+          "ended_at": "2026-11-18T16:38:53.968501+00:00",
+          "exit_code": 0,
+          "pid": 234,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.959421+00:00",
+          "stderr": "",
+          "stdout": " M sample.txt\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.10072184999989986,
+      "ended_at": "2026-11-18T16:38:53.968579+00:00",
+      "expected": {
+        "reason": "DIRTY_OR_UNTRACKED_SOURCE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "ca02980e43ee04c5672f0d4864ee2d069864e583104402a9c1b17187ad458b19",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "dirty_source",
+      "started_at": "2026-11-18T16:38:53.867856+00:00",
+      "verdict": "PASS"
+    },
+    {
+      "actual": {
+        "reason": "DIRTY_OR_UNTRACKED_SOURCE",
+        "status": "BLOCKED"
+      },
+      "case_id": "S32",
+      "commands": [
+        {
+          "command": [
+            "git",
+            "clone",
+            "--no-local",
+            "<case-workspace>/repo/../private/stage1a/source",
+            "<case-workspace>/repo/../private/stage1a/S32/source-copy"
+          ],
+          "ended_at": "2026-11-18T16:38:54.017293+00:00",
+          "exit_code": 0,
+          "pid": 235,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:53.969392+00:00",
+          "stderr": "Cloning into '<case-workspace>/repo/../private/stage1a/S32/source-copy'...\n",
+          "stdout": "",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S32/source-copy",
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "ended_at": "2026-11-18T16:38:54.020397+00:00",
+          "exit_code": 0,
+          "pid": 247,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:54.017489+00:00",
+          "stderr": "",
+          "stdout": "<case-workspace>/private/stage1a/S32/source-copy/.git\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S32/source-copy",
+            "config",
+            "--local",
+            "--list"
+          ],
+          "ended_at": "2026-11-18T16:38:54.023578+00:00",
+          "exit_code": 0,
+          "pid": 248,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:54.020492+00:00",
+          "stderr": "",
+          "stdout": "core.repositoryformatversion=0\ncore.filemode=true\ncore.bare=false\ncore.logallrefupdates=true\nremote.origin.url=<case-workspace>/repo/../private/stage1a/source\nremote.origin.fetch=+refs/heads/*:refs/remotes/origin/*\nbranch.main.remote=origin\nbranch.main.merge=refs/heads/main\n",
+          "timeout_seconds": 8
+        },
+        {
+          "command": [
+            "git",
+            "-C",
+            "<case-workspace>/repo/../private/stage1a/S32/source-copy",
+            "status",
+            "--porcelain"
+          ],
+          "ended_at": "2026-11-18T16:38:54.026587+00:00",
+          "exit_code": 0,
+          "pid": 249,
+          "process_state": "DIRECT_CHILD_REAPED",
+          "retry": 0,
+          "started_at": "2026-11-18T16:38:54.023604+00:00",
+          "stderr": "",
+          "stdout": "?? untracked.txt\n",
+          "timeout_seconds": 8
+        }
+      ],
+      "elapsed_seconds": 0.05735001300126896,
+      "ended_at": "2026-11-18T16:38:54.026651+00:00",
+      "expected": {
+        "reason": "DIRTY_OR_UNTRACKED_SOURCE",
+        "status": "BLOCKED"
+      },
+      "input_sha256": "014fd3daedbe56501226c13d3621ab1186591f5f4f1640e02da8213aef7affbe",
+      "mode": "local-synthetic-operation",
+      "production_permit": false,
+      "retries": 0,
+      "scenario": "untracked_source",
+      "started_at": "2026-11-18T16:38:53.969296+00:00",
+      "verdict": "PASS"
+    }
+  ],
+  "checker_sha256": "4bc7a9771164ee7a759a3810cf82c1cff91943f7d3289cc004713550923ef5cb",
+  "count": 32,
+  "ended_at": "2026-11-18T16:38:54.027025+00:00",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "git_version": "git version 2.52.0",
+  "kind": "SYNTHETIC_LOCAL_EXECUTION",
+  "limits": [
+    "no durable archive or ACL test",
+    "same host/account",
+    "timeout tests only known direct child; general descendant containment UNKNOWN"
+  ],
+  "oracle_sha256": "ccebf7b7a83d148d730b2f7c7ad4f22b63255f747af8b1d9d2bed68514533ae4",
+  "original_anchors": {
+    "manifest.json": "9e820648119e9149a0a52b948ce97e1280293e5892c5aa1349cc94e329e48bb1",
+    "original.bundle": "4785919fa2697cf0f62beab3ee5052082a3eef312e0177ce9e0d2eb9fdba0b89"
+  },
+  "originals_unchanged": true,
+  "passed": 32,
+  "production_permit": false,
+  "result": "PASS",
+  "retries": 0,
+  "runner_sha256": "a3fc42bf4da87a2d4bfc715fcae6aaad421620b3c31ad61f41eea73428aea782",
+  "setup_commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "--object-format=sha1",
+        "-b",
+        "main",
+        "<case-workspace>/repo/../private/stage1a/source"
+      ],
+      "ended_at": "2026-11-18T16:38:52.692205+00:00",
+      "exit_code": 0,
+      "pid": 10,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.677500+00:00",
+      "stderr": "",
+      "stdout": "Initialized empty Git repository in <case-workspace>/private/stage1a/source/.git/\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "add",
+        "sample.txt"
+      ],
+      "ended_at": "2026-11-18T16:38:52.700721+00:00",
+      "exit_code": 0,
+      "pid": 11,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.692463+00:00",
+      "stderr": "",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "commit",
+        "-m",
+        "synthetic first"
+      ],
+      "ended_at": "2026-11-18T16:38:52.721733+00:00",
+      "exit_code": 0,
+      "pid": 12,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.700738+00:00",
+      "stderr": "",
+      "stdout": "[main (root-commit) 2ee3306] synthetic first\n 1 file changed, 1 insertion(+)\n create mode 100644 sample.txt\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "commit",
+        "-am",
+        "synthetic second"
+      ],
+      "ended_at": "2026-11-18T16:38:52.743751+00:00",
+      "exit_code": 0,
+      "pid": 15,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.721899+00:00",
+      "stderr": "",
+      "stdout": "[main 5203f79] synthetic second\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "checkout",
+        "-b",
+        "feature"
+      ],
+      "ended_at": "2026-11-18T16:38:52.755370+00:00",
+      "exit_code": 0,
+      "pid": 18,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.743769+00:00",
+      "stderr": "Switched to a new branch 'feature'\n",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "add",
+        "feature.txt"
+      ],
+      "ended_at": "2026-11-18T16:38:52.762841+00:00",
+      "exit_code": 0,
+      "pid": 19,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.755550+00:00",
+      "stderr": "",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "commit",
+        "-m",
+        "synthetic feature"
+      ],
+      "ended_at": "2026-11-18T16:38:52.849104+00:00",
+      "exit_code": 0,
+      "pid": 20,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.762858+00:00",
+      "stderr": "",
+      "stdout": "[feature 82dc3c3] synthetic feature\n 1 file changed, 1 insertion(+)\n create mode 100644 feature.txt\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "tag",
+        "-a",
+        "synthetic-v1",
+        "-m",
+        "synthetic annotated tag"
+      ],
+      "ended_at": "2026-11-18T16:38:52.852272+00:00",
+      "exit_code": 0,
+      "pid": 23,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.849126+00:00",
+      "stderr": "",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "checkout",
+        "main"
+      ],
+      "ended_at": "2026-11-18T16:38:52.856723+00:00",
+      "exit_code": 0,
+      "pid": 24,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.852287+00:00",
+      "stderr": "Switched to branch 'main'\n",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "rev-parse",
+        "--absolute-git-dir"
+      ],
+      "ended_at": "2026-11-18T16:38:52.858976+00:00",
+      "exit_code": 0,
+      "pid": 25,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.856740+00:00",
+      "stderr": "",
+      "stdout": "<case-workspace>/private/stage1a/source/.git\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "config",
+        "--local",
+        "--list"
+      ],
+      "ended_at": "2026-11-18T16:38:52.861669+00:00",
+      "exit_code": 0,
+      "pid": 26,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.859062+00:00",
+      "stderr": "",
+      "stdout": "core.repositoryformatversion=0\ncore.filemode=true\ncore.bare=false\ncore.logallrefupdates=true\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "status",
+        "--porcelain"
+      ],
+      "ended_at": "2026-11-18T16:38:52.864656+00:00",
+      "exit_code": 0,
+      "pid": 27,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.861843+00:00",
+      "stderr": "",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)"
+      ],
+      "ended_at": "2026-11-18T16:38:52.867508+00:00",
+      "exit_code": 0,
+      "pid": 28,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.864669+00:00",
+      "stderr": "",
+      "stdout": "refs/heads/feature 82dc3c33fd1f4776403a9564cba24f03776c3bd2\nrefs/heads/main 5203f795167a174a63ba10c7e89b42408ec9fc54\nrefs/tags/synthetic-v1 2152e0755ffddbceda9bbb3f6825e0d447ad93f1\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "rev-list",
+        "--objects",
+        "--all"
+      ],
+      "ended_at": "2026-11-18T16:38:52.870458+00:00",
+      "exit_code": 0,
+      "pid": 29,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.867525+00:00",
+      "stderr": "",
+      "stdout": "82dc3c33fd1f4776403a9564cba24f03776c3bd2\n5203f795167a174a63ba10c7e89b42408ec9fc54\n2ee3306e45236811da74defc688acf725117cdec\n2152e0755ffddbceda9bbb3f6825e0d447ad93f1 synthetic-v1\ne662fac01e6691737ada3f3ea9c38557e6ca6da2 \n3b8cbd359f2a7e0467247b536cea04d5fbe2b166 feature.txt\n0b1c550742934ca340e4166b3e143504ce5cb226 sample.txt\nf79ce5f1bbf5c11c7e3521ef02911bc5093887dc \n34de3514bd4973877876d7d419d423cb17445e21 \nabfb58e5d834edf38654e512882d1e291d30e6d9 sample.txt\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "0b1c550742934ca340e4166b3e143504ce5cb226"
+      ],
+      "ended_at": "2026-11-18T16:38:52.873491+00:00",
+      "exit_code": 0,
+      "pid": 30,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.870483+00:00",
+      "stderr": "",
+      "stdout": "blob\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "blob",
+        "0b1c550742934ca340e4166b3e143504ce5cb226"
+      ],
+      "ended_at": "2026-11-18T16:38:52.876137+00:00",
+      "exit_code": 0,
+      "pid": 31,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.873504+00:00",
+      "stderr": "",
+      "stdout": "synthetic second\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+      ],
+      "ended_at": "2026-11-18T16:38:52.879439+00:00",
+      "exit_code": 0,
+      "pid": 32,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.876187+00:00",
+      "stderr": "",
+      "stdout": "tag\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "tag",
+        "2152e0755ffddbceda9bbb3f6825e0d447ad93f1"
+      ],
+      "ended_at": "2026-11-18T16:38:52.882805+00:00",
+      "exit_code": 0,
+      "pid": 33,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.879456+00:00",
+      "stderr": "",
+      "stdout": "object 82dc3c33fd1f4776403a9564cba24f03776c3bd2\ntype commit\ntag synthetic-v1\ntagger Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic annotated tag\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "2ee3306e45236811da74defc688acf725117cdec"
+      ],
+      "ended_at": "2026-11-18T16:38:52.892643+00:00",
+      "exit_code": 0,
+      "pid": 34,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.882837+00:00",
+      "stderr": "",
+      "stdout": "commit\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "commit",
+        "2ee3306e45236811da74defc688acf725117cdec"
+      ],
+      "ended_at": "2026-11-18T16:38:52.894998+00:00",
+      "exit_code": 0,
+      "pid": 35,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.892660+00:00",
+      "stderr": "",
+      "stdout": "tree 34de3514bd4973877876d7d419d423cb17445e21\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic first\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "34de3514bd4973877876d7d419d423cb17445e21"
+      ],
+      "ended_at": "2026-11-18T16:38:52.899351+00:00",
+      "exit_code": 0,
+      "pid": 36,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.895047+00:00",
+      "stderr": "",
+      "stdout": "tree\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "tree",
+        "34de3514bd4973877876d7d419d423cb17445e21"
+      ],
+      "ended_at": "2026-11-18T16:38:52.902140+00:00",
+      "exit_code": 0,
+      "pid": 37,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.899366+00:00",
+      "stderr": "",
+      "stdout": "100644 sample.txt\u0000��X��4��T�\u0012�-\u001e)\u001d0��",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+      ],
+      "ended_at": "2026-11-18T16:38:52.905819+00:00",
+      "exit_code": 0,
+      "pid": 38,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.902166+00:00",
+      "stderr": "",
+      "stdout": "blob\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "blob",
+        "3b8cbd359f2a7e0467247b536cea04d5fbe2b166"
+      ],
+      "ended_at": "2026-11-18T16:38:52.908993+00:00",
+      "exit_code": 0,
+      "pid": 39,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.905835+00:00",
+      "stderr": "",
+      "stdout": "synthetic branch\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "5203f795167a174a63ba10c7e89b42408ec9fc54"
+      ],
+      "ended_at": "2026-11-18T16:38:52.911672+00:00",
+      "exit_code": 0,
+      "pid": 40,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.909036+00:00",
+      "stderr": "",
+      "stdout": "commit\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "commit",
+        "5203f795167a174a63ba10c7e89b42408ec9fc54"
+      ],
+      "ended_at": "2026-11-18T16:38:52.915348+00:00",
+      "exit_code": 0,
+      "pid": 41,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.911687+00:00",
+      "stderr": "",
+      "stdout": "tree f79ce5f1bbf5c11c7e3521ef02911bc5093887dc\nparent 2ee3306e45236811da74defc688acf725117cdec\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic second\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+      ],
+      "ended_at": "2026-11-18T16:38:52.918383+00:00",
+      "exit_code": 0,
+      "pid": 42,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.915388+00:00",
+      "stderr": "",
+      "stdout": "commit\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "commit",
+        "82dc3c33fd1f4776403a9564cba24f03776c3bd2"
+      ],
+      "ended_at": "2026-11-18T16:38:52.922546+00:00",
+      "exit_code": 0,
+      "pid": 43,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.918396+00:00",
+      "stderr": "",
+      "stdout": "tree e662fac01e6691737ada3f3ea9c38557e6ca6da2\nparent 5203f795167a174a63ba10c7e89b42408ec9fc54\nauthor Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\ncommitter Synthetic Tester <synthetic@example.invalid> 1794960000 +0000\n\nsynthetic feature\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "abfb58e5d834edf38654e512882d1e291d30e6d9"
+      ],
+      "ended_at": "2026-11-18T16:38:52.925876+00:00",
+      "exit_code": 0,
+      "pid": 44,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.922579+00:00",
+      "stderr": "",
+      "stdout": "blob\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "blob",
+        "abfb58e5d834edf38654e512882d1e291d30e6d9"
+      ],
+      "ended_at": "2026-11-18T16:38:52.928818+00:00",
+      "exit_code": 0,
+      "pid": 45,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.925893+00:00",
+      "stderr": "",
+      "stdout": "synthetic first\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+      ],
+      "ended_at": "2026-11-18T16:38:52.931592+00:00",
+      "exit_code": 0,
+      "pid": 46,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.928844+00:00",
+      "stderr": "",
+      "stdout": "tree\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "tree",
+        "e662fac01e6691737ada3f3ea9c38557e6ca6da2"
+      ],
+      "ended_at": "2026-11-18T16:38:52.933906+00:00",
+      "exit_code": 0,
+      "pid": 47,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.931607+00:00",
+      "stderr": "",
+      "stdout": "100644 feature.txt\u0000;��5�*~\u0004g${Sl�\u0004���f100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "-t",
+        "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+      ],
+      "ended_at": "2026-11-18T16:38:52.936463+00:00",
+      "exit_code": 0,
+      "pid": 48,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.933927+00:00",
+      "stderr": "",
+      "stdout": "tree\n",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "cat-file",
+        "tree",
+        "f79ce5f1bbf5c11c7e3521ef02911bc5093887dc"
+      ],
+      "ended_at": "2026-11-18T16:38:52.939026+00:00",
+      "exit_code": 0,
+      "pid": 49,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.936476+00:00",
+      "stderr": "",
+      "stdout": "100644 sample.txt\u0000\u000b\u001cU\u0007B�L�@�\u0016k>\u00145\u0004�\\�&",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<case-workspace>/repo/../private/stage1a/source",
+        "bundle",
+        "create",
+        "<case-workspace>/repo/../private/stage1a/original.bundle",
+        "--all"
+      ],
+      "ended_at": "2026-11-18T16:38:52.946790+00:00",
+      "exit_code": 0,
+      "pid": 50,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.939088+00:00",
+      "stderr": "",
+      "stdout": "",
+      "timeout_seconds": 8
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "ended_at": "2026-11-18T16:38:52.954449+00:00",
+      "exit_code": 0,
+      "pid": 53,
+      "process_state": "DIRECT_CHILD_REAPED",
+      "retry": 0,
+      "started_at": "2026-11-18T16:38:52.947157+00:00",
+      "stderr": "",
+      "stdout": "git version 2.52.0\n",
+      "timeout_seconds": 8
+    }
+  ],
+  "started_at": "2026-11-18T16:38:52.673892+00:00",
+  "timeout_per_command_seconds": 8
+}

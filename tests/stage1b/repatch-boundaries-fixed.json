@@ -1,0 +1,1869 @@
+[
+  {
+    "id": "R01-L1-CI-failure",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "git-document"
+        },
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "FAIL",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": false,
+          "separate_execution": false,
+          "separate_area": false,
+          "direct_retrieval": false,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "FAIL"
+    }
+  },
+  {
+    "id": "R02-L1-review-unknown",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "git-document"
+        },
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "UNKNOWN"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": false,
+          "separate_execution": false,
+          "separate_area": false,
+          "direct_retrieval": false,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    }
+  },
+  {
+    "id": "R03-L1-head-changed",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "git-document"
+        },
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": false,
+          "separate_execution": false,
+          "separate_area": false,
+          "direct_retrieval": false,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "5555555555555555555555555555555555555555"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "FAIL"
+    }
+  },
+  {
+    "id": "R04-L1-nonapplicable-observations-retained",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "git-document"
+        },
+        "level": 1,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "FAIL",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": false,
+          "separate_execution": false,
+          "separate_area": false,
+          "direct_retrieval": false,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "PASS",
+      "CUSTODY_STATUS": "NOT_TESTED"
+    }
+  },
+  {
+    "id": "R05-L2-missing-separation",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": false,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "BLOCKED",
+      "INDEPENDENCE_STATUS": "BLOCKED"
+    }
+  },
+  {
+    "id": "R06-L2-known-sha-fail",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "FAIL",
+      "VERIFICATION_STATUS": "FAIL"
+    }
+  },
+  {
+    "id": "R07-L3-exact-active-risks",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": true,
+          "approval_state": "PASS",
+          "covered_risks": [
+            "confidential"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "PASS"
+    }
+  },
+  {
+    "id": "R08-L3-unknown-risk",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": true,
+          "approval_state": "PASS",
+          "covered_risks": [
+            "other"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "contract_status": "FAIL"
+    }
+  },
+  {
+    "id": "R09-L3-duplicate-risk",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": true,
+          "approval_state": "PASS",
+          "covered_risks": [
+            "confidential",
+            "confidential"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "contract_status": "FAIL"
+    }
+  },
+  {
+    "id": "R10-L3-missing-risk",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": true,
+          "approval_state": "PASS",
+          "covered_risks": []
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "BLOCKED",
+      "VERIFICATION_STATUS": "UNKNOWN"
+    }
+  },
+  {
+    "id": "R11-L3-approval-denied",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": false,
+          "approval_state": "FAIL",
+          "covered_risks": [
+            "confidential"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "FAIL"
+    }
+  },
+  {
+    "id": "R12-L3-approval-unknown",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": false,
+          "approval_state": "UNKNOWN",
+          "covered_risks": [
+            "confidential"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "BLOCKED"
+    }
+  },
+  {
+    "id": "R13-L3-approval-unexecuted",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 3,
+        "risk": {
+          "confidential": true,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "SOLO_STANDARD",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "synthetic scope sufficient",
+          "approved": false,
+          "approval_state": "NOT_TESTED",
+          "covered_risks": [
+            "confidential"
+          ]
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": null,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    }
+  },
+  {
+    "id": "R14-STRICT-known-shared",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "STRICT_INDEPENDENT",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": true,
+          "shared_owner": true
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "ACCEPTANCE_STATUS": "BLOCKED",
+      "INDEPENDENCE_STATUS": "BLOCKED"
+    }
+  },
+  {
+    "id": "R15-STRICT-human-missing",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "STRICT_INDEPENDENT",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": false,
+          "shared_owner": false
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "INDEPENDENCE_STATUS": "BLOCKED"
+    }
+  },
+  {
+    "id": "R16-STRICT-owner-unknown",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "STRICT_INDEPENDENT",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": true,
+          "shared_owner": null
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "PARTIAL"
+    }
+  },
+  {
+    "id": "R17-STRICT-established",
+    "input": {
+      "contract": {
+        "schema_version": "1",
+        "attempt_id": "synthetic-attempt-A",
+        "repository": "example/synthetic",
+        "ref": "refs/heads/main",
+        "head": "1111111111111111111111111111111111111111",
+        "tree": "2222222222222222222222222222222222222222",
+        "parents": [
+          "3333333333333333333333333333333333333333"
+        ],
+        "object": {
+          "id": "synthetic.bundle",
+          "size": 200,
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "kind": "bundle"
+        },
+        "level": 2,
+        "risk": {
+          "confidential": false,
+          "destructive": false,
+          "strong_authenticity": false,
+          "rationale": "important synthetic bundle"
+        },
+        "policy": {
+          "version": "0.2.0",
+          "commit": "4444444444444444444444444444444444444444"
+        },
+        "approval_id": "SYNTHETIC-ONLY",
+        "destination": "synthetic-store",
+        "operations": [
+          "create",
+          "read"
+        ],
+        "actor": "synthetic-owner",
+        "classification": "public",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "audit_mode": "STRICT_INDEPENDENT",
+        "required_checks": [
+          "size",
+          "sha256",
+          "all_bytes",
+          "bundle_restore"
+        ],
+        "extra_checks": [],
+        "extra_decision": {
+          "decision": "not_required",
+          "rationale": "no special risk",
+          "approved": true
+        },
+        "observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        },
+        "ci_required": true,
+        "sessions": {
+          "separate_session": true,
+          "separate_execution": true,
+          "separate_area": true,
+          "direct_retrieval": true,
+          "human_independent": true,
+          "shared_owner": false
+        }
+      },
+      "approval": {
+        "id": "SYNTHETIC-ONLY",
+        "scope": "reusable",
+        "repositories": [
+          "example/synthetic"
+        ],
+        "object_ids": [
+          "synthetic.bundle"
+        ],
+        "classifications": [
+          "public"
+        ],
+        "destinations": [
+          "synthetic-store"
+        ],
+        "actors": [
+          "synthetic-owner"
+        ],
+        "operations": [
+          "create",
+          "read"
+        ],
+        "valid_from": "2026-01-01T00:00:00+00:00",
+        "valid_until": "2027-01-01T00:00:00+00:00",
+        "retention_until": "2027-01-01T00:00:00+00:00",
+        "delete_move_overwrite": "prohibited",
+        "acl": "PASS",
+        "authorization_verified": true
+      },
+      "now": "2026-11-18T00:00:00+00:00",
+      "observed_head": "1111111111111111111111111111111111111111"
+    },
+    "expected": {
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS"
+    }
+  }
+]

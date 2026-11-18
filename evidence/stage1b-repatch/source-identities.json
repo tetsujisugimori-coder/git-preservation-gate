@@ -1,0 +1,7 @@
+{
+  "tools/stage1b/contract.py": "4453fa95dba1d1eca3040881fc9d296170c0847cf900af7bfe0dcf2a52b97ba1",
+  "tests/stage1b/oracle-fixed.json": "357bc296bc7d5beb2b75eb084d2af967ba4b0ec4b29b9f17fdea0314f15189c3",
+  "tests/stage1b/repatch-boundaries-fixed.json": "607759af8151e0a4fd35a3cc883009e74582ce40b4bd5e5deb6bb7e94897c722",
+  "tests/stage1b/review-new13-fixed.json": "4db866fadba919c6b0a9b6838a9ab1c4f2480534fc3468a43be62e43fe51f0fc",
+  "tests/stage1b/review12-fixed.json": "cea8c9b9cc56878b297b3cfe4bf2c900be1140a07135e362cb2744d2678349f8"
+}

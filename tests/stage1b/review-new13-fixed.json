@@ -1,0 +1,104 @@
+{
+  "id": "NEW13-L1-explicit-public-doc",
+  "input": {
+    "contract": {
+      "schema_version": "1",
+      "attempt_id": "synthetic-attempt-A",
+      "repository": "example/synthetic",
+      "ref": "refs/heads/main",
+      "head": "1111111111111111111111111111111111111111",
+      "tree": "2222222222222222222222222222222222222222",
+      "parents": [
+        "3333333333333333333333333333333333333333"
+      ],
+      "object": {
+        "id": "public-document.md",
+        "size": 200,
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "kind": "git-document"
+      },
+      "level": 1,
+      "risk": {
+        "confidential": false,
+        "destructive": false,
+        "strong_authenticity": false,
+        "rationale": "Public reproducible Git-tracked documentation; no experiment evidence or special risk"
+      },
+      "policy": {
+        "version": "0.2.0",
+        "commit": "4444444444444444444444444444444444444444"
+      },
+      "approval_id": "SYNTHETIC-ONLY",
+      "destination": "synthetic-store",
+      "operations": [
+        "create",
+        "read"
+      ],
+      "actor": "synthetic-owner",
+      "classification": "public",
+      "retention_until": "2027-01-01T00:00:00+00:00",
+      "delete_move_overwrite": "prohibited",
+      "audit_mode": "SOLO_STANDARD",
+      "required_checks": [],
+      "extra_checks": [],
+      "extra_decision": {
+        "decision": "not_required",
+        "rationale": "no special risk",
+        "approved": true
+      },
+      "observations": {
+        "storage": "NOT_TESTED",
+        "readback": "NOT_TESTED",
+        "size": "NOT_TESTED",
+        "sha256": "NOT_TESTED",
+        "all_bytes": "NOT_TESTED",
+        "bundle_restore": "NOT_TESTED",
+        "ci": "PASS",
+        "review": "PASS"
+      },
+      "ci_required": true,
+      "sessions": {
+        "separate_session": false,
+        "separate_execution": false,
+        "separate_area": false,
+        "direct_retrieval": false,
+        "human_independent": null,
+        "shared_owner": true
+      }
+    },
+    "approval": {
+      "id": "SYNTHETIC-ONLY",
+      "scope": "reusable",
+      "repositories": [
+        "example/synthetic"
+      ],
+      "object_ids": [
+        "synthetic.bundle"
+      ],
+      "classifications": [
+        "public"
+      ],
+      "destinations": [
+        "synthetic-store"
+      ],
+      "actors": [
+        "synthetic-owner"
+      ],
+      "operations": [
+        "create",
+        "read"
+      ],
+      "valid_from": "2026-01-01T00:00:00+00:00",
+      "valid_until": "2027-01-01T00:00:00+00:00",
+      "retention_until": "2027-01-01T00:00:00+00:00",
+      "delete_move_overwrite": "prohibited",
+      "acl": "PASS",
+      "authorization_verified": true
+    },
+    "now": "2026-11-18T00:00:00+00:00",
+    "observed_head": "1111111111111111111111111111111111111111"
+  },
+  "expected": {
+    "ACCEPTANCE_STATUS": "PASS"
+  }
+}

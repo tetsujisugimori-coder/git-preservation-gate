@@ -1,0 +1,11 @@
+{
+  "scope": "Explicit adopted-policy corrections requested by review 5960666074; original inputs/oracles unchanged",
+  "case_overrides": {
+    "C26": {"reason": "STRICT_SHARED_OWNER", "INDEPENDENCE_STATUS": "BLOCKED", "ACCEPTANCE_STATUS": "BLOCKED"},
+    "C27": {"INDEPENDENCE_STATUS": "NOT_TESTED"}
+  },
+  "reasons": {
+    "C26": "Known shared owner fails STRICT requirement even if other tests remain unexecuted. Previous UNKNOWN/PARTIAL is retained in oracle-v020-p2.json and RED evidence.",
+    "C27": "Level 1 additional archive independence is non-applicable NOT_TESTED, not UNKNOWN. Required CI/review remain unexecuted, so ACCEPTANCE stays PARTIAL."
+  }
+}

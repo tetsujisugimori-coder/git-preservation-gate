@@ -21,6 +21,9 @@ jobs:
           python3 tests/stage1b/run_contract_batch.py "$RUNNER_TEMP/stage1b-contract-${GITHUB_RUN_ID}"
           python3 tests/stage1b/run_independent10.py
           python3 tests/stage1b/run_p2_regression.py
+          python3 tests/stage1b/run_review_regression.py
+          python3 tests/stage1b/run_review_regression.py --additional
+          python3 tests/stage1b/test_publication_scan.py
       - name: Stage1A 32 original Linux cases
         shell: bash
         run: |

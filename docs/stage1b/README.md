@@ -1,3 +1,10 @@
+# Current re-correction status (2026-11-18)
+
+See [P2-B01/B02 re-correction](repatch-review.md) for the current scope, fixed starting version, new results and pending independent/CI gates. Limited acceptance and merge recommendation remain NO pending completion; Draft maintained. Previous YES/CI-zero statements below are dated historical evidence, not the current decision.
+
+---
+## Historical record, retained unchanged
+
 # Stage 1-B: bounded trial execution and storage contracts
 
 [Plan](PLAN.md) / [pilot boundaries](pilot.md). This is an additive implementation based on merged Stage1A and adopted central v0.2.0, not a change to historical observations. Issue11 tracks this stage.

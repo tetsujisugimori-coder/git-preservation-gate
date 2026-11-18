@@ -1,0 +1,119 @@
+{
+  "suite": "stage1b-new-p2-pre-fixed",
+  "passed": 18,
+  "total": 18,
+  "cases": [
+    {
+      "id": "P201-storage-pass-readback-not-tested",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P201-required-ci-not-tested",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P201-review-unknown",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P201-known-hash-fail-dominates",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P201-missing-approval-blocks",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P202-explicit-denial",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P202-approval-unknown",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P202-approval-not-tested",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P202-approved-basic-sufficient",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P202-contradictory-approval-schema",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P203-exemption-without-basis",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P203-exemption-wrong-head",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P203-exemption-empty-rationale",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P203-scoped-exemption-ci-not-tested",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P203-ci-required-waiver-conflict",
+      "match": true,
+      "mismatches": {},
+      "production_permit": false
+    },
+    {
+      "id": "P201-unknown-plus-not-tested",
+      "match": true,
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "production_permit": false
+    },
+    {
+      "id": "P201-pass-plus-not-tested",
+      "match": true,
+      "expected": "NOT_TESTED",
+      "actual": "NOT_TESTED",
+      "production_permit": false
+    },
+    {
+      "id": "P201-fail-plus-blocked",
+      "match": true,
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "production_permit": false
+    }
+  ],
+  "scope": "pure synthetic contract, no actual permission or save"
+}

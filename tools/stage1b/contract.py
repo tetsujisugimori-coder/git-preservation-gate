@@ -41,8 +41,11 @@ def schema(c):
         if d['approval_state'] not in ('PASS','FAIL','UNKNOWN','NOT_TESTED'):raise Invalid('extra approval state')
         if d['approved'] != (d['approval_state']=='PASS'):raise Invalid('extra approval contradiction')
     if 'covered_risks' in d:
+        if isinstance(d['covered_risks'],list) and all(isinstance(v,str) for v in d['covered_risks']) and len(d['covered_risks'])!=len(set(d['covered_risks'])):raise Invalid('risk coverage duplicate')
         strings(d['covered_risks'])
-        if not set(d['covered_risks']) <= {'confidential','destructive','strong_authenticity'}:raise Invalid('risk coverage')
+        if not set(d['covered_risks']) <= {'confidential','destructive','strong_authenticity'}:raise Invalid('risk coverage unknown')
+        active={k for k in ['confidential','destructive','strong_authenticity'] if c['risk'][k]}
+        if set(d['covered_risks'])-active:raise Invalid('risk coverage excess')
     if c['extra_decision']['decision'] not in ('required','not_required','UNKNOWN'):raise Invalid('extra')
     exact(c['observations'],'storage readback size sha256 all_bytes bundle_restore ci review')
     for v in c['observations'].values():state(v)
@@ -83,12 +86,25 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
         if all(isinstance(v,str) and v in STATES for v in vals):out['VERIFICATION_STATUS']=aggregate(vals)
         elif 'FAIL' in [v for v in vals if isinstance(v,str)]:out['VERIFICATION_STATUS']='FAIL'
     try:schema(c);n=stamp(now)
-    except (ValueError,TypeError,KeyError):reasons.append('SCHEMA_INVALID');return out
+    except (ValueError,TypeError,KeyError) as exc:
+        reasons.append('SCHEMA_INVALID')
+        risk_errors={'risk coverage unknown':'RISK_UNKNOWN_NAME','risk coverage excess':'RISK_NOT_APPLICABLE','risk coverage duplicate':'RISK_DUPLICATE'}
+        if str(exc) in risk_errors:reasons.append(risk_errors[str(exc)])
+        return out
     o=c['observations'];s=c['sessions'];out['CUSTODY_STATUS']=o['storage']
+    minlevel=3 if any(c['risk'][k] for k in ['confidential','destructive','strong_authenticity']) else (1 if c['object']['kind']=='git-document' else 2)
+    archive_required=max(c['level'],minlevel)>=2
+    out['archive_applicability']={'required':archive_required,'reason':'LEVEL2_3_REQUIRED' if archive_required else 'LEVEL1_GIT_ONLY_NOT_APPLICABLE'}
+    out['archive_observations']=dict(o)
     out['VERIFICATION_STATUS']=aggregate([o[k] for k in ['readback','size','sha256','all_bytes','bundle_restore']])
     required=['separate_session','separate_execution','separate_area','direct_retrieval']
     if c['audit_mode']=='STRICT_INDEPENDENT':required+=['human_independent']
     out['INDEPENDENCE_STATUS']='BLOCKED' if any(s[k] is False for k in required) else ('UNKNOWN' if any(s[k] is None for k in required) else ('UNKNOWN' if s['shared_owner'] is None else ('PARTIAL' if s['shared_owner'] else 'PASS')))
+    if c['audit_mode']=='STRICT_INDEPENDENT' and s['shared_owner'] is True:
+        out['INDEPENDENCE_STATUS']='BLOCKED'
+        reasons.append('STRICT_SHARED_OWNER')
+    if not archive_required:
+        for axis in ['CUSTODY_STATUS','VERIFICATION_STATUS','INDEPENDENCE_STATUS']:out[axis]='NOT_TESTED'
     out['human_independence']='LIMITED_SHARED_OWNER' if s['shared_owner'] else ('PASS' if s['human_independent'] is True else 'UNKNOWN')
     status='PASS'
     def fault(st,reason):
@@ -103,7 +119,6 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     if c['object']['kind']=='zip' and out['VERIFICATION_STATUS']!='FAIL':
         out['VERIFICATION_STATUS']='NOT_TESTED'
         reasons.append('ZIP_ADAPTER_NOT_IMPLEMENTED')
-    minlevel=3 if any(c['risk'][k] for k in ['confidential','destructive','strong_authenticity']) else (1 if c['object']['kind']=='git-document' else 2)
     if c['level']<minlevel:fault('FAIL','LEVEL_TOO_LOW')
     if observed_head is None:fault('UNKNOWN','HEAD_UNCONFIRMED')
     elif observed_head!=c['head']:fault('FAIL','HEAD_CHANGED')
@@ -154,7 +169,7 @@ def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     blockers={'POLICY_UNCONFIRMED','APPROVAL_UNVERIFIED','HEAD_UNCONFIRMED',
               'CHECK_ADAPTER_UNKNOWN','EXTRA_CONTRACT_UNKNOWN','EXTRA_APPROVAL_UNKNOWN',
               'ZIP_ADAPTER_NOT_IMPLEMENTED'}
-    blocked=(status=='BLOCKED' or out['INDEPENDENCE_STATUS']=='BLOCKED'
+    blocked=(status=='BLOCKED' or (archive_required and out['INDEPENDENCE_STATUS']=='BLOCKED')
              or any(code in blockers or code.startswith('ACL_') for code in reasons))
     out['ACCEPTANCE_STATUS']=('FAIL' if 'FAIL' in acceptance else
                               'BLOCKED' if blocked or 'BLOCKED' in acceptance else

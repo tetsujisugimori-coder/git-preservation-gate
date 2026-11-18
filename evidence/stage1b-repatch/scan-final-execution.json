@@ -1,0 +1,14 @@
+{
+  "start": "2026-11-18T16:42:17.928658+00:00",
+  "end": "2026-11-18T16:42:18.067520+00:00",
+  "command": [
+    "python",
+    "tests/stage1b/test_publication_scan.py"
+  ],
+  "exit_code": 0,
+  "timeout": 20,
+  "retry": 0,
+  "python": "3.12.14",
+  "scanner_sha256": "889abf2bd1903fd92c7ee78b3a98951b9014d0c83e2785994f46353295661174",
+  "test_sha256": "068ad8bb9cb216dc94aabbefa894e503006e5835dcdf63237932b5a84ce2c8a6"
+}

@@ -1,0 +1,70 @@
+{
+  "suite": "independent-10-fixed-oracle-rerun",
+  "count": 10,
+  "passed": 10,
+  "oracle_sha256": "9869bbd7143d4954edb327020a39a906394f348ed2675b370e3f3d60b6fc219d",
+  "production_permit": false,
+  "independent_new_review": false,
+  "cases": [
+    {
+      "id": "B01-normal",
+      "expected": "PASS",
+      "actual": "PASS",
+      "match": true
+    },
+    {
+      "id": "B02-risk-uncovered",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    },
+    {
+      "id": "B03-retention-expired",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    },
+    {
+      "id": "B04-storagefail",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "match": true
+    },
+    {
+      "id": "B05-shafail",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "match": true
+    },
+    {
+      "id": "B06-unknown-owner",
+      "expected": "NOT_PASS",
+      "actual": "PARTIAL",
+      "match": true
+    },
+    {
+      "id": "B07-strict-same-owner",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    },
+    {
+      "id": "B08-wrongscope",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    },
+    {
+      "id": "B09-unverified",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    },
+    {
+      "id": "B10-zip",
+      "expected": "NOT_PASS",
+      "actual": "BLOCKED",
+      "match": true
+    }
+  ]
+}

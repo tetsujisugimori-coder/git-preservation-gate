@@ -1,0 +1,73 @@
+{
+  "adapter_sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7",
+  "cases": [
+    {
+      "actual": {
+        "elapsed": 9.586001397110522e-06,
+        "production_permit": false,
+        "reason": "RISK_SCHEMA",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R01",
+      "risk": [],
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 8.573995728511363e-06,
+        "production_permit": false,
+        "reason": "RISK_SCHEMA",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R02",
+      "risk": null,
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 8.843002433422953e-06,
+        "production_permit": false,
+        "reason": "RISK_SCHEMA",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R03",
+      "risk": {
+        "confidential": false
+      },
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 1.1106996680609882e-05,
+        "production_permit": false,
+        "reason": "RISK_SCHEMA",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R04",
+      "risk": {
+        "confidential": false,
+        "destructive": false,
+        "strong_authenticity": 0
+      },
+      "test_verdict": "PASS"
+    }
+  ],
+  "oracle_sha256": "dc20b03a5058c5793702ee3ad10400b1a81691cb5dfd2fe56fc50dd91508c938",
+  "production_permit": false
+}

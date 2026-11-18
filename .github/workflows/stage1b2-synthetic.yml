@@ -14,6 +14,7 @@ jobs:
         run: |
           python3 tests/stage1b2/run_suite.py --root "$RUNNER_TEMP/b2-${GITHUB_RUN_ID}"
           python3 tests/stage1b2/run_boundaries.py --root "$RUNNER_TEMP/b2-boundaries-${GITHUB_RUN_ID}"
+          python3 tests/stage1b2/run_risk_schema.py --root "$RUNNER_TEMP/b2-risk-${GITHUB_RUN_ID}"
       - name: Unchanged contracts and bundle regressions
         run: |
           set -euo pipefail

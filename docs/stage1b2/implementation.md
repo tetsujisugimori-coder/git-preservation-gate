@@ -28,3 +28,6 @@ Five further expectations were independently frozen in `boundaries.json`: relati
 Fault outcomes and test outcomes are distinct. ENOSPC, ACL denial and sharing violation cases are explicitly **injected**, not actual volume-full/ACL/file-lock measurements. Link creation may be unavailable on normal Windows and then is NOT_TESTED. The harness records that result without claiming the real fault passed. Fault-copy mutations affect fresh synthetic copies, never archived original evidence.
 
 Commands: `python tests/stage1b2/run_suite.py --root <fresh-root>` and `python tests/stage1b2/run_boundaries.py --root <different-fresh-root>`. The suite does not claim independent-person review; another session must obtain the published fixed version and audit saved objects separately.
+
+## Independent P3 risk-schema correction
+Reviewer B found that risk=[] caused an uncaught AttributeError before any save. The same raw input and three neighboring schema cases were fixed in a separate oracle before execution. RED:0/4, exit1; GREEN:4/4, exit0. The adapter now rejects non-dict, missing/extra risk keys and non-boolean risk values as FAIL/RISK_SCHEMA before evaluating risk. Existing34 and5 cases remain unchanged and pass. Original source/results are retained in a separate evidence directory. This does not loosen non-elevation or any risk restriction.

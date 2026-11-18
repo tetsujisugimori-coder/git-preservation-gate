@@ -1,0 +1,67 @@
+{
+  "adapter_sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2",
+  "cases": [
+    {
+      "actual": {
+        "reason": "AttributeError",
+        "status": "UNCAUGHT_EXCEPTION"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R01",
+      "risk": [],
+      "test_verdict": "FAIL"
+    },
+    {
+      "actual": {
+        "reason": "AttributeError",
+        "status": "UNCAUGHT_EXCEPTION"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R02",
+      "risk": null,
+      "test_verdict": "FAIL"
+    },
+    {
+      "actual": {
+        "elapsed": 9.49500099522993e-06,
+        "production_permit": false,
+        "reason": "RISK_UNSUPPORTED",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R03",
+      "risk": {
+        "confidential": false
+      },
+      "test_verdict": "FAIL"
+    },
+    {
+      "actual": {
+        "elapsed": 8.889997843652964e-06,
+        "production_permit": false,
+        "reason": "RISK_UNSUPPORTED",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "destination_unmodified": true,
+      "expected_reason": "RISK_SCHEMA",
+      "expected_status": "FAIL",
+      "id": "R04",
+      "risk": {
+        "confidential": false,
+        "destructive": false,
+        "strong_authenticity": 0
+      },
+      "test_verdict": "FAIL"
+    }
+  ],
+  "oracle_sha256": "dc20b03a5058c5793702ee3ad10400b1a81691cb5dfd2fe56fc50dd91508c938",
+  "production_permit": false
+}

@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "elapsed": 0.0004395990035845898,
+        "production_permit": false,
+        "reason": "ROOT_NOT_ABSOLUTE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "X01",
+      "name": "relative roots",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.00048264300130540505,
+        "production_permit": false,
+        "reason": "FILE_SCHEMA",
+        "status": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "X02",
+      "name": "manifest non-dict item",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0005653679982060567,
+        "production_permit": false,
+        "reason": "FILE_SCHEMA",
+        "status": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "X03",
+      "name": "manifest boolean size",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.001086618001863826,
+        "production_permit": false,
+        "reason": "UNEXPECTED_DIRECTORY",
+        "status": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "X04",
+      "name": "empty extra directory",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0006352500058710575,
+        "production_permit": false,
+        "reason": "RECORD_SCHEMA",
+        "status": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "X05",
+      "name": "malformed receipt",
+      "test_verdict": "PASS"
+    }
+  ],
+  "oracle_sha256": "537ae4bc130710af7ec7634a230853bed0298055748a6f9e6d513fa7e55f193a",
+  "production_permit": false,
+  "source_sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7"
+}

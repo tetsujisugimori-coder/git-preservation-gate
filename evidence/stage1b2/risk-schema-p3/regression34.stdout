@@ -1,0 +1,36 @@
+{"environment": {"platform": "linux", "python": "3.12.14", "windows_admin_token": "NOT_APPLICABLE"}}
+{"case_id": "B201", "expected": "PASS", "actual_status": "PASS", "reason": "DIRECT_RETRIEVAL_ALL_BYTES", "test_verdict": "PASS"}
+{"case_id": "B202", "expected": "PASS", "actual_status": "PASS", "reason": "DIRECT_RETRIEVAL_ALL_BYTES", "test_verdict": "PASS"}
+{"case_id": "B203", "expected": "PASS", "actual_status": "PASS", "reason": "DIRECT_RETRIEVAL_ALL_BYTES", "test_verdict": "PASS"}
+{"case_id": "B204", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "DIRECTORY_UNAVAILABLE", "test_verdict": "PASS"}
+{"case_id": "B205", "expected": "FAIL", "actual_status": "FAIL", "reason": "APPROVAL_SCOPE", "test_verdict": "PASS"}
+{"case_id": "B206", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "APPROVAL_NOT_VERIFIED", "test_verdict": "PASS"}
+{"case_id": "B207", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "APPROVAL_EXPIRED", "test_verdict": "PASS"}
+{"case_id": "B208", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "ATTEMPT_EXISTS", "test_verdict": "PASS"}
+{"case_id": "B209", "expected": "PASS", "actual_status": "PASS", "reason": "DIRECT_RETRIEVAL_ALL_BYTES", "test_verdict": "PASS"}
+{"case_id": "B210", "expected": "FAIL", "actual_status": "FAIL", "reason": "SOURCE_MISMATCH", "test_verdict": "PASS"}
+{"case_id": "B211", "expected": "FAIL", "actual_status": "FAIL", "reason": "SOURCE_CHANGED", "test_verdict": "PASS"}
+{"case_id": "B212", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "IO_OR_SCHEMA_ERROR", "test_verdict": "PASS"}
+{"case_id": "B213", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "IO_OR_SCHEMA_ERROR", "test_verdict": "PASS"}
+{"case_id": "B214", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "IO_OR_SCHEMA_ERROR", "test_verdict": "PASS"}
+{"case_id": "B215", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "IO_OR_SCHEMA_ERROR", "test_verdict": "PASS"}
+{"case_id": "B216", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "IO_OR_SCHEMA_ERROR", "test_verdict": "PASS"}
+{"case_id": "B217", "expected": "FAIL", "actual_status": "FAIL", "reason": "INCOMPLETE_OR_EXTRA", "test_verdict": "PASS"}
+{"case_id": "B218", "expected": "FAIL", "actual_status": "FAIL", "reason": "RECEIPT_MISMATCH", "test_verdict": "PASS"}
+{"case_id": "B219", "expected": "FAIL", "actual_status": "FAIL", "reason": "RECORD_SCHEMA", "test_verdict": "PASS"}
+{"case_id": "B220", "expected": "FAIL", "actual_status": "FAIL", "reason": "CONTENT_MISMATCH", "test_verdict": "PASS"}
+{"case_id": "B221", "expected": "FAIL", "actual_status": "FAIL", "reason": "FILE_SET_MISMATCH", "test_verdict": "PASS"}
+{"case_id": "B222", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "DIRECTORY_UNAVAILABLE", "test_verdict": "PASS"}
+{"case_id": "B223", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "RECEIVER_UNAVAILABLE", "test_verdict": "PASS"}
+{"case_id": "B224", "expected": "FAIL", "actual_status": "FAIL", "reason": "APPROVAL_SCOPE", "test_verdict": "PASS"}
+{"case_id": "B225", "expected": "FAIL", "actual_status": "FAIL", "reason": "UNSAFE_PATH", "test_verdict": "PASS"}
+{"case_id": "B226", "expected": "NOT_TESTED", "actual_status": "NOT_TESTED", "reason": "LEVEL1_ARCHIVE_NOT_APPLICABLE", "test_verdict": "PASS"}
+{"case_id": "B227", "expected": "FAIL", "actual_status": "FAIL", "reason": "LEVEL2_ARCHIVE_REQUIRED", "test_verdict": "PASS"}
+{"case_id": "B228", "expected": "BLOCKED", "actual_status": "BLOCKED", "reason": "LEVEL_UNSUPPORTED", "test_verdict": "PASS"}
+{"case_id": "B229", "expected": "UNKNOWN", "actual_status": "UNKNOWN", "reason": "DEADLINE", "test_verdict": "PASS"}
+{"case_id": "B230", "expected": "FAIL", "actual_status": "FAIL", "reason": "LINK_OR_REPARSE", "test_verdict": "PASS"}
+{"case_id": "B231", "expected": "FAIL", "actual_status": "FAIL", "reason": "FILE_SET_MISMATCH", "test_verdict": "PASS"}
+{"case_id": "B232", "expected": "FAIL", "actual_status": "FAIL", "reason": "DUPLICATE_PATH", "test_verdict": "PASS"}
+{"case_id": "B233", "expected": "FAIL", "actual_status": "FAIL", "reason": "REQUEST_NOT_BOUND", "test_verdict": "PASS"}
+{"case_id": "B234", "expected": "FAIL", "actual_status": "FAIL", "reason": "LEVEL_TOO_LOW", "test_verdict": "PASS"}
+{"PASS": 34, "FAIL": 0, "NOT_TESTED": 0}

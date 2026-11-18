@@ -81,6 +81,8 @@ def dates(s):
 
 def validate(request, approval):
     if not isinstance(request,dict) or not isinstance(approval,dict):raise Rejected('SCHEMA')
+    risk=request.get('risk')
+    if not isinstance(risk,dict) or set(risk)!={'confidential','destructive','strong_authenticity'} or any(type(v) is not bool for v in risk.values()):raise Rejected('RISK_SCHEMA')
     if request.get('synthetic_only') is not True:raise Rejected('NON_SYNTHETIC_NOT_SUPPORTED','BLOCKED')
     if any(request.get('risk',{}).get(k) is not False for k in ('confidential','destructive','strong_authenticity')):raise Rejected('RISK_UNSUPPORTED','BLOCKED')
     if type(request.get('level')) is not int or request['level'] not in (1,2):raise Rejected('LEVEL_UNSUPPORTED','BLOCKED')

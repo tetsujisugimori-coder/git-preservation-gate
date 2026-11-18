@@ -1,12 +1,28 @@
 """Frozen-oracle synthetic pilot. Fresh root required, no existing evidence changes.
 Injection != real disk-full/ACL/lock. This runner records that distinction.
 """
-import argparse,copy,errno,hashlib,json,os,pathlib,shutil,subprocess,sys,time,uuid
+import argparse,copy,errno,hashlib,json,os,pathlib,shutil,subprocess,sys,time,uuid,re
 from datetime import datetime,timezone,timedelta
 from unittest.mock import patch
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'tools/stage1b2'))
 import adapter as a
+
+class PrerequisiteRejected(Exception):
+    def __init__(self, observation): self.observation=observation
+
+def require_saved(observation):
+    if observation.get('status')!='PASS':raise PrerequisiteRejected(observation)
+
+def safe_diagnostic(value):
+    return value if isinstance(value,str) and re.fullmatch(r'[A-Za-z0-9_-]{1,100}',value) else 'UNPRINTED_VALUE'
+
+def environment_observation():
+    observation={'platform':sys.platform,'python':'.'.join(map(str,sys.version_info[:3])),'windows_admin_token':'NOT_APPLICABLE'}
+    if os.name=='nt':
+        try:observation['windows_admin_token']=bool(a.ctypes.windll.shell32.IsUserAnAdmin())
+        except Exception:observation['windows_admin_token']='UNKNOWN'
+    return observation
 
 def fixture(root, name, mode='direct'):
     d=root/name;d.mkdir();src=d/'source';dst=d/'store';src.mkdir();dst.mkdir()
@@ -40,16 +56,16 @@ def independent_check(saved,src,sha):
 def run_case(c,root):
     n=int(c['id'][1:])-200;d,src,dst,r,ap=fixture(root,c['id'],'handoff' if n in (2,9) else 'direct');before=frozen_source(src)
     if n==1:
-        v=a.save(r,ap);assert v['status']=='PASS';v=independent_check(dst/'trial',src,v['receipt_sha256']);assert frozen_source(src)==before;return v
+        v=a.save(r,ap);require_saved(v);v=independent_check(dst/'trial',src,v['receipt_sha256']);assert frozen_source(src)==before;return v
     if n in (2,3):
         if n==3:r['attempt_id']='unicode';bind(r,ap)
-        v,code=invoke(d,r,ap);assert code==0;return independent_check(dst/r['attempt_id'],src,v['receipt_sha256'])
+        v,code=invoke(d,r,ap);require_saved(v);assert code==0;return independent_check(dst/r['attempt_id'],src,v['receipt_sha256'])
     if n==4:r['destination']=str(d/'absent');ap['destination']=r['destination'];bind(r,ap)
     if n==5:r['destination']=str(d/'elsewhere')
     if n==6:ap['authorization_verified']=False
     if n==7:ap['valid_until']='2000-01-01T00:00:00+00:00'
     if n==8:
-        v=a.save(r,ap);assert v['status']=='PASS';files={p.relative_to(dst).as_posix():p.read_bytes() for p in dst.rglob('*') if p.is_file()};v=a.save(r,ap);assert files=={p.relative_to(dst).as_posix():p.read_bytes() for p in dst.rglob('*') if p.is_file()};return v
+        v=a.save(r,ap);require_saved(v);files={p.relative_to(dst).as_posix():p.read_bytes() for p in dst.rglob('*') if p.is_file()};v=a.save(r,ap);assert files=={p.relative_to(dst).as_posix():p.read_bytes() for p in dst.rglob('*') if p.is_file()};return v
     if n==9:
         rp=d/'request.json';pp=d/'approval.json';rp.write_bytes(a.encoded(r));pp.write_bytes(a.encoded(ap));cmd=[sys.executable,str(ROOT/'tools/stage1b2/adapter.py'),'save','--request',str(rp),'--approval',str(pp)]
         ps=[subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE) for _ in range(2)];rows=[]
@@ -70,7 +86,7 @@ def run_case(c,root):
     if n==15:
         with patch.object(a,'regular_bytes',side_effect=PermissionError('injected read denied')):return a.save(r,ap)
     if n in (17,18,19,20,21,31):
-        v=a.save(r,ap);assert v['status']=='PASS';target=d/'fault-copy';shutil.copytree(dst/'trial',target)
+        v=a.save(r,ap);require_saved(v);target=d/'fault-copy';shutil.copytree(dst/'trial',target)
         if n==17:(target/'receipt.json').unlink()
         if n==18:(target/'receipt.json').write_bytes(b'{}')
         if n==19:(target/'manifest.json').write_bytes(b'{}')
@@ -103,13 +119,16 @@ def run_case(c,root):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);args=p.parse_args();root=pathlib.Path(args.root).resolve();root.mkdir(parents=True,exist_ok=False)
     oracle=(pathlib.Path(__file__).with_name('oracle.json')).read_bytes();(root/'oracle.fixed.json').write_bytes(oracle)
-    start=a.timestamp();rows=[]
+    start=a.timestamp();rows=[];environment=environment_observation()
+    print(json.dumps({'environment':environment}),flush=True)
     for c in json.loads(oracle)['cases']:
         t=time.monotonic()
         try:
             r=run_case(c,root);verdict='PASS' if r['status']==c['expected'] else ('NOT_TESTED' if r['status']=='NOT_TESTED' else 'FAIL')
+        except PrerequisiteRejected as e:r=e.observation;verdict='FAIL'
         except Exception as e:r=dict(status='ERROR',reason=type(e).__name__);verdict='FAIL'
         row={**c,'actual':r,'test_verdict':verdict,'elapsed':time.monotonic()-t};rows.append(row);(root/(c['id']+'.json')).write_bytes(a.encoded(row))
-    report=dict(schema='stage1b2-suite-1',started_at=start,ended_at=a.timestamp(),python=sys.version,platform=sys.platform,oracle_sha256=a.digest(oracle),source_sha256=a.digest((ROOT/'tools/stage1b2/adapter.py').read_bytes()),runner_sha256=a.digest(pathlib.Path(__file__).read_bytes()),production_permit=False,retry=0,receiver_timeout_seconds=40,cases=rows,counts={k:sum(x['test_verdict']==k for x in rows) for k in ['PASS','FAIL','NOT_TESTED']})
+        print(json.dumps({'case_id':c['id'],'expected':c['expected'],'actual_status':safe_diagnostic(r.get('status')),'reason':safe_diagnostic(r.get('reason')),'test_verdict':verdict}),flush=True)
+    report=dict(schema='stage1b2-suite-1',started_at=start,ended_at=a.timestamp(),python=sys.version,platform=sys.platform,environment=environment,oracle_sha256=a.digest(oracle),source_sha256=a.digest((ROOT/'tools/stage1b2/adapter.py').read_bytes()),runner_sha256=a.digest(pathlib.Path(__file__).read_bytes()),production_permit=False,retry=0,receiver_timeout_seconds=40,cases=rows,counts={k:sum(x['test_verdict']==k for x in rows) for k in ['PASS','FAIL','NOT_TESTED']})
     (root/'results.json').write_bytes(a.encoded(report));print(json.dumps(report['counts']));return 1 if report['counts']['FAIL'] else 0
 if __name__=='__main__':raise SystemExit(main())

@@ -1,0 +1,74 @@
+{
+  "files": [
+    {
+      "path": "adapter-red.py",
+      "size": 14616,
+      "sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2"
+    },
+    {
+      "path": "execution.json",
+      "size": 306,
+      "sha256": "f4d3646585b09bbc3aa8879066ab37f29eae57b98b7767142ab5d5d73e6ecc8d"
+    },
+    {
+      "path": "green.json",
+      "size": 1918,
+      "sha256": "f778b3673c1d1dc348de6da8d661aeb10185d98c560656fc3d97b8c57669d8e6"
+    },
+    {
+      "path": "green.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "green.stdout",
+      "size": 23,
+      "sha256": "b84caa87702d742f974dddd5fe1a999c6c49ac7f221fffc48b1f5d42d1cb0651"
+    },
+    {
+      "path": "red.json",
+      "size": 1740,
+      "sha256": "9c4fca4212fac572e17e2e3a22dddd87d53c1fe0a38768f332b8621f619b5112"
+    },
+    {
+      "path": "red.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "red.stdout",
+      "size": 23,
+      "sha256": "5ac61d225ad2c9f01eea990afd7262a0f4646010290dbdd553c47a0019b2bc56"
+    },
+    {
+      "path": "regression34.json",
+      "size": 15157,
+      "sha256": "a78eff703b19ac5938b32df4e060a7a9fe23662633a201617c811a7ad596478c"
+    },
+    {
+      "path": "regression34.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression34.stdout",
+      "size": 4343,
+      "sha256": "bc5670da06f8515ab4626b1c12a02d9c3e1db6d2ed371c991cd477b17324876d"
+    },
+    {
+      "path": "regression5.json",
+      "size": 1711,
+      "sha256": "dc77cbb9ee5548274f067d82c2a63197e47b81607f9ce412b1e6caa81c06e73e"
+    },
+    {
+      "path": "regression5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression5.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    }
+  ]
+}

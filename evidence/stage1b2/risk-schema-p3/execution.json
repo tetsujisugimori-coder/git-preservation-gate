@@ -1,0 +1,13 @@
+{
+  "kind": "measured-command-exit-record",
+  "exit_codes": {
+    "red": 1,
+    "green": 0,
+    "regression34": 0,
+    "regression5": 0
+  },
+  "expected_frozen_before_execution": true,
+  "red_unhandled_exception_not_save_success": true,
+  "original_oracles_unchanged": true,
+  "production_permit": false
+}

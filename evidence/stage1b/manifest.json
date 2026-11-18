@@ -1,5 +1,5 @@
 {
-  "scope": "public derived evidence; raw originals retained separately; excludes this manifest",
+  "scope": "public derived evidence; raw retained separately; excludes manifest",
   "files": [
     {
       "path": "evidence/stage1b/contract-review/execution.json",
@@ -147,6 +147,11 @@
       "sha256": "edd91fbf6b7bc83974efb8f52ccd5d8ecd02c8e1dec2f4757a0d2e29a7166c2c"
     },
     {
+      "path": "evidence/stage1b/submission-v1-readback.json",
+      "size": 23058,
+      "sha256": "1edf35bac9f3557eca1577e6cc23b80c3272f5cc9cca9a5999cf15a9caac8a89"
+    },
+    {
       "path": "evidence/stage1b/windows-final/final-suite02/oracle.json",
       "size": 4331,
       "sha256": "78fbc924a5dc55bf63f715206b30d966009b3c7c929921363ca931d808ad4098"
@@ -220,6 +225,16 @@
       "path": "evidence/stage1b/windows-independent/scope.json",
       "size": 178,
       "sha256": "d321411ccd4b75d21631db498a37c55738f6a68acdb6fade9812916728a71a1d"
+    },
+    {
+      "path": "evidence/stage1b/windows-independent-final/oracle.json",
+      "size": 4623,
+      "sha256": "e87f9ab11700b8e7062447b17e65ef1236dbc836bee9c2638b95193b95ab0071"
+    },
+    {
+      "path": "evidence/stage1b/windows-independent-final/results.json",
+      "size": 54012,
+      "sha256": "14b9d05df0a7686604155b6f7cb7a308f87ac06a21e331b74bf0a1a06f5d125a"
     },
     {
       "path": "evidence/stage1b/windows-initial/bounds-results.json",

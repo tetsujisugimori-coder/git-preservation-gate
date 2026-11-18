@@ -1,3 +1,29 @@
+# Fixed-publication re-review (2026-11-18)
+
+Overall **PARTIAL**. P2-B01 and P2-B02 are **CLOSED in the reviewed synthetic contract scope**; P2-03 remains CLOSED. P3-B03 is CLOSED; current-status alignment P3-B04 is corrected. Limited technical acceptance **YES**, limited merge recommendation **YES**, subject to final publication readback of this documentation/evidence-only follow-up. Draft is retained. Actual merge is not authorized by this recommendation.
+
+Reviewed executable HEAD `1014154c6db51d250352b5038a0add215ef13c38`, tree `aa6403d4375a043d630134cea769db0eb3266a05`, parent `c52194dc7d290e409d8f7b60ab5015aa81a05969`. The authenticated GitHub API created a new commit with the exact tree of locally tested `8d6c78d5b604449acea80652c8e2baa252b13a1f`; these are distinct commits, not interchangeable OIDs. Normal HTTPS Git push failed for unavailable CLI credentials; non-force expected-head API update succeeded. No force push or history rewriting.
+
+## Independent results
+Separate AI reviewer B newly fetched the fixed GitHub HEAD into a separate verification area. Linux Python 3.12.14: contract50 (documented overlay), original independent10, P2 regression18, Stage1A32 all matched. Original review12 plus NEW13 (13 total), additional17, publication scanner10 and independently frozen B78 also matched, exit0. Original50 expectations yield48/50 after the intentional C26/C27 contract corrections; original fixtures and initial failed transcript remain unchanged. The separately explained overlay yields50/50. No oracle was fitted silently to outputs.
+
+A separate Windows verification session cloned the same GitHub HEAD: Python3.14.7, Git2.53.0.windows.1, Windows PowerShell5.1.26100.9818 and PowerShell7.6.9 each21/21, exit0, outer timeout120s and retry0. These are new normal-Windows measurements, separate from hosted CI. The required131-case set is covered; the second shell repeat is additional rather than a new distinct case denominator.
+
+Formal push CI [44398709869](https://github.com/tetsujisugimori-coder/git-preservation-gate/actions/runs/44398709869) completed success at the reviewed executable HEAD: Linux and Windows jobs/checks2/2. Commit statuses0 does not mean checks0. The final documentation follow-up's own CI and readback are reported separately in the anchored PR review, never inferred from this earlier run.
+
+## Submission and evidence
+Reviewer B independently retrieved all172 PR changed paths at the executable HEAD; GitHub API paginated path set and Git diff agree. Full bytes, sizes, SHA-256 and Git blob OIDs agree with the submitted local manuscript. Existing manifest77 and new manifest60 match their respective sets, sizes and hashes. B's initial audit selection error was corrected and retained, not mistaken for a product defect. Final follow-up adds only documentation and audit evidence; final changed count and fixed tree are recorded in the PR review.
+
+New public audit derivatives are separate from raw records. No additional Archive/Vault/Library or permanent-custody claim is made. Synthetic success does not establish actual original preservation. Same owner/account/platform and shared filesystem limit independence: **LIMITED_SHARED_OWNER**, not third-party human audit. Legacy unreferenced-blob path disclosure remains **P3 OPEN**; the old cloud raw retention remains **UNKNOWN**. Known private paths are not repeated here.
+
+## Preserved acceptance boundaries
+Level1 optional archive observations cannot veto ordinary required Git/CI/review acceptance, and non-applicable axes are NOT_TESTED rather than fabricated PASS. Level2 mandatory preservation remains. Unknown/duplicate/non-active L3 covered risks are rejected without altering adopted v0.2.0 risk classification. Known shared-owner STRICT is BLOCKED; SOLO technical verification remains supported. Synthetic approval fields do not authenticate a real owner.
+
+Real durable store/adapters, actual ACL/retention, real disk-full/ACL/file-lock faults, external approval authentication and controller-wide universal termination remain unaccepted or untested. **production_permit=false**, Stage1-C production transition **HOLD**, other repositories' HOLD/BLOCKED unchanged. Policy adoption is not performed in this correction. Historical FAIL/BLOCKED/UNKNOWN/NOT_TESTED records below remain historical, not current PASS.
+
+---
+## Earlier re-correction record (preserved)
+
 # Stage 1-B P2-B01/B02 re-correction
 
 2026-11-18. Existing Issue #11 / Draft PR #12; starting HEAD

@@ -1,0 +1,543 @@
+{
+  "head": "1014154c6db51d250352b5038a0add215ef13c38",
+  "tree": "aa6403d4375a043d630134cea769db0eb3266a05",
+  "source_audit": [
+    {
+      "path": "tools/stage1b/windows_suite.py",
+      "all_bytes_equal_git_blob": true,
+      "size": 4463,
+      "sha256": "a76faa8ba301b70c589dfd0551d95f4474f8219bc402e35e69e3f9d45e24076d",
+      "git_blob_oid": "7139fae6dcbf3326bf317b146aff141c29da085a"
+    },
+    {
+      "path": "tools/stage1b/finite_process.py",
+      "all_bytes_equal_git_blob": true,
+      "size": 7846,
+      "sha256": "115ba6e2c33fc5e97314e49d1fb42c5f2e35a83118004f6d57843c7032c6e4e1",
+      "git_blob_oid": "dc1ebe05eca2d998c53d485461f439a1cb867caa"
+    }
+  ],
+  "independence": "LIMITED_SHARED_OWNER",
+  "cases_unique": 21,
+  "executions": 42,
+  "runs": [
+    {
+      "run_id": "1e3d2c21-ddbb-40c0-a688-e8b3194619dc",
+      "head": "1014154c6db51d250352b5038a0add215ef13c38",
+      "shell": "ps51",
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "$PSVersionTable.PSVersion.ToString(); python -B tools/stage1b/windows_suite.py --root '../ps51-results'; exit $LASTEXITCODE"
+      ],
+      "started_at": "2026-11-18T21:11:45.474284+00:00",
+      "ended_at": "2026-11-18T21:11:48.638756+00:00",
+      "exit_code": 0,
+      "timeout_seconds": 120,
+      "retries": 0,
+      "stdout_size": 45,
+      "stderr_size": 0,
+      "stdout_sha256": "913ec1bd18739a1e58f75aa449ddd76348bbcec4cf0040f327d5286cb53a4f65",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.14.7",
+      "independence": "LIMITED_SHARED_OWNER",
+      "total": 21,
+      "passed": 21,
+      "oracle_sha256": "4ae506a4c8189e81f8e36c030d13e48841e4314dc1887b01d8b2dcd79c2f6635",
+      "result_sha256": "6deeda6c3b142f7180b17e7ba7785d00776ca685dcea731bef8e7a1009629ab5",
+      "cases": [
+        {
+          "id": "normal",
+          "match": true,
+          "expected": [
+            "PASS",
+            "JOB_EMPTY"
+          ],
+          "actual": {
+            "status": "PASS",
+            "reason": "OK",
+            "process_state": "JOB_EMPTY",
+            "exit_code": 0,
+            "retry": 0,
+            "elapsed": 0.050916400003188755
+          }
+        },
+        {
+          "id": "nonzero",
+          "match": true,
+          "expected": [
+            "FAIL",
+            "JOB_EMPTY"
+          ],
+          "actual": {
+            "status": "FAIL",
+            "reason": "COMMAND_NONZERO",
+            "process_state": "JOB_EMPTY",
+            "exit_code": 7,
+            "retry": 0,
+            "elapsed": 0.05727969999861671
+          }
+        },
+        {
+          "id": "missing",
+          "match": true,
+          "expected": [
+            "BLOCKED",
+            "NOT_STARTED"
+          ],
+          "actual": {
+            "status": "BLOCKED",
+            "reason": "SPAWN_OR_SETUP_FAILED",
+            "process_state": "NOT_STARTED",
+            "retry": 0,
+            "elapsed": 0.00047369999811053276
+          }
+        },
+        {
+          "id": "hang",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.3104564000022947
+          }
+        },
+        {
+          "id": "descendants",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.7102911999973003
+          }
+        },
+        {
+          "id": "parent_exit_child",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 0,
+            "retry": 0,
+            "elapsed": 0.5095031000018935
+          }
+        },
+        {
+          "id": "query_failure",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "RUNNING_IN_OWN_JOB"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "CONTROL_FAILED",
+            "process_state": "RUNNING_IN_OWN_JOB",
+            "retry": 0,
+            "elapsed": 0.005655799999658484
+          }
+        },
+        {
+          "id": "terminate_failure",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "RUNNING_IN_OWN_JOB"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "CONTROL_FAILED",
+            "process_state": "RUNNING_IN_OWN_JOB",
+            "retry": 0,
+            "elapsed": 0.205889600001683
+          }
+        },
+        {
+          "id": "parent_nonzero_child",
+          "match": true,
+          "expected": [
+            "FAIL",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "FAIL",
+            "reason": "COMMAND_NONZERO_WITH_TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 7,
+            "retry": 0,
+            "elapsed": 0.5023125000006985
+          }
+        },
+        {
+          "id": "nan",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "inf",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "negative",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "zero",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "excessive",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "retry",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "RETRY_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "infinite_retry",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "RETRY_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "boolean",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "wait-0",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOPPED",
+          "actual": "UNASSIGNED_CHILD_STOPPED"
+        },
+        {
+          "id": "wait-258",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+          "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+        },
+        {
+          "id": "wait-4294967295",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+          "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+        },
+        {
+          "id": "overall",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "TIMEOUT",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.251845200000389
+          }
+        }
+      ],
+      "raw_stdout_b64": "NS4xLjI2MTAwLjk4MTgNCnsicGFzc2VkIjogMjEsICJ0b3RhbCI6IDIxfQ0K",
+      "raw_stderr_b64": ""
+    },
+    {
+      "run_id": "0105bce4-1d51-497f-8923-5048be6c6d74",
+      "head": "1014154c6db51d250352b5038a0add215ef13c38",
+      "shell": "ps7",
+      "command": [
+        "pwsh.exe",
+        "-NoProfile",
+        "-Command",
+        "$PSVersionTable.PSVersion.ToString(); python -B tools/stage1b/windows_suite.py --root '../ps7-results'; exit $LASTEXITCODE"
+      ],
+      "started_at": "2026-11-18T21:11:48.695511+00:00",
+      "ended_at": "2026-11-18T21:11:51.913771+00:00",
+      "exit_code": 0,
+      "timeout_seconds": 120,
+      "retries": 0,
+      "stdout_size": 36,
+      "stderr_size": 0,
+      "stdout_sha256": "a4b92a5682d4fb6b3166caad464273eb2e81a8c4ae52d45fb03a4c494e4e6eb7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.14.7",
+      "independence": "LIMITED_SHARED_OWNER",
+      "total": 21,
+      "passed": 21,
+      "oracle_sha256": "eada825b9305b9ec8817e0276a33f7783929245c2e46e4ddda6c6df30cfc6300",
+      "result_sha256": "6e76ad65e96d971ebdc30dec7e8a9f26fa43e3b7744c2beca8fef3d25712478e",
+      "cases": [
+        {
+          "id": "normal",
+          "match": true,
+          "expected": [
+            "PASS",
+            "JOB_EMPTY"
+          ],
+          "actual": {
+            "status": "PASS",
+            "reason": "OK",
+            "process_state": "JOB_EMPTY",
+            "exit_code": 0,
+            "retry": 0,
+            "elapsed": 0.05560269999841694
+          }
+        },
+        {
+          "id": "nonzero",
+          "match": true,
+          "expected": [
+            "FAIL",
+            "JOB_EMPTY"
+          ],
+          "actual": {
+            "status": "FAIL",
+            "reason": "COMMAND_NONZERO",
+            "process_state": "JOB_EMPTY",
+            "exit_code": 7,
+            "retry": 0,
+            "elapsed": 0.1363777000005939
+          }
+        },
+        {
+          "id": "missing",
+          "match": true,
+          "expected": [
+            "BLOCKED",
+            "NOT_STARTED"
+          ],
+          "actual": {
+            "status": "BLOCKED",
+            "reason": "SPAWN_OR_SETUP_FAILED",
+            "process_state": "NOT_STARTED",
+            "retry": 0,
+            "elapsed": 0.002117800002451986
+          }
+        },
+        {
+          "id": "hang",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.30322370000067167
+          }
+        },
+        {
+          "id": "descendants",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.7057872000004863
+          }
+        },
+        {
+          "id": "parent_exit_child",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 0,
+            "retry": 0,
+            "elapsed": 0.5065222000048379
+          }
+        },
+        {
+          "id": "query_failure",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "RUNNING_IN_OWN_JOB"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "CONTROL_FAILED",
+            "process_state": "RUNNING_IN_OWN_JOB",
+            "retry": 0,
+            "elapsed": 0.009091399995668326
+          }
+        },
+        {
+          "id": "terminate_failure",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "RUNNING_IN_OWN_JOB"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "CONTROL_FAILED",
+            "process_state": "RUNNING_IN_OWN_JOB",
+            "retry": 0,
+            "elapsed": 0.2067583000025479
+          }
+        },
+        {
+          "id": "parent_nonzero_child",
+          "match": true,
+          "expected": [
+            "FAIL",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "FAIL",
+            "reason": "COMMAND_NONZERO_WITH_TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 7,
+            "retry": 0,
+            "elapsed": 0.5038443000012194
+          }
+        },
+        {
+          "id": "nan",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "inf",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "negative",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "zero",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "excessive",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "retry",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "RETRY_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "infinite_retry",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "RETRY_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "boolean",
+          "match": true,
+          "expected": "REJECT_BEFORE_ROOT",
+          "actual": "INVALID_BOUND"
+        },
+        {
+          "id": "wait-0",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOPPED",
+          "actual": "UNASSIGNED_CHILD_STOPPED"
+        },
+        {
+          "id": "wait-258",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+          "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+        },
+        {
+          "id": "wait-4294967295",
+          "match": true,
+          "expected": "UNASSIGNED_CHILD_STOP_UNCONFIRMED",
+          "actual": "UNASSIGNED_CHILD_STOP_UNCONFIRMED"
+        },
+        {
+          "id": "overall",
+          "match": true,
+          "expected": [
+            "UNKNOWN",
+            "TIMEOUT",
+            "JOB_EMPTY_AFTER_TERMINATE"
+          ],
+          "actual": {
+            "status": "UNKNOWN",
+            "reason": "TIMEOUT",
+            "process_state": "JOB_EMPTY_AFTER_TERMINATE",
+            "exit_code": 124,
+            "retry": 0,
+            "elapsed": 0.2514923999988241
+          }
+        }
+      ],
+      "raw_stdout_b64": "Ny42LjkNCnsicGFzc2VkIjogMjEsICJ0b3RhbCI6IDIxfQ0K",
+      "raw_stderr_b64": ""
+    }
+  ],
+  "production_permit": false,
+  "limitations": [
+    "Same owner, Windows host and filesystem; separate agent/session/checkout and fresh execution.",
+    "Controller death and arbitrary descendants outside owned Job are not proven.",
+    "Synthetic fault injections are not real ACL/disk failure experiments.",
+    "Workspace evidence is not permanent storage acceptance."
+  ],
+  "checkout_clean_after_tests": true
+}

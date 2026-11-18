@@ -1,0 +1,117 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "records": [
+    {
+      "id": 0,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/run_contract_batch.py",
+        "<workspace>/gate-stage1b-public-independent-b-20261118/public-run-1/contract50"
+      ],
+      "start": "2026-11-18T21:10:56.956410+00:00",
+      "end": "2026-11-18T21:10:57.191540+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "940ab04828d1f4a6ac3a463eab744c1a95f16b24c7bd1002f422edac4e099261",
+      "stdout": "0.stdout",
+      "stderr": "0.stderr"
+    },
+    {
+      "id": 1,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/run_independent10.py"
+      ],
+      "start": "2026-11-18T21:10:57.191830+00:00",
+      "end": "2026-11-18T21:10:57.247778+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "6cf75fe5b7aff8b79f80d0a1face6bd020f135a909e934074b235e496b9c6aa9",
+      "stdout": "1.stdout",
+      "stderr": "1.stderr"
+    },
+    {
+      "id": 2,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/run_p2_regression.py"
+      ],
+      "start": "2026-11-18T21:10:57.248285+00:00",
+      "end": "2026-11-18T21:10:57.289072+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "bb57b3ae5c2de9b0bb5a80792ef100d84b8a5e8d666a09a31eca1566e165c47f",
+      "stdout": "2.stdout",
+      "stderr": "2.stderr"
+    },
+    {
+      "id": 3,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/run_review_regression.py"
+      ],
+      "start": "2026-11-18T21:10:57.289364+00:00",
+      "end": "2026-11-18T21:10:57.357745+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1",
+      "stdout": "3.stdout",
+      "stderr": "3.stderr"
+    },
+    {
+      "id": 4,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/run_review_regression.py",
+        "--additional"
+      ],
+      "start": "2026-11-18T21:10:57.358203+00:00",
+      "end": "2026-11-18T21:10:57.399158+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "bc8f8b7f8a94f8026ccf53df603b7dfe2883c83d316b47794bb4b5e1e911ead1",
+      "stdout": "4.stdout",
+      "stderr": "4.stderr"
+    },
+    {
+      "id": 5,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/stage1b/test_publication_scan.py"
+      ],
+      "start": "2026-11-18T21:10:57.399543+00:00",
+      "end": "2026-11-18T21:10:57.515730+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "068ad8bb9cb216dc94aabbefa894e503006e5835dcdf63237932b5a84ce2c8a6",
+      "stdout": "5.stdout",
+      "stderr": "5.stderr"
+    },
+    {
+      "id": 6,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tools/stage1a/run_suite.py",
+        "--root",
+        "<workspace>/gate-stage1b-public-independent-b-20261118/public-run-1/stage1a32"
+      ],
+      "start": "2026-11-18T21:10:57.516048+00:00",
+      "end": "2026-11-18T21:10:58.549308+00:00",
+      "exit": 0,
+      "timeout": 240,
+      "retry": 0,
+      "source_sha256": "a3fc42bf4da87a2d4bfc715fcae6aaad421620b3c31ad61f41eea73428aea782",
+      "stdout": "6.stdout",
+      "stderr": "6.stderr"
+    }
+  ]
+}

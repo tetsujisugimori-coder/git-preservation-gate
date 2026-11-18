@@ -1,0 +1,569 @@
+{
+  "cases": [
+    {
+      "id": "R01-L1-CI-failure",
+      "input_sha256": "66742c7fa36be5829c5d02785bc157802f834ad758749ff08be24b2b9a0cca73",
+      "expected": {
+        "ACCEPTANCE_STATUS": "FAIL"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "LEVEL1_GIT_ONLY",
+          "CI_FAIL"
+        ],
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": false,
+          "reason": "LEVEL1_GIT_ONLY_NOT_APPLICABLE"
+        },
+        "archive_observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "FAIL",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R02-L1-review-unknown",
+      "input_sha256": "a326f91a28bae7edd046f5da656819825f3bb20f5c932602afd709baed8492a2",
+      "expected": {
+        "ACCEPTANCE_STATUS": "PARTIAL"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "LEVEL1_GIT_ONLY"
+        ],
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": false,
+          "reason": "LEVEL1_GIT_ONLY_NOT_APPLICABLE"
+        },
+        "archive_observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "UNKNOWN"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R03-L1-head-changed",
+      "input_sha256": "57d6b62b54ff98921a41b45d029a9a0383db9c5641b8d5f6b75d6ec11ac52236",
+      "expected": {
+        "ACCEPTANCE_STATUS": "FAIL"
+      },
+      "actual": {
+        "contract_status": "FAIL",
+        "reason_codes": [
+          "HEAD_CHANGED"
+        ],
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": false,
+          "reason": "LEVEL1_GIT_ONLY_NOT_APPLICABLE"
+        },
+        "archive_observations": {
+          "storage": "NOT_TESTED",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R04-L1-nonapplicable-observations-retained",
+      "input_sha256": "e072b5eeb3741458d17b950acc0e55f5be0397c39967100d44761b4f3b821139",
+      "expected": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "LEVEL1_GIT_ONLY",
+          "CUSTODY_FAIL"
+        ],
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": false,
+          "reason": "LEVEL1_GIT_ONLY_NOT_APPLICABLE"
+        },
+        "archive_observations": {
+          "storage": "FAIL",
+          "readback": "NOT_TESTED",
+          "size": "NOT_TESTED",
+          "sha256": "NOT_TESTED",
+          "all_bytes": "NOT_TESTED",
+          "bundle_restore": "NOT_TESTED",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R05-L2-missing-separation",
+      "input_sha256": "a3881c8e97437c29f676c3955b409045df7769ea06e1ca8f05548cf13cf23c04",
+      "expected": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R06-L2-known-sha-fail",
+      "input_sha256": "362c636ae868badaddd17093928e5bcb54ca61cc867e313b542bf118a1a83160",
+      "expected": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "FAIL"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID",
+          "VERIFICATION_FAIL"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "FAIL",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R07-L3-exact-active-risks",
+      "input_sha256": "bb6d3c6852ebfe05c1f26ca5fd7785ad92c5f62095b09227c806bbbb51b289c9",
+      "expected": {
+        "ACCEPTANCE_STATUS": "PASS"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "PASS",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R08-L3-unknown-risk",
+      "input_sha256": "be6e79fbf11548e7ce843fc61bdbcf0dee62c0af728a29b8a68f48d90a77ed8c",
+      "expected": {
+        "contract_status": "FAIL"
+      },
+      "actual": {
+        "contract_status": "FAIL",
+        "reason_codes": [
+          "SCHEMA_INVALID",
+          "RISK_UNKNOWN_NAME"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "UNKNOWN",
+        "production_permit": false
+      },
+      "match": true
+    },
+    {
+      "id": "R09-L3-duplicate-risk",
+      "input_sha256": "306effce8ef5bc5f10da851ec9b3509a0a64feb3d4af617b49f5ec01c78efb97",
+      "expected": {
+        "contract_status": "FAIL"
+      },
+      "actual": {
+        "contract_status": "FAIL",
+        "reason_codes": [
+          "SCHEMA_INVALID",
+          "RISK_DUPLICATE"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "UNKNOWN",
+        "production_permit": false
+      },
+      "match": true
+    },
+    {
+      "id": "R10-L3-missing-risk",
+      "input_sha256": "2a3adb52aa630edd66d506284c0f32e10a12a4a160c5913d85422aa18698c847",
+      "expected": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "UNKNOWN"
+      },
+      "actual": {
+        "contract_status": "UNKNOWN",
+        "reason_codes": [
+          "EXTRA_CONTRACT_UNKNOWN"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R11-L3-approval-denied",
+      "input_sha256": "3fba7dda7754b6dbed3fdd994f593461a4936285c64c26cf9cc70af82ddf6371",
+      "expected": {
+        "ACCEPTANCE_STATUS": "FAIL"
+      },
+      "actual": {
+        "contract_status": "FAIL",
+        "reason_codes": [
+          "EXTRA_APPROVAL_DENIED"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R12-L3-approval-unknown",
+      "input_sha256": "dc555d07d61a2a61a60aa0839fab786c4fc3c71c02b2492b870a57e146f0bffd",
+      "expected": {
+        "ACCEPTANCE_STATUS": "BLOCKED"
+      },
+      "actual": {
+        "contract_status": "UNKNOWN",
+        "reason_codes": [
+          "EXTRA_APPROVAL_UNKNOWN"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R13-L3-approval-unexecuted",
+      "input_sha256": "46407b45dd486b1e086c3bf68bc9f2472d6ed12778b05bc02e7159fb91e531e0",
+      "expected": {
+        "ACCEPTANCE_STATUS": "PARTIAL"
+      },
+      "actual": {
+        "contract_status": "NOT_TESTED",
+        "reason_codes": [
+          "EXTRA_APPROVAL_NOT_TESTED"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "PARTIAL",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R14-STRICT-known-shared",
+      "input_sha256": "ebd22719899f3caaa13935f8bba480f9c91b3ac71b323712098b9cf4a590dcb3",
+      "expected": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "STRICT_SHARED_OWNER"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "human_independence": "LIMITED_SHARED_OWNER",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R15-STRICT-human-missing",
+      "input_sha256": "cd3b75cdae8f63f2b831a145be6a9ec5c98820e0dba632170e277c028aea1d36",
+      "expected": {
+        "INDEPENDENCE_STATUS": "BLOCKED"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "human_independence": "UNKNOWN",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R16-STRICT-owner-unknown",
+      "input_sha256": "8b298f6c2f34980f715bceac0a34e8c916b214a67094376f322672b587317d96",
+      "expected": {
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "human_independence": "PASS",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    },
+    {
+      "id": "R17-STRICT-established",
+      "input_sha256": "c3f87015613481f9672f617e78f4f60c1a3ebe135c0504d61b4edb5061aa6892",
+      "expected": {
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS"
+      },
+      "actual": {
+        "contract_status": "PASS",
+        "reason_codes": [
+          "CONTRACT_VALID"
+        ],
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PASS",
+        "human_independence": "PASS",
+        "production_permit": false,
+        "archive_applicability": {
+          "required": true,
+          "reason": "LEVEL2_3_REQUIRED"
+        },
+        "archive_observations": {
+          "storage": "PASS",
+          "readback": "PASS",
+          "size": "PASS",
+          "sha256": "PASS",
+          "all_bytes": "PASS",
+          "bundle_restore": "PASS",
+          "ci": "PASS",
+          "review": "PASS"
+        }
+      },
+      "match": true
+    }
+  ],
+  "total": 17,
+  "matched": 17,
+  "production_permit": false
+}

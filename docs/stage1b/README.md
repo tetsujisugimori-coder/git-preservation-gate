@@ -1,3 +1,10 @@
+# Current fixed-publication re-review status (2026-11-18)
+
+See [fixed-publication results](repatch-review.md). Overall PARTIAL; P2-B01/B02 and P3-B03 technically CLOSED; P2-03 remains CLOSED. Limited synthetic/Windows technical acceptance YES and limited merge recommendation YES, with final documentation readback and CI reported by the anchored PR review. Draft retained. Real permanent preservation and Stage1-C production transition are not accepted. Historical path disclosure P3 OPEN; old cloud raw retention UNKNOWN.
+
+---
+## Earlier status and historical records (preserved)
+
 # Current re-correction status (2026-11-18)
 
 See [P2-B01/B02 re-correction](repatch-review.md) for the current scope, fixed starting version, new results and pending independent/CI gates. Limited acceptance and merge recommendation remain NO pending completion; Draft maintained. Previous YES/CI-zero statements below are dated historical evidence, not the current decision.

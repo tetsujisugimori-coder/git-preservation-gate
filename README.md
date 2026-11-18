@@ -11,4 +11,6 @@
 
 正本は[中央規約v0.1.0](docs/preservation-policy.md)。[構成](docs/architecture.md)、[ゲート契約](docs/gate-contracts.md)、[保存・脅威モデル](docs/security-and-storage.md)、[AI適用計画](docs/ai-integration-plan.md)、[AI実行主体10分類](docs/actor-execution-taxonomy.md)、[実行来歴契約](docs/execution-provenance-contract.md)、[試験台帳](tests/test-plan.md)、[AI分類の合成反例12件](tests/actor-classification-cases.md)、[Stage0受入・現状調査](docs/stage0-acceptance.md)を参照。
 
+Stage 0の補訂案として、[単独開発向け監査v0.1.1提案（未採用）](docs/solo-maintainer-audit-proposal.md)、[単独監査の合成反例案（未実施）](tests/solo-maintainer-audit-scenarios.md)、[PR #4原ZIP限定回収記録](docs/pr4-original-zip-limited-recovery.md)を追加。現行正本は引き続きv0.1.0、P05の独立担当者必須・Gate B/C停止条件は変更されていない。PR #4の原ZIPはUNKNOWN、実保存/再取得はBLOCKED。
+
 関連: [Issue #1](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/1)・[Stage 0補訂Issue #3](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/3)。main直変更・無承認設定変更・本番適用は行わない。Stage 0補訂のDraft PRは別審査までマージしない。公開物は設計・仕様のみ。実案件bundleや承認原本をこのPublic repoへ置かない。

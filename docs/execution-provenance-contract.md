@@ -65,6 +65,9 @@ OID placeholdersがあるため本例は**故意に未完成**であり、Gate�
 3. 固定済み原bytesのSHA-256を計算する。レコードにdigestを書き戻さない。
 4. receiptに予約済みID・対象record_id・SHA-256を入れて固定する。監査ではreceipt ID、対象record_id、固定版原bytesのdigestを照合する。receipt未着はBLOCKED、対象またはdigestの矛盾はFAILとして扱う。
 
+## 単独開発における主体・照合の区別（未採用案）
+[単独開発向け監査v0.1.1案](solo-maintainer-audit-proposal.md)は、同じownerによる別セッションBの直接再取得と技術照合を認める一方、別人格・別OS資格情報の独立性が成立したと扱わない。主体、OS account、credential、execution_id、workspace、保存先からの取得経路を個別フィールド/証拠として記録し、共有関係や未知を開示する。採用前は現行v0.1.0 P05による独立担当者不足BLOCKEDを維持する。
+
 ## Gateの受入契約
 - **Gate A**: 対象commit/treeと記録の対応、実行主体/環境の取得可能な来歴、固定した規約版を検査する。未pushも同じ対象固定規則。
 - **Gate B**: 保存・再取得・隔離復元の各実行について別レコードを残し、担当分離とP03〜P05の原実物取得を確認する。

@@ -22,3 +22,8 @@ C成立はpush/mergeの承認を自動作成しない。CIが0件ならNOT_TESTE
 
 ## 制御策の強制力
 文書/合成器は本番操作の技術的遮断ではない。ローカルhook、CI、branch protection、ACLの導入・回避可能性はStage 1/2で別評価。本案から第三者認証・不変保存・時刻真正性を主張しない。
+
+## P2補訂の機械入力契約
+optional `risk_contract` は `{decision, rationale, approval, risks}`。decisionは `required / not_required / UNKNOWN`、approvalは `PASS / FAIL / UNKNOWN / NOT_TESTED`、risksはtrueとなったrisk keyの集合。型・未知key・重複・非該当riskはschema拒否。L3で未提供、UNKNOWN、空白理由、全risk未網羅、requiredなのに必須追加検査が空、not_requiredなのに必須追加検査ありの場合は `RISK_CONTRACT_UNKNOWN`。承認の非PASSは別理由コードで保持し、verificationへ集約する。空理由はschema異常ではなく根拠不足UNKNOWN。
+
+Gate Aの対象同定と、追加安全契約を必要とするB/Cを分ける。正しく承認されたnot_requiredなら基本検査だけでB/Cの合成eligibleは可能。requiredなら従来のextra_checksを全て検査する。低すぎる分類は全eligible=false、acceptance FAIL。保存/検証の既知FAILだけ対応軸に保持し、それ以外はUNKNOWN。Stage 0の実permitは全ケースfalse。

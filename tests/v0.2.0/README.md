@@ -33,3 +33,14 @@
 旧SMは未実施の自然文仕様。これはv0.2での具体化実行であって、旧原票の回収/旧実測再現ではない。ATは旧PR固定版を別領域で再実行し旧期待保持。
 
 L1では保存承認scope/期限/individualは非適用、adopted（規約適用）のみ共通。CIやレビュー/公開操作の権限は別契約で省略しない。extra_checksはL1では製品受入C、L2/3では追加内容検証B/Cに適用。L1のB trueは追加archive非適用を含む仮定上の通過で、検証PASSを表さない。
+
+## P2補訂後の再実行
+旧 `cases.json` と `oracle-lock.json` は初回49件の原票として不変。旧run.pyは旧期待の比較であり、補訂後はV019/V041の2差分を意図的に報告する（47/49）。旧期待を修正して成功へ合わせない。新規32件は実行前固定。49件の再判定overlayは別ファイルで、V041の見落とし訂正履歴を保存。
+
+repo rootから:
+```sh
+python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p2/p2-cases.json new32.json
+python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p2/legacy49-reassessment-v2.json regression49.json
+python tests/v0.2.0/p2/run_fixed.py tests/v0.2.0/check.py tests/v0.2.0/p2/extra-boundary-cases.json extra3.json
+```
+初回evidence/submission-manifestは初回HEAD専用。本補訂の提出集合は新しいp2/submission-manifestで別に管理。

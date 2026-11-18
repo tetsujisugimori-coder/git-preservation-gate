@@ -1,0 +1,63 @@
+{
+  "reviewed_local_head": "f94bfc42c19bc2c4d36bb7d2fefd56db113e8622",
+  "time": "2026-11-18T10:00:58.051658+00:00",
+  "reviewer": "separate AI reviewer B",
+  "independence_limits": [
+    "same provider infrastructure",
+    "same account",
+    "shared filesystem",
+    "inherited context",
+    "not independent human or credential principal"
+  ],
+  "hashes": {
+    "tests/v0.2.0/check.py": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+    "tests/v0.2.0/run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+    "tests/v0.2.0/input.schema.json": "70327dd93fa6d3753b5cc8770f8126afbaa4f859d79e97932917cdb47e10cc7d"
+  },
+  "results": {
+    "p2_fixed": {
+      "pass": 32,
+      "total": 32
+    },
+    "original49_reassessment": {
+      "pass": 49,
+      "total": 49,
+      "original_expectation_changes": [
+        "V019",
+        "V041"
+      ]
+    },
+    "extra_boundary": {
+      "pass": 3,
+      "total": 3,
+      "before_fix_pass": 0
+    },
+    "schema": {
+      "pass": 29,
+      "total": 29
+    },
+    "runner": {
+      "pass": 4,
+      "total": 4
+    },
+    "legacy_AT": {
+      "pass": 52,
+      "total": 52
+    }
+  },
+  "findings": {
+    "P2-01": "CLOSED scoped",
+    "P2-02": "CLOSED scoped",
+    "reviewer-X01-03": "CLOSED same counterexamples",
+    "remaining_P1": 0,
+    "remaining_P2": 0,
+    "remaining_P3": 0
+  },
+  "recommendation": {
+    "stage0_limited_acceptance": "YES",
+    "stage0_limited_merge": "YES conditional on final submitted readback",
+    "formal_policy_adoption": "PENDING",
+    "stage1": "NO",
+    "production_operations": "NO"
+  }
+}

@@ -407,6 +407,48 @@
         "type": "string",
         "pattern": "^[A-Za-z0-9_]+$"
       }
+    },
+    "risk_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "rationale",
+        "approval",
+        "risks"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "required",
+            "not_required",
+            "UNKNOWN"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "approval": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN",
+            "NOT_TESTED"
+          ]
+        },
+        "risks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "confidential",
+              "irrecoverable",
+              "destructive",
+              "strong_authenticity"
+            ]
+          }
+        }
+      }
     }
   },
   "required": [

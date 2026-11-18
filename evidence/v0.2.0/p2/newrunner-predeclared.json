@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-18T10:02:46.977579+00:00",
+  "expected": {
+    "exit_code": 2,
+    "test_status": "NOT_TESTED",
+    "checker_runs": 0
+  },
+  "files": {
+    "empty": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "duplicate": "99d09534093b66630e5b6015556ba56828e4de3649f4914e5c9bb9c781000d7e",
+    "missing_field": "4a6e68b80482f625b9e293d41acdc9ee900e2165ebf7384ef200994a8125df6b"
+  }
+}

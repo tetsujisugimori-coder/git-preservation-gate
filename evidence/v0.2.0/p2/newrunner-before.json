@@ -1,0 +1,26 @@
+[
+  {
+    "id": "empty",
+    "exit_code": 0,
+    "stdout": "gate-v02-p2-20261118/oracle/newrunner-faults/empty-before-log.json {'PASS': 0, 'FAIL': 0, 'UNKNOWN': 0}\n",
+    "stderr": "",
+    "timeout": 30,
+    "retry": 0
+  },
+  {
+    "id": "duplicate",
+    "exit_code": 0,
+    "stdout": "gate-v02-p2-20261118/oracle/newrunner-faults/duplicate-before-log.json {'PASS': 2, 'FAIL': 0, 'UNKNOWN': 0}\n",
+    "stderr": "",
+    "timeout": 30,
+    "retry": 0
+  },
+  {
+    "id": "missing_field",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"[private-workspace]/gate-v02-p2-20261118/repo/tests/v0.2.0/p2/run_fixed.py\", line 5, in <module>\n    raw=json.dumps(c['input'],sort_keys=True).encode();r={'id':c['id'],'input':c['input'],'input_sha256':sha(raw),'expected':c['expected'],'started_at':now(),'timeout_seconds':5,'retry':0,'command':['python','-I','check.py']}\n                                                                                                                             ~^^^^^^^^^^^^\nKeyError: 'expected'\n",
+    "timeout": 30,
+    "retry": 0
+  }
+]

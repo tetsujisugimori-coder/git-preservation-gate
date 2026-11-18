@@ -1,0 +1,168 @@
+{
+  "count": 4,
+  "passed": 4,
+  "rows": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "gate-v02-p2-20261118/oracle/regression-results/missing_cases/run.py",
+        "--log",
+        "gate-v02-p2-20261118/oracle/regression-results/missing_cases/log.json"
+      ],
+      "start": "2026-11-18T10:00:08.276799+00:00",
+      "end": "2026-11-18T10:00:08.315946+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "missing_cases",
+      "expected": {
+        "exit_code": 2,
+        "test_status": "NOT_TESTED",
+        "runs": []
+      },
+      "actual": {
+        "started_at": "2026-11-18T10:00:08.307807+00:00",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "kind": "SYNTHETIC_ONLY",
+        "production_permit": false,
+        "runs": [],
+        "preflight_error": "FileNotFoundError: [Errno 2] No such file or directory: '[isolated-case]/cases.json'",
+        "test_status": "NOT_TESTED",
+        "ended_at": "2026-11-18T10:00:08.309371+00:00"
+      },
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "gate-v02-p2-20261118/oracle/regression-results/empty_cases/run.py",
+        "--log",
+        "gate-v02-p2-20261118/oracle/regression-results/empty_cases/log.json"
+      ],
+      "start": "2026-11-18T10:00:08.316702+00:00",
+      "end": "2026-11-18T10:00:08.353929+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "empty_cases",
+      "expected": {
+        "exit_code": 2,
+        "test_status": "NOT_TESTED",
+        "runs": []
+      },
+      "actual": {
+        "started_at": "2026-11-18T10:00:08.346443+00:00",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "kind": "SYNTHETIC_ONLY",
+        "production_permit": false,
+        "runs": [],
+        "inputs": {
+          "cases.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "check.py": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+          "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+          "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+        },
+        "preflight_error": "ValueError: case inventory invalid",
+        "test_status": "NOT_TESTED",
+        "ended_at": "2026-11-18T10:00:08.348073+00:00"
+      },
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "gate-v02-p2-20261118/oracle/regression-results/digest_mismatch/run.py",
+        "--log",
+        "gate-v02-p2-20261118/oracle/regression-results/digest_mismatch/log.json"
+      ],
+      "start": "2026-11-18T10:00:08.355673+00:00",
+      "end": "2026-11-18T10:00:08.395535+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "digest_mismatch",
+      "expected": {
+        "exit_code": 2,
+        "test_status": "NOT_TESTED",
+        "runs": []
+      },
+      "actual": {
+        "started_at": "2026-11-18T10:00:08.384900+00:00",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "kind": "SYNTHETIC_ONLY",
+        "production_permit": false,
+        "runs": [],
+        "inputs": {
+          "cases.json": "d291fbe6f0f30284d0474c434315155e4f520cd7e745a36d396e365317ff057b",
+          "check.py": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+          "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+          "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+        },
+        "preflight_error": "ValueError: oracle digest mismatch",
+        "test_status": "NOT_TESTED",
+        "ended_at": "2026-11-18T10:00:08.387559+00:00"
+      },
+      "match": true
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "gate-v02-p2-20261118/oracle/regression-results/duplicate_ids/run.py",
+        "--log",
+        "gate-v02-p2-20261118/oracle/regression-results/duplicate_ids/log.json"
+      ],
+      "start": "2026-11-18T10:00:08.398196+00:00",
+      "end": "2026-11-18T10:00:08.440438+00:00",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "preflight failed; no checker execution\n",
+      "timeout_seconds": 30,
+      "retry": 0,
+      "id": "duplicate_ids",
+      "expected": {
+        "exit_code": 2,
+        "test_status": "NOT_TESTED",
+        "runs": []
+      },
+      "actual": {
+        "started_at": "2026-11-18T10:00:08.427332+00:00",
+        "environment": {
+          "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+        },
+        "kind": "SYNTHETIC_ONLY",
+        "production_permit": false,
+        "runs": [],
+        "inputs": {
+          "cases.json": "fb3bec32bb7421159c392d042ffcfd0d7287c90e957110092e90b759b92ebe62",
+          "check.py": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+          "run.py": "6f2948856f1a783ae7ce47205adcf295e57423897367a84d6d972d1d2a80e2f3",
+          "oracle-lock.json": "ce2257980eace5df04f27c5fade511fb40691638d2fc2fc711e687c6dc2bfdbe"
+        },
+        "preflight_error": "ValueError: case inventory invalid",
+        "test_status": "NOT_TESTED",
+        "ended_at": "2026-11-18T10:00:08.431907+00:00"
+      },
+      "match": true
+    }
+  ],
+  "public_redaction": {
+    "raw_sha256": "1ddd6f73a0094c2c413bf01682e397d3a522ee7c5ba93fbea2227cbb3099483a",
+    "change": "internal workspace prefix removed; raw retained privately"
+  }
+}

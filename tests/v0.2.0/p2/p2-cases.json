@@ -1,0 +1,2928 @@
+[
+  {
+    "id": "P001",
+    "title": "Original V019 missing risk contract",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Prior PASS does not establish risk-specific contract completeness."
+  },
+  {
+    "id": "P002",
+    "title": "L3 confidential approved baseline sufficient",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "No additional check is justified by an explicit approved rationale; avoid blanket BLOCKED."
+  },
+  {
+    "id": "P003",
+    "title": "L3 confidential required but empty additional checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Unknown required content cannot authorize hypothetical B/C."
+  },
+  {
+    "id": "P004",
+    "title": "L3 confidential defined additional check PASS",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "PASS"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "Explicit additional contract and observed synthetic result."
+  },
+  {
+    "id": "P005",
+    "title": "L3 destructive approved baseline sufficient",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "No additional check is justified by an explicit approved rationale; avoid blanket BLOCKED."
+  },
+  {
+    "id": "P006",
+    "title": "L3 destructive required but empty additional checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Unknown required content cannot authorize hypothetical B/C."
+  },
+  {
+    "id": "P007",
+    "title": "L3 destructive defined additional check PASS",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "PASS"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "Explicit additional contract and observed synthetic result."
+  },
+  {
+    "id": "P008",
+    "title": "L3 strong_authenticity approved baseline sufficient",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": true
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "strong_authenticity"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "No additional check is justified by an explicit approved rationale; avoid blanket BLOCKED."
+  },
+  {
+    "id": "P009",
+    "title": "L3 strong_authenticity required but empty additional checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": true
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "strong_authenticity"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Unknown required content cannot authorize hypothetical B/C."
+  },
+  {
+    "id": "P010",
+    "title": "L3 strong_authenticity defined additional check PASS",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": true
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "PASS"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "strong_authenticity"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "Explicit additional contract and observed synthetic result."
+  },
+  {
+    "id": "P011",
+    "title": "L3 irrecoverable approved baseline sufficient",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": true,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "irrecoverable"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "No additional check is justified by an explicit approved rationale; avoid blanket BLOCKED."
+  },
+  {
+    "id": "P012",
+    "title": "L3 irrecoverable required but empty additional checks",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": true,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "irrecoverable"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Unknown required content cannot authorize hypothetical B/C."
+  },
+  {
+    "id": "P013",
+    "title": "L3 irrecoverable defined additional check PASS",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": true,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "PASS"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "irrecoverable"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "PASS",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PASS",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": []
+    },
+    "rationale": "Explicit additional contract and observed synthetic result."
+  },
+  {
+    "id": "P014",
+    "title": "L3 approval FAIL",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "FAIL",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_APPROVAL_FAIL"
+      ]
+    },
+    "rationale": "Approval observation stays separate from custody and preserves its status."
+  },
+  {
+    "id": "P015",
+    "title": "L3 approval UNKNOWN",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "UNKNOWN",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_APPROVAL_UNKNOWN"
+      ]
+    },
+    "rationale": "Approval observation stays separate from custody and preserves its status."
+  },
+  {
+    "id": "P016",
+    "title": "L3 approval NOT_TESTED",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "NOT_TESTED",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "NOT_TESTED",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_APPROVAL_NOT_TESTED"
+      ]
+    },
+    "rationale": "Approval observation stays separate from custody and preserves its status."
+  },
+  {
+    "id": "P017",
+    "title": "L3 empty_rationale",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Incomplete or inconsistent contract cannot prove sufficiency."
+  },
+  {
+    "id": "P018",
+    "title": "L3 missing_risk",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": []
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Incomplete or inconsistent contract cannot prove sufficiency."
+  },
+  {
+    "id": "P019",
+    "title": "L3 decision_unknown",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "UNKNOWN",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Incomplete or inconsistent contract cannot prove sufficiency."
+  },
+  {
+    "id": "P020",
+    "title": "L3 not_required_nonempty",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "PASS"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "confidential"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Incomplete or inconsistent contract cannot prove sufficiency."
+  },
+  {
+    "id": "P021",
+    "title": "L3 required extra FAIL",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "FAIL"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_EXTRA_risk_control_FAIL"
+      ]
+    },
+    "rationale": "Do not turn unexecuted or unknown extra check into FAIL or PASS."
+  },
+  {
+    "id": "P022",
+    "title": "L3 required extra UNKNOWN",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "UNKNOWN"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_EXTRA_risk_control_UNKNOWN"
+      ]
+    },
+    "rationale": "Do not turn unexecuted or unknown extra check into FAIL or PASS."
+  },
+  {
+    "id": "P023",
+    "title": "L3 required extra NOT_TESTED",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": true,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {
+        "risk_control": "NOT_TESTED"
+      },
+      "contract_extra_required": [
+        "risk_control"
+      ],
+      "risk_contract": {
+        "decision": "required",
+        "rationale": "Additional risk check required.",
+        "approval": "PASS",
+        "risks": [
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "NOT_TESTED",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "PARTIAL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_EXTRA_risk_control_NOT_TESTED"
+      ]
+    },
+    "rationale": "Do not turn unexecuted or unknown extra check into FAIL or PASS."
+  },
+  {
+    "id": "P024",
+    "title": "Low classification plus sha256",
+    "input": {
+      "artifact_kind": "ordinary",
+      "level": 1,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "FAIL",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_SHA256_FAIL",
+        "LEVEL_TOO_LOW"
+      ]
+    },
+    "rationale": "Classification rejection never suppresses an observed failure in its own axis."
+  },
+  {
+    "id": "P025",
+    "title": "Low classification plus storage",
+    "input": {
+      "artifact_kind": "ordinary",
+      "level": 1,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "FAIL",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "FAIL",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_STORAGE_FAIL",
+        "LEVEL_TOO_LOW"
+      ]
+    },
+    "rationale": "Classification rejection never suppresses an observed failure in its own axis."
+  },
+  {
+    "id": "P026",
+    "title": "Low classification plus ci",
+    "input": {
+      "artifact_kind": "ordinary",
+      "level": 1,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "FAIL",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_CI_FAIL",
+        "LEVEL_TOO_LOW"
+      ]
+    },
+    "rationale": "Classification rejection never suppresses an observed failure in its own axis."
+  },
+  {
+    "id": "P027",
+    "title": "Low classification plus None",
+    "input": {
+      "artifact_kind": "ordinary",
+      "level": 1,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": null,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "NOT_TESTED",
+        "change_control": "NOT_TESTED",
+        "ci": "NOT_TESTED",
+        "review": "NOT_TESTED",
+        "original": "NOT_TESTED",
+        "approval": "NOT_TESTED",
+        "storage": "NOT_TESTED",
+        "receipt": "NOT_TESTED",
+        "retrieval": "NOT_TESTED",
+        "size": "NOT_TESTED",
+        "sha256": "NOT_TESTED",
+        "bytes": "NOT_TESTED",
+        "crc": "NOT_TESTED",
+        "manifest": "NOT_TESTED",
+        "archive_safety": "NOT_TESTED",
+        "acl": "NOT_TESTED",
+        "retention": "NOT_TESTED",
+        "bundle_restore": "NOT_TESTED",
+        "object_integrity": "NOT_TESTED"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "LEVEL_TOO_LOW"
+      ]
+    },
+    "rationale": "Classification rejection never suppresses an observed failure in its own axis."
+  },
+  {
+    "id": "P028",
+    "title": "Unknown classification plus sha256",
+    "input": {
+      "artifact_kind": "zip",
+      "level": "UNKNOWN",
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "FAIL",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_SHA256_FAIL",
+        "LEVEL_UNKNOWN"
+      ]
+    },
+    "rationale": "Known failures survive unresolved classification."
+  },
+  {
+    "id": "P029",
+    "title": "Unknown classification plus storage",
+    "input": {
+      "artifact_kind": "zip",
+      "level": "UNKNOWN",
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "FAIL",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "FAIL",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_STORAGE_FAIL",
+        "LEVEL_UNKNOWN"
+      ]
+    },
+    "rationale": "Known failures survive unresolved classification."
+  },
+  {
+    "id": "P030",
+    "title": "Unknown classification plus ci",
+    "input": {
+      "artifact_kind": "zip",
+      "level": "UNKNOWN",
+      "risk": {
+        "confidential": false,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "SOLO_STANDARD",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "FAIL",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": false,
+        "credential_independent": false
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "UNKNOWN",
+      "VERIFICATION_STATUS": "UNKNOWN",
+      "INDEPENDENCE_STATUS": "UNKNOWN",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_CI_FAIL",
+        "LEVEL_UNKNOWN"
+      ]
+    },
+    "rationale": "Known failures survive unresolved classification."
+  },
+  {
+    "id": "P031",
+    "title": "Missing L3 contract plus SHA FAIL",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "FAIL",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": []
+    },
+    "expected": {
+      "CUSTODY_STATUS": "PASS",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "PASS",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "CHECK_SHA256_FAIL",
+        "RISK_CONTRACT_UNKNOWN"
+      ]
+    },
+    "rationale": "Unknown contract must not mask known mismatch."
+  },
+  {
+    "id": "P032",
+    "title": "Contract nonactive risk is invalid",
+    "input": {
+      "artifact_kind": "zip",
+      "level": 3,
+      "risk": {
+        "confidential": true,
+        "irrecoverable": false,
+        "destructive": false,
+        "strong_authenticity": false
+      },
+      "mode": "STRICT_INDEPENDENT",
+      "checks": {
+        "git_trace": "PASS",
+        "change_control": "PASS",
+        "ci": "PASS",
+        "review": "PASS",
+        "original": "PASS",
+        "approval": "PASS",
+        "storage": "PASS",
+        "receipt": "PASS",
+        "retrieval": "PASS",
+        "size": "PASS",
+        "sha256": "PASS",
+        "bytes": "PASS",
+        "crc": "PASS",
+        "manifest": "PASS",
+        "archive_safety": "PASS",
+        "acl": "PASS",
+        "retention": "PASS",
+        "bundle_restore": "PASS",
+        "object_integrity": "PASS"
+      },
+      "context": {
+        "session_separated": true,
+        "execution_separated": true,
+        "workspace_separated": true,
+        "direct_storage": true,
+        "independent_input": true,
+        "human_independent": true,
+        "credential_independent": true
+      },
+      "authorization": {
+        "scope_matches": true,
+        "valid": true,
+        "adopted": true,
+        "individual": true
+      },
+      "flags": {
+        "regenerated": false,
+        "retroactive_pass": false,
+        "level_downgrade": false,
+        "claims_third_party": false
+      },
+      "ci_required": true,
+      "extra_checks": {},
+      "contract_extra_required": [],
+      "risk_contract": {
+        "decision": "not_required",
+        "rationale": "Risk-specific review concludes baseline sufficient.",
+        "approval": "PASS",
+        "risks": [
+          "confidential",
+          "destructive"
+        ]
+      }
+    },
+    "expected": {
+      "CUSTODY_STATUS": "FAIL",
+      "VERIFICATION_STATUS": "FAIL",
+      "INDEPENDENCE_STATUS": "FAIL",
+      "ACCEPTANCE_STATUS": "FAIL",
+      "applicability": {
+        "custody": true,
+        "verification": true,
+        "independence": true
+      },
+      "gate_eligibility": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "permit": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "reason_codes": [
+        "SCHEMA_INVALID"
+      ]
+    },
+    "rationale": "Contract scope mismatch is schema invalid, not implicitly approved."
+  }
+]

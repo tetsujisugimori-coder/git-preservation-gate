@@ -1,0 +1,3078 @@
+{
+  "checker_sha256": "e840f847edf8162114a2d4593d09ff0dce4fc0076bfa1b03a096f12f27eaea60",
+  "oracle_sha256": "04855410edbd754b5fdf4fe27e8acda21d6ae18a52f6002180571b7525257e07",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "command": "python check.py < canonical case input",
+  "count": 49,
+  "passed": 49,
+  "rows": [
+    {
+      "id": "V001",
+      "input_sha256": "2d6a7a96b54176cfee48bdee7756f00d38fdd460d23c940fbcbeafbf4fed2928",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.239343+00:00",
+      "end": "2026-11-18T10:00:06.259000+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V002",
+      "input_sha256": "b022a426896ba44e82fec7477a84d431708034746d3f6c6ee32a8ebbf85d45f4",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETRIEVAL_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETRIEVAL_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.259069+00:00",
+      "end": "2026-11-18T10:00:06.277446+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RETRIEVAL_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V003",
+      "input_sha256": "e252c7d0a3758e766dceefc826e2256adb8c619c4e13f6d3c4e1f57b3d5a21a1",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.277523+00:00",
+      "end": "2026-11-18T10:00:06.295342+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V004",
+      "input_sha256": "dac876dcd974b463bb4251c167a6df1f788d28ad4da0b178badbf81f2cd64a0e",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CRC_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CRC_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.295389+00:00",
+      "end": "2026-11-18T10:00:06.314133+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CRC_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V005",
+      "input_sha256": "daa7d80600dddc8922ddadb3edd70b6cf9465fe0de4f8b197917a4e252bc3b2c",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_MANIFEST_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_MANIFEST_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.314188+00:00",
+      "end": "2026-11-18T10:00:06.331869+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_MANIFEST_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V006",
+      "input_sha256": "6e789981e8abadffac7a286d6f098e454bfddcf0ccd6dbd3e7a5558ae066aa14",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.331914+00:00",
+      "end": "2026-11-18T10:00:06.351542+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V007",
+      "input_sha256": "0f44a132d02342aba0321ea00d45478a4abcbfdfc89b57260f2c1a8bf034947c",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.351592+00:00",
+      "end": "2026-11-18T10:00:06.371831+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DIRECT_STORAGE_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V008",
+      "input_sha256": "f33eccdeb7d7a10e62b95087d53a43dd297c75b38f8a9efdd52d931b6f3e196f",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.371888+00:00",
+      "end": "2026-11-18T10:00:06.394062+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V009",
+      "input_sha256": "bb50063a7afca59f876e74e4755fbc1ba84d735c2b1f4b70da34e0f0b98d4bcb",
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_EXPIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_EXPIRED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.394113+00:00",
+      "end": "2026-11-18T10:00:06.414361+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"AUTH_EXPIRED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V010",
+      "input_sha256": "18c3a32582bb909f860bc33ec941601b1c7bd17bec57de798ec12eff8890778d",
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_SCOPE_MISMATCH",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "AUTH_SCOPE_MISMATCH",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.414490+00:00",
+      "end": "2026-11-18T10:00:06.435831+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"AUTH_SCOPE_MISMATCH\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V011",
+      "input_sha256": "5c02f955978c32fef84a47f313e605510d58dbe57c7619720fa6d6804a792cf5",
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ACL_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ACL_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.435881+00:00",
+      "end": "2026-11-18T10:00:06.463468+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ACL_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V012",
+      "input_sha256": "389594cd32ecf85f218475fcfea73f4660c542f85b379df150a4e613fc967beb",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ORIGINAL_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ORIGINAL_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.463520+00:00",
+      "end": "2026-11-18T10:00:06.485437+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ORIGINAL_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V013",
+      "input_sha256": "482ec3e987fcb0830fafe56f6975f3d01703615e3fb0d56f3d3e6d6d9b61f1d1",
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ORIGINAL_SUBSTITUTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ORIGINAL_SUBSTITUTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.485486+00:00",
+      "end": "2026-11-18T10:00:06.505437+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ORIGINAL_SUBSTITUTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V014",
+      "input_sha256": "3af2b332537ad03c2b4142caf9731a47ce954f7fac7a16300a17934e00bb3539",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_OVERCLAIM"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_OVERCLAIM"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.505486+00:00",
+      "end": "2026-11-18T10:00:06.529016+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"THIRD_PARTY_OVERCLAIM\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V015",
+      "input_sha256": "d643d87db49e9326e7e96744e7a7688448c11d715be15567d77f8e1b2e323fec",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HISTORY_REWRITTEN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HISTORY_REWRITTEN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.529063+00:00",
+      "end": "2026-11-18T10:00:06.551004+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HISTORY_REWRITTEN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V016",
+      "input_sha256": "e0f7086edec2456b6128f1b2b4a51b9994aa6b44f729aef2b5accdd1e0693a85",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BUNDLE_RESTORE_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BUNDLE_RESTORE_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.551054+00:00",
+      "end": "2026-11-18T10:00:06.578590+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_BUNDLE_RESTORE_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V017",
+      "input_sha256": "f8f33d6b01ff4d78d855c3239156cce914bd37df5295368f55c004a408b80991",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_CI_FAIL"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_CI_FAIL"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.578647+00:00",
+      "end": "2026-11-18T10:00:06.621984+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\", \"CHECK_CI_FAIL\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V018",
+      "input_sha256": "6d040ca9f0a4f66b40f2c9072c25a78f1f61b74a8b04c17f2fdcc962792b22ff",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_REVIEW_NOT_TESTED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED",
+          "CHECK_REVIEW_NOT_TESTED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.622041+00:00",
+      "end": "2026-11-18T10:00:06.647966+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\", \"CHECK_REVIEW_NOT_TESTED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V019",
+      "input_sha256": "5b7bc0d7d009bf9faa68a8c21fd72364d06227ade8e504aaa6972efaf8a485ab",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "PASS",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "RISK_CONTRACT_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.648019+00:00",
+      "end": "2026-11-18T10:00:06.676808+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"PASS\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"RISK_CONTRACT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V020",
+      "input_sha256": "0d15f9978324b9af350c0b075b9d0647312268a0f20cc5f4a040863970f23f38",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.676868+00:00",
+      "end": "2026-11-18T10:00:06.705634+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HUMAN_INDEPENDENT_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V021",
+      "input_sha256": "19298b3967f082b3d1e8f913b8ac8ed7d0e8da0cb62682b688ba02c255020244",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_MISSING"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "HUMAN_INDEPENDENT_MISSING"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.705694+00:00",
+      "end": "2026-11-18T10:00:06.735654+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"HUMAN_INDEPENDENT_MISSING\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V022",
+      "input_sha256": "2c9312c2a6e47a076c131d3ea800d2005cf532c5d3aeeafa21a195ecf8740983",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SESSION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SESSION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.735717+00:00",
+      "end": "2026-11-18T10:00:06.755308+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SESSION_SEPARATED_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V023",
+      "input_sha256": "c718ec11f1eb036819f3a3f60dc43c448d39c13662af8bd709ca4edfa78eeb92",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXECUTION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXECUTION_SEPARATED_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.755360+00:00",
+      "end": "2026-11-18T10:00:06.779926+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EXECUTION_SEPARATED_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V024",
+      "input_sha256": "66ae3904207d75445295cc226aa7cf2584d2bde2a21fe74b236377ea35e4b868",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "WORKSPACE_SEPARATED_MISSING"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "WORKSPACE_SEPARATED_MISSING"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.779988+00:00",
+      "end": "2026-11-18T10:00:06.800608+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"WORKSPACE_SEPARATED_MISSING\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V025",
+      "input_sha256": "1de0284db9b2f26b869ff69b1f84c951238ea6d5f1f4865f3221c674e3571b74",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDEPENDENT_INPUT_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDEPENDENT_INPUT_MISSING",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.800679+00:00",
+      "end": "2026-11-18T10:00:06.827650+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"BLOCKED\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"INDEPENDENT_INPUT_MISSING\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V026",
+      "input_sha256": "074716a8ede5c6f072f8ce1ab17869014bc2740cb2794ad03c0a75f9ad21a421",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RECEIPT_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RECEIPT_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.827705+00:00",
+      "end": "2026-11-18T10:00:06.857235+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RECEIPT_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V027",
+      "input_sha256": "b21d16d3147e8d5e65a73ded4ce917cb620e82bd0a77c6b7afa4399647772359",
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_BLOCKED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.857337+00:00",
+      "end": "2026-11-18T10:00:06.877886+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_STORAGE_BLOCKED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V028",
+      "input_sha256": "ec5ac444bcb5769887d292b03368d9b0f677ab11b5db557958fceed7631add0f",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETENTION_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_RETENTION_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.877949+00:00",
+      "end": "2026-11-18T10:00:06.900152+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_RETENTION_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V029",
+      "input_sha256": "39c83711e9cdd57ca17ced82154b2d8111777e919d55afadb7bc8cb7088abced",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "POLICY_NOT_ADOPTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "POLICY_NOT_ADOPTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.900229+00:00",
+      "end": "2026-11-18T10:00:06.926617+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"POLICY_NOT_ADOPTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V030",
+      "input_sha256": "adfc9f7f474d92fcf56ed926f56a632f8d4ecd531342b5bc13d53c07c562e8b4",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_DOWNGRADE",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_DOWNGRADE",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.926669+00:00",
+      "end": "2026-11-18T10:00:06.946503+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_DOWNGRADE\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V031",
+      "input_sha256": "9be835e5f59f79b692e432d54981ac0793bbc3e9ad69c2e96dfc00d73854baea",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_OBJECT_INTEGRITY_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_OBJECT_INTEGRITY_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.946554+00:00",
+      "end": "2026-11-18T10:00:06.966515+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_OBJECT_INTEGRITY_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V032",
+      "input_sha256": "371f63af8e49c3eb484e455970895c007db1417299684d7f48992dd293c41f9f",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ARCHIVE_SAFETY_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_ARCHIVE_SAFETY_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.966568+00:00",
+      "end": "2026-11-18T10:00:06.991313+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_ARCHIVE_SAFETY_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V033",
+      "input_sha256": "c8caa8e66b0e067cc7db6083357eefe0c5361d7fec61e3aaa246bf6814bf83b2",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:06.991374+00:00",
+      "end": "2026-11-18T10:00:07.013051+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V034",
+      "input_sha256": "ff961585c49300116e6f05e8bb38cbdc613e19aeb29b08e57d7c2de07b47cfae",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.013153+00:00",
+      "end": "2026-11-18T10:00:07.032906+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V035",
+      "input_sha256": "6e789981e8abadffac7a286d6f098e454bfddcf0ccd6dbd3e7a5558ae066aa14",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.032961+00:00",
+      "end": "2026-11-18T10:00:07.062643+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V036",
+      "input_sha256": "bfb50015d22dc5aaa27e19532095593a52e7da466f5486b0633a471c5f1ccb8f",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_REVIEW_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_REVIEW_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.062704+00:00",
+      "end": "2026-11-18T10:00:07.081140+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_REVIEW_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V037",
+      "input_sha256": "8621b9e3719ae1cde798d1ea1ef3ada7d0d1406d9254b2294efc0a436df7dd9c",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_NOT_TESTED",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.081185+00:00",
+      "end": "2026-11-18T10:00:07.098417+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CI_NOT_TESTED\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V038",
+      "input_sha256": "ef70cea2785dd39a429c127f7ae1f9293e76333cf70b61a6ab422005b1a5946d",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PARTIAL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BYTES_NOT_TESTED",
+          "CHECK_SHA256_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_BYTES_NOT_TESTED",
+          "CHECK_SHA256_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.098462+00:00",
+      "end": "2026-11-18T10:00:07.119871+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"PARTIAL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_BYTES_NOT_TESTED\", \"CHECK_SHA256_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V039",
+      "input_sha256": "8ff197c6da4d61dc9556f79e053a0722868b899fe7588c4549d5362960091eb4",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "DIRECT_STORAGE_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.119928+00:00",
+      "end": "2026-11-18T10:00:07.140130+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"DIRECT_STORAGE_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V040",
+      "input_sha256": "042ec18c0c451bc38d86c725742cd0e7884db8bdf7d0f05e432d0d91b7b77b79",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.140177+00:00",
+      "end": "2026-11-18T10:00:07.159415+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V041",
+      "input_sha256": "f089f9bfc41e1a70e52401c1838bba5ed3c7b0b0ad0f4013d2dc5ebf0c5dd0ee",
+      "expected": {
+        "CUSTODY_STATUS": "BLOCKED",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDIVIDUAL_APPROVAL_REQUIRED",
+          "RISK_CONTRACT_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "INDIVIDUAL_APPROVAL_REQUIRED",
+          "RISK_CONTRACT_UNKNOWN",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.159465+00:00",
+      "end": "2026-11-18T10:00:07.180654+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"BLOCKED\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"INDIVIDUAL_APPROVAL_REQUIRED\", \"RISK_CONTRACT_UNKNOWN\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V042",
+      "input_sha256": "1b7507ea74be20bdcf864330a841d5218864d3537d9e35fb4dc5020200694437",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXTRA_CHECK_MISSING_isolation",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "BLOCKED",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "BLOCKED",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "EXTRA_CHECK_MISSING_isolation",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.180709+00:00",
+      "end": "2026-11-18T10:00:07.199565+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"BLOCKED\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"BLOCKED\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"EXTRA_CHECK_MISSING_isolation\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V043",
+      "input_sha256": "9ebe59604a642331a5cfa086ed32ca83943d5dba2336097604d3e7d68117f615",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_isolation_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_EXTRA_isolation_FAIL",
+          "SOLO_LIMITED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.199619+00:00",
+      "end": "2026-11-18T10:00:07.221950+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"LIMITED_SHARED_OWNER\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": true, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_EXTRA_isolation_FAIL\", \"SOLO_LIMITED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V044",
+      "input_sha256": "4b998e712794062323cee098a3768fa72b454b5fc678e15415a259011a713c82",
+      "expected": {
+        "CUSTODY_STATUS": "PASS",
+        "VERIFICATION_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_UNVERIFIED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PARTIAL",
+        "CUSTODY_STATUS": "PASS",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "PASS",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "SOLO_LIMITED",
+          "THIRD_PARTY_UNVERIFIED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.221995+00:00",
+      "end": "2026-11-18T10:00:07.241545+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PARTIAL\", \"CUSTODY_STATUS\": \"PASS\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"PASS\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"SOLO_LIMITED\", \"THIRD_PARTY_UNVERIFIED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V045",
+      "input_sha256": "82849a38ee5acc537d8d684ab7a98d65d6ddcc5fa65dbb1d36f98d9de82a002b",
+      "expected": {
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "ACCEPTANCE_STATUS": "PASS",
+        "applicability": {
+          "custody": false,
+          "verification": false,
+          "independence": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "PASS",
+        "CUSTODY_STATUS": "NOT_TESTED",
+        "INDEPENDENCE_STATUS": "NOT_TESTED",
+        "VERIFICATION_STATUS": "NOT_TESTED",
+        "applicability": {
+          "custody": false,
+          "independence": false,
+          "verification": false
+        },
+        "gate_eligibility": {
+          "A": true,
+          "B": true,
+          "C": true
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "ARCHIVE_NOT_REQUIRED"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.241596+00:00",
+      "end": "2026-11-18T10:00:07.262416+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"PASS\", \"CUSTODY_STATUS\": \"NOT_TESTED\", \"INDEPENDENCE_STATUS\": \"NOT_TESTED\", \"VERIFICATION_STATUS\": \"NOT_TESTED\", \"applicability\": {\"custody\": false, \"independence\": false, \"verification\": false}, \"gate_eligibility\": {\"A\": true, \"B\": true, \"C\": true}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"ARCHIVE_NOT_REQUIRED\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V046",
+      "input_sha256": "ff7a776c25eb9ba2ee259d261291d2ab1ec0aab4cd8de438c452edfc012e8210",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "LEVEL_TOO_LOW"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.262468+00:00",
+      "end": "2026-11-18T10:00:07.280972+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"LEVEL_TOO_LOW\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V047",
+      "input_sha256": "d45cac6862b58f1687f38d6e279ae2902a771715bf1df8080339d9b0895343f3",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_SHA256_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.281014+00:00",
+      "end": "2026-11-18T10:00:07.327884+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"FAIL\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_SHA256_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V048",
+      "input_sha256": "c0d61d1bfd69e0768881c03339ffd9cbcf4373803ff87a4f06682a99a52e5aa7",
+      "expected": {
+        "CUSTODY_STATUS": "FAIL",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "FAIL",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_STORAGE_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.341502+00:00",
+      "end": "2026-11-18T10:00:07.416819+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"FAIL\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_STORAGE_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    },
+    {
+      "id": "V049",
+      "input_sha256": "537a247063ff1d480a710a7bab9a7c0fe8191a7be15b05c853b9cb278dc36692",
+      "expected": {
+        "CUSTODY_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "ACCEPTANCE_STATUS": "FAIL",
+        "applicability": {
+          "custody": true,
+          "verification": true,
+          "independence": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "actual": {
+        "ACCEPTANCE_STATUS": "FAIL",
+        "CUSTODY_STATUS": "UNKNOWN",
+        "INDEPENDENCE_STATUS": "UNKNOWN",
+        "VERIFICATION_STATUS": "UNKNOWN",
+        "applicability": {
+          "custody": true,
+          "independence": true,
+          "verification": true
+        },
+        "gate_eligibility": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "permit": {
+          "A": false,
+          "B": false,
+          "C": false
+        },
+        "reason_codes": [
+          "CHECK_CI_FAIL",
+          "LEVEL_UNKNOWN"
+        ]
+      },
+      "match": true,
+      "start": "2026-11-18T10:00:07.416889+00:00",
+      "end": "2026-11-18T10:00:07.438494+00:00",
+      "exit_code": 0,
+      "stdout": "{\"ACCEPTANCE_STATUS\": \"FAIL\", \"CUSTODY_STATUS\": \"UNKNOWN\", \"INDEPENDENCE_STATUS\": \"UNKNOWN\", \"VERIFICATION_STATUS\": \"UNKNOWN\", \"applicability\": {\"custody\": true, \"independence\": true, \"verification\": true}, \"gate_eligibility\": {\"A\": false, \"B\": false, \"C\": false}, \"permit\": {\"A\": false, \"B\": false, \"C\": false}, \"reason_codes\": [\"CHECK_CI_FAIL\", \"LEVEL_UNKNOWN\"]}\n",
+      "stderr": "",
+      "timeout_seconds": 5,
+      "timed_out": false,
+      "retry": 0
+    }
+  ]
+}

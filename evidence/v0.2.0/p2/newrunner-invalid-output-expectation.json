@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-18T10:03:52.189899+00:00",
+  "expected": {
+    "exit_code": 1,
+    "rows": 1,
+    "status": "FAIL",
+    "actual": null,
+    "stdout": "not-json\n"
+  },
+  "runner_sha256": "abd0eaf44ce1f3af021683f54847df2161174491aff5cb35f8e6e69ec2e4b191"
+}

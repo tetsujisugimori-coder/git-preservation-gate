@@ -22,7 +22,7 @@ def combine(values):
 def shape(d):
     if type(d) is not dict: return False
     required = {'artifact_kind','level','risk','mode','checks','context','authorization','flags','ci_required','extra_checks','contract_extra_required'}
-    if set(d) != required: return False
+    if set(d) not in (required, required | {'risk_contract'}): return False
     if d['artifact_kind'] not in ('ordinary','evidence','zip','bundle'): return False
     if not (type(d['level']) is int and d['level'] in (1,2,3) or d['level'] == 'UNKNOWN'): return False
     if d['mode'] not in ('SOLO_STANDARD','STRICT_INDEPENDENT'): return False
@@ -37,6 +37,13 @@ def shape(d):
     if type(extras) is not dict or any(type(k) is not str or not k or not k.isascii() or not k.replace('_','').isalnum() or type(v) is not str or v not in STATES for k,v in extras.items()): return False
     if type(required_extras) is not list or any(type(k) is not str or not k or not k.isascii() or not k.replace('_','').isalnum() for k in required_extras): return False
     if len(required_extras)!=len(set(required_extras)): return False
+    if 'risk_contract' in d:
+        rc=d['risk_contract']
+        if type(rc) is not dict or set(rc)!={'decision','rationale','approval','risks'}: return False
+        if rc['decision'] not in ('required','not_required','UNKNOWN'): return False
+        if type(rc['rationale']) is not str or rc['approval'] not in ('PASS','FAIL','UNKNOWN','NOT_TESTED'): return False
+        if type(rc['risks']) is not list or any(type(k) is not str or k not in RISKS or d['risk'][k] is not True for k in rc['risks']): return False
+        if len(rc['risks'])!=len(set(rc['risks'])): return False
     return True
 
 
@@ -48,10 +55,9 @@ def evaluate(d):
     if not shape(d): return result('FAIL','FAIL','FAIL','FAIL',True,[False]*3,['SCHEMA_INVALID'])
     checks=d['checks']; reasons=[]
     level=d['level']
-    if level in (1,2) and (any(v is True for v in d['risk'].values()) or d['artifact_kind']!='ordinary' and level<2):
-        return result('UNKNOWN','UNKNOWN','UNKNOWN','FAIL',True,[False]*3,['LEVEL_TOO_LOW'])
-    if level=='UNKNOWN' or any(v is None for v in d['risk'].values()):
-        reasons=['LEVEL_UNKNOWN']
+    low=level in (1,2) and (any(v is True for v in d['risk'].values()) or d['artifact_kind']!='ordinary' and level<2)
+    if low or level=='UNKNOWN' or any(v is None for v in d['risk'].values()):
+        reasons=['LEVEL_TOO_LOW' if low else 'LEVEL_UNKNOWN']
         custody_names=['original','approval','storage','receipt','acl','retention']
         verify_names=['retrieval','size','sha256','bytes']
         if d['artifact_kind']=='zip': verify_names += ['crc','manifest','archive_safety']
@@ -63,13 +69,15 @@ def evaluate(d):
         verify_fail=any(checks[x]=='FAIL' for x in verify_names)
         for key in d['contract_extra_required']:
             if d['extra_checks'].get(key)=='FAIL': verify_fail=True; reasons.append('CHECK_EXTRA_'+key+'_FAIL')
+        if d.get('risk_contract',{}).get('approval')=='FAIL':
+            verify_fail=True; reasons.append('RISK_CONTRACT_APPROVAL_FAIL')
         flag_fail=False
         for flag,code in [('regenerated','ORIGINAL_SUBSTITUTED'),('retroactive_pass','HISTORY_REWRITTEN'),('level_downgrade','LEVEL_DOWNGRADE')]:
             if d['flags'][flag]: flag_fail=True; reasons.append(code)
         if d['flags']['regenerated']: custody_fail=True; verify_fail=True
         if d['flags']['claims_third_party'] and d['context']['human_independent'] is False: flag_fail=True; reasons.append('THIRD_PARTY_OVERCLAIM')
         failed=custody_fail or verify_fail or flag_fail or any(checks[x]=='FAIL' for x in relevant)
-        return result('FAIL' if custody_fail else 'UNKNOWN','FAIL' if verify_fail else 'UNKNOWN','UNKNOWN','FAIL' if failed else 'PARTIAL',True,[False]*3,reasons)
+        return result('FAIL' if custody_fail else 'UNKNOWN','FAIL' if verify_fail else 'UNKNOWN','UNKNOWN','FAIL' if failed or low else 'PARTIAL',True,[False]*3,reasons)
     invalid=[]
     for flag,code in [('regenerated','ORIGINAL_SUBSTITUTED'),('retroactive_pass','HISTORY_REWRITTEN'),('level_downgrade','LEVEL_DOWNGRADE')]:
         if d['flags'][flag]: invalid.append(code)
@@ -112,6 +120,16 @@ def evaluate(d):
     if d['artifact_kind']=='zip': v_names += ['crc','manifest','archive_safety']
     if d['artifact_kind']=='bundle': v_names += ['bundle_restore','object_integrity']
     verify_parts=[check(v_names),extra]
+    if level==3:
+        rc=d.get('risk_contract')
+        contract_unknown=(rc is None or rc['decision']=='UNKNOWN' or not rc['rationale'].strip()
+            or set(rc['risks']) != {k for k,v in d['risk'].items() if v is True}
+            or rc['decision']=='required' and not d['contract_extra_required']
+            or rc['decision']=='not_required' and bool(d['contract_extra_required']))
+        if contract_unknown:
+            verify_parts.append('UNKNOWN'); reasons.append('RISK_CONTRACT_UNKNOWN')
+        if rc is not None and rc['approval']!='PASS':
+            verify_parts.append(rc['approval']); reasons.append('RISK_CONTRACT_APPROVAL_'+rc['approval'])
     context=d['context']; independent=[]
     for key in ['session_separated','execution_separated','workspace_separated','direct_storage','independent_input']:
         value=context[key]

@@ -7,7 +7,7 @@ OPTIONAL = {'attempt_id', 'ci_required', 'ci_exemption', 'archive_request',
             'approval_id', 'destination', 'operations', 'actor', 'classification',
             'retention_until', 'delete_move_overwrite', 'audit_mode',
             'required_checks', 'extra_checks', 'extra_decision', 'sessions'}
-ARCHIVE = OPTIONAL - {'ci_required', 'ci_exemption', 'archive_request'}
+ARCHIVE = OPTIONAL - {'ci_required', 'ci_exemption', 'archive_request', 'attempt_id'}
 ARCHIVE_OBS = {'storage', 'readback', 'size', 'sha256', 'all_bytes', 'bundle_restore'}
 RISK_FLAGS = ('confidential', 'destructive', 'strong_authenticity',
               'important_evidence', 'publicly_retrievable')

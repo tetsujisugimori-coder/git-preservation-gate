@@ -1,0 +1,50 @@
+name: PR20 docs-only preservation guidance validation
+on:
+  push:
+    branches: [docs/pr23-acceptance-preservation-lessons-20261119]
+permissions:
+  contents: read
+jobs:
+  docs-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check document links, classification boundaries, and independence enum
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          root = Path.cwd()
+          doc_path = root / "docs/operations/pr23-preservation-and-pr-acceptance-20261119.md"
+          readme_path = root / "README.md"
+          doc = doc_path.read_text(encoding="utf-8")
+          readme = readme_path.read_text(encoding="utf-8")
+          assert "非規範" in doc and "本番permit" in doc
+          assert "Level 1は通常Git管理を既定" in doc
+          assert "Level 2は許可範囲内で先に原物を保護" in doc
+          assert "マージ実績は観測事実、マージ許可の証明ではない" in doc
+          assert "INDEPENDENCE_STATUS=UNKNOWN" in doc
+          assert "human_independence=LIMITED_SHARED_OWNER" in doc
+          assert "INDEPENDENCE_STATUS=LIMITED_SHARED_OWNER" not in doc
+          permitted = {"PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN", "NOT_TESTED"}
+          states = re.findall(r"\bINDEPENDENCE_STATUS\s*=\s*([A-Z_]+)", doc)
+          assert states and all(state in permitted for state in states), states
+          assert doc_path.name in readme, "README index missing"
+          for source, text in ((doc_path, doc), (readme_path, readme)):
+              for target in re.findall(r"\]\(([^)]+)\)", text):
+                  if "://" in target or target.startswith("#"):
+                      continue
+                  relative = target.split("#", 1)[0]
+                  if not relative:
+                      continue
+                  assert (source.parent / relative).exists(), (source, target)
+          print("PR20 documentation-only validation PASS; this is not a real preservation test")
+          PY
+      - name: Check public publication scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/stage1b/test_publication_scan.py

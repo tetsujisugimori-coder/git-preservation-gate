@@ -29,6 +29,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
     from contract import Invalid, aggregate, boolean, exact, hexid, schema, stamp, state, string, strings, validate_contract
 
     reasons = []
+    invalid_archive_request = False
     out = {
         'contract_status': 'FAIL', 'reason_codes': reasons,
         'CUSTODY_STATUS': 'NOT_TESTED', 'VERIFICATION_STATUS': 'NOT_TESTED',
@@ -88,10 +89,13 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         for v in obs.values():
             state(v)
         if 'archive_request' in c:
-            exact(c['archive_request'], 'requested_by reason')
-            if c['archive_request']['requested_by'] not in ('owner', 'case_contract'):
-                raise Invalid('archive requester')
-            string(c['archive_request']['reason'])
+            try:
+                exact(c['archive_request'], 'requested_by reason')
+                if c['archive_request']['requested_by'] not in ('owner', 'case_contract'):
+                    raise Invalid('archive requester')
+                string(c['archive_request']['reason'])
+            except (ValueError, TypeError, KeyError):
+                invalid_archive_request = True
         elif set(c) & ARCHIVE or set(obs) & ARCHIVE_OBS:
             raise Invalid('archive intent must be explicit')
         if 'ci_required' in c and type(c['ci_required']) is not bool:
@@ -149,16 +153,27 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
     out['archive_applicability'] = {
         'required': True, 'reason': 'LEVEL1_EXPLICIT_ARCHIVE_REQUEST'
     }
+    # Preserve any observed failure even when archive metadata is incomplete.
+    out['CUSTODY_STATUS'] = obs.get('storage', 'NOT_TESTED')
+    out['VERIFICATION_STATUS'] = aggregate([
+        obs.get(k, 'NOT_TESTED') for k in ('readback','size','sha256','all_bytes')
+    ])
+    archive_failed = ('FAIL' in (out['CUSTODY_STATUS'], out['VERIFICATION_STATUS']))
+    if invalid_archive_request:
+        out['archive_status'] = 'FAIL' if archive_failed else 'BLOCKED'
+        out['archive_contract_status'] = 'BLOCKED'
+        out['archive_reason_codes'] = ['ARCHIVE_REQUEST_INVALID']
+        return out
     # Missing archive parameters block ONLY the requested archive, not Git.
     missing = [key for key in REQUIRED_ARCHIVE if key not in c]
     missing += ['object.' + key for key in ('size','sha256') if key not in obj]
     if missing:
-        out['archive_status'] = 'BLOCKED'
+        out['archive_status'] = 'FAIL' if archive_failed else 'BLOCKED'
         out['archive_contract_status'] = 'BLOCKED'
         out['archive_reason_codes'] = ['ARCHIVE_INPUT_MISSING:' + key for key in missing]
         return out
     if approval is None:
-        out['archive_status'] = 'BLOCKED'
+        out['archive_status'] = 'FAIL' if archive_failed else 'BLOCKED'
         out['archive_contract_status'] = 'BLOCKED'
         out['archive_reason_codes'] = ['APPROVAL_MISSING']
         return out

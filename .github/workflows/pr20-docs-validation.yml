@@ -1,4 +1,4 @@
-name: PR20 docs-only preservation guidance validation
+name: PR20 scoped documentation and synthetic publication checks
 on:
   push:
     branches: [docs/pr23-acceptance-preservation-lessons-20261119]
@@ -10,41 +10,68 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Check document links, classification boundaries, and independence enum
+      - name: Static documentation contract (PR20 guide and README only)
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          import json
           import re
+
           root = Path.cwd()
           doc_path = root / "docs/operations/pr23-preservation-and-pr-acceptance-20261119.md"
           readme_path = root / "README.md"
           doc = doc_path.read_text(encoding="utf-8")
           readme = readme_path.read_text(encoding="utf-8")
+          start = "<!-- PR20_INDEPENDENCE_RECORD_START -->"
+          end = "<!-- PR20_INDEPENDENCE_RECORD_END -->"
+          assert doc.count(start) == doc.count(end) == 1, "Missing/duplicate record markers"
+          record_text = doc.split(start, 1)[1].split(end, 1)[0].strip()
+          record_match = re.fullmatch(r"```json\s*\n(.*?)\n```", record_text, re.S)
+          assert record_match is not None, "Example must be a JSON code fence"
+          record = json.loads(record_match.group(1))
+          allowed = {"PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN", "NOT_TESTED"}
+          assert set(record) == {"INDEPENDENCE_STATUS", "human_independence", "verification_scope"}
+          def valid_example(value):
+              return (type(value) is dict
+                      and value.get("INDEPENDENCE_STATUS") in allowed
+                      and value.get("human_independence") == "LIMITED_SHARED_OWNER"
+                      and value.get("verification_scope") == "documentation-only")
+          assert valid_example(record) and record["INDEPENDENCE_STATUS"] == "UNKNOWN"
+          assert not valid_example({**record, "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER"})
+          assert not valid_example({k: v for k, v in record.items() if k != "INDEPENDENCE_STATUS"})
+
+          section2 = doc.split("## 2. 他案件でも使う最小運用手順", 1)[1].split("## 3.", 1)[0]
+          step3 = section2.split("3. **Level 2は許可範囲内で先に原物を保護する**", 1)[1].split("4. **Bは実保存先から再取得する**", 1)[0]
+          step4 = section2.split("4. **Bは実保存先から再取得する**", 1)[1].split("5. **4軸を分けて判断する**", 1)[0]
+          for required in ("データ分類", "削除・移動・上書きの許可条件", "有効期間", "既存承認"):
+              assert required in step3, ("Approval guidance missing", required)
+          for required in ("SOLO_STANDARD", "別session", "別execution ID", "別検証領域",
+                           "保存先から実原物を直接再取得", "human_independence=LIMITED_SHARED_OWNER"):
+              assert required in step4, ("Audit guidance missing", required)
+          handoff = doc.split("## 4. 最小限の引継ぎ記録テンプレート", 1)[1]
+          for required in ("データ分類", "削除・移動・上書き条件", "別検証領域ID", "保存先直接再取得ID"):
+              assert required in handoff, ("Handoff fields missing", required)
           assert "非規範" in doc and "本番permit" in doc
           assert "Level 1は通常Git管理を既定" in doc
-          assert "Level 2は許可範囲内で先に原物を保護" in doc
           assert "マージ実績は観測事実、マージ許可の証明ではない" in doc
-          assert "INDEPENDENCE_STATUS=UNKNOWN" in doc
-          assert "human_independence=LIMITED_SHARED_OWNER" in doc
-          assert "INDEPENDENCE_STATUS=LIMITED_SHARED_OWNER" not in doc
-          permitted = {"PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN", "NOT_TESTED"}
-          states = re.findall(r"\bINDEPENDENCE_STATUS\s*=\s*([A-Z_]+)", doc)
-          assert states and all(state in permitted for state in states), states
+          assert "公開スキャン（既存合成単体テスト）" in doc
           assert doc_path.name in readme, "README index missing"
           for source, text in ((doc_path, doc), (readme_path, readme)):
               for target in re.findall(r"\]\(([^)]+)\)", text):
                   if "://" in target or target.startswith("#"):
                       continue
                   relative = target.split("#", 1)[0]
-                  if not relative:
-                      continue
-                  assert (source.parent / relative).exists(), (source, target)
-          print("PR20 documentation-only validation PASS; this is not a real preservation test")
+                  if relative:
+                      assert (source.parent / relative).exists(), (source, target)
+          print("PASS: PR20 documentation example JSON, scoped text contract, local links only")
+          print("NOT_TESTED: real archive, ACL, retention, Git bundle recovery, independent audit, production")
           PY
-      - name: Check public publication scan
+      - name: Synthetic publication fixture regression (unit test; not real-data inspection)
         shell: bash
         run: |
           set -euo pipefail
           python3 tests/stage1b/test_publication_scan.py
+          echo "PASS: existing synthetic publication fixture tests only"
+          echo "NOT_TESTED: actual published secrets/contents and real-world preservation"

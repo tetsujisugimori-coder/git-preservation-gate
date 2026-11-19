@@ -130,6 +130,26 @@ check("IO-08-unobserved-create-cannot-be-PASS",
       validate_contract(c8, a8, NOW, HEAD, POLICY),
       {"archive_status": "PARTIAL", "archive_create_status": "NOT_TESTED"})
 
+# P3: distinguish incomplete request, malformed approval schema, and known FAIL.
+c9, a9 = template()
+a9.pop("acl")
+check("IO-09-missing-approval-acl-is-BLOCKED",
+      validate_contract(c9, a9, NOW, HEAD, POLICY),
+      {"ACCEPTANCE_STATUS": "PASS", "archive_status": "BLOCKED",
+       "archive_contract_status": "BLOCKED"})
+c10, a10 = template()
+a10["acl"] = "INVALID_STATE"
+check("IO-10-malformed-approval-acl-schema-is-FAIL",
+      validate_contract(c10, a10, NOW, HEAD, POLICY),
+      {"ACCEPTANCE_STATUS": "PASS", "archive_status": "FAIL",
+       "archive_contract_status": "FAIL"})
+c11, a11 = template()
+c11["archive_request"].pop("reason")
+check("IO-11-malformed-archive-request-is-BLOCKED",
+      validate_contract(c11, a11, NOW, HEAD, POLICY),
+      {"ACCEPTANCE_STATUS": "PASS", "archive_status": "BLOCKED",
+       "archive_contract_status": "BLOCKED"})
+
 failures = [item["id"] for item in checks if item["verdict"] != "PASS"]
 print(json.dumps({"suite": "issue14-independent-operation-boundary",
                   "total": len(checks), "passed": len(checks)-len(failures),

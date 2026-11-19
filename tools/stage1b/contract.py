@@ -78,6 +78,11 @@ def aggregate(values):
 def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     """Eligibility only; approval provenance must be checked outside this pure function."""
     reasons=[];out={'contract_status':'FAIL','reason_codes':reasons,'CUSTODY_STATUS':'UNKNOWN','VERIFICATION_STATUS':'UNKNOWN','INDEPENDENCE_STATUS':'UNKNOWN','ACCEPTANCE_STATUS':'FAIL','human_independence':'UNKNOWN','production_permit':False}
+    # Issue #14: compact L1 uses a separate Git-only acceptance axis.
+    # Legacy full contracts and all Level 2/3 records keep the prior evaluator.
+    from level1 import is_compact_l1, validate_level1
+    if is_compact_l1(c):
+        return validate_level1(c, a, now, observed_head, effective_policy)
     # Retain separately typed observations even if another contract field is invalid.
     if isinstance(c,dict) and isinstance(c.get('observations'),dict):
         raw=c['observations']

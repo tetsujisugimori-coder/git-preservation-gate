@@ -49,7 +49,7 @@ Existing complete schema v1 records, including historical Level 1 fixtures, rema
 PC and mobile forms and CLI entry points should expose only normal Git identity/risk and CI/review/permission checks by default. Storage/ACL/retention fields appear only on deliberate additional-save opt-in. No implicit disk write, retention assurance, directory creation or ACL modification is permitted.
 
 ## Verification
-- New independent synthetic counterexamples: tests/stage1b/test_level1_defaults.py (32 cases).
+- New independent synthetic counterexamples: tests/stage1b/test_level1_defaults.py (35 cases).
 - CI: .github/workflows/issue14-level1-defaults.yml. Re-runs prior Stage 1-B oracle/overlay, P2/review and Stage1A/B2 regressions, and existing Windows bounded 21 cases.
 - Synthetic CI cannot prove real storage, third-party independence, Windows write scope or production deployment.
 - Before merge, independent reviewer must fetch final HEAD, inspect diff and re-run with additional adversarial cases. Keep Draft and preserve old evidence and failed runs.

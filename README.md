@@ -1,5 +1,7 @@
 # git-preservation-gate
 
+**Issue #14 最新判定（2026-11-19 JST）**　総合 **PARTIAL**。Level 1の簡素化と明示保存の分離は合成自己検証済み。固定版の独立レビュー待ちのため限定技術受入・限定マージ推奨は **NO**。`production_permit=false`。固定版、正式CI、回帰結果は [Draft PR #19](https://github.com/tetsujisugimori-coder/git-preservation-gate/pull/19) と [Issue #14 入力仕様](docs/stage1b/issue14-level1-defaults.md) を参照。
+
 複数AI担当・複数リポジトリで共通利用するGit成果物の保全・検証・監査規約と、その実装を開発するプロジェクト。
 
 **中央規約の現行正本は [v0.2.0](docs/v0.2.0/policy.md)（2026-11-18 JST 正式承認・発効）です。** [採用記録と版差分](docs/v0.2.0/adoption-record.md) / [承認を記録したIssue #5](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/5) を参照。従来の [v0.1.0](docs/preservation-policy.md) とPR #4のv0.1.1案は歴史的参照として保持し、v0.2.0の採用で旧判定を書き換えません。

@@ -1,5 +1,7 @@
 # Stage 1-B storage-contract validation module
 
+**Issue #14 status (2026-11-19 JST): PARTIAL.** Compact Level 1 synthetic self-checks are complete. The fixed Draft PR awaits independent review. Limited technical acceptance and limited merge recommendation are NO. [Issue #14 specification and verification scope](../../docs/stage1b/issue14-level1-defaults.md)
+
 This pure module validates **trusted input records**, not the identity/authority of an owner, authenticity of evidence, ACL enforcement, or storage durability. `production_permit` is always false. A syntactically valid approval or receipt is not proof that approval/storage occurred. Actual operations require independently established authority and an implementation-specific safety gate.
 
 ## Input contract (schema version 1)

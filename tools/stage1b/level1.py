@@ -197,7 +197,10 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         return out
     result = validate_contract(extended, approval, now, observed_head, effective_policy)
     out['CUSTODY_STATUS'] = result['CUSTODY_STATUS']
-    out['VERIFICATION_STATUS'] = result['VERIFICATION_STATUS']
+    # Git documents have no bundle-restore requirement. Never promote an unrun check to PASS.
+    verification = aggregate([extended['observations'][k] for k in
+        ('readback', 'size', 'sha256', 'all_bytes')])
+    out['VERIFICATION_STATUS'] = verification
     out['INDEPENDENCE_STATUS'] = result['INDEPENDENCE_STATUS']
     out['human_independence'] = result['human_independence']
     out['archive_contract_status'] = result['contract_status']
@@ -205,7 +208,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
     indep = ('PASS' if result['INDEPENDENCE_STATUS'] == 'PARTIAL'
              and c['audit_mode'] == 'SOLO_STANDARD' else result['INDEPENDENCE_STATUS'])
     checks = [result['contract_status'], result['CUSTODY_STATUS'],
-              result['VERIFICATION_STATUS'], indep]
+              verification, indep]
     out['archive_status'] = (
         'FAIL' if 'FAIL' in checks else
         'BLOCKED' if 'BLOCKED' in checks or any(

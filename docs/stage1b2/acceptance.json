@@ -1,0 +1,33 @@
+{
+  "stage": "1-B2",
+  "state": "LIMITED_TECHNICAL_ACCEPTANCE",
+  "CUSTODY_STATUS": "PASS",
+  "VERIFICATION_STATUS": "PASS",
+  "INDEPENDENCE_STATUS": "LIMITED_SHARED_OWNER",
+  "ACCEPTANCE_STATUS": "PARTIAL",
+  "production_permit": false,
+  "stage1c": "HOLD",
+  "other_repository_rollout": false,
+  "archive_approval": "Owner explicitly approved this nonsecret synthetic pilot, one-year retention, create/read only; exact private contract separately checked",
+  "limits": [
+    "No existing original migration",
+    "No ACL/security change",
+    "No service registration",
+    "No merge"
+  ],
+  "custody_scope": "Two approved synthetic Archive objects plus separately saved Windows raw-evidence ZIP; later probe and audit logs outside frozen ZIP",
+  "real_retention_enforcement": "UNKNOWN",
+  "cross_host_handoff": "NOT_TESTED",
+  "long_path": "NOT_TESTED",
+  "real_disk_full": "NOT_TESTED",
+  "real_acl_denial": "NOT_TESTED",
+  "controller_universal_stop": "UNKNOWN",
+  "historical_path_disclosure": "P3_OPEN",
+  "historical_cloud_raw": "UNKNOWN",
+  "limited_technical_acceptance": "YES",
+  "limited_merge_recommendation": "YES",
+  "final_publication_condition": "Final documentation-only HEAD readback and exact-head CI reported in anchored PR review",
+  "P3_B2_SCHEMA": "CLOSED",
+  "P2_B2_CI01": "CLOSED",
+  "new_unresolved_P1_P2": []
+}

@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "path": "0.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "0.stdout",
+      "size": 1026,
+      "sha256": "3662724d4e16eab3a2be6b42616bdc0d7fc0d4cee3743398f83b5adcba0a8202"
+    },
+    {
+      "path": "1.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "1.stdout",
+      "size": 1438,
+      "sha256": "567266a38787419e20046021360beedd8030bae5d1362caa48fdff2c40e91007"
+    },
+    {
+      "path": "2.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "2.stdout",
+      "size": 2675,
+      "sha256": "17c02d826939f7907871bfad3a1c722ad2aa0500235eb74a74f7dc25db756067"
+    },
+    {
+      "path": "3.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3.stdout",
+      "size": 13299,
+      "sha256": "ca1905761be953640937b9e38437a51d34d245df4f1603719bb27be42f30e0f4"
+    },
+    {
+      "path": "4.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4.stdout",
+      "size": 16748,
+      "sha256": "d283ee6dec393f4a62e54a331364370be8c4e04e5e19b62244bd4a1e8a6b22d3"
+    },
+    {
+      "path": "5.stderr",
+      "size": 109,
+      "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+    },
+    {
+      "path": "5.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "6.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "6.stdout",
+      "size": 74,
+      "sha256": "69d91772e4e4535ae9fb5bcf4ed2ca846d654fd80befe3d844f49bb69579a394"
+    },
+    {
+      "path": "execution.json",
+      "size": 2393,
+      "sha256": "6285f6628bb6b333888143afb5eca2cca52a74c066c6b85041eb18b863a96726"
+    },
+    {
+      "path": "publication-receipts.json",
+      "size": 4900,
+      "sha256": "9621150d46f2460065f9bfaa28bd10544627cd6291323cd9f0f82e9bc0076b5c"
+    }
+  ]
+}

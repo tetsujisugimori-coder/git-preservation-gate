@@ -1,0 +1,136 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "case_counts": {
+          "FAIL": 0,
+          "NOT_TESTED": 0,
+          "PASS": 34
+        },
+        "case_status": "PASS",
+        "record_validation": "PASS"
+      },
+      "expected": "PASS",
+      "id": "CP01",
+      "mutation": "normal",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP02",
+      "mutation": "missing",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP03",
+      "mutation": "short",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP04",
+      "mutation": "duplicate",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP05",
+      "mutation": "extra",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP06",
+      "mutation": "wrong-id",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP07",
+      "mutation": "unknown-verdict",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {
+          "FAIL": 0,
+          "NOT_TESTED": 1,
+          "PASS": 33
+        },
+        "case_status": "PARTIAL",
+        "record_validation": "PASS"
+      },
+      "expected": "PARTIAL",
+      "id": "CP08",
+      "mutation": "link-not-tested",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP09",
+      "mutation": "other-not-tested",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP10",
+      "mutation": "malformed",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "case_counts": {},
+        "case_status": "FAIL",
+        "record_validation": "FAIL"
+      },
+      "expected": "FAIL",
+      "id": "CP11",
+      "mutation": "wrong-actual",
+      "test_verdict": "PASS"
+    }
+  ],
+  "oracle_sha256": "b38466475d7ae06870be7460d73967ef76e3743a8a9ccf1ef86b0f1bc369c0a5",
+  "probe_sha256": "ea52ec2fad91df5fe8d682146980e40ab7802e33386ae31f4f7f58e64d6f1487",
+  "production_permit": false
+}

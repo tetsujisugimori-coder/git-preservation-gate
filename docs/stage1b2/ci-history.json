@@ -1,0 +1,34 @@
+{
+  "initial_head": "cace6edf91c63b86c8db5b62b9af43edf590a641",
+  "run_id": 44411775221,
+  "linux": "success",
+  "hosted_windows": "failure",
+  "hosted_windows_case_counts": {
+    "PASS": 11,
+    "FAIL": 23,
+    "NOT_TESTED": 0
+  },
+  "hosted_windows_cause": "UNKNOWN pending per-case and token diagnostics",
+  "normal_windows_separate_observation": {
+    "ps51": {
+      "PASS": 33,
+      "FAIL": 0,
+      "NOT_TESTED": 1
+    },
+    "ps7": {
+      "PASS": 33,
+      "FAIL": 0,
+      "NOT_TESTED": 1
+    },
+    "boundaries_each": "5/5",
+    "old_finite_each": "21/21",
+    "symlink_creation": "NOT_TESTED due to normal-user permission"
+  },
+  "production_permit": false,
+  "history": "Initial formal failure remains failure; neither Linux nor normal Windows observations overwrite it.",
+  "diagnostic_run": 44412388434,
+  "diagnostic_head": "23353dce01c92cd7402a19ed9d0724b5ea4bcef8",
+  "diagnostic_windows_admin_token": true,
+  "diagnostic_cause": "ELEVATED_WINDOWS_TOKEN blocks non-admin-only adapter on hosted Windows",
+  "initial_generic_status_matches_not_fault_coverage": "Some BLOCKED statuses matched but intended faults were not reached; do not claim those cases exercised their intended failure"
+}

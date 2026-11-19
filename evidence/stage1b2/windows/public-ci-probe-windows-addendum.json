@@ -1,0 +1,169 @@
+{
+  "head": "caa57bba4aaa92e8b713c0c6e3fcf21b83123744",
+  "tree": "3479596dcc4b14f37fd337ed8d2860cf19bcdba0",
+  "adapter_sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7",
+  "runs": [
+    {
+      "shell": "ps51",
+      "exit_code": 0,
+      "controller_status": "PASS",
+      "process_state": "JOB_EMPTY",
+      "started_at": "2026-11-18T22:38:51.015128+00:00",
+      "ended_at": "2026-11-18T22:38:53.308652+00:00",
+      "stdout_sha256": "317f2c9be64fc64c3558257051a4bf0860d5658e2b1b9b0a336f79cf3dc48d82",
+      "stderr_bytes": 0,
+      "probe": {
+        "adapter_sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7",
+        "boundaries": "PASS",
+        "ended_at": "2026-11-18T22:38:53.277323+00:00",
+        "environment": {
+          "platform": "win32",
+          "python": "3.14.7",
+          "windows_admin_token": false
+        },
+        "exit_code": 0,
+        "guard_tests": 0,
+        "oracle_sha256": "eedb0712407080e8beffeec1c3b890114c41bca06546f45ff5490a4475d1f4a6",
+        "ordinary_suite": "PARTIAL",
+        "production_permit": false,
+        "reason": "NORMAL_USER_SUITES",
+        "retry": 0,
+        "risk_schema": "PASS",
+        "runs": [
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 1,
+              "PASS": 33
+            },
+            "case_status": "PARTIAL",
+            "ended_at": "2026-11-18T22:38:52.728503+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 34,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:51.315937+00:00",
+            "suite": "run_suite",
+            "timeout_seconds": 120
+          },
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 0,
+              "PASS": 5
+            },
+            "case_status": "PASS",
+            "ended_at": "2026-11-18T22:38:53.147628+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 5,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:52.728536+00:00",
+            "suite": "run_boundaries",
+            "timeout_seconds": 120
+          },
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 0,
+              "PASS": 4
+            },
+            "case_status": "PASS",
+            "ended_at": "2026-11-18T22:38:53.277311+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 4,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:53.147650+00:00",
+            "suite": "run_risk_schema",
+            "timeout_seconds": 120
+          }
+        ],
+        "started_at": "2026-11-18T22:38:51.315876+00:00",
+        "status": "PARTIAL"
+      }
+    },
+    {
+      "shell": "ps7",
+      "exit_code": 0,
+      "controller_status": "PASS",
+      "process_state": "JOB_EMPTY",
+      "started_at": "2026-11-18T22:38:53.312264+00:00",
+      "ended_at": "2026-11-18T22:38:55.658705+00:00",
+      "stdout_sha256": "05a734d0d0bfc0e6ac1c0a1ac47f6bd890fb8e87ea8151cf34d89cb4296cb0f6",
+      "stderr_bytes": 0,
+      "probe": {
+        "adapter_sha256": "86a2ae74e4b6210e0ff649027d7380c9a22c27ef2ddf47c10ee2797688893cc7",
+        "boundaries": "PASS",
+        "ended_at": "2026-11-18T22:38:55.597963+00:00",
+        "environment": {
+          "platform": "win32",
+          "python": "3.14.7",
+          "windows_admin_token": false
+        },
+        "exit_code": 0,
+        "guard_tests": 0,
+        "oracle_sha256": "eedb0712407080e8beffeec1c3b890114c41bca06546f45ff5490a4475d1f4a6",
+        "ordinary_suite": "PARTIAL",
+        "production_permit": false,
+        "reason": "NORMAL_USER_SUITES",
+        "retry": 0,
+        "risk_schema": "PASS",
+        "runs": [
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 1,
+              "PASS": 33
+            },
+            "case_status": "PARTIAL",
+            "ended_at": "2026-11-18T22:38:55.110342+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 34,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:53.729507+00:00",
+            "suite": "run_suite",
+            "timeout_seconds": 120
+          },
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 0,
+              "PASS": 5
+            },
+            "case_status": "PASS",
+            "ended_at": "2026-11-18T22:38:55.466682+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 5,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:55.110377+00:00",
+            "suite": "run_boundaries",
+            "timeout_seconds": 120
+          },
+          {
+            "case_counts": {
+              "FAIL": 0,
+              "NOT_TESTED": 0,
+              "PASS": 4
+            },
+            "case_status": "PASS",
+            "ended_at": "2026-11-18T22:38:55.597951+00:00",
+            "execution_status": "PASS",
+            "exit_code": 0,
+            "fixed_case_count": 4,
+            "retry": 0,
+            "started_at": "2026-11-18T22:38:55.466703+00:00",
+            "suite": "run_risk_schema",
+            "timeout_seconds": 120
+          }
+        ],
+        "started_at": "2026-11-18T22:38:53.729443+00:00",
+        "status": "PARTIAL"
+      }
+    }
+  ],
+  "old_archive_unchanged": true,
+  "evidence_location": "outside prior frozen evidence ZIP"
+}

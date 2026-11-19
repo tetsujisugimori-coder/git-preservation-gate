@@ -1,0 +1,260 @@
+{
+  "files": [
+    {
+      "path": "expectation-correction.json",
+      "size": 209,
+      "sha256": "d6a828daa0ceb6d0230fb91b62d3b9889bedfc5a4ffb0967ac19b058fd4146f7"
+    },
+    {
+      "path": "independent-oracle-v1.json",
+      "size": 5523,
+      "sha256": "d1cf4c317f94d0bf136eacc1bb3038da82797b6c3e1eae74a61038be330fdf38"
+    },
+    {
+      "path": "independent-run-1/expected.fixed.json",
+      "size": 401,
+      "sha256": "b9d1458a7faaa6e5518357a694f7fe6e651c4974df6f2a5b48a29a8b1d075e84"
+    },
+    {
+      "path": "independent-run-1/results.json",
+      "size": 4880,
+      "sha256": "f8ea958038903b5b2889ba735e724d85569b994ac575369f783e1b413e112d2f"
+    },
+    {
+      "path": "independent-run-2/expected.fixed.json",
+      "size": 398,
+      "sha256": "3d57a14cd554a033706035a1467b2f3b330e9096434e866689142c20b643bfce"
+    },
+    {
+      "path": "independent-run-2/results.json",
+      "size": 4981,
+      "sha256": "ae75f6ccf5b646cc2f458699051087566ff09f734f7afe20abdb47e3a8a16653"
+    },
+    {
+      "path": "oracle-mapping.json",
+      "size": 9733,
+      "sha256": "60da1a81546218de070cd0b4960116a8d48b5387d87599bed996c78b093c5808"
+    },
+    {
+      "path": "publication-receipts.json",
+      "size": 13735,
+      "sha256": "8aaef708d4c532cc762a8b100b2f9070d3c37dd8bc0dfe631ca78467e51bf2c9"
+    },
+    {
+      "path": "regression-run-1/0.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/0.stdout",
+      "size": 41,
+      "sha256": "d06aa9f6642532404075371c14f61d77614ddd2c553cd0d329f1742cd5202ad7"
+    },
+    {
+      "path": "regression-run-1/1.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/1.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "regression-run-1/2.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/2.stdout",
+      "size": 1026,
+      "sha256": "35a7c8c79e3b7c0db1f628d583e30c8e2a5cf1c4b832e269cda743f0fb82463e"
+    },
+    {
+      "path": "regression-run-1/3.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/3.stdout",
+      "size": 1438,
+      "sha256": "567266a38787419e20046021360beedd8030bae5d1362caa48fdff2c40e91007"
+    },
+    {
+      "path": "regression-run-1/4.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/4.stdout",
+      "size": 2675,
+      "sha256": "17c02d826939f7907871bfad3a1c722ad2aa0500235eb74a74f7dc25db756067"
+    },
+    {
+      "path": "regression-run-1/5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/5.stdout",
+      "size": 13299,
+      "sha256": "ca1905761be953640937b9e38437a51d34d245df4f1603719bb27be42f30e0f4"
+    },
+    {
+      "path": "regression-run-1/6.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/6.stdout",
+      "size": 16748,
+      "sha256": "d283ee6dec393f4a62e54a331364370be8c4e04e5e19b62244bd4a1e8a6b22d3"
+    },
+    {
+      "path": "regression-run-1/7.stderr",
+      "size": 109,
+      "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+    },
+    {
+      "path": "regression-run-1/7.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/8.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-1/8.stdout",
+      "size": 74,
+      "sha256": "69d91772e4e4535ae9fb5bcf4ed2ca846d654fd80befe3d844f49bb69579a394"
+    },
+    {
+      "path": "regression-run-1/execution.json",
+      "size": 4940,
+      "sha256": "2fb3094267530cfe6ce42010f158734c9e1eb3f7e9267cf48db10447ecf704f6"
+    },
+    {
+      "path": "regression-run-1/new34/results.json",
+      "size": 15046,
+      "sha256": "e38a57c87c719f53826f579da1eb509882db0fc0424ff59445e0751a1173b6e0"
+    },
+    {
+      "path": "regression-run-1/new5/results.json",
+      "size": 1711,
+      "sha256": "eda5cb51aa2ab138a38acddbfb0c36c1b9ddca470a6bbcaa7a79c42fe670e1f0"
+    },
+    {
+      "path": "regression-run-2/0.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/0.stdout",
+      "size": 4343,
+      "sha256": "bc5670da06f8515ab4626b1c12a02d9c3e1db6d2ed371c991cd477b17324876d"
+    },
+    {
+      "path": "regression-run-2/1.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/1.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "regression-run-2/2.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/2.stdout",
+      "size": 1026,
+      "sha256": "83af0d3ed3fe13b42444e7cc1f257e448b69e7aa8ca6f8720c9814dadb73dfc2"
+    },
+    {
+      "path": "regression-run-2/3.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/3.stdout",
+      "size": 1438,
+      "sha256": "567266a38787419e20046021360beedd8030bae5d1362caa48fdff2c40e91007"
+    },
+    {
+      "path": "regression-run-2/4.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/4.stdout",
+      "size": 2675,
+      "sha256": "17c02d826939f7907871bfad3a1c722ad2aa0500235eb74a74f7dc25db756067"
+    },
+    {
+      "path": "regression-run-2/5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/5.stdout",
+      "size": 13299,
+      "sha256": "ca1905761be953640937b9e38437a51d34d245df4f1603719bb27be42f30e0f4"
+    },
+    {
+      "path": "regression-run-2/6.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/6.stdout",
+      "size": 16748,
+      "sha256": "d283ee6dec393f4a62e54a331364370be8c4e04e5e19b62244bd4a1e8a6b22d3"
+    },
+    {
+      "path": "regression-run-2/7.stderr",
+      "size": 109,
+      "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+    },
+    {
+      "path": "regression-run-2/7.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/8.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression-run-2/8.stdout",
+      "size": 74,
+      "sha256": "69d91772e4e4535ae9fb5bcf4ed2ca846d654fd80befe3d844f49bb69579a394"
+    },
+    {
+      "path": "regression-run-2/execution.json",
+      "size": 4940,
+      "sha256": "c4967ee46ce1425816f13b06e973a9daea453c9b5f0b439e80d7ac174dafb973"
+    },
+    {
+      "path": "regression-run-2/new34/results.json",
+      "size": 15163,
+      "sha256": "ce3616fbfedccde81bd6cd87e5b72e08ddd1c46404c9f35374c8a106430f646a"
+    },
+    {
+      "path": "regression-run-2/new5/results.json",
+      "size": 1711,
+      "sha256": "a11e90bd4a3359b3b354e7bb6202099a8127b04dd9fec0529671c56d2c4d483f"
+    },
+    {
+      "path": "windows-direct-readback.json",
+      "size": 4866,
+      "sha256": "644472cc34a7ca26b6b2b5eba5a616704e367d3fcf4b568398dcdbbee6ffb9ea"
+    }
+  ],
+  "scope": "public derivatives, excludes manifest; Windows direct source-read record is parsed JSON derivative, not original raw stdout"
+}

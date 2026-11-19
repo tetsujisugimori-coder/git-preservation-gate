@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "path": "ci-additional.json",
+      "size": 1725,
+      "sha256": "f8c9cdf3942244ce64cfb0292f80070ab25993f0c1ff4acd04d0575f5005d7b3"
+    },
+    {
+      "path": "ci-assess-final.json",
+      "size": 3033,
+      "sha256": "197c395bbcef50e0d8ffe84b261778ee3bc467220383728fda7bdbef42f88e04"
+    },
+    {
+      "path": "ci-replay-final.json",
+      "size": 2167,
+      "sha256": "e2880728d2d0e764ff269d4985f3446e8b1c052bc54db4ca7f11654b514112af"
+    },
+    {
+      "path": "ci-replay-old.json",
+      "size": 2181,
+      "sha256": "bef2f85db4afddaee056918c0cd77eaa20385b1776e929a489a84ab54abc83e9"
+    },
+    {
+      "path": "review-followup.md",
+      "size": 1623,
+      "sha256": "e8f8ae0bcd3c9d2cce0deb5c6ffe49c9e0ef6c5bda6d39c35cf5cc3c018861c1"
+    },
+    {
+      "path": "windows-zip-readback-summary.json",
+      "size": 989,
+      "sha256": "f84a73d894a0bc37ea535bb119961eb078d5e57f03425ac2b7b017251bd69236"
+    }
+  ],
+  "scope": "Independent B follow-up public summaries, manifest excluded; no private raw paths"
+}

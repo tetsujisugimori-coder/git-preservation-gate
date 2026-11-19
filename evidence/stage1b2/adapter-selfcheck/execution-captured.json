@@ -1,0 +1,42 @@
+[
+  {
+    "run": "suite-captured",
+    "command": [
+      "python",
+      "tests/stage1b2/run_suite.py",
+      "--root",
+      "<fresh-case-root>"
+    ],
+    "command_is_redacted": true,
+    "started_at": "2026-11-18T22:27:23.091094+00:00",
+    "ended_at": "2026-11-18T22:27:23.877225+00:00",
+    "elapsed": 0.786182739000651,
+    "exit_code": 0,
+    "timeout_seconds": 120,
+    "retry": 0,
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "source_sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2",
+    "stdout_sha256": "d06aa9f6642532404075371c14f61d77614ddd2c553cd0d329f1742cd5202ad7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "run": "boundaries-captured",
+    "command": [
+      "python",
+      "tests/stage1b2/run_boundaries.py",
+      "--root",
+      "<fresh-case-root>"
+    ],
+    "command_is_redacted": true,
+    "started_at": "2026-11-18T22:27:23.877376+00:00",
+    "ended_at": "2026-11-18T22:27:24.122793+00:00",
+    "elapsed": 0.24542474599729758,
+    "exit_code": 0,
+    "timeout_seconds": 120,
+    "retry": 0,
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "source_sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2",
+    "stdout_sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

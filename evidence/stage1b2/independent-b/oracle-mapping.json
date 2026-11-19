@@ -1,0 +1,246 @@
+{
+  "original_oracle_sha256": "d1cf4c317f94d0bf136eacc1bb3038da82797b6c3e1eae74a61038be330fdf38",
+  "mapping_scope": "semantic oracle, not 30 homogeneous executed tests; PARTIAL/UNKNOWN/NOT_TESTED retained",
+  "cases": [
+    {
+      "id": "B2-01",
+      "input_condition": "通常ファイル・有効な限定承認・新保存領域・異なる再取得領域",
+      "expected": "保存と直接読戻し内容照合PASS、permit=false",
+      "assessment": "PASS",
+      "evidence_reference": "B201",
+      "notes": "real filesystem synthetic normal"
+    },
+    {
+      "id": "B2-02",
+      "input_condition": "具体保存先承認なし",
+      "expected": "BLOCKED、保存先に書込なし",
+      "assessment": "PASS",
+      "evidence_reference": "B206",
+      "notes": "approval unverified rejected; real approval authenticated outside adapter"
+    },
+    {
+      "id": "B2-03",
+      "input_condition": "承認scope外の元ファイルまたは保存先",
+      "expected": "拒否、scope外副作用なし",
+      "assessment": "PASS",
+      "evidence_reference": "B205/B224",
+      "notes": "scope mismatch rejected"
+    },
+    {
+      "id": "B2-04",
+      "input_condition": "期限切れ承認",
+      "expected": "BLOCKED、保存なし",
+      "assessment": "PASS",
+      "evidence_reference": "B207",
+      "notes": "expired rejected"
+    },
+    {
+      "id": "B2-05",
+      "input_condition": "同attemptの二重実行",
+      "expected": "二回目拒否、先行原物/receipt不変",
+      "assessment": "PASS",
+      "evidence_reference": "B208",
+      "notes": "existing attempt unchanged"
+    },
+    {
+      "id": "B2-06",
+      "input_condition": "同attempt同時実行",
+      "expected": "最大1成功、他は拒否、混合manifestを受入しない",
+      "assessment": "PASS",
+      "evidence_reference": "B209",
+      "notes": "two real subprocesses, exactly one save"
+    },
+    {
+      "id": "B2-07",
+      "input_condition": "保存先既存ファイル競合",
+      "expected": "拒否、既存bytes不変",
+      "assessment": "PASS",
+      "evidence_reference": "B208",
+      "notes": "attempt collision refusal"
+    },
+    {
+      "id": "B2-08",
+      "input_condition": "保存先が存在しないか親不達",
+      "expected": "事前固定契約に従い停止、保存成功を宣言しない",
+      "assessment": "PASS",
+      "evidence_reference": "B204",
+      "notes": "missing destination refused"
+    },
+    {
+      "id": "B2-09",
+      "input_condition": "相対..、絶対path、UNC、drive別名による逸脱",
+      "expected": "拒否、範囲外I/Oなし",
+      "assessment": "PARTIAL",
+      "evidence_reference": "B225/I03/I04",
+      "notes": "traversal/reserved/case alias rejected; full Windows alias space not exhausted"
+    },
+    {
+      "id": "B2-10",
+      "input_condition": "保存元/保存先祖先のsymlinkまたはjunction",
+      "expected": "拒否または実証された固定先安全検査、未検証ならUNKNOWN",
+      "assessment": "PARTIAL",
+      "evidence_reference": "B230/I05",
+      "notes": "Linux symlink and ancestor rejected; Windows junction belongs separate execution"
+    },
+    {
+      "id": "B2-11",
+      "input_condition": "検査後保存前のlink先変更",
+      "expected": "安全停止または残余競合をUNKNOWN、無条件safe PASS禁止",
+      "assessment": "UNKNOWN",
+      "evidence_reference": "static design",
+      "notes": "check-use race not eliminated; non-adversarial owner local filesystem scope required"
+    },
+    {
+      "id": "B2-12",
+      "input_condition": "原物の読取中変更",
+      "expected": "期待hash/size不一致拒否、完成receiptなし",
+      "assessment": "PASS",
+      "evidence_reference": "B211/I06",
+      "notes": "synthetic source mutated after copy; detected"
+    },
+    {
+      "id": "B2-13",
+      "input_condition": "部分書込/容量不足注入",
+      "expected": "FAIL、部分ファイルを成功原物として扱わない",
+      "assessment": "PARTIAL",
+      "evidence_reference": "B212/B213",
+      "notes": "injected IO only; actual volume exhaustion NOT_TESTED"
+    },
+    {
+      "id": "B2-14",
+      "input_condition": "保存中process終了",
+      "expected": "完全保存receiptなしなら成功不可、残留物保持、再実行上書きなし",
+      "assessment": "PASS",
+      "evidence_reference": "I07",
+      "notes": "real child os._exit(37) before write; receipt absent and direct retrieve rejects"
+    },
+    {
+      "id": "B2-15",
+      "input_condition": "receipt欠落/破損/別attempt/別object",
+      "expected": "検証拒否、content一致とcustody根拠を分離",
+      "assessment": "PASS",
+      "evidence_reference": "B217/B218/I08/I09",
+      "notes": "receipt absent/corrupt/binding rejected"
+    },
+    {
+      "id": "B2-16",
+      "input_condition": "manifest欠落/余分/不足/重複/サイズ不一致",
+      "expected": "検証拒否、空集合一致不可",
+      "assessment": "PASS",
+      "evidence_reference": "B219/B231/B232/boundaries5",
+      "notes": "manifest corruption/extra/duplicate/type rejected"
+    },
+    {
+      "id": "B2-17",
+      "input_condition": "保存後1byte改変",
+      "expected": "VERIFICATION FAIL、旧原物不変",
+      "assessment": "PASS",
+      "evidence_reference": "B220",
+      "notes": "real fault-copy byte change rejected"
+    },
+    {
+      "id": "B2-18",
+      "input_condition": "保存後消失/読取拒否/再接続失敗",
+      "expected": "UNKNOWN/BLOCKED等を原因別記録、再取得PASS不可",
+      "assessment": "PARTIAL",
+      "evidence_reference": "B215/B221/B222",
+      "notes": "absence and simulated read-denial; real ACL/network disconnect not tested"
+    },
+    {
+      "id": "B2-19",
+      "input_condition": "A workspaceコピーをB検証入力にする",
+      "expected": "独立直接再取得要件未成立、INDEPENDENCE非PASS",
+      "assessment": "NOT_TESTED",
+      "evidence_reference": "pending Windows B",
+      "notes": "actual independent source retrieval awaits A save"
+    },
+    {
+      "id": "B2-20",
+      "input_condition": "L1追加archive非適用",
+      "expected": "archive NOT_TESTED+理由、通常Git条件は別検査",
+      "assessment": "PASS",
+      "evidence_reference": "B226",
+      "notes": "archive NOT_TESTED no write"
+    },
+    {
+      "id": "B2-21",
+      "input_condition": "L2/3重要原物をL1申告",
+      "expected": "FAIL/拒否、保存必須を迂回しない",
+      "assessment": "PASS",
+      "evidence_reference": "B227/B228/B234",
+      "notes": "mandatory or unsupported high-risk reject"
+    },
+    {
+      "id": "B2-22",
+      "input_condition": "STRICT共有ownerがtrue",
+      "expected": "BLOCKED、SOLO共有ownerとは区別",
+      "assessment": "PASS",
+      "evidence_reference": "old regression review13/additional17",
+      "notes": "STRICT shared-owner blocked retained"
+    },
+    {
+      "id": "B2-23",
+      "input_condition": "handoff依頼の保存先/元hash/操作を差替え",
+      "expected": "拒否、任意ファイルI/Oやコマンド実行禁止",
+      "assessment": "PASS",
+      "evidence_reference": "B205/B210/B225/B233",
+      "notes": "request/target/hash/path tampering rejected"
+    },
+    {
+      "id": "B2-24",
+      "input_condition": "handoff受取側が実行不能/元データ読取不能",
+      "expected": "未成立、送信側ログだけで保存PASS禁止",
+      "assessment": "PASS",
+      "evidence_reference": "B223",
+      "notes": "nonexistent receiver executable observed; cross-environment reachability separate"
+    },
+    {
+      "id": "B2-25",
+      "input_condition": "timeoutまたは終了状態観測不能",
+      "expected": "有限期限で親停止、未確認子孫はUNKNOWN",
+      "assessment": "PARTIAL",
+      "evidence_reference": "B229/I07",
+      "notes": "cooperative deadline injected and real bounded child exit; all descendants unknown"
+    },
+    {
+      "id": "B2-26",
+      "input_condition": "合成fault注入成功",
+      "expected": "テスト成功と実ACL/容量/lock故障実測を区別",
+      "assessment": "PASS",
+      "evidence_reference": "oracle kind labels/docs",
+      "notes": "injected and real faults distinguished; actual ACL/disk/lock NOT_TESTED"
+    },
+    {
+      "id": "B2-27",
+      "input_condition": "保存PASS・B読戻し未実施",
+      "expected": "CUSTODY限定PASS可、VERIFICATION NOT_TESTED、ACCEPTANCE未成立",
+      "assessment": "PASS",
+      "evidence_reference": "B201 receipt inspection",
+      "notes": "saved receipt verification and independence NOT_TESTED, acceptance PARTIAL"
+    },
+    {
+      "id": "B2-28",
+      "input_condition": "非機密通常合成file以外のbundle/ZIP",
+      "expected": "必要内部整合/復元未検証を明記、単なるbyteコピーで受入PASS禁止",
+      "assessment": "PASS",
+      "evidence_reference": "static validate object_kind + design",
+      "notes": "ZIP/bundle kind unsupported; old32 not new artifact custody"
+    },
+    {
+      "id": "B2-29",
+      "input_condition": "原物がsource/target同一または保存先内",
+      "expected": "拒否、原物の上書き・再帰保存を行わない",
+      "assessment": "PASS",
+      "evidence_reference": "I01/I02",
+      "notes": "overlap rejected"
+    },
+    {
+      "id": "B2-30",
+      "input_condition": "取得済データと期待SHAだけ整合するが比較元原bytes不在",
+      "expected": "hash一致のみ、全byte NOT_TESTED/UNKNOWN",
+      "assessment": "PASS",
+      "evidence_reference": "I10",
+      "notes": "missing original directory BLOCKED; no all-byte success"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "cases": 11,
+  "expected_frozen_before_execution": true,
+  "kind": "synthetic-result-integrity-controls-not-Windows-execution",
+  "production_permit": false
+}

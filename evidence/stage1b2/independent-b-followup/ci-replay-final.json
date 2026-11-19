@@ -1,0 +1,96 @@
+{
+  "cases": [
+    {
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "expected": "PASS",
+      "id": "CP01",
+      "mutation": "normal",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP02",
+      "mutation": "missing",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP03",
+      "mutation": "short",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP04",
+      "mutation": "duplicate",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP05",
+      "mutation": "extra",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP06",
+      "mutation": "wrong-id",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP07",
+      "mutation": "unknown-verdict",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "PARTIAL",
+      "exit_code": 0,
+      "expected": "PARTIAL",
+      "id": "CP08",
+      "mutation": "link-not-tested",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP09",
+      "mutation": "other-not-tested",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP10",
+      "mutation": "malformed",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual_status": "FAIL",
+      "exit_code": 1,
+      "expected": "FAIL",
+      "id": "CP11",
+      "mutation": "wrong-actual",
+      "test_verdict": "PASS"
+    }
+  ],
+  "oracle_sha256": "b38466475d7ae06870be7460d73967ef76e3743a8a9ccf1ef86b0f1bc369c0a5",
+  "production_permit": false,
+  "source_sha256": "ea52ec2fad91df5fe8d682146980e40ab7802e33386ae31f4f7f58e64d6f1487",
+  "synthetic_subprocess_only": true
+}

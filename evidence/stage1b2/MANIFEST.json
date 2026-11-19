@@ -1,0 +1,560 @@
+{
+  "scope": "Published derivatives, code snapshots and review records; private raw and later publication readbacks separate",
+  "files": [
+    {
+      "path": "adapter-selfcheck/boundaries-captured.json",
+      "size": 1709,
+      "sha256": "9084ec9254ad9d16070f3863a69aa18dc42906612283e020e827841fcd6bc52b"
+    },
+    {
+      "path": "adapter-selfcheck/boundaries-captured.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "adapter-selfcheck/boundaries-captured.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "adapter-selfcheck/boundaries-corrected.json",
+      "size": 1710,
+      "sha256": "91103286ecf5dcf14c922e504c63e8428064988042f2d6bacaa7e80816eff5be"
+    },
+    {
+      "path": "adapter-selfcheck/boundaries-first-runner.py",
+      "size": 1787,
+      "sha256": "88eacf220374b3ed3028b63a06009454098e93a2d8d0b9d0aff975b6e807209a"
+    },
+    {
+      "path": "adapter-selfcheck/execution-captured.json",
+      "size": 1477,
+      "sha256": "8a9bf40601d81a4c0d30ade2081aeef838b77701120b2f7bcf9f6ff8774670eb"
+    },
+    {
+      "path": "adapter-selfcheck/execution-transcript.json",
+      "size": 918,
+      "sha256": "ad13e94404f4025a047fe6b207ed7b489dce62f9a975410a5cbd9648db8b5cbd"
+    },
+    {
+      "path": "adapter-selfcheck/manifest.json",
+      "size": 2914,
+      "sha256": "56b83c817df934719f47ecb8ddc4361ee2ab9602fb47a365be652439c66271a5"
+    },
+    {
+      "path": "adapter-selfcheck/suite-captured.json",
+      "size": 15038,
+      "sha256": "5446bb97d5eb6de1557ebcc5a157c1a7237c61097eae2967031b7f230070cdc2"
+    },
+    {
+      "path": "adapter-selfcheck/suite-captured.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "adapter-selfcheck/suite-captured.stdout",
+      "size": 41,
+      "sha256": "d06aa9f6642532404075371c14f61d77614ddd2c553cd0d329f1742cd5202ad7"
+    },
+    {
+      "path": "adapter-selfcheck/suite-corrected.json",
+      "size": 15045,
+      "sha256": "318460aa33fc85ffe08b0c9c2a94d7d39b3b0c8c9704d1fe52fc34ffc8ba0c16"
+    },
+    {
+      "path": "adapter-selfcheck/suite-final-adapter.py",
+      "size": 14616,
+      "sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2"
+    },
+    {
+      "path": "adapter-selfcheck/suite-final-corrected.json",
+      "size": 15042,
+      "sha256": "476bd1711008ce91f2a1145967f867aaba01ed6739c2a60bab17465a205a2b30"
+    },
+    {
+      "path": "adapter-selfcheck/suite-final-runner-initial.py",
+      "size": 8366,
+      "sha256": "9ea8e4f2d2565ae91d17071e69a88c1f6484091752c012ee8065bb5c16c0ef94"
+    },
+    {
+      "path": "adapter-selfcheck/suite-final.json",
+      "size": 13111,
+      "sha256": "bdf34fe52a038b104c454b25dc7960249a74228fcd0aedea2a4beb67cbbadc0f"
+    },
+    {
+      "path": "adapter-selfcheck/suite-first-adapter-initial.py",
+      "size": 13648,
+      "sha256": "ad54082aa6e81eda1d654d248eabca6716afe89f5f519dff5785657653ce0f36"
+    },
+    {
+      "path": "adapter-selfcheck/suite-first-runner-initial.py",
+      "size": 8362,
+      "sha256": "fd83de50986b02bea0656e51f7184fcd77b51725daefaf27176ef2cdf488c4fe"
+    },
+    {
+      "path": "adapter-selfcheck/suite-first.json",
+      "size": 18464,
+      "sha256": "f6582817d7b29e057f3800ac4e37bc9d86676e643288a8101ce3dd61418d5c9b"
+    },
+    {
+      "path": "ci-history/manifest.json",
+      "size": 179,
+      "sha256": "96edb42392304baab8656f6d8f2a41c03b881fc3b77a7c6d07a6e3028fbbc559"
+    },
+    {
+      "path": "ci-history/selected-diagnostics.json",
+      "size": 7242,
+      "sha256": "9d708e6332be86321adcc9cb73103bc4ee15fc523e6dd7eb47988590e419b1c7"
+    },
+    {
+      "path": "ci-probe-report-p3/ci-probe-before.py",
+      "size": 3755,
+      "sha256": "b598445aec484274080435b29f8b181f7a98edccd0a0d039c7a8955aeaff1884"
+    },
+    {
+      "path": "ci-probe-report-p3/execution.json",
+      "size": 181,
+      "sha256": "8fad3a2238b9ecc032f75bb6ee45ea588f4ed166c6bcb9cc6b6f373865672b27"
+    },
+    {
+      "path": "ci-probe-report-p3/full-green.json",
+      "size": 2167,
+      "sha256": "e2880728d2d0e764ff269d4985f3446e8b1c052bc54db4ca7f11654b514112af"
+    },
+    {
+      "path": "ci-probe-report-p3/full-green.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ci-probe-report-p3/full-green.stdout",
+      "size": 24,
+      "sha256": "ba538fe676541aa45ec79e4e5f866da27528f463a2c21d1616955dcdd7e4c59a"
+    },
+    {
+      "path": "ci-probe-report-p3/full-red.json",
+      "size": 2181,
+      "sha256": "bef2f85db4afddaee056918c0cd77eaa20385b1776e929a489a84ab54abc83e9"
+    },
+    {
+      "path": "ci-probe-report-p3/full-red.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ci-probe-report-p3/full-red.stdout",
+      "size": 24,
+      "sha256": "8e704786cb00417e73efc9cd56b8442860656d4e185d2f782c67a8b0e76f0743"
+    },
+    {
+      "path": "ci-probe-report-p3/green.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ci-probe-report-p3/green.stdout",
+      "size": 24,
+      "sha256": "ba538fe676541aa45ec79e4e5f866da27528f463a2c21d1616955dcdd7e4c59a"
+    },
+    {
+      "path": "ci-probe-report-p3/manifest.json",
+      "size": 1792,
+      "sha256": "b00fb2aaab8b8ceefc808c21f4c271b1c02ea616dec9e5c2f02bf5c9dc06e4d7"
+    },
+    {
+      "path": "ci-probe-report-p3/replay-execution.json",
+      "size": 297,
+      "sha256": "5592a2ed742b1d1ab4aec85361680f24fc1141c5c78db3d6dfd83e90a1b5c50b"
+    },
+    {
+      "path": "ci-probe-report-p3/results.json",
+      "size": 3033,
+      "sha256": "197c395bbcef50e0d8ffe84b261778ee3bc467220383728fda7bdbef42f88e04"
+    },
+    {
+      "path": "independent-b/expectation-correction.json",
+      "size": 209,
+      "sha256": "d6a828daa0ceb6d0230fb91b62d3b9889bedfc5a4ffb0967ac19b058fd4146f7"
+    },
+    {
+      "path": "independent-b/independent-oracle-v1.json",
+      "size": 5523,
+      "sha256": "d1cf4c317f94d0bf136eacc1bb3038da82797b6c3e1eae74a61038be330fdf38"
+    },
+    {
+      "path": "independent-b/independent-run-1/expected.fixed.json",
+      "size": 401,
+      "sha256": "b9d1458a7faaa6e5518357a694f7fe6e651c4974df6f2a5b48a29a8b1d075e84"
+    },
+    {
+      "path": "independent-b/independent-run-1/results.json",
+      "size": 4880,
+      "sha256": "f8ea958038903b5b2889ba735e724d85569b994ac575369f783e1b413e112d2f"
+    },
+    {
+      "path": "independent-b/independent-run-2/expected.fixed.json",
+      "size": 398,
+      "sha256": "3d57a14cd554a033706035a1467b2f3b330e9096434e866689142c20b643bfce"
+    },
+    {
+      "path": "independent-b/independent-run-2/results.json",
+      "size": 4981,
+      "sha256": "ae75f6ccf5b646cc2f458699051087566ff09f734f7afe20abdb47e3a8a16653"
+    },
+    {
+      "path": "independent-b/manifest.json",
+      "size": 8289,
+      "sha256": "84e34b11ef6f298ad2f910233b4af74899492eb6b97a9f3d5243f1d68031da85"
+    },
+    {
+      "path": "independent-b/oracle-mapping.json",
+      "size": 9733,
+      "sha256": "60da1a81546218de070cd0b4960116a8d48b5387d87599bed996c78b093c5808"
+    },
+    {
+      "path": "independent-b/publication-receipts.json",
+      "size": 13735,
+      "sha256": "8aaef708d4c532cc762a8b100b2f9070d3c37dd8bc0dfe631ca78467e51bf2c9"
+    },
+    {
+      "path": "independent-b/regression-run-1/0.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/0.stdout",
+      "size": 41,
+      "sha256": "d06aa9f6642532404075371c14f61d77614ddd2c553cd0d329f1742cd5202ad7"
+    },
+    {
+      "path": "independent-b/regression-run-1/1.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/1.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "independent-b/regression-run-1/2.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/2.stdout",
+      "size": 1026,
+      "sha256": "35a7c8c79e3b7c0db1f628d583e30c8e2a5cf1c4b832e269cda743f0fb82463e"
+    },
+    {
+      "path": "independent-b/regression-run-1/3.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/3.stdout",
+      "size": 1438,
+      "sha256": "567266a38787419e20046021360beedd8030bae5d1362caa48fdff2c40e91007"
+    },
+    {
+      "path": "independent-b/regression-run-1/4.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/4.stdout",
+      "size": 2675,
+      "sha256": "17c02d826939f7907871bfad3a1c722ad2aa0500235eb74a74f7dc25db756067"
+    },
+    {
+      "path": "independent-b/regression-run-1/5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/5.stdout",
+      "size": 13299,
+      "sha256": "ca1905761be953640937b9e38437a51d34d245df4f1603719bb27be42f30e0f4"
+    },
+    {
+      "path": "independent-b/regression-run-1/6.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/6.stdout",
+      "size": 16748,
+      "sha256": "d283ee6dec393f4a62e54a331364370be8c4e04e5e19b62244bd4a1e8a6b22d3"
+    },
+    {
+      "path": "independent-b/regression-run-1/7.stderr",
+      "size": 109,
+      "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+    },
+    {
+      "path": "independent-b/regression-run-1/7.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/8.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-1/8.stdout",
+      "size": 74,
+      "sha256": "69d91772e4e4535ae9fb5bcf4ed2ca846d654fd80befe3d844f49bb69579a394"
+    },
+    {
+      "path": "independent-b/regression-run-1/execution.json",
+      "size": 4940,
+      "sha256": "2fb3094267530cfe6ce42010f158734c9e1eb3f7e9267cf48db10447ecf704f6"
+    },
+    {
+      "path": "independent-b/regression-run-1/new34/results.json",
+      "size": 15046,
+      "sha256": "e38a57c87c719f53826f579da1eb509882db0fc0424ff59445e0751a1173b6e0"
+    },
+    {
+      "path": "independent-b/regression-run-1/new5/results.json",
+      "size": 1711,
+      "sha256": "eda5cb51aa2ab138a38acddbfb0c36c1b9ddca470a6bbcaa7a79c42fe670e1f0"
+    },
+    {
+      "path": "independent-b/regression-run-2/0.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/0.stdout",
+      "size": 4343,
+      "sha256": "bc5670da06f8515ab4626b1c12a02d9c3e1db6d2ed371c991cd477b17324876d"
+    },
+    {
+      "path": "independent-b/regression-run-2/1.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/1.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "independent-b/regression-run-2/2.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/2.stdout",
+      "size": 1026,
+      "sha256": "83af0d3ed3fe13b42444e7cc1f257e448b69e7aa8ca6f8720c9814dadb73dfc2"
+    },
+    {
+      "path": "independent-b/regression-run-2/3.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/3.stdout",
+      "size": 1438,
+      "sha256": "567266a38787419e20046021360beedd8030bae5d1362caa48fdff2c40e91007"
+    },
+    {
+      "path": "independent-b/regression-run-2/4.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/4.stdout",
+      "size": 2675,
+      "sha256": "17c02d826939f7907871bfad3a1c722ad2aa0500235eb74a74f7dc25db756067"
+    },
+    {
+      "path": "independent-b/regression-run-2/5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/5.stdout",
+      "size": 13299,
+      "sha256": "ca1905761be953640937b9e38437a51d34d245df4f1603719bb27be42f30e0f4"
+    },
+    {
+      "path": "independent-b/regression-run-2/6.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/6.stdout",
+      "size": 16748,
+      "sha256": "d283ee6dec393f4a62e54a331364370be8c4e04e5e19b62244bd4a1e8a6b22d3"
+    },
+    {
+      "path": "independent-b/regression-run-2/7.stderr",
+      "size": 109,
+      "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+    },
+    {
+      "path": "independent-b/regression-run-2/7.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/8.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent-b/regression-run-2/8.stdout",
+      "size": 74,
+      "sha256": "69d91772e4e4535ae9fb5bcf4ed2ca846d654fd80befe3d844f49bb69579a394"
+    },
+    {
+      "path": "independent-b/regression-run-2/execution.json",
+      "size": 4940,
+      "sha256": "c4967ee46ce1425816f13b06e973a9daea453c9b5f0b439e80d7ac174dafb973"
+    },
+    {
+      "path": "independent-b/regression-run-2/new34/results.json",
+      "size": 15163,
+      "sha256": "ce3616fbfedccde81bd6cd87e5b72e08ddd1c46404c9f35374c8a106430f646a"
+    },
+    {
+      "path": "independent-b/regression-run-2/new5/results.json",
+      "size": 1711,
+      "sha256": "a11e90bd4a3359b3b354e7bb6202099a8127b04dd9fec0529671c56d2c4d483f"
+    },
+    {
+      "path": "independent-b/windows-direct-readback.json",
+      "size": 4866,
+      "sha256": "644472cc34a7ca26b6b2b5eba5a616704e367d3fcf4b568398dcdbbee6ffb9ea"
+    },
+    {
+      "path": "independent-b-followup/ci-additional.json",
+      "size": 1725,
+      "sha256": "f8c9cdf3942244ce64cfb0292f80070ab25993f0c1ff4acd04d0575f5005d7b3"
+    },
+    {
+      "path": "independent-b-followup/ci-assess-final.json",
+      "size": 3033,
+      "sha256": "197c395bbcef50e0d8ffe84b261778ee3bc467220383728fda7bdbef42f88e04"
+    },
+    {
+      "path": "independent-b-followup/ci-replay-final.json",
+      "size": 2167,
+      "sha256": "e2880728d2d0e764ff269d4985f3446e8b1c052bc54db4ca7f11654b514112af"
+    },
+    {
+      "path": "independent-b-followup/ci-replay-old.json",
+      "size": 2181,
+      "sha256": "bef2f85db4afddaee056918c0cd77eaa20385b1776e929a489a84ab54abc83e9"
+    },
+    {
+      "path": "independent-b-followup/manifest.json",
+      "size": 1046,
+      "sha256": "67dadf778ced4e0ea8b03d6849eaad3f2735123076e8c4d8e602dd975417b7fa"
+    },
+    {
+      "path": "independent-b-followup/review-followup.md",
+      "size": 1623,
+      "sha256": "e8f8ae0bcd3c9d2cce0deb5c6ffe49c9e0ef6c5bda6d39c35cf5cc3c018861c1"
+    },
+    {
+      "path": "independent-b-followup/windows-zip-readback-summary.json",
+      "size": 989,
+      "sha256": "f84a73d894a0bc37ea535bb119961eb078d5e57f03425ac2b7b017251bd69236"
+    },
+    {
+      "path": "risk-schema-p3/adapter-red.py",
+      "size": 14616,
+      "sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2"
+    },
+    {
+      "path": "risk-schema-p3/execution.json",
+      "size": 306,
+      "sha256": "f4d3646585b09bbc3aa8879066ab37f29eae57b98b7767142ab5d5d73e6ecc8d"
+    },
+    {
+      "path": "risk-schema-p3/green.json",
+      "size": 1918,
+      "sha256": "f778b3673c1d1dc348de6da8d661aeb10185d98c560656fc3d97b8c57669d8e6"
+    },
+    {
+      "path": "risk-schema-p3/green.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "risk-schema-p3/green.stdout",
+      "size": 23,
+      "sha256": "b84caa87702d742f974dddd5fe1a999c6c49ac7f221fffc48b1f5d42d1cb0651"
+    },
+    {
+      "path": "risk-schema-p3/manifest.json",
+      "size": 2076,
+      "sha256": "173f8cf22a1e3fcad89aaa8e14f5eee652aeec0361d6142e1731523cfd773c94"
+    },
+    {
+      "path": "risk-schema-p3/red.json",
+      "size": 1740,
+      "sha256": "9c4fca4212fac572e17e2e3a22dddd87d53c1fe0a38768f332b8621f619b5112"
+    },
+    {
+      "path": "risk-schema-p3/red.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "risk-schema-p3/red.stdout",
+      "size": 23,
+      "sha256": "5ac61d225ad2c9f01eea990afd7262a0f4646010290dbdd553c47a0019b2bc56"
+    },
+    {
+      "path": "risk-schema-p3/regression34.json",
+      "size": 15157,
+      "sha256": "a78eff703b19ac5938b32df4e060a7a9fe23662633a201617c811a7ad596478c"
+    },
+    {
+      "path": "risk-schema-p3/regression34.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "risk-schema-p3/regression34.stdout",
+      "size": 4343,
+      "sha256": "bc5670da06f8515ab4626b1c12a02d9c3e1db6d2ed371c991cd477b17324876d"
+    },
+    {
+      "path": "risk-schema-p3/regression5.json",
+      "size": 1711,
+      "sha256": "dc77cbb9ee5548274f067d82c2a63197e47b81607f9ce412b1e6caa81c06e73e"
+    },
+    {
+      "path": "risk-schema-p3/regression5.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "risk-schema-p3/regression5.stdout",
+      "size": 23,
+      "sha256": "f603adab460383a9b8c831a4dcd08ab78cf750cd4eddda9944af19eac11fd716"
+    },
+    {
+      "path": "windows/manifest.json",
+      "size": 445,
+      "sha256": "ab8037b15864218b04a5d8eba6ca2e812f908d9a3e8ecc0fece5c7f88991564f"
+    },
+    {
+      "path": "windows/public-ci-probe-windows-addendum.json",
+      "size": 5753,
+      "sha256": "773d795dce19274b1d036bda88977af458e2ec9e470453769ff0f123f785b9c4"
+    },
+    {
+      "path": "windows/public-windows-b2-summary.json",
+      "size": 24031,
+      "sha256": "a56440b29ae6993a8f795cd7f2deb36903f8e649ceb457c22f8df92c313113ad"
+    }
+  ]
+}

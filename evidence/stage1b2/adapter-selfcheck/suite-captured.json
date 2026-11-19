@@ -1,0 +1,531 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "count": 3,
+        "elapsed": 0.0027076289989054203,
+        "manifest_sha256": "1a1a86497e1bb654c6d51099ffef96f44d3b19b2afb4b18436b3730c88d874be",
+        "object_id": "synthetic-three",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "c77dc3cd89c40de1e75b3499d66bfa1fa76e40f7bf7235eabe0d35a514e28a12",
+        "status": "PASS"
+      },
+      "elapsed": 0.019396358002268244,
+      "expected": "PASS",
+      "id": "B201",
+      "kind": "real-filesystem",
+      "name": "normal direct save and independent read method",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "count": 3,
+        "elapsed": 0.002791441998851951,
+        "manifest_sha256": "1a1a86497e1bb654c6d51099ffef96f44d3b19b2afb4b18436b3730c88d874be",
+        "object_id": "synthetic-three",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "df99fa0ee802d901bb7b48b78ef0163cab628806c7249d7902eca6c0c9280c0b",
+        "status": "PASS"
+      },
+      "elapsed": 0.1078359589955653,
+      "expected": "PASS",
+      "id": "B202",
+      "kind": "real-process",
+      "name": "one-shot receiver reads source and saves without manual copying",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "count": 3,
+        "elapsed": 0.0025415510026505217,
+        "manifest_sha256": "590ffa4258b513f053536654985a631af1640b99d4bdb40bf7619319eaae95b7",
+        "object_id": "synthetic-three",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "a224748b7ad806af91e8030572365c6b915726bd5b89e95723ccc85a55a33d51",
+        "status": "PASS"
+      },
+      "elapsed": 0.1036573919991497,
+      "expected": "PASS",
+      "id": "B203",
+      "kind": "real-filesystem",
+      "name": "Unicode paths",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0002944169973488897,
+        "production_permit": false,
+        "reason": "DIRECTORY_UNAVAILABLE",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0007646560043212958,
+      "expected": "BLOCKED",
+      "id": "B204",
+      "kind": "real-filesystem",
+      "name": "destination missing",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 1.3702003343496472e-05,
+        "production_permit": false,
+        "reason": "APPROVAL_SCOPE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0004623950007953681,
+      "expected": "FAIL",
+      "id": "B205",
+      "kind": "contract",
+      "name": "destination approval scope mismatch",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 1.430200063623488e-05,
+        "production_permit": false,
+        "reason": "APPROVAL_NOT_VERIFIED",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.000732781998522114,
+      "expected": "BLOCKED",
+      "id": "B206",
+      "kind": "contract",
+      "name": "unverified approval",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 4.6290995669551194e-05,
+        "production_permit": false,
+        "reason": "APPROVAL_EXPIRED",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0005482429987750947,
+      "expected": "BLOCKED",
+      "id": "B207",
+      "kind": "contract",
+      "name": "expired approval",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0008508520040777512,
+        "production_permit": false,
+        "reason": "ATTEMPT_EXISTS",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.01259401499555679,
+      "expected": "BLOCKED",
+      "id": "B208",
+      "kind": "real-filesystem",
+      "name": "same attempt collision",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "count": 3,
+        "elapsed": 0.004671039001550525,
+        "manifest_sha256": "1a1a86497e1bb654c6d51099ffef96f44d3b19b2afb4b18436b3730c88d874be",
+        "object_id": "synthetic-three",
+        "production_permit": false,
+        "reason": "DIRECT_RETRIEVAL_ALL_BYTES",
+        "receipt_sha256": "24077e3ee5f9a807eee992249c8b061b0be1df190ccb481803beaf3d1f0dc514",
+        "status": "PASS"
+      },
+      "elapsed": 0.11214377600117587,
+      "expected": "PASS",
+      "id": "B209",
+      "kind": "real-process",
+      "name": "simultaneous attempt collision one save only",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.00045709400001214817,
+        "production_permit": false,
+        "reason": "SOURCE_MISMATCH",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0011198420033906586,
+      "expected": "FAIL",
+      "id": "B210",
+      "kind": "real-filesystem",
+      "name": "input SHA mismatch",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.005744000001868699,
+        "production_permit": false,
+        "reason": "SOURCE_CHANGED",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.007646486999874469,
+      "expected": "FAIL",
+      "id": "B211",
+      "kind": "injected-synthetic-source",
+      "name": "source changes during save",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0013750790021731518,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.006383813000866212,
+      "expected": "BLOCKED",
+      "id": "B212",
+      "kind": "injected-IO",
+      "name": "partial write interruption retained incomplete",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.002378367993514985,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.00646690400026273,
+      "expected": "BLOCKED",
+      "id": "B213",
+      "kind": "injected-IO-not-real-volume-full",
+      "name": "capacity ENOSPC",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0010207439991063438,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.004966364002029877,
+      "expected": "BLOCKED",
+      "id": "B214",
+      "kind": "injected-IO-not-real-ACL",
+      "name": "write access EACCES",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.00034334100200794637,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0012750899986713193,
+      "expected": "BLOCKED",
+      "id": "B215",
+      "kind": "injected-IO-not-real-ACL",
+      "name": "read access EACCES",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0010609300006763078,
+        "production_permit": false,
+        "reason": "IO_OR_SCHEMA_ERROR",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0050230959968757816,
+      "expected": "BLOCKED",
+      "id": "B216",
+      "kind": "injected-IO-not-real-lock",
+      "name": "sharing violation",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.00021849000040674582,
+        "production_permit": false,
+        "reason": "INCOMPLETE_OR_EXTRA",
+        "status": "FAIL"
+      },
+      "elapsed": 0.0233140860000276,
+      "expected": "FAIL",
+      "id": "B217",
+      "kind": "fault-copy",
+      "name": "receipt missing",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0004946769986418076,
+        "production_permit": false,
+        "reason": "RECEIPT_MISMATCH",
+        "status": "FAIL"
+      },
+      "elapsed": 0.01343877400358906,
+      "expected": "FAIL",
+      "id": "B218",
+      "kind": "fault-copy",
+      "name": "receipt corruption",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0008239290036726743,
+        "production_permit": false,
+        "reason": "RECORD_SCHEMA",
+        "status": "FAIL"
+      },
+      "elapsed": 0.015881578001426533,
+      "expected": "FAIL",
+      "id": "B219",
+      "kind": "fault-copy",
+      "name": "manifest corruption",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0013990790030220523,
+        "production_permit": false,
+        "reason": "CONTENT_MISMATCH",
+        "status": "FAIL"
+      },
+      "elapsed": 0.013644051003211644,
+      "expected": "FAIL",
+      "id": "B220",
+      "kind": "fault-copy",
+      "name": "stored SHA mismatch",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0009863290033536032,
+        "production_permit": false,
+        "reason": "FILE_SET_MISMATCH",
+        "status": "FAIL"
+      },
+      "elapsed": 0.014947577001294121,
+      "expected": "FAIL",
+      "id": "B221",
+      "kind": "fault-copy",
+      "name": "stored file missing",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 9.106899960897863e-05,
+        "production_permit": false,
+        "reason": "DIRECTORY_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0009572889975970611,
+      "expected": "BLOCKED",
+      "id": "B222",
+      "kind": "real-filesystem",
+      "name": "reconnect destination unavailable",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "production_permit": false,
+        "reason": "RECEIVER_UNAVAILABLE",
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.003834941002423875,
+      "expected": "BLOCKED",
+      "id": "B223",
+      "kind": "real-process",
+      "name": "receiver cannot start",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 1.7871003365144134e-05,
+        "production_permit": false,
+        "reason": "APPROVAL_SCOPE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0031735880038468167,
+      "expected": "FAIL",
+      "id": "B224",
+      "kind": "contract-not-token-difference",
+      "name": "actor mismatch",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 8.842199895298108e-05,
+        "production_permit": false,
+        "reason": "UNSAFE_PATH",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0008415850024903193,
+      "expected": "FAIL",
+      "id": "B225",
+      "kind": "contract",
+      "name": "directory escape",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "production_permit": false,
+        "reason": "LEVEL1_ARCHIVE_NOT_APPLICABLE",
+        "status": "NOT_TESTED"
+      },
+      "elapsed": 0.0006719410012010485,
+      "expected": "NOT_TESTED",
+      "id": "B226",
+      "kind": "contract",
+      "name": "level1 no extra archive",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 4.592099867295474e-05,
+        "production_permit": false,
+        "reason": "LEVEL2_ARCHIVE_REQUIRED",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.000624947999313008,
+      "expected": "FAIL",
+      "id": "B227",
+      "kind": "contract",
+      "name": "level2 mandatory archive not bypassed",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 7.922004442662e-06,
+        "production_permit": false,
+        "reason": "LEVEL_UNSUPPORTED",
+        "receipt_complete": false,
+        "status": "BLOCKED"
+      },
+      "elapsed": 0.0011834180040750653,
+      "expected": "BLOCKED",
+      "id": "B228",
+      "kind": "contract",
+      "name": "level3 unsupported pilot fails closed",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 999,
+        "production_permit": false,
+        "reason": "DEADLINE",
+        "receipt_complete": false,
+        "status": "UNKNOWN"
+      },
+      "elapsed": 0.002908804002800025,
+      "expected": "UNKNOWN",
+      "id": "B229",
+      "kind": "injected-clock",
+      "name": "deadline already exceeded",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.00046437700075330213,
+        "production_permit": false,
+        "reason": "LINK_OR_REPARSE",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0027630580007098615,
+      "expected": "FAIL",
+      "id": "B230",
+      "kind": "OS-dependent-link",
+      "name": "link/reparse source",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0015433749940712005,
+        "production_permit": false,
+        "reason": "FILE_SET_MISMATCH",
+        "status": "FAIL"
+      },
+      "elapsed": 0.015988059996743686,
+      "expected": "FAIL",
+      "id": "B231",
+      "kind": "fault-copy",
+      "name": "unexpected saved file",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 0.0001120429951697588,
+        "production_permit": false,
+        "reason": "DUPLICATE_PATH",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0014436939964070916,
+      "expected": "FAIL",
+      "id": "B232",
+      "kind": "contract",
+      "name": "duplicate casefold path",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 4.6514993300661445e-05,
+        "production_permit": false,
+        "reason": "REQUEST_NOT_BOUND",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0006700129961245693,
+      "expected": "FAIL",
+      "id": "B233",
+      "kind": "contract",
+      "name": "request substitution after binding",
+      "test_verdict": "PASS"
+    },
+    {
+      "actual": {
+        "elapsed": 6.654998287558556e-06,
+        "production_permit": false,
+        "reason": "LEVEL_TOO_LOW",
+        "receipt_complete": false,
+        "status": "FAIL"
+      },
+      "elapsed": 0.0005145050017745234,
+      "expected": "FAIL",
+      "id": "B234",
+      "kind": "contract",
+      "name": "Level1 important evidence misclassification",
+      "test_verdict": "PASS"
+    }
+  ],
+  "counts": {
+    "FAIL": 0,
+    "NOT_TESTED": 0,
+    "PASS": 34
+  },
+  "ended_at": "2026-11-18T22:27:23.848940+00:00",
+  "oracle_sha256": "a02fa1d85d2d1972da5997312f9221121a92720066c8ecb7f5e2b178921dd36a",
+  "platform": "linux",
+  "production_permit": false,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "receiver_timeout_seconds": 40,
+  "retry": 0,
+  "runner_sha256": "0c5ad1131d1e2a3590a82eb9d93e0ef178ae18933d048b691a520e1da767f782",
+  "schema": "stage1b2-suite-1",
+  "source_sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2",
+  "started_at": "2026-11-18T22:27:23.323651+00:00"
+}

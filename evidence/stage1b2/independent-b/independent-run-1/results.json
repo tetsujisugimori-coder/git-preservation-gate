@@ -1,0 +1,179 @@
+{
+  "cases": [
+    {
+      "id": "I01",
+      "condition": "overlap",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "SOURCE_DESTINATION_OVERLAP",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 0.0008396409975830466
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.295334+00:00",
+      "end": "2026-11-18T22:29:40.296344+00:00"
+    },
+    {
+      "id": "I02",
+      "condition": "source_in_store",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "SOURCE_DESTINATION_OVERLAP",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 0.00022005099890520796
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.297397+00:00",
+      "end": "2026-11-18T22:29:40.297773+00:00"
+    },
+    {
+      "id": "I03",
+      "condition": "reserved_device",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "UNSAFE_PATH",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 6.946899520698935e-05
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.299078+00:00",
+      "end": "2026-11-18T22:29:40.299190+00:00"
+    },
+    {
+      "id": "I04",
+      "condition": "case_alias",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "DUPLICATE_PATH",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 0.0006919379957253113
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.300821+00:00",
+      "end": "2026-11-18T22:29:40.301690+00:00"
+    },
+    {
+      "id": "I05",
+      "condition": "ancestor_link",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "LINK_OR_REPARSE",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 0.0003727310031536035
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.303129+00:00",
+      "end": "2026-11-18T22:29:40.303688+00:00"
+    },
+    {
+      "id": "I06",
+      "condition": "after_read_source_change",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "SOURCE_CHANGED",
+        "production_permit": false,
+        "receipt_complete": false,
+        "elapsed": 0.009784349997062236
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.304676+00:00",
+      "end": "2026-11-18T22:29:40.315663+00:00"
+    },
+    {
+      "id": "I07",
+      "condition": "kill_in_write",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "INCOMPLETE_OR_EXTRA",
+        "production_permit": false,
+        "elapsed": 0.0002599599974928424
+      },
+      "extra": {
+        "child_exit": 37,
+        "receipt_exists": false
+      },
+      "match": true,
+      "start": "2026-11-18T22:29:40.316442+00:00",
+      "end": "2026-11-18T22:29:40.375856+00:00"
+    },
+    {
+      "id": "I08",
+      "condition": "receipt_wrong_object",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "OBJECT_BINDING",
+        "production_permit": false,
+        "elapsed": 0.0007595569986733608
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.376828+00:00",
+      "end": "2026-11-18T22:29:40.390479+00:00"
+    },
+    {
+      "id": "I09",
+      "condition": "receipt_other_attempt",
+      "expected": "FAIL",
+      "actual": {
+        "status": "FAIL",
+        "reason": "OBJECT_BINDING",
+        "production_permit": false,
+        "elapsed": 0.0004151249959249981
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.391084+00:00",
+      "end": "2026-11-18T22:29:40.400695+00:00"
+    },
+    {
+      "id": "I10",
+      "condition": "raw_bytes_absent",
+      "expected": "BLOCKED",
+      "actual": {
+        "status": "BLOCKED",
+        "reason": "DIRECTORY_UNAVAILABLE",
+        "production_permit": false,
+        "elapsed": 9.940499876393005e-05
+      },
+      "extra": {},
+      "match": true,
+      "start": "2026-11-18T22:29:40.401164+00:00",
+      "end": "2026-11-18T22:29:40.412054+00:00"
+    },
+    {
+      "id": "I11",
+      "condition": "risk_shape",
+      "expected": "BLOCKED",
+      "actual": {
+        "status": "UNHANDLED",
+        "exception": "AttributeError"
+      },
+      "extra": {},
+      "match": false,
+      "start": "2026-11-18T22:29:40.412735+00:00",
+      "end": "2026-11-18T22:29:40.412793+00:00"
+    }
+  ],
+  "source_sha256": "c6a4d5e5f8f3fbaee56a8759ca204a223f5da69d16f9f789ea46d29180a57da2",
+  "semantic_oracle_sha256": "d1cf4c317f94d0bf136eacc1bb3038da82797b6c3e1eae74a61038be330fdf38",
+  "permit": false
+}

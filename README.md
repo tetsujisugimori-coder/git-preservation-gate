@@ -32,3 +32,7 @@
 ## Stage 1-B
 
 [実保存契約・Windows有限停止・限定パイロット（開発中）](docs/stage1b/README.md)。合成/P0技術確認と実保存許可を分離し、production_permit=falseを維持します。
+
+## Stage 1-B2 limited save pilot
+
+See [scope and gated results](docs/stage1b2/README.md). This does not enable production preservation or supersede Issue14.

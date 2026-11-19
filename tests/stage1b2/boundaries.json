@@ -1,0 +1,1 @@
+{"fixed_before_execution":true,"cases":[{"id":"X01","name":"relative roots","expected":"FAIL"},{"id":"X02","name":"manifest non-dict item","expected":"FAIL"},{"id":"X03","name":"manifest boolean size","expected":"FAIL"},{"id":"X04","name":"empty extra directory","expected":"FAIL"},{"id":"X05","name":"malformed receipt","expected":"FAIL"}]}

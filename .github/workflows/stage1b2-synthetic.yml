@@ -1,0 +1,43 @@
+name: Stage1B2 nonsecret synthetic adapter
+on:
+  push:
+    branches: [feat/stage1b2-windows-save-pilot]
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: New nonsecret synthetic cases
+        run: |
+          python3 tests/stage1b2/run_suite.py --root "$RUNNER_TEMP/b2-${GITHUB_RUN_ID}"
+          python3 tests/stage1b2/run_boundaries.py --root "$RUNNER_TEMP/b2-boundaries-${GITHUB_RUN_ID}"
+          python3 tests/stage1b2/run_risk_schema.py --root "$RUNNER_TEMP/b2-risk-${GITHUB_RUN_ID}"
+          python3 tests/stage1b2/test_ci_probe_reports.py --root "$RUNNER_TEMP/b2-report-${GITHUB_RUN_ID}"
+      - name: Unchanged contracts and bundle regressions
+        run: |
+          set -euo pipefail
+          python3 tests/stage1b/run_contract_batch.py "$RUNNER_TEMP/b2-contract-${GITHUB_RUN_ID}"
+          python3 tests/stage1b/run_independent10.py
+          python3 tests/stage1b/run_p2_regression.py
+          python3 tests/stage1b/run_review_regression.py
+          python3 tests/stage1b/run_review_regression.py --additional
+          python3 tests/stage1b/test_publication_scan.py
+          python3 tools/stage1a/run_suite.py --root "$RUNNER_TEMP/b2-stage1a-${GITHUB_RUN_ID}"
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Windows token applicability and adapter probe
+        shell: pwsh
+        run: |
+          python tests/stage1b2/ci_probe.py --root (Join-Path $env:RUNNER_TEMP ("b2-probe-" + $env:GITHUB_RUN_ID))
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Unchanged owned-job21 (separate scope)
+        shell: pwsh
+        run: |
+          python tools/stage1b/windows_suite.py --root (Join-Path $env:RUNNER_TEMP ("b2-old21-" + $env:GITHUB_RUN_ID))
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

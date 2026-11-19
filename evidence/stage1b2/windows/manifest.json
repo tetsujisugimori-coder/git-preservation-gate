@@ -1,0 +1,15 @@
+{
+  "scope": "path-redacted Windows summaries; later probe raw outside prior Archive ZIP",
+  "files": [
+    {
+      "path": "public-ci-probe-windows-addendum.json",
+      "size": 5753,
+      "sha256": "773d795dce19274b1d036bda88977af458e2ec9e470453769ff0f123f785b9c4"
+    },
+    {
+      "path": "public-windows-b2-summary.json",
+      "size": 24031,
+      "sha256": "a56440b29ae6993a8f795cd7f2deb36903f8e649ceb457c22f8df92c313113ad"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "run_id": 44411775221,
+    "head": "cace6edf91c63b86c8db5b62b9af43edf590a641",
+    "scope": "Selected safe diagnostic lines; complete GitHub job log retained privately",
+    "lines": [
+      "2026-11-18T22:27:54.8161328Z {\"PASS\": 11, \"FAIL\": 23, \"NOT_TESTED\": 0}",
+      "2026-11-18T22:27:54.8979201Z ##[error]Process completed with exit code 1."
+    ]
+  },
+  {
+    "run_id": 44412388434,
+    "head": "23353dce01c92cd7402a19ed9d0724b5ea4bcef8",
+    "scope": "Selected safe diagnostic lines; complete GitHub job log retained privately",
+    "lines": [
+      "2026-11-18T22:31:44.5286780Z {\"environment\": {\"platform\": \"win32\", \"python\": \"3.12.10\", \"windows_admin_token\": true}}",
+      "2026-11-18T22:31:44.5367400Z {\"case_id\": \"B201\", \"expected\": \"PASS\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.6049723Z {\"case_id\": \"B202\", \"expected\": \"PASS\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.6673276Z {\"case_id\": \"B203\", \"expected\": \"PASS\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.6692081Z {\"case_id\": \"B204\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.6708153Z {\"case_id\": \"B205\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.6723659Z {\"case_id\": \"B206\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.6739110Z {\"case_id\": \"B207\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.6754062Z {\"case_id\": \"B208\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7467713Z {\"case_id\": \"B209\", \"expected\": \"PASS\", \"actual_status\": \"ERROR\", \"reason\": \"AssertionError\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7483589Z {\"case_id\": \"B210\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7498998Z {\"case_id\": \"B211\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7515392Z {\"case_id\": \"B212\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7532901Z {\"case_id\": \"B213\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7548562Z {\"case_id\": \"B214\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7566560Z {\"case_id\": \"B215\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7582695Z {\"case_id\": \"B216\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7605412Z {\"case_id\": \"B217\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7630561Z {\"case_id\": \"B218\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7656668Z {\"case_id\": \"B219\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7676904Z {\"case_id\": \"B220\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7693993Z {\"case_id\": \"B221\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7711351Z {\"case_id\": \"B222\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"DIRECTORY_UNAVAILABLE\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7790259Z {\"case_id\": \"B223\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"RECEIVER_UNAVAILABLE\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7807412Z {\"case_id\": \"B224\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7822830Z {\"case_id\": \"B225\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7840719Z {\"case_id\": \"B226\", \"expected\": \"NOT_TESTED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7857478Z {\"case_id\": \"B227\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7873472Z {\"case_id\": \"B228\", \"expected\": \"BLOCKED\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"PASS\"}",
+      "2026-11-18T22:31:44.7892382Z {\"case_id\": \"B229\", \"expected\": \"UNKNOWN\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7912715Z {\"case_id\": \"B230\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7928646Z {\"case_id\": \"B231\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7943873Z {\"case_id\": \"B232\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7959004Z {\"case_id\": \"B233\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7974473Z {\"case_id\": \"B234\", \"expected\": \"FAIL\", \"actual_status\": \"BLOCKED\", \"reason\": \"ELEVATED_WINDOWS_TOKEN\", \"test_verdict\": \"FAIL\"}",
+      "2026-11-18T22:31:44.7986519Z {\"PASS\": 11, \"FAIL\": 23, \"NOT_TESTED\": 0}",
+      "2026-11-18T22:31:44.8588847Z ##[error]Process completed with exit code 1."
+    ]
+  }
+]

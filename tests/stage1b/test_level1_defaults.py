@@ -164,6 +164,21 @@ check('L1-32-known-fail-survives-missing-archive-metadata',
       {'ACCEPTANCE_STATUS':'PASS','archive_status':'FAIL','CUSTODY_STATUS':'FAIL'},
       failed_custody_missing_destination, approval())
 
+def observed_fail_without_opt_in(c):
+    c['observations']['storage'] = 'FAIL'
+check('L1-33-rejected-archive-evidence-retains-known-fail',
+      {'contract_status':'FAIL','CUSTODY_STATUS':'FAIL'}, observed_fail_without_opt_in)
+bad_acl = approval()
+bad_acl['acl'] = 'UNKNOWN'
+check('L1-34-unverified-acl-blocks-only-archive',
+      {'ACCEPTANCE_STATUS':'PASS','archive_status':'BLOCKED'}, with_archive, bad_acl)
+def malformed_request_known_fail(c):
+    malformed_archive_request(c)
+    c['observations']['storage']='FAIL'
+check('L1-35-malformed-archive-retains-known-fail',
+      {'ACCEPTANCE_STATUS':'PASS','archive_status':'FAIL',
+       'CUSTODY_STATUS':'FAIL'}, malformed_request_known_fail)
+
 failures = [x['case'] for x in cases if x['verdict'] != 'PASS']
 print(json.dumps({'suite':'issue14-compact-level1-synthetic', 'total':len(cases),
                   'pass':len(cases)-len(failures), 'failures':failures,

@@ -1,0 +1,49 @@
+name: Issue14 Level 1 compact-input and regression
+on:
+  push:
+    branches: [feat/issue14-level1-default-input]
+permissions:
+  contents: read
+jobs:
+  linux-level1-and-legacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Issue 14 counterexamples and legacy contract regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/stage1b/test_level1_defaults.py > "$RUNNER_TEMP/issue14-results.json"
+          python3 tests/stage1b/run_contract_batch.py "$RUNNER_TEMP/issue14-contract-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-legacy.json"
+          python3 tests/stage1b/run_independent10.py > "$RUNNER_TEMP/issue14-independent10.json"
+          python3 tests/stage1b/run_p2_regression.py > "$RUNNER_TEMP/issue14-p2.json"
+          python3 tests/stage1b/run_review_regression.py > "$RUNNER_TEMP/issue14-review.json"
+          python3 tests/stage1b/run_review_regression.py --additional > "$RUNNER_TEMP/issue14-review-additional.json"
+          python3 tests/stage1b/test_publication_scan.py > "$RUNNER_TEMP/issue14-publication.json"
+          python3 tools/stage1a/run_suite.py --root "$RUNNER_TEMP/issue14-stage1a-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-stage1a.json"
+          echo "Issue 14 and baseline regression commands exited 0"
+      - name: Archive no-secret synthetic adapter regression
+        run: |
+          set -euo pipefail
+          python3 tests/stage1b2/run_suite.py --root "$RUNNER_TEMP/issue14-b2-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-b2.json"
+          python3 tests/stage1b2/run_boundaries.py --root "$RUNNER_TEMP/issue14-b2-boundaries-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-b2-boundaries.json"
+          python3 tests/stage1b2/run_risk_schema.py --root "$RUNNER_TEMP/issue14-b2-risk-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-b2-risk.json"
+          python3 tests/stage1b2/test_ci_probe_reports.py --root "$RUNNER_TEMP/issue14-b2-report-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-b2-report.json"
+      - name: Upload non-secret synthetic results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue14-synthetic-linux
+          path: ${{ runner.temp }}/issue14-*.json
+          if-no-files-found: warn
+  windows-regression:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Existing Windows bounded 21 cases
+        shell: pwsh
+        run: |
+          python tools/stage1b/windows_suite.py --root (Join-Path $env:RUNNER_TEMP ("issue14-win-" + $env:GITHUB_RUN_ID))
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

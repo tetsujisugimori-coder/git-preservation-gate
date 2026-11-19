@@ -14,6 +14,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 tests/stage1b/test_level1_operation_independent.py --baseline-only > "$RUNNER_TEMP/issue14-operation-red.json"
           python3 tests/stage1b/test_level1_defaults.py > "$RUNNER_TEMP/issue14-results.json"
           python3 tests/stage1b/run_contract_batch.py "$RUNNER_TEMP/issue14-contract-${GITHUB_RUN_ID}" > "$RUNNER_TEMP/issue14-legacy.json"
           python3 tests/stage1b/run_independent10.py > "$RUNNER_TEMP/issue14-independent10.json"

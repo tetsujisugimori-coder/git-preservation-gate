@@ -47,6 +47,8 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         'archive_applicability': {'required': archive_requested, 'reason': applicability},
         'archive_status': 'NOT_TESTED', 'archive_contract_status': 'NOT_TESTED',
         'archive_reason_codes': [], 'GIT_PERMISSIONS_STATUS': 'NOT_TESTED',
+        'archive_create_status': 'NOT_TESTED',
+        'archive_readback_status': 'NOT_TESTED',
     }
 
     obs = c.get('observations')
@@ -247,7 +249,26 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
             out['VERIFICATION_STATUS'] = verification
     out['INDEPENDENCE_STATUS'] = result['INDEPENDENCE_STATUS']
     out['human_independence'] = result['human_independence']
-    out['archive_contract_status'] = result['contract_status']
+    # archive_request is a NEW SAVE + readback request. A read-only approval can
+    # verify old material, but never proves that this request created a new copy.
+    # Preserve the legacy custody/verification observations as separate facts.
+    requested_ops = set(c['operations'])
+    missing_ops = {'create', 'read'} - requested_ops
+    out['archive_create_status'] = (
+        out['CUSTODY_STATUS'] if 'create' in requested_ops else 'NOT_TESTED'
+    )
+    out['archive_readback_status'] = (
+        verification if 'read' in requested_ops else 'NOT_TESTED'
+    )
+    if missing_ops:
+        result['reason_codes'].extend(
+            'ARCHIVE_NEW_SAVE_OPERATION_MISSING:' + operation
+            for operation in sorted(missing_ops)
+        )
+    out['archive_contract_status'] = (
+        contract.aggregate([result['contract_status'], 'BLOCKED'])
+        if missing_ops else result['contract_status']
+    )
     out['archive_reason_codes'] = result['reason_codes']
     indep = ('PASS' if result['INDEPENDENCE_STATUS'] == 'PARTIAL'
              and c['audit_mode'] == 'SOLO_STANDARD' else result['INDEPENDENCE_STATUS'])
@@ -255,7 +276,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
               verification, indep]
     out['archive_status'] = (
         'FAIL' if 'FAIL' in checks else
-        'BLOCKED' if 'BLOCKED' in checks or unavailable_check or any(
+        'BLOCKED' if missing_ops or 'BLOCKED' in checks or unavailable_check or any(
             v in result['reason_codes'] for v in ('APPROVAL_UNVERIFIED','POLICY_UNCONFIRMED',
                 'HEAD_UNCONFIRMED','CHECK_ADAPTER_UNKNOWN','ZIP_ADAPTER_NOT_IMPLEMENTED')
         ) or any(code.startswith('ACL_') for code in result['reason_codes']) else

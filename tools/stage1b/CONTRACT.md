@@ -49,3 +49,9 @@ P2-02: `extra_decision.approved=false` without optional `approval_state` denotes
 P2-03: A false `ci_required` requires `ci_exemption` with nonempty rationale, exact repository/ref/head/object_id. Missing or mismatched waiver is BLOCKED; invalid structure/schema fails. A waiver cannot coexist with `ci_required=true`. Waiving CI never changes the CI observation to PASS.
 
 This development-stage amendment does not authenticate external approval, save anything to a durable destination, claim an independent human audit or enable production permit.
+
+## Issue #14 compact Level 1 input (separate follow-up, synthetic only)
+A compact opt-in path accepts regular public/retrievable Git documents without any archive-specific fields. Missing ci_required defaults to true. Risk flags and a classification rationale are required; needed CI/review/permissions observations are never manufactured as PASS. The initial Git-only path returns archive_applicability.required=false, and CUSTODY/VERIFICATION/INDEPENDENCE remain NOT_TESTED. An explicit archive_request triggers a separate archive_status; missing scope/destination/retention/authorization stops only the archive action. Actual save operations are not executed here. The previous full-schema Level 1 records, Level 2/3 and historical fixtures remain on the legacy path.
+
+Specification and examples: ../../docs/stage1b/issue14-level1-defaults.md
+New synthetic tests: ../../tests/stage1b/test_level1_defaults.py

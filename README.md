@@ -36,3 +36,7 @@
 ## Stage 1-B2 limited save pilot
 
 See [scope and gated results](docs/stage1b2/README.md). This does not enable production preservation or supersede Issue14.
+
+## Issue #14 Level 1 standard-input simplification (Draft)
+
+[Issue #14](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/14) is a separate follow-up: ordinary Git documents use default inputs without extra archive approval, destination, retention or audit fields. See [compact input and separated explicit-save evaluation](docs/stage1b/issue14-level1-defaults.md). This is synthetic-only, does not alter Level 2/3 or authorize real saves or production.

@@ -151,6 +151,19 @@ def wrongful_waiver(c):
 check('L1-30-wrong-scoped-waiver',
       {'contract_status':'BLOCKED','ACCEPTANCE_STATUS':'BLOCKED'}, wrongful_waiver)
 
+def malformed_archive_request(c):
+    c['archive_request'] = {'requested_by':'owner'}
+check('L1-31-invalid-archive-request-isolated',
+      {'contract_status':'PASS','ACCEPTANCE_STATUS':'PASS','archive_status':'BLOCKED'},
+      malformed_archive_request)
+def failed_custody_missing_destination(c):
+    with_archive(c)
+    c.pop('destination')
+    c['observations']['storage']='FAIL'
+check('L1-32-known-fail-survives-missing-archive-metadata',
+      {'ACCEPTANCE_STATUS':'PASS','archive_status':'FAIL','CUSTODY_STATUS':'FAIL'},
+      failed_custody_missing_destination, approval())
+
 failures = [x['case'] for x in cases if x['verdict'] != 'PASS']
 print(json.dumps({'suite':'issue14-compact-level1-synthetic', 'total':len(cases),
                   'pass':len(cases)-len(failures), 'failures':failures,

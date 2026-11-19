@@ -31,6 +31,10 @@
 
 公開GitHubには実案件原物、非公開承認票、内部の保存先locatorや機密情報を掲載しない。mainへの直接変更は禁止し、規約改訂もbranch/PR/レビューで管理する。
 
+## 横断運用の実例
+
+[Codex-Orchestration-Lab PR #23：原物保全・文書受入・マージ判断の分離](docs/operations/pr23-preservation-and-pr-acceptance-20261119.md)（2026-11-19、v0.2.0の適用例）。Level 1の通常Git管理とLevel 2重要原物の保全を別判定し、承認の再利用、別セッション監査、所有者受入、マージ実行権限を混同しないための**非規範の運用補助資料**です。規約変更・本番許可・各案件のHOLD解除ではありません。
+
 ## Stage 1-B
 
 [実保存契約・Windows有限停止・限定パイロット（開発中）](docs/stage1b/README.md)。合成/P0技術確認と実保存許可を分離し、production_permit=falseを維持します。

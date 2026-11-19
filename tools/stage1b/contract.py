@@ -2,6 +2,10 @@
 from datetime import datetime
 import re
 STATES={'PASS','FAIL','PARTIAL','BLOCKED','UNKNOWN','NOT_TESTED'}
+APPROVAL_KEYS = frozenset(
+    'id scope repositories object_ids classifications destinations actors operations '
+    'valid_from valid_until retention_until delete_move_overwrite acl authorization_verified'.split()
+)
 class Invalid(ValueError): pass
 def exact(o,keys):
     if not isinstance(o,dict) or set(o)!=set(keys.split()): raise Invalid('keys')
@@ -59,7 +63,7 @@ def schema(c):
     for v in c['sessions'].values():
         if v is not None and type(v) is not bool:raise Invalid('session')
 def approval_schema(a):
-    exact(a,'id scope repositories object_ids classifications destinations actors operations valid_from valid_until retention_until delete_move_overwrite acl authorization_verified')
+    if not isinstance(a,dict) or set(a)!=APPROVAL_KEYS:raise Invalid('keys')
     string(a['id'])
     if a['scope'] not in ('case','reusable'):raise Invalid('scope')
     for k in ['repositories','object_ids','classifications','destinations','actors','operations']:strings(a[k])
@@ -78,6 +82,14 @@ def aggregate(values):
 def validate_contract(c,a,now,observed_head=None,effective_policy=None):
     """Eligibility only; approval provenance must be checked outside this pure function."""
     reasons=[];out={'contract_status':'FAIL','reason_codes':reasons,'CUSTODY_STATUS':'UNKNOWN','VERIFICATION_STATUS':'UNKNOWN','INDEPENDENCE_STATUS':'UNKNOWN','ACCEPTANCE_STATUS':'FAIL','human_independence':'UNKNOWN','production_permit':False}
+    # Issue #14: compact L1 uses a separate Git-only acceptance axis.
+    # Legacy full contracts and all Level 2/3 records keep the prior evaluator.
+    if __package__:
+        from .level1 import is_compact_l1, validate_level1
+    else:
+        from level1 import is_compact_l1, validate_level1
+    if is_compact_l1(c):
+        return validate_level1(c, a, now, observed_head, effective_policy)
     # Retain separately typed observations even if another contract field is invalid.
     if isinstance(c,dict) and isinstance(c.get('observations'),dict):
         raw=c['observations']

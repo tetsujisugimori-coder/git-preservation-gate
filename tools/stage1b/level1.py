@@ -240,7 +240,6 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         'BLOCKED' if 'BLOCKED' in checks or any(
             v in result['reason_codes'] for v in ('APPROVAL_UNVERIFIED','POLICY_UNCONFIRMED',
                 'HEAD_UNCONFIRMED','CHECK_ADAPTER_UNKNOWN','ZIP_ADAPTER_NOT_IMPLEMENTED')
-        ) or any(code.startswith('ACL_') for code in result['reason_codes'])
-        ) else
+        ) or any(code.startswith('ACL_') for code in result['reason_codes']) else
         'PASS' if all(v == 'PASS' for v in checks) else 'PARTIAL')
     return out

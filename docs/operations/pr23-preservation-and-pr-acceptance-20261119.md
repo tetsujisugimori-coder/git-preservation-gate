@@ -11,12 +11,25 @@
 - [マージ直前のレビュー](https://github.com/tetsujisugimori-coder/Codex-Orchestration-Lab/pull/23#pullrequestreview-5969815850)は2026-11-19 14:33:32 JST時点で`MERGE=HOLD/NO`。GitHubでは同日14:36:49 JSTに[merge commit `9190483e6148…`](https://github.com/tetsujisugimori-coder/Codex-Orchestration-Lab/commit/9190483e6148c654ac0d31cf5a0262c344956bf0)が成立。今回参照できたGitHub記録から、最終HOLD後の操作主体・追加承認・規則適合の全経路は特定できない。詳細は[マージ後追補](https://github.com/tetsujisugimori-coder/Codex-Orchestration-Lab/pull/23#issuecomment-7002297135)。**マージ実績は観測事実、マージ許可の証明ではない**。
 - 旧ZIP同一性UNKNOWN、H11 MISMATCH、歴史的P2-01〜04 OPEN、C01〜C30 NOT_TESTED、実Codex B起動禁止などは本事例の成功で解除していない。
 
+### 文書内の状態記載例（独立性の実物再判定ではない）
+以下は中央v0.2.0の**列挙値と人的独立性の限界を分離して記録するためのJSON例**であり、元PR #23の原票を書き換えたり、現物の追加監査を実施したりしたものではない。元の保存・再取得ログの技術照合報告はそのまま保持する。
+
+<!-- PR20_INDEPENDENCE_RECORD_START -->
+```json
+{
+  "INDEPENDENCE_STATUS": "UNKNOWN",
+  "human_independence": "LIMITED_SHARED_OWNER",
+  "verification_scope": "documentation-only"
+}
+```
+<!-- PR20_INDEPENDENCE_RECORD_END -->
+
 ## 2. 他案件でも使う最小運用手順
 
 1. **受入単位と依存を固定する**：対象repo、Issue/PR、HEAD/tree/base、成果物ID、採用規約版、案件契約、現在の判定を明示。通常Git文書、重要原物、特別リスクを対象ごとに分類し、混在PRでは独立した判定票・依存関係を作る。過去の欠損・別案件のP2は、現在の受入必須条件に**関係する場合だけ**停止理由にする。既知の安全FAILは無関係として握りつぶさない。
 2. **Level 1は通常Git管理を既定とする**：固定版・必須CI・レビュー・権限を確認。明示指定がない限り、追加Archive宛先・保持・ACL・A/B分離の入力を求めない。追加保存を個別に指定したときだけ、その操作に必要な追加情報・承認を確認し、別判定する（[Issue #14](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/14)）。
-3. **Level 2は許可範囲内で先に原物を保護する**：既存承認を対象/保存先/主体/操作/権限/保持/削除条件/期限で照合し、一致項目は再利用。不足箇所だけを確定。原物に触れず読取検査を行い、承認済みの新規領域に非上書き保存し、manifest/receiptを記録する。サンドボックス書込拒否と通常Windowsユーザーの権限を混同しない。承認不足・機密疑義・ACL拒否では保存を停止する。
-4. **Bは実保存先から再取得する**：Aのstdout、実行ID、監査プログラムのPID差だけで別セッションを認定しない。別セッション/別executionと使用検証器・共有資格情報を記録し、保存先の実bytesと元基準でsize・SHA・全byte・適用時CRC/ZIP manifest・Git bundle復元を照合。共有owner/hostは`LIMITED_SHARED_OWNER`。再保存や必要以上の再監査は繰り返さない。
+3. **Level 2は許可範囲内で先に原物を保護する**：既存承認を対象原物と**データ分類**、保存先、主体、許可**操作**（作成・読取等）、アクセス権、保持期間、**削除・移動・上書きの許可条件**、承認の有効期間で照合し、すべて承認範囲内の項目だけ再利用する。不足項目は当該操作についてのみ確認し、無関係のLevel 1受入を止めない。承認票の記述と実効ACL・容量・書込/再取得可否・実保持保証は別々に確認する。原物を変更せず読取検査を先行し、許可された新規領域に非上書き保存してmanifest/receiptを記録する。サンドボックス書込拒否と通常Windowsユーザーの権限を混同せず、承認不足・機密疑義・ACL拒否では当該保存を停止する。
+4. **Bは実保存先から再取得する**：`SOLO_STANDARD`の技術要件として、保存担当Aと検証担当Bの**別session**、**別execution ID**、**別検証領域**（Bの検証workspace・出力先をAの保存/検証作業領域から区別）、および**承認済み保存先から実原物を直接再取得する別取得操作**をすべて確認し、各識別情報と根拠を残す。Aのstdout、Aのworkspaceコピー、単なるPID差や別AI名だけではこの4条件を証明できない。Bは保存先の実bytesを元基準と照合し、size・SHA・全byte・適用時CRC/ZIP manifest・Git bundle隔離復元等の必要検査を実施する。別検証領域や別取得の根拠が本書から確認できない場合、その要素は`UNKNOWN`/`NOT_TESTED`のままとし、旧PR #23の記録を遡及してPASSへ変えない。共有owner/host/資格情報と共有検証器の使用実態も記録し、人的独立性の限界は`human_independence=LIMITED_SHARED_OWNER`として分離する。再保存や必要以上の再監査は繰り返さない。
 5. **4軸を分けて判断する**：`CUSTODY`（保存）、`VERIFICATION`（保存先照合）、`INDEPENDENCE`（独立性）、`ACCEPTANCE`（対象受入）。未実施は`NOT_TESTED`、取得不能は`UNKNOWN`、拒否は`BLOCKED`、不一致は`FAIL`。Level 1追加Archiveの非適用はPASSに捏造しない。必要条件を満たした成果物だけ所有者が明示受入する。
 6. **マージ/pullは別の実行ゲート**：受入PASSやGitHub APIの操作可能性だけで許可済みとしない。案件の現行禁止、許可主体、レビュー、保護/required checks、直前HEAD等を確認。不明・禁止中は実行停止。GitHubでマージが後から観測された場合、コミット/時刻/観測状態と当時のHOLDを併記し、承認・実行主体が未確認ならUNKNOWNとして**遡及的なAPPROVEを作らない**。ローカルpullは独立に承認する。
 
@@ -26,14 +39,17 @@
 - Windows操作の自動化は[Issue #15](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/15)／[Issue #18](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/18)の別工程で扱う。既存のLevel 1入力簡素化は[Issue #14](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/14)。本書はWindowsシステム設定、ACL、GitHub権限、作業中PRの状態を変更しない。
 - 後続案件へ適用するときは、対象固有の契約、分類、権限、停止条件を毎回確認する。本例で成立したLevel 2の技術受入を別repoの原物や本番permitへ自動流用しない。
 
+### PR #20の文書CIの成功範囲
+このPR専用の `.github/workflows/pr20-docs-validation.yml` は対象Draftブランチへのpushで起動する。**文書整合チェック（静的）**はこのガイドの区切られたJSON例をJSONとして構文解析して状態値を列挙値と照合し、SOLO_STANDARDの必須4条件・承認再利用の項目の文言、README参照・相対Markdownリンクを検査する。文書全体の文字列に対する単純な列挙値検索や、実物の独立性を検証するものではない。**公開スキャン（既存合成単体テスト）**は `tests/stage1b/test_publication_scan.py` の合成fixtureに対する検査であり、実案件原物の機密検査・実際のGitHub公開内容の全件監査ではない。成功時の主張は**固定HEADの文書整合と合成単体テストがPASSした**ことに限定し、実保存・保存先直接再取得・権限・保持・Git bundle復元・第三者監査・本番permit・マージ承認は `NOT_TESTED`/別判定とする。CI未起動時は `NOT_TESTED` であり、自動でPASSとしない。
+
 ## 4. 最小限の引継ぎ記録テンプレート
 
 ```text
 対象：repo / Issue / PR / HEAD / tree / base / 成果物ID
 分類：Level / 判定理由 / 必須依存 / 対象外の旧阻害
-承認：既存承認の適用範囲 / 不足条件 / 操作主体 / 期限
+承認：既存承認の対象・データ分類 / 保存先 / 主体 / 操作 / ACL / 保持期間 / 削除・移動・上書き条件 / 有効期間 / 不足条件
 保存：対象・保存先の参照ID / attempt / custody / manifest・receipt
-再取得：Bのsession/execution / 保存先直接取得 / 検査値 / 共有要素
+再取得：A/B別session・別execution ID / AとBの別検証領域ID / Bの保存先直接再取得ID / size・SHA・全byte等 / 共有要素
 判定：CUSTODY / VERIFICATION / INDEPENDENCE / ACCEPTANCE
 PR操作：CI / レビュー / 現行禁止・保護 / 別マージ許可 / pull許可
 履歴：旧判定（不変） / 新観測 / UNKNOWN / 人間の明示判断

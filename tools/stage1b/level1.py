@@ -37,7 +37,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         'human_independence': 'UNKNOWN', 'production_permit': False,
         'archive_applicability': {'required': False, 'reason': 'LEVEL1_GIT_ONLY_NOT_APPLICABLE'},
         'archive_status': 'NOT_TESTED', 'archive_contract_status': 'NOT_TESTED',
-        'archive_reason_codes': [],
+        'archive_reason_codes': [], 'GIT_PERMISSIONS_STATUS': 'NOT_TESTED',
     }
     try:
         if not isinstance(c, dict) or not BASE <= set(c) or not set(c) <= BASE | OPTIONAL:
@@ -101,6 +101,16 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         if 'ci_required' in c and type(c['ci_required']) is not bool:
             raise Invalid('bool')
     except (ValueError, TypeError, KeyError):
+        # Malformed records cannot hide already observed failures.
+        raw = c.get('observations', {}) if isinstance(c, dict) else {}
+        if isinstance(raw, dict):
+            if raw.get('storage') == 'FAIL':
+                out['CUSTODY_STATUS'] = 'FAIL'
+            if any(raw.get(k) == 'FAIL' for k in
+                   ('readback','size','sha256','all_bytes')):
+                out['VERIFICATION_STATUS'] = 'FAIL'
+        if 'FAIL' in (out['CUSTODY_STATUS'], out['VERIFICATION_STATUS']) and isinstance(c, dict) and 'archive_request' in c:
+            out['archive_status'] = 'FAIL'
         reasons.append('SCHEMA_INVALID')
         return out
 
@@ -134,6 +144,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
     ci = obs.get('ci', 'NOT_TESTED')
     review = obs.get('review', 'NOT_TESTED')
     permissions = obs.get('permissions', 'NOT_TESTED')
+    out['GIT_PERMISSIONS_STATUS'] = permissions
     for label, value in (('CI', ci), ('REVIEW', review), ('PERMISSIONS', permissions)):
         if value == 'FAIL':
             reasons.append(label + '_FAIL')
@@ -229,6 +240,7 @@ def validate_level1(c, approval, now, observed_head, effective_policy):
         'BLOCKED' if 'BLOCKED' in checks or any(
             v in result['reason_codes'] for v in ('APPROVAL_UNVERIFIED','POLICY_UNCONFIRMED',
                 'HEAD_UNCONFIRMED','CHECK_ADAPTER_UNKNOWN','ZIP_ADAPTER_NOT_IMPLEMENTED')
+        ) or any(code.startswith('ACL_') for code in result['reason_codes'])
         ) else
         'PASS' if all(v == 'PASS' for v in checks) else 'PARTIAL')
     return out

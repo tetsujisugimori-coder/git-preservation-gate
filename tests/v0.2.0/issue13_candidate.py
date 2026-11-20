@@ -69,10 +69,24 @@ def compare(version, record, protection=None):
     # A known protection trigger takes precedence for operation stopping.
     # The legacy gate still preserves unresolved risk evidence on its own axes.
     gates = check.evaluate(projected)
-    if level == 2 and record.get("risk_contract", {}).get("approval") == "FAIL":
-        gates["VERIFICATION_STATUS"] = gates["ACCEPTANCE_STATUS"] = "FAIL"
+    previous = check.evaluate(record)
+    prior_failures = {
+        axis for axis in ("custody", "verification")
+        if previous[axis.upper() + "_STATUS"] == "FAIL"
+    }
+    reasons = set(gates["reason_codes"])
+    if record.get("risk_contract", {}).get("approval") == "FAIL":
+        prior_failures.add("verification")
+        reasons.add("RISK_CONTRACT_APPROVAL_FAIL")
+    if prior_failures:
+        reasons.update(code for code in previous["reason_codes"] if code.endswith("_FAIL"))
+        for axis in prior_failures:
+            gates[axis.upper() + "_STATUS"] = "FAIL"
+            gates["applicability"][axis] = True
+            reasons.add("PRIOR_" + axis.upper() + "_FAIL")
+        gates["ACCEPTANCE_STATUS"] = "FAIL"
         gates["gate_eligibility"].update(B=False, C=False)
-        gates["reason_codes"] = sorted({*gates["reason_codes"], "RISK_CONTRACT_APPROVAL_FAIL"})
+        gates["reason_codes"] = sorted(reasons)
     return {
         "version": version,
         "level": level,
@@ -143,9 +157,11 @@ def save_synthetic(
 
     planned = directory / planned_name
     comparison = "NOT_TESTED"
-    planned_collision = False
-    if planned_name in approved_read_names and (planned.exists() or planned.is_symlink()):
-        planned_collision = True
+    try:
+        planned_collision = planned.exists() or planned.is_symlink()
+    except OSError:
+        return outcome("BLOCKED", comparison, reason="COLLISION_CHECK_UNAVAILABLE")
+    if planned_collision and planned_name in approved_read_names:
         comparison = inspect_copy(planned, payload)
         if (
             comparison == "PASS" and prior is not None and prior.object_id == object_id
@@ -160,6 +176,8 @@ def save_synthetic(
         return outcome("BLOCKED", comparison, reason="EXISTING_UNCONFIRMED")
 
     for name in names:
+        if name != planned_name and not planned_collision:
+            return outcome("BLOCKED", comparison, reason="PLANNED_NAME_OUTSIDE_SCOPE")
         if name not in approved_create_names or name not in approved_read_names:
             continue
         path = directory / name
@@ -180,9 +198,7 @@ def save_synthetic(
                 return outcome("FAIL", comparison, incomplete_name=name, reason="READBACK_FAILED")
         except OSError:
             return outcome("FAIL", comparison, incomplete_name=name, reason="WRITE_INTERRUPTED")
-        rename_reason = None
-        if name != planned_name:
-            rename_reason = "PLANNED_NAME_COLLISION" if planned_collision else "PLANNED_NAME_OUTSIDE_SCOPE"
+        rename_reason = "PLANNED_NAME_COLLISION" if name != planned_name else None
         return outcome("NEW_SAVED", comparison, saved_name=name, new_saves=1, rename_reason=rename_reason)
 
     return outcome("BLOCKED", comparison, reason="NO_APPROVED_UNUSED_NAME")

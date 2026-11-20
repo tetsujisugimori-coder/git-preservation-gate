@@ -220,8 +220,42 @@ def boundary_cases(root):
         record(risk={"destructive": True}), (2, "UNKNOWN", "FAIL"), (2, "BLOCKED", "BLOCKED"),
         reason="EXTRA_CHECK_MISSING_destructive_protection",
     )
+    prior = record(
+        artifact_kind="ordinary", level=3, checks={"sha256": "FAIL"},
+        risk_contract={"decision": "not_required", "risks": [], "approval": "PASS",
+                       "rationale": "fixed synthetic historical approval"},
+    )
+    prior_hash = classify(
+        prior, (3, "FAIL", "FAIL"), (1, "FAIL", "FAIL"), reason="PRIOR_VERIFICATION_FAIL",
+    )
+    assert prior_hash["candidate"]["gates"]["gate_eligibility"]["C"] is False
+    assert "CHECK_SHA256_FAIL" in prior_hash["candidate"]["gates"]["reason_codes"]
+    assert prior_hash["candidate"]["gates"]["applicability"]["verification"] is True
+    prior_approval = classify(
+        {**prior, "checks": {**prior["checks"], "sha256": "PASS"},
+         "risk_contract": {**prior["risk_contract"], "approval": "FAIL"}},
+        (3, "FAIL", "FAIL"), (1, "FAIL", "FAIL"), reason="RISK_CONTRACT_APPROVAL_FAIL",
+    )
+    prior_storage = classify(
+        {**prior, "checks": {**prior["checks"], "sha256": "PASS", "storage": "FAIL"}},
+        (3, "PASS", "FAIL"), (1, "NOT_TESTED", "FAIL"), reason="PRIOR_CUSTODY_FAIL",
+    )
+    assert prior_storage["candidate"]["gates"]["CUSTODY_STATUS"] == "FAIL"
+    unapproved_root = root / "unapproved-planned"
+    unapproved_root.mkdir()
+    unapproved = save_synthetic(
+        CANDIDATE, unapproved_root, PAYLOAD, object_id=OBJECT, original_name="source.zip",
+        planned_name=PLANNED, alternatives=(ALT1,), approved_create_names=(ALT1,),
+        approved_read_names=(ALT1,),
+    )
+    assert (unapproved.status, unapproved.reason, unapproved.new_saves) == (
+        "BLOCKED", "PLANNED_NAME_OUTSIDE_SCOPE", 0,
+    )
+    assert not directory_snapshot(unapproved_root)
     return dict(interrupted=interrupted, wrong_receipt=wrong_receipt, no_read=no_read,
-                uncertain=uncertain, duty=duty, insufficient_protection=insufficient_protection)
+                uncertain=uncertain, duty=duty, insufficient_protection=insufficient_protection,
+                prior_hash=prior_hash, prior_approval=prior_approval, prior_storage=prior_storage,
+                unapproved_planned=asdict(unapproved))
 
 
 def main():

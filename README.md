@@ -6,6 +6,8 @@
 
 **中央規約の現行正本は [v0.2.0](docs/v0.2.0/policy.md)（2026-11-18 JST 正式承認・発効）です。** [採用記録と版差分](docs/v0.2.0/adoption-record.md) / [承認を記録したIssue #5](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/5) を参照。従来の [v0.1.0](docs/preservation-policy.md) とPR #4のv0.1.1案は歴史的参照として保持し、v0.2.0の採用で旧判定を書き換えません。
 
+[次期 v0.3.0 正式化案](docs/v0.3.0/policy.md)（未採用・未発効）。検証範囲と正式化の手順は[採用記録案](docs/v0.3.0/adoption-record.md)を参照。
+
 | 段階 | 対象 | 現在 |
 | --- | --- | --- |
 | Stage 0 | 中央規約、監査方式、故障系の設計・合成 | **v0.2.0規約正式採用**。設計・合成限定受入であり実保全PASSではない |

@@ -1,0 +1,20 @@
+name: v0.3.0 policy checks
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/v0.3.0/**'
+      - 'tests/v0.3.0/**'
+      - '.github/workflows/v030-policy.yml'
+permissions:
+  contents: read
+jobs:
+  policy-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Check documented P2 decisions and links
+        run: python3 tests/v0.3.0/test_policy_docs.py

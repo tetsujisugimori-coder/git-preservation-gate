@@ -10,6 +10,8 @@
 
 採用を決定した場合は、所有者の承認記録、承認日、対象HEADのレビュー、発効条件と適用範囲をここに記録する。規約文書の状態表示とREADMEの現行正本案内を発効条件に合わせて更新し、旧版への参照を残す。
 
+状態表示やREADMEを更新した後の最終HEADを固定し、審査済みHEADとの差分を確認する。既存の審査結果は前提が同じ範囲で再利用し、採用・発効・適用範囲の判断に影響する差分は独立再審査する。マージ直前に対象HEADと必要な確認結果がその最終版に対応していることを確認する。
+
 ## 審査対象
 
 [規約本文](policy.md)、[Gate・監査契約](gates-and-audit.md)、[承認・原物救済](authorization-and-rescue.md)、[互換・移行手順](compatibility.md)。版番号、初回適用範囲、現行契約と変更する箇所、既知FAILの保持を [Issue #13](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/13) の方針と照合する。

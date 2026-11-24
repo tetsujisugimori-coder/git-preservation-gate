@@ -1,6 +1,6 @@
-# Gate A/B/C・監査契約 v0.3.0 正式化案
+# Gate A/B/C・監査契約 v0.3.0（正式採用承認版）
 
-[規約本文](policy.md) に付属する未発効の契約。Gate A/B/Cの定義、SOLO_STANDARD・STRICT_INDEPENDENTの要件、制御策の実証は [v0.2.0のGate・監査契約](../v0.2.0/gates-and-audit.md) を継承する。分類、P2補訂の追加安全条件の適用範囲、HEAD変更時の再審査は、以下の記載を適用する。
+[規約本文](policy.md) と同じく、所有者が2026-11-24 JSTに正式採用を承認し、PR #25のmainマージ時に発効する契約。Gate A/B/Cの定義、SOLO_STANDARD・STRICT_INDEPENDENTの要件、制御策の実証は [v0.2.0のGate・監査契約](../v0.2.0/gates-and-audit.md) を継承する。分類、P2補訂の追加安全条件の適用範囲、HEAD変更時の再審査は、以下の記載を適用する。
 
 ## 追加安全条件と集約
 

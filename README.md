@@ -4,24 +4,22 @@
 
 複数AI担当・複数リポジトリで共通利用するGit成果物の保全・検証・監査規約と、その実装を開発するプロジェクト。
 
-**中央規約の現行正本は [v0.2.0](docs/v0.2.0/policy.md)（2026-11-18 JST 正式承認・発効）です。** [採用記録と版差分](docs/v0.2.0/adoption-record.md) / [承認を記録したIssue #5](https://github.com/tetsujisugimori-coder/git-preservation-gate/issues/5) を参照。従来の [v0.1.0](docs/preservation-policy.md) とPR #4のv0.1.1案は歴史的参照として保持し、v0.2.0の採用で旧判定を書き換えません。
-
-[次期 v0.3.0 正式化案](docs/v0.3.0/policy.md)（未採用・未発効）。検証範囲と正式化の手順は[採用記録案](docs/v0.3.0/adoption-record.md)を参照。
+**中央規約の現行正本は、[PR #25](https://github.com/tetsujisugimori-coder/git-preservation-gate/pull/25)のmainマージ前は [v0.2.0](docs/v0.2.0/policy.md)、マージ後は [v0.3.0](docs/v0.3.0/policy.md) です。** v0.3.0の所有者正式採用承認日は2026-11-24 JST、発効はPR #25のmainマージ時です。初回適用は発効後の中央リポジトリの新規審査・規約解釈に限定し、既存案件と他リポジトリの移行は別判断です。[v0.3.0採用記録](docs/v0.3.0/adoption-record.md) / [v0.2.0採用記録](docs/v0.2.0/adoption-record.md)を参照。旧版と旧判定は履歴として保持します。
 
 | 段階 | 対象 | 現在 |
 | --- | --- | --- |
-| Stage 0 | 中央規約、監査方式、故障系の設計・合成 | **v0.2.0規約正式採用**。設計・合成限定受入であり実保全PASSではない |
+| Stage 0 | 中央規約、監査方式、故障系の設計・合成 | **v0.3.0所有者採用承認済み（PR #25のmainマージ時に発効）**。文書・合成限定受入であり実保全PASSではない |
 | Stage 1 | Git bundleの作成・保存・再取得・隔離復元・有限停止 | **開発・試験中**。Stage 1-AのLinux合成プローブは限定受入済み、本番実保存・全OS・強制ゲートは未受入 |
 | Stage 2 | AI/AGENTS.md/Codex CLI/CIへの版付き連携 | 計画・個別評価の対象。自動強制は未導入 |
 | Stage 3 | castle-3d-partsを起点とする横断パイロット | 段階的展開方針を承認済み。各repoの導入・マージは別審査 |
 
-## v0.2.0の判断基準
+## v0.3.0の判断基準（発効前の案件はv0.2.0を適用）
 
 - **Level 1**：通常の公開コード・文書はGit履歴、案件別CI・レビューを基本とし、Archive、別アカウント、ZIP等を一律に必須としない。
 - **Level 2**：重要原物は承認済み永続先への実保存と保存先からの直接再取得、size/SHA-256・必要な全byte/ZIP/manifest検査を維持する。同一所有者の別セッション技術監査は条件付きで可能だが第三者人的独立性PASSとはしない。
-- **Level 3**：機密・破壊リスクなどに応じ個別承認、実効ACL、事前固定した追加安全契約を要求する。別アカウントやVMは一律義務でなく案件リスクに応じる。
+- **Level 3**：所有者指定または規約上の最低Level 3が確定した機密保護対象。個別承認、実効ACL、事前固定した追加安全契約を要求する。非機密の喪失・破壊リスクはLevel 2でも個別保護する。別アカウントやVMは案件リスクに応じる。
 
-[Gate/監査契約](docs/v0.2.0/gates-and-audit.md) / [承認再利用・原物救済](docs/v0.2.0/authorization-and-rescue.md) / [v0.1.0との差分](docs/v0.2.0/compatibility.md) / [合成結果](docs/v0.2.0/results.md) / [独立設計レビュー](docs/v0.2.0/independent-review.md)。
+[v0.3.0 Gate/監査契約](docs/v0.3.0/gates-and-audit.md) / [承認再利用・原物救済](docs/v0.3.0/authorization-and-rescue.md) / [互換・移行手順](docs/v0.3.0/compatibility.md)。v0.2.0の[合成結果](docs/v0.2.0/results.md)と[独立設計レビュー](docs/v0.2.0/independent-review.md)も引き継ぎ範囲の根拠として保持する。
 
 ## 適用と制限
 
